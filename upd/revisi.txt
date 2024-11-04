@@ -1,0 +1,6 @@
+table :
+status_transaksi
+	id
+	status_transaksi
+purchase_order
+	status_transaksi_id
