@@ -9,6 +9,7 @@ $(document).ready(function($) {
 
     $(document.body).on('click', '.app-item' ,function(){
         set_content($(this).attr('href'));
+        $(this).closest('.dropdown').removeClass('open');
         return false;
     });
      $(document.body).on('click', '.maintenance-app' ,function(){

@@ -5,7 +5,8 @@
 		    e.stopImmediatePropagation();
 		    e.preventDefault();
 		    // $('.se-pre-con').css('display','block');
-
+		    var submitButton = $(this).find("button[type=submit]");
+			submitButton.prop('disabled', true).text('Menyimpan...');
 
 		       var form_data = new FormData(this);
 		        send_ajax_file( $(this).attr('action'),form_data).then( function(data){

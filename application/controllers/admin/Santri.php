@@ -188,8 +188,8 @@ class santri extends MY_Controller {
 		try {
 			
 			$data = [
-				'nama' 	=> $_POST['nama'],
-				'nis'	=>	$_POST['nis'],
+				'nama' 				=> $_POST['nama'],
+				'nis'				=>	$_POST['nis'],
 				'jenis_kelamin'		=>	$_POST['jenis_kelamin'],
 				'tempat_lahir'		=>	$_POST['tempat_lahir'],
 				'tanggal_lahir'		=>	$_POST['tanggal_lahir'],

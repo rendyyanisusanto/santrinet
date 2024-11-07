@@ -16,6 +16,8 @@
 						<ul class="dropdown-menu width-300">
 							<li class="dropdown-header">Optional layouts</li>
 							<li><a class="app-item" href="santri/get_data"><i class="icon-align-center-horizontal"></i> Pendataan Santri</a></li>
+							<li><a class="app-item" href="santri/get_data"><i class="icon-align-center-horizontal"></i> Pendataan Pengurus</a></li>
+							<li><a class="app-item" href="santri/get_data"><i class="icon-align-center-horizontal"></i> Lembaga Pengurus</a></li>
 							
 						</ul>
 					</li>
@@ -36,12 +38,16 @@
 
 						<ul class="dropdown-menu width-300">
 							<li class="dropdown-header">Rekam Medis</li>
-							<li><a class="app-item" href="tahfidz/get_data"><i class="icon-align-center-horizontal"></i> Rekam Medis</a></li>
-							<li><a class="app-item" href="tahfidz/get_data"><i class="icon-align-center-horizontal"></i> Data Obat</a></li>
-							<li><a class="app-item" href="tahfidz/get_data"><i class="icon-align-center-horizontal"></i> Data Keluhan</a></li>
-							<li><a class="app-item" href="tahfidz/get_data"><i class="icon-align-center-horizontal"></i> Status Rekam Medis</a></li>
+							<li><a class="app-item" href="rekam_medis/get_data"><i class="icon-align-center-horizontal"></i> Rekam Medis</a></li>
+							<li><a class="app-item" href="obat/get_data"><i class="icon-align-center-horizontal"></i> Data Obat</a></li>
+							<li><a class="app-item" href="keluhan/get_data"><i class="icon-align-center-horizontal"></i> Data Keluhan</a></li>
+							<li><a class="app-item" href="status_rekam_medis/get_data"><i class="icon-align-center-horizontal"></i> Status Rekam Medis</a></li>
 							<li class="dropdown-header">Surat Ijin</li>
-							<li><a class="app-item" href="tahfidz/get_data"><i class="icon-align-center-horizontal"></i> Surat Ijin</a></li>
+							<li><a class="app-item" href="tahfidz/get_data"><i class="icon-align-center-horizontal"></i> Surat Ijin Sakit</a></li>
+							<li><a class="app-item" href="tahfidz/get_data"><i class="icon-align-center-horizontal"></i> Surat Ijin Lain</a></li>
+							<li class="dropdown-header">Laporan & Statistik</li>
+							<li><a class="app-item" href="laporan_rekam_medis/get_data"><i class="icon-align-center-horizontal"></i> Laporan Rekam Medis</a></li>
+							<li><a class="app-item" href="tahfidz/get_data"><i class="icon-align-center-horizontal"></i> Laporan Ijin</a></li>
 							
 						</ul>
 					</li>
@@ -51,8 +57,12 @@
 						</a>
 
 						<ul class="dropdown-menu width-300">
-							<li class="dropdown-header">Optional layouts</li>
+							<li class="dropdown-header">Pelanggaran</li>
 							
+							<li><a class="app-item" href="pelanggaran/get_data"><i class="icon-align-center-horizontal"></i> Pelanggaran</a></li>
+							<li><a class="app-item" href="tatib/get_data"><i class="icon-align-center-horizontal"></i> Tatib</a></li>
+							<li><a class="app-item" href="kategori_tatib/get_data"><i class="icon-align-center-horizontal"></i> Kategori Tatib</a></li>
+
 						</ul>
 					</li>
 					<li class="dropdown">
