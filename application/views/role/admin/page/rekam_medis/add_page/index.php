@@ -11,7 +11,7 @@
 						<fieldset>
 							<legend class="text-semibold"><?php echo $data_get['param']['title'] ?> - <b>TAMBAH DATA</b></legend>
 							
-
+							<input type="hidden" name="uuid" value="<?= $data_get['uuid']?>">
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Tanggal : <i class="text-danger">*</i></label>
@@ -47,6 +47,13 @@
 									<div class="col-lg-3">
 						              	<button class="btn btn-xs btn-info" type="button" onclick="add_keluhan();" data-toggle="tooltip" data-placement="top" title="Setting Kode" ><i class="icon-plus3"></i></button>
 						            </div>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Lama Sakit : <i class="text-danger">*</i></label>
+									<div class="col-lg-3">
+										<input type="number" name="lama_sakit" class="form-control">
+									</div>
 								</div>
 
 								<div class="form-group">

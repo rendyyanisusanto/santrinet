@@ -1,17 +1,17 @@
 /*
- Navicat Premium Data Transfer
+ Navicat Premium Dump SQL
 
- Source Server         : DB
+ Source Server         : LOCAL
  Source Server Type    : MySQL
- Source Server Version : 100425
+ Source Server Version : 100432 (10.4.32-MariaDB)
  Source Host           : localhost:3306
  Source Schema         : ppsq
 
  Target Server Type    : MySQL
- Target Server Version : 100425
+ Target Server Version : 100432 (10.4.32-MariaDB)
  File Encoding         : 65001
 
- Date: 07/11/2024 20:08:12
+ Date: 08/11/2024 08:41:04
 */
 
 SET NAMES utf8mb4;
@@ -22,15 +22,15 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `akun`;
 CREATE TABLE `akun`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `no_ref` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `nama` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  `indukakun_id` int(11) NULL DEFAULT NULL,
+  `indukakun_id` int NULL DEFAULT NULL,
   `saldo_normal` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  `create_at` timestamp(0) NULL DEFAULT current_timestamp(),
-  `is_edit` int(11) NULL DEFAULT NULL,
+  `create_at` timestamp NULL DEFAULT current_timestamp,
+  `is_edit` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of akun
@@ -75,14 +75,14 @@ INSERT INTO `akun` VALUES (40, '1108', 'Persediaan Produk', 1, 'D', '2023-05-21 
 -- ----------------------------
 DROP TABLE IF EXISTS `asrama`;
 CREATE TABLE `asrama`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
-  `created_at` timestamp(0) NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NULL DEFAULT current_timestamp,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of asrama
@@ -96,11 +96,11 @@ INSERT INTO `asrama` VALUES (4, 'C', 'Asrama C', '#ff0000', 1, '2024-11-01 16:02
 -- ----------------------------
 DROP TABLE IF EXISTS `groups`;
 CREATE TABLE `groups`  (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of groups
@@ -119,17 +119,17 @@ INSERT INTO `groups` VALUES (9, 'FINANCE', 'Vindy');
 -- ----------------------------
 DROP TABLE IF EXISTS `groups_detail`;
 CREATE TABLE `groups_detail`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `groups_id` int(10) UNSIGNED NULL DEFAULT NULL,
-  `submenu_id` int(11) NULL DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `groups_id` int UNSIGNED NULL DEFAULT NULL,
+  `submenu_id` int NULL DEFAULT NULL,
   `c` tinyint(1) NULL DEFAULT NULL,
   `r` tinyint(1) NULL DEFAULT NULL,
   `u` tinyint(1) NULL DEFAULT NULL,
   `d` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `groups_id`(`groups_id`) USING BTREE,
+  INDEX `groups_id`(`groups_id` ASC) USING BTREE,
   CONSTRAINT `groups_detail_ibfk_1` FOREIGN KEY (`groups_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 385 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 385 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of groups_detail
@@ -368,15 +368,15 @@ INSERT INTO `groups_detail` VALUES (384, 4, 33, 0, 0, 0, 0);
 -- ----------------------------
 DROP TABLE IF EXISTS `kamar`;
 CREATE TABLE `kamar`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `asrama_id` int(11) NULL DEFAULT NULL,
+  `asrama_id` int NULL DEFAULT NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `asrama_id`(`asrama_id`) USING BTREE,
+  INDEX `asrama_id`(`asrama_id` ASC) USING BTREE,
   CONSTRAINT `kamar_ibfk_1` FOREIGN KEY (`asrama_id`) REFERENCES `asrama` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of kamar
@@ -394,48 +394,53 @@ INSERT INTO `kamar` VALUES (7, 'C2', 'Kamar C2', 4, 1);
 -- ----------------------------
 DROP TABLE IF EXISTS `kamar_santri`;
 CREATE TABLE `kamar_santri`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `santri_id` int(11) NULL DEFAULT NULL,
-  `kamar_id` int(11) NULL DEFAULT NULL,
-  `tahun` int(255) NULL DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `santri_id` int NULL DEFAULT NULL,
+  `kamar_id` int NULL DEFAULT NULL,
+  `tahun` int NULL DEFAULT NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `kamar_id`(`kamar_id`) USING BTREE,
-  INDEX `santri_id`(`santri_id`) USING BTREE,
+  INDEX `kamar_id`(`kamar_id` ASC) USING BTREE,
+  INDEX `santri_id`(`santri_id` ASC) USING BTREE,
   CONSTRAINT `kamar_santri_ibfk_2` FOREIGN KEY (`kamar_id`) REFERENCES `kamar` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `kamar_santri_ibfk_3` FOREIGN KEY (`santri_id`) REFERENCES `santri` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of kamar_santri
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for kategori_tatib
 -- ----------------------------
 DROP TABLE IF EXISTS `kategori_tatib`;
 CREATE TABLE `kategori_tatib`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `status_aktif` int(11) NULL DEFAULT NULL,
+  `status_aktif` int NULL DEFAULT NULL,
+  `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of kategori_tatib
 -- ----------------------------
-INSERT INTO `kategori_tatib` VALUES (1, 'A', 'RINGAN', 1);
-INSERT INTO `kategori_tatib` VALUES (2, 'B', 'SEDANG', 1);
-INSERT INTO `kategori_tatib` VALUES (3, 'C', 'BERAT', 1);
+INSERT INTO `kategori_tatib` VALUES (1, 'A', 'RINGAN', 1, 'green');
+INSERT INTO `kategori_tatib` VALUES (2, 'B', 'SEDANG', 1, 'yellow');
+INSERT INTO `kategori_tatib` VALUES (3, 'C', 'BERAT', 1, 'red');
 
 -- ----------------------------
 -- Table structure for keluhan
 -- ----------------------------
 DROP TABLE IF EXISTS `keluhan`;
 CREATE TABLE `keluhan`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `status_aktif` int(1) NULL DEFAULT 1,
+  `status_aktif` int NULL DEFAULT 1,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 171 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 171 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of keluhan
@@ -616,11 +621,11 @@ INSERT INTO `keluhan` VALUES (170, 'Kaki Bolong', NULL, 1);
 -- ----------------------------
 DROP TABLE IF EXISTS `keluhan_rm`;
 CREATE TABLE `keluhan_rm`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `rekam_medis_id` int(11) NULL DEFAULT NULL,
-  `keluhan_id` int(11) NULL DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `rekam_medis_id` int NULL DEFAULT NULL,
+  `keluhan_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 33 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of keluhan_rm
@@ -657,17 +662,19 @@ INSERT INTO `keluhan_rm` VALUES (29, 13, 169);
 INSERT INTO `keluhan_rm` VALUES (30, 13, 166);
 INSERT INTO `keluhan_rm` VALUES (31, 14, 169);
 INSERT INTO `keluhan_rm` VALUES (32, 14, 170);
+INSERT INTO `keluhan_rm` VALUES (38, 15, 169);
+INSERT INTO `keluhan_rm` VALUES (39, 15, 170);
 
 -- ----------------------------
 -- Table structure for lembaga_pengurus
 -- ----------------------------
 DROP TABLE IF EXISTS `lembaga_pengurus`;
 CREATE TABLE `lembaga_pengurus`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of lembaga_pengurus
@@ -688,26 +695,30 @@ INSERT INTO `lembaga_pengurus` VALUES (10, 'J', 'PAU');
 -- ----------------------------
 DROP TABLE IF EXISTS `login_attempts`;
 CREATE TABLE `login_attempts`  (
-  `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
   `ip_address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `login` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `time` int(10) UNSIGNED NULL DEFAULT NULL,
+  `time` int UNSIGNED NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 279 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 279 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of login_attempts
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for madin
 -- ----------------------------
 DROP TABLE IF EXISTS `madin`;
 CREATE TABLE `madin`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `status_aktif` int(255) NULL DEFAULT NULL,
-  `created_at` timestamp(0) NULL DEFAULT current_timestamp(),
+  `status_aktif` int NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 104 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 104 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of madin
@@ -820,10 +831,10 @@ INSERT INTO `madin` VALUES (103, 'K100', 'KELAS 34A', '#000000', 1, '2024-11-01 
 -- ----------------------------
 DROP TABLE IF EXISTS `menu`;
 CREATE TABLE `menu`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `menu` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of menu
@@ -842,12 +853,12 @@ INSERT INTO `menu` VALUES (8, 'HR');
 -- ----------------------------
 DROP TABLE IF EXISTS `obat`;
 CREATE TABLE `obat`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `status_aktif` int(1) NULL DEFAULT 1,
+  `status_aktif` int NULL DEFAULT 1,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of obat
@@ -960,11 +971,11 @@ INSERT INTO `obat` VALUES (102, 'OBTA001', 'OBAT REFLEXIN', 1);
 -- ----------------------------
 DROP TABLE IF EXISTS `obat_rm`;
 CREATE TABLE `obat_rm`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `rekam_medis_id` int(11) NULL DEFAULT NULL,
-  `obat_id` int(11) NULL DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `rekam_medis_id` int NULL DEFAULT NULL,
+  `obat_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of obat_rm
@@ -1000,57 +1011,67 @@ INSERT INTO `obat_rm` VALUES (28, 12, 101);
 INSERT INTO `obat_rm` VALUES (29, 13, 102);
 INSERT INTO `obat_rm` VALUES (30, 14, 96);
 INSERT INTO `obat_rm` VALUES (31, 14, 97);
+INSERT INTO `obat_rm` VALUES (38, 15, 102);
+INSERT INTO `obat_rm` VALUES (39, 15, 99);
 
 -- ----------------------------
 -- Table structure for pelanggaran
 -- ----------------------------
 DROP TABLE IF EXISTS `pelanggaran`;
 CREATE TABLE `pelanggaran`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `pelanggaran` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `tatib_id` int(11) NULL DEFAULT NULL,
+  `tatib_id` int NULL DEFAULT NULL,
   `takzir` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `pengurus_id` int(11) NULL DEFAULT NULL,
-  `pelapor_id` int(11) NULL DEFAULT NULL,
+  `pengurus_id` int NULL DEFAULT NULL,
+  `pelapor_id` int NULL DEFAULT NULL,
   `status_dokumen_pelanggaran` enum('BELUM_MENGAMBIL','MENGAMBIL_BELUM_MENGEMBALIKAN','MENGAMBIL_SUDAH_MENGEMBALIKAN') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of pelanggaran
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for pendidikan_santri
 -- ----------------------------
 DROP TABLE IF EXISTS `pendidikan_santri`;
 CREATE TABLE `pendidikan_santri`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `santri_id` int(11) NULL DEFAULT NULL,
-  `madin_id` int(11) NULL DEFAULT NULL,
-  `tahfidz_id` int(11) NULL DEFAULT NULL,
-  `sekolah_id` int(11) NULL DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `santri_id` int NULL DEFAULT NULL,
+  `madin_id` int NULL DEFAULT NULL,
+  `tahfidz_id` int NULL DEFAULT NULL,
+  `sekolah_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `madin_id`(`madin_id`) USING BTREE,
-  INDEX `tahfidz_id`(`tahfidz_id`) USING BTREE,
-  INDEX `sekolah_id`(`sekolah_id`) USING BTREE,
-  INDEX `santri_id`(`santri_id`) USING BTREE,
+  INDEX `madin_id`(`madin_id` ASC) USING BTREE,
+  INDEX `tahfidz_id`(`tahfidz_id` ASC) USING BTREE,
+  INDEX `sekolah_id`(`sekolah_id` ASC) USING BTREE,
+  INDEX `santri_id`(`santri_id` ASC) USING BTREE,
   CONSTRAINT `pendidikan_santri_ibfk_2` FOREIGN KEY (`madin_id`) REFERENCES `madin` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `pendidikan_santri_ibfk_3` FOREIGN KEY (`tahfidz_id`) REFERENCES `tahfidz` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `pendidikan_santri_ibfk_4` FOREIGN KEY (`sekolah_id`) REFERENCES `sekolah` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `pendidikan_santri_ibfk_5` FOREIGN KEY (`santri_id`) REFERENCES `santri` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of pendidikan_santri
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for pengurus
 -- ----------------------------
 DROP TABLE IF EXISTS `pengurus`;
 CREATE TABLE `pengurus`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `santri_id` int(11) NULL DEFAULT NULL,
-  `lembaga_pengurus_id` int(11) NULL DEFAULT NULL,
-  `status_aktif` int(11) NULL DEFAULT NULL,
+  `santri_id` int NULL DEFAULT NULL,
+  `lembaga_pengurus_id` int NULL DEFAULT NULL,
+  `status_aktif` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 48 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 48 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of pengurus
@@ -1108,13 +1129,13 @@ INSERT INTO `pengurus` VALUES (47, '1266', 1266, 1, 1);
 -- ----------------------------
 DROP TABLE IF EXISTS `perawat`;
 CREATE TABLE `perawat`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `no_hp` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `status_aktif` tinyint(4) NULL DEFAULT NULL,
+  `status_aktif` tinyint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of perawat
@@ -1154,7 +1175,7 @@ CREATE TABLE `profil_website`  (
   `lng` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `lat` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `api_fingerprint` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of profil_website
@@ -1166,42 +1187,44 @@ INSERT INTO `profil_website` VALUES ('SIM PONDOK', 'Sumberpasir', '085894632505'
 -- ----------------------------
 DROP TABLE IF EXISTS `rekam_medis`;
 CREATE TABLE `rekam_medis`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `santri_id` int(11) NULL DEFAULT NULL,
-  `status_rekam_medis_id` int(11) NULL DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `santri_id` int NULL DEFAULT NULL,
+  `status_rekam_medis_id` int NULL DEFAULT NULL,
   `tanggal` date NULL DEFAULT NULL,
   `foto` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `uuid` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
-  `perawat_id` int(11) NULL DEFAULT NULL,
+  `perawat_id` int NULL DEFAULT NULL,
   `diagnosis` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `catatan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `lama_sakit` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of rekam_medis
 -- ----------------------------
-INSERT INTO `rekam_medis` VALUES (2, 54, 1, '2024-11-05', NULL, 'RM2279', '566468e5-9327-496e-a514-718a390aa9e9', 1, 4, 'Sakit Jantung', 'Harus rawat inap');
-INSERT INTO `rekam_medis` VALUES (3, 53, 1, '2024-11-04', '', 'RM8165', '6449bd25-3142-4abc-b870-28bc110a483e', 1, 3, 'Sakit', 'Harus Istirahat');
-INSERT INTO `rekam_medis` VALUES (4, 52, 1, '2024-11-03', NULL, 'RM2566', '0f9c260b-805f-4bec-b2b9-c3f784b56a78', 1, 4, 'Sakit', 'tes');
-INSERT INTO `rekam_medis` VALUES (5, 47, 1, '2024-11-04', NULL, 'RM314', '81f695a4-ec2c-46c0-82f0-05ce072dc4aa', 1, 4, 'Sakit', 'trsss');
-INSERT INTO `rekam_medis` VALUES (6, 54, 2, '2024-11-03', NULL, 'RM7815', '4c48bc6b-2ece-45b4-a1d3-31dbb659c5e5', 1, 1, 'Sakit', 'tes');
-INSERT INTO `rekam_medis` VALUES (7, 49, 3, '2024-11-04', 'e10f92f6ff16f4e8a8564ba4a69be10f.png', 'RM1125', 'fc1aafb0-4fed-45b4-944e-0e02c5bf12cd', 1, 4, 'Sakit', 'trsss');
-INSERT INTO `rekam_medis` VALUES (8, 46, 1, '2024-11-06', '3968b05cc047a0e82d55895b51a4bdc5.jpg', 'RM13', 'e92bf0fc-d9f6-4aac-a311-476710c38774', 1, 1, 'Sakit', 'tes');
-INSERT INTO `rekam_medis` VALUES (9, 50, 3, '2024-11-04', '', 'RM4186', '6102d327-fd9b-4367-bf49-94ed60d98888', 1, 1, 'Sakit Jantung', 'trsss');
-INSERT INTO `rekam_medis` VALUES (10, 49, 1, '2024-11-03', '', 'RM2603', '5dcfac4f-b58d-4a51-be8d-40f339881323', 1, 2, 'Sakit', 'tes');
-INSERT INTO `rekam_medis` VALUES (11, 48, 1, '2024-11-06', '', 'RM8853', '239bd161-5168-4b92-a7c0-14ed1e3b1141', 1, 4, 'Sakit', 'tes');
-INSERT INTO `rekam_medis` VALUES (12, 52, 2, '2024-11-07', '', 'RM7046', '0b011ac4-e34c-4a09-a6e3-4135b8650404', 1, 3, 'Sakit', 'tes');
-INSERT INTO `rekam_medis` VALUES (13, 53, 3, '2024-11-07', '', 'RM5249', '42739c41-9440-4a4d-a124-78a063be42c0', 1, 2, 'Sakit', 'tes');
+INSERT INTO `rekam_medis` VALUES (2, 54, 1, '2024-11-05', NULL, 'RM2279', '566468e5-9327-496e-a514-718a390aa9e9', 1, 4, 'Sakit Jantung', 'Harus rawat inap', NULL);
+INSERT INTO `rekam_medis` VALUES (3, 53, 1, '2024-11-04', '', 'RM8165', '6449bd25-3142-4abc-b870-28bc110a483e', 1, 3, 'Sakit', 'Harus Istirahat', NULL);
+INSERT INTO `rekam_medis` VALUES (4, 52, 1, '2024-11-03', NULL, 'RM2566', '0f9c260b-805f-4bec-b2b9-c3f784b56a78', 1, 4, 'Sakit', 'tes', NULL);
+INSERT INTO `rekam_medis` VALUES (5, 47, 1, '2024-11-04', NULL, 'RM314', '81f695a4-ec2c-46c0-82f0-05ce072dc4aa', 1, 4, 'Sakit', 'trsss', NULL);
+INSERT INTO `rekam_medis` VALUES (6, 54, 2, '2024-11-03', NULL, 'RM7815', '4c48bc6b-2ece-45b4-a1d3-31dbb659c5e5', 1, 1, 'Sakit', 'tes', NULL);
+INSERT INTO `rekam_medis` VALUES (7, 49, 3, '2024-11-04', 'e10f92f6ff16f4e8a8564ba4a69be10f.png', 'RM1125', 'fc1aafb0-4fed-45b4-944e-0e02c5bf12cd', 1, 4, 'Sakit', 'trsss', NULL);
+INSERT INTO `rekam_medis` VALUES (8, 46, 1, '2024-11-06', '3968b05cc047a0e82d55895b51a4bdc5.jpg', 'RM13', 'e92bf0fc-d9f6-4aac-a311-476710c38774', 1, 1, 'Sakit', 'tes', NULL);
+INSERT INTO `rekam_medis` VALUES (9, 50, 3, '2024-11-04', '', 'RM4186', '6102d327-fd9b-4367-bf49-94ed60d98888', 1, 1, 'Sakit Jantung', 'trsss', NULL);
+INSERT INTO `rekam_medis` VALUES (10, 49, 1, '2024-11-03', '', 'RM2603', '5dcfac4f-b58d-4a51-be8d-40f339881323', 1, 2, 'Sakit', 'tes', NULL);
+INSERT INTO `rekam_medis` VALUES (11, 48, 1, '2024-11-06', '', 'RM8853', '239bd161-5168-4b92-a7c0-14ed1e3b1141', 1, 4, 'Sakit', 'tes', NULL);
+INSERT INTO `rekam_medis` VALUES (12, 52, 2, '2024-11-07', '', 'RM7046', '0b011ac4-e34c-4a09-a6e3-4135b8650404', 1, 3, 'Sakit', 'tes', NULL);
+INSERT INTO `rekam_medis` VALUES (13, 53, 3, '2024-11-07', '', 'RM5249', '42739c41-9440-4a4d-a124-78a063be42c0', 1, 2, 'Sakit', 'tes', NULL);
+INSERT INTO `rekam_medis` VALUES (15, 1357, 2, '2024-11-07', '777f78cbb7c8b24600f4036a4a37a077.png', 'RM9200', 'cb9ddebb-92a8-4b84-9d3e-ec69ea7e4bd2', 1, 4, 'sakit1', 'tes1', 6);
 
 -- ----------------------------
 -- Table structure for santri
 -- ----------------------------
 DROP TABLE IF EXISTS `santri`;
 CREATE TABLE `santri`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `nis` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `jenis_kelamin` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -1214,7 +1237,7 @@ CREATE TABLE `santri`  (
   `no_hp_ibu` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1359 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1359 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of santri
@@ -2582,14 +2605,14 @@ INSERT INTO `santri` VALUES (1358, '0118060077', 'Muhammad Hilmy Zulfikar', NULL
 -- ----------------------------
 DROP TABLE IF EXISTS `sekolah`;
 CREATE TABLE `sekolah`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `status_aktif` int(255) NULL DEFAULT NULL,
-  `created_at` timestamp(0) NULL DEFAULT current_timestamp(),
+  `status_aktif` int NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sekolah
@@ -2604,13 +2627,13 @@ INSERT INTO `sekolah` VALUES (4, 'SMK', 'SMK IT ASY-SYADZILI', '#000000', 1, '20
 -- ----------------------------
 DROP TABLE IF EXISTS `setting_status`;
 CREATE TABLE `setting_status`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `status` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `groups` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of setting_status
@@ -2625,13 +2648,13 @@ INSERT INTO `setting_status` VALUES (4, 'Non Aktif', '0', 'warning', 'active');
 -- ----------------------------
 DROP TABLE IF EXISTS `setting_table`;
 CREATE TABLE `setting_table`  (
-  `id_setting_table` int(11) NOT NULL AUTO_INCREMENT,
+  `id_setting_table` int NOT NULL AUTO_INCREMENT,
   `table` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `name` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `value` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `keterangan` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   PRIMARY KEY (`id_setting_table`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 122 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 123 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of setting_table
@@ -2649,19 +2672,20 @@ INSERT INTO `setting_table` VALUES (118, 'asrama', 'kode', 'A{rand}', NULL);
 INSERT INTO `setting_table` VALUES (119, 'kamar', 'kode', 'K{order_number}', NULL);
 INSERT INTO `setting_table` VALUES (120, 'rekam_medis', 'kode', 'RM{rand}', NULL);
 INSERT INTO `setting_table` VALUES (121, 'keluhan', 'kode', 'KEL{rand}', NULL);
+INSERT INTO `setting_table` VALUES (122, 'tatib', 'kode', 'KT{rand}', NULL);
 
 -- ----------------------------
 -- Table structure for status_rekam_medis
 -- ----------------------------
 DROP TABLE IF EXISTS `status_rekam_medis`;
 CREATE TABLE `status_rekam_medis`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `color` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `status_aktif` tinyint(1) NULL DEFAULT 1,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of status_rekam_medis
@@ -2675,16 +2699,16 @@ INSERT INTO `status_rekam_medis` VALUES (3, 'Istirahat di Kamar', '#d35400', 1, 
 -- ----------------------------
 DROP TABLE IF EXISTS `submenu`;
 CREATE TABLE `submenu`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `menu_id` int(11) NULL DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `menu_id` int NULL DEFAULT NULL,
   `submenu` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `link` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  `c` tinyint(4) NULL DEFAULT NULL,
-  `r` tinyint(4) NULL DEFAULT NULL,
-  `u` tinyint(4) NULL DEFAULT NULL,
-  `d` tinyint(4) NULL DEFAULT NULL,
+  `c` tinyint NULL DEFAULT NULL,
+  `r` tinyint NULL DEFAULT NULL,
+  `u` tinyint NULL DEFAULT NULL,
+  `d` tinyint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of submenu
@@ -2728,29 +2752,33 @@ INSERT INTO `submenu` VALUES (34, 2, 'Mutasi Bahan', 'mutasi_bahan/get_data', 1,
 -- ----------------------------
 DROP TABLE IF EXISTS `surat_ijin_poskestren`;
 CREATE TABLE `surat_ijin_poskestren`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `rekam_medis_id` int(11) NULL DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `rekam_medis_id` int NULL DEFAULT NULL,
   `tanggal` date NULL DEFAULT NULL,
   `keperluan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `tanggal_kembali` date NULL DEFAULT NULL,
   `foto` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of surat_ijin_poskestren
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for tahfidz
 -- ----------------------------
 DROP TABLE IF EXISTS `tahfidz`;
 CREATE TABLE `tahfidz`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `status_aktif` int(255) NULL DEFAULT NULL,
-  `created_at` timestamp(0) NULL DEFAULT current_timestamp(),
+  `status_aktif` int NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of tahfidz
@@ -2862,14 +2890,14 @@ INSERT INTO `tahfidz` VALUES (102, 'T100', 'TAHFIDZ 34A', '#000000', 1, '2024-11
 -- ----------------------------
 DROP TABLE IF EXISTS `tatib`;
 CREATE TABLE `tatib`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `kategori_tatib_id` int(11) NULL DEFAULT NULL,
-  `status_aktif` int(11) NULL DEFAULT NULL,
-  `poin` int(11) NULL DEFAULT NULL,
+  `kategori_tatib_id` int NULL DEFAULT NULL,
+  `status_aktif` int NULL DEFAULT NULL,
+  `poin` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 60 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 62 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of tatib
@@ -2939,7 +2967,7 @@ INSERT INTO `tatib` VALUES (59, 'C26', 'Berzina/Homo', 3, 1, 50);
 -- ----------------------------
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users`  (
-  `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
   `ip_address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `username` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -2948,11 +2976,11 @@ CREATE TABLE `users`  (
   `activation_code` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `forgotten_password_selector` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `forgotten_password_code` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `forgotten_password_time` int(10) UNSIGNED NULL DEFAULT NULL,
+  `forgotten_password_time` int UNSIGNED NULL DEFAULT NULL,
   `remember_selector` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `remember_code` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `created_on` int(10) UNSIGNED NOT NULL,
-  `last_login` int(10) UNSIGNED NULL DEFAULT NULL,
+  `created_on` int UNSIGNED NOT NULL,
+  `last_login` int UNSIGNED NULL DEFAULT NULL,
   `active` tinyint(1) UNSIGNED NULL DEFAULT NULL,
   `first_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `last_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -2960,19 +2988,19 @@ CREATE TABLE `users`  (
   `phone` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `pin` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `salt` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `anggota_id` int(11) NULL DEFAULT NULL,
+  `anggota_id` int NULL DEFAULT NULL,
   `table` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `email`(`email`) USING BTREE,
-  UNIQUE INDEX `activation_selector`(`activation_selector`) USING BTREE,
-  UNIQUE INDEX `forgotten_password_selector`(`forgotten_password_selector`) USING BTREE,
-  UNIQUE INDEX `remember_selector`(`remember_selector`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+  UNIQUE INDEX `email`(`email` ASC) USING BTREE,
+  UNIQUE INDEX `activation_selector`(`activation_selector` ASC) USING BTREE,
+  UNIQUE INDEX `forgotten_password_selector`(`forgotten_password_selector` ASC) USING BTREE,
+  UNIQUE INDEX `remember_selector`(`remember_selector` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, '127.0.0.1', 'administrator', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1730983274, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (1, '127.0.0.1', 'administrator', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1730986253, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, NULL, NULL);
 INSERT INTO `users` VALUES (7, '::1', 'ahm', '$2y$10$Hojls1F0e38bTgB9Gyn8Cer.L.3Ak0T3rx5MyDvE3teoxXmawwGFG', 'ahmad@impact.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1692973423, 1715747442, 1, 'AHM', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `users` VALUES (8, '112.215.237.81', 'rendy', '$2y$10$Zexem4W9luDl6kK6lUJfTet.gqskrcQqkFbK9osLRfEVYgp3wRJuq', 'rendy@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1697964271, 1697964280, 1, 'rendy', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `users` VALUES (21, '158.140.169.138', 'totok', '$2y$10$52VxVZPcFFMmD.WCYdihZeAUexuJHiEELQlR7jNlOuQWuKZwVy5te', 'totok@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1715824768, 1720236542, 1, 'SUHARIYANTO/TOTOK', NULL, NULL, NULL, NULL, NULL, 57, 'karyawan');
@@ -2985,11 +3013,11 @@ INSERT INTO `users` VALUES (24, '125.163.127.49', 'markus', '$2y$10$qnjYJ.5QAYbo
 -- ----------------------------
 DROP TABLE IF EXISTS `users_groups`;
 CREATE TABLE `users_groups`  (
-  `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `user_id` mediumint(8) UNSIGNED NOT NULL,
-  `group_id` mediumint(8) UNSIGNED NOT NULL,
+  `id` mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` mediumint UNSIGNED NOT NULL,
+  `group_id` mediumint UNSIGNED NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users_groups
@@ -3018,6 +3046,6 @@ INSERT INTO `users_groups` VALUES (19, 24, 5);
 -- View structure for v_groups_detail_submenu
 -- ----------------------------
 DROP VIEW IF EXISTS `v_groups_detail_submenu`;
-CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`localhost` SQL SECURITY DEFINER VIEW `v_groups_detail_submenu` AS select `groups_detail`.`id` AS `id`,`groups_detail`.`groups_id` AS `groups_id`,`groups_detail`.`submenu_id` AS `submenu_id`,`groups_detail`.`c` AS `c`,`groups_detail`.`r` AS `r`,`groups_detail`.`u` AS `u`,`groups_detail`.`d` AS `d`,`submenu`.`menu_id` AS `menu_id`,`submenu`.`submenu` AS `submenu`,`submenu`.`link` AS `link` from (`groups_detail` join `submenu` on(`groups_detail`.`submenu_id` = `submenu`.`id`)) ;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_groups_detail_submenu` AS select `groups_detail`.`id` AS `id`,`groups_detail`.`groups_id` AS `groups_id`,`groups_detail`.`submenu_id` AS `submenu_id`,`groups_detail`.`c` AS `c`,`groups_detail`.`r` AS `r`,`groups_detail`.`u` AS `u`,`groups_detail`.`d` AS `d`,`submenu`.`menu_id` AS `menu_id`,`submenu`.`submenu` AS `submenu`,`submenu`.`link` AS `link` from (`groups_detail` join `submenu` on(`groups_detail`.`submenu_id` = `submenu`.`id`)) ; ;
 
 SET FOREIGN_KEY_CHECKS = 1;

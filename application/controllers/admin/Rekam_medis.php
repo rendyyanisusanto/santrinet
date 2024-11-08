@@ -8,9 +8,9 @@ class rekam_medis extends MY_Controller {
 	public $arr = [
 			'title'				=>	'Master Data Rekam Medis',
 			'table'				=>	'rekam_medis',
-			'column'			=>	[ 'kode','santri_id', 'status_rekam_medis_id','tanggal','foto','uuid','status_aktif'],
-			'column_order'		=>	[ 'id','kode','santri_id', 'status_rekam_medis_id','tanggal','foto','uuid','status_aktif'],
-			'column_search'		=>	[ 'id','kode','santri_id', 'status_rekam_medis_id','tanggal','foto','uuid','status_aktif'],
+			'column'			=>	[ 'kode','santri_id', 'status_rekam_medis_id','tanggal','foto','uuid','lama_sakit','status_aktif'],
+			'column_order'		=>	[ 'id','kode','santri_id', 'status_rekam_medis_id','tanggal','foto','uuid','lama_sakit','status_aktif'],
+			'column_search'		=>	[ 'id','kode','santri_id', 'status_rekam_medis_id','tanggal','foto','uuid','lama_sakit','status_aktif'],
 			'order'				=>	['id'	=>	'DESC'],
 			'id'				=>	'id',
 			'parents_link'		=>	'role/admin/page/rekam_medis'
@@ -25,6 +25,7 @@ class rekam_medis extends MY_Controller {
 	{
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
+		$data['uuid']		=	generate_uuid();
 		$data['status_rekam_medis']	=	$this->db->query("select id, nama, color from status_rekam_medis")->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
@@ -40,7 +41,13 @@ class rekam_medis extends MY_Controller {
 			$data['data_edit']	=	$this->my_where($data['param']['table'], [
 				$data['param']['id']	=>	$id
 			])->row_array();
-
+			$data['uuid']		=	generate_uuid();
+			
+			$data['status_rekam_medis']	=	$this->db->query("select id, nama, color from status_rekam_medis")->result_array();
+			$data['santri']	=	$this->db->query("select id, nama from santri where id = ".$data['data_edit']['santri_id'])->row_array();
+			$data['perawat']	=	$this->db->query("select id, nama from perawat where id = ".$data['data_edit']['perawat_id'])->row_array();
+			$data['obat_terpilih']	=	$this->db->query("select obat_id as id, (select nama from obat where obat.id=obat_rm.obat_id) as text from obat_rm where rekam_medis_id = ".$id)->result_array();
+			$data['keluhan_terpilih']	=	$this->db->query("select keluhan_id as id, (select nama from keluhan where keluhan.id=keluhan_rm.keluhan_id) as text from keluhan_rm where rekam_medis_id = ".$id)->result_array();
 			if (!empty($data['data_edit'])) {
 				$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/edit_page/index',$data['param']['parents_link'].'/edit_page/js', 'role/global/modal_setting'],$data);
 			}			
@@ -187,50 +194,55 @@ class rekam_medis extends MY_Controller {
 	function simpan_data()
 	{
 		try {
-			$foto = $this->save_media([
-				'path'	=>	"./inc/media/rekam_medis/",
-				'filename' => 'foto',
-			]);
-			$uuid = generate_uuid();
-			$data = [
-				'santri_id'				=>	$_POST['santri_id'],
-				'status_rekam_medis_id'	=>	$_POST['status_rekam_medis_id'],
-				'tanggal'				=>	$_POST['tanggal'],
-				'kode'					=>	$_POST['kode'],
-				'uuid'					=>	$uuid,
-				'foto'					=>	((isset($foto)) ? $foto['file_name'] : ''),
-				'status_aktif'			=>	$_POST['status_aktif'],
-				'perawat_id'			=>	$_POST['perawat_id'],
-				'diagnosis'				=>	$_POST['diagnosis'],
-				'catatan'				=>	$_POST['catatan'],
-
-			];
-			if ($this->save_data('rekam_medis', $data)) {
-
-				$rm = $this->my_where('rekam_medis', ['uuid'=>$uuid])->row_array();
-
-				foreach ($_POST['obat_id'] as $key => $value) {
-					$this->save_data('obat_rm', [
-						'rekam_medis_id' =>	$rm['id'],
-						'obat_id'	=>	$value
+			$uuid = $_POST['uuid'];
+			$cek = $this->my_where('rekam_medis', ['uuid'=>$uuid])->num_rows();
+			if (!empty($uuid) && $cek == 0) {
+				// code...
+				$foto = $this->save_media([
+					'path'	=>	"./inc/media/rekam_medis/",
+					'filename' => 'foto',
+				]);
+				$data = [
+					'santri_id'				=>	$_POST['santri_id'],
+					'status_rekam_medis_id'	=>	$_POST['status_rekam_medis_id'],
+					'tanggal'				=>	$_POST['tanggal'],
+					'kode'					=>	$_POST['kode'],
+					'uuid'					=>	$_POST['uuid'],
+					'foto'					=>	((isset($foto)) ? $foto['file_name'] : ''),
+					'lama_sakit'			=>	$_POST['lama_sakit'],
+					'status_aktif'			=>	$_POST['status_aktif'],
+					'perawat_id'			=>	$_POST['perawat_id'],
+					'diagnosis'				=>	$_POST['diagnosis'],
+					'catatan'				=>	$_POST['catatan'],
+	
+				];
+				if ($this->save_data('rekam_medis', $data)) {
+	
+					$rm = $this->my_where('rekam_medis', ['uuid'=>$uuid])->row_array();
+	
+					foreach ($_POST['obat_id'] as $key => $value) {
+						$this->save_data('obat_rm', [
+							'rekam_medis_id' =>	$rm['id'],
+							'obat_id'	=>	$value
+						]);
+					}
+					foreach ($_POST['keluhan_id'] as $key => $value) {
+						$this->save_data('keluhan_rm', [
+							'rekam_medis_id' =>	$rm['id'],
+							'keluhan_id'	=>	$value
+						]);
+					}
+					echo json_encode([
+						'status'	=>	200,
+						'msg'		=>	'Data rekam_medis berhasil ditambahkan',
+						'foto'		=>	$foto
+					]);
+				}else{
+					echo json_encode([
+						'status'	=>	500,
+						'msg'		=>	'Data rekam_medis gagal ditambahkan'
 					]);
 				}
-				foreach ($_POST['keluhan_id'] as $key => $value) {
-					$this->save_data('keluhan_rm', [
-						'rekam_medis_id' =>	$rm['id'],
-						'keluhan_id'	=>	$value
-					]);
-				}
-				echo json_encode([
-					'status'	=>	200,
-					'msg'		=>	'Data rekam_medis berhasil ditambahkan',
-					'foto'		=>	$foto
-				]);
-			}else{
-				echo json_encode([
-					'status'	=>	500,
-					'msg'		=>	'Data rekam_medis gagal ditambahkan'
-				]);
 			}
 		} catch (Exception $e) {
 			echo json_encode([
@@ -243,31 +255,60 @@ class rekam_medis extends MY_Controller {
 	{
 		
 		try {
-			
-			// $data = [
-			// 	'nama' 	=> $_POST['nama'],
-			// 	'nis'	=>	$_POST['nis'],
-			// 	'jenis_kelamin'		=>	$_POST['jenis_kelamin'],
-			// 	'tempat_lahir'		=>	$_POST['tempat_lahir'],
-			// 	'tanggal_lahir'		=>	$_POST['tanggal_lahir'],
-			// 	'nama_ayah'			=>	$_POST['nama_ayah'],
-			// 	'nama_ibu'			=>	$_POST['nama_ibu'],
-			// 	'no_hp_ayah'		=>	$_POST['no_hp_ayah'],
-			// 	'no_hp_ibu'			=>	$_POST['no_hp_ibu'],
-			// 	'status_aktif' 		=> $_POST['status_aktif']
-			// ];
-			// if ($this->my_update('rekam_medis', $data, [$this->arr['id'] => $_POST['id']])) {
-			// 	echo json_encode([
-			// 		'status'	=>	200,
-			// 		'msg'		=>	'Data rekam_medis berhasil ditambahkan'
-			// 	]);
-			// }else{
-			// 	echo json_encode([
-			// 		'status'	=>	500,
-			// 		'msg'		=>	'Data rekam_medis gagal ditambahkan'
-			// 	]);
-			// }
-			echo json_encode($_POST);
+			$uuid = $_POST['uuid'];
+			$cek = $this->my_where('rekam_medis', ['uuid'=>$uuid])->num_rows();
+			if (!empty($uuid) && $cek == 0) {
+				// code...
+				$foto = $this->save_media([
+					'path'	=>	"./inc/media/rekam_medis/",
+					'filename' => 'foto',
+				]);
+				$data = [
+					'santri_id'				=>	$_POST['santri_id'],
+					'status_rekam_medis_id'	=>	$_POST['status_rekam_medis_id'],
+					'tanggal'				=>	$_POST['tanggal'],
+					'kode'					=>	$_POST['kode'],
+					'uuid'					=>	$_POST['uuid'],
+					'foto'					=>	(($_FILES['foto']) ? $foto['file_name'] : $_POST['foto_before']),
+					'lama_sakit'			=>	$_POST['lama_sakit'],
+					'status_aktif'			=>	$_POST['status_aktif'],
+					'perawat_id'			=>	$_POST['perawat_id'],
+					'diagnosis'				=>	$_POST['diagnosis'],
+					'catatan'				=>	$_POST['catatan'],
+	
+				];
+				if ($this->my_update('rekam_medis', $data, ['id'=>$_POST['id']])) {
+	
+					$this->db->delete('obat_rm', ['rekam_medis_id'=>$_POST['id']]);
+
+					foreach ($_POST['obat_id'] as $key => $value) {
+						$this->save_data('obat_rm', [
+							'rekam_medis_id' =>	$_POST['id'],
+							'obat_id'	=>	$value
+						]);
+					}
+
+					$this->db->delete('keluhan_rm', ['rekam_medis_id'=>$_POST['id']]);
+					
+					foreach ($_POST['keluhan_id'] as $key => $value) {
+						$this->save_data('keluhan_rm', [
+							'rekam_medis_id' =>	$_POST['id'],
+							'keluhan_id'	=>	$value
+						]);
+					}
+
+					echo json_encode([
+						'status'	=>	200,
+						'msg'		=>	'Data rekam_medis berhasil diedit',
+						'foto'		=>	$foto
+					]);
+				}else{
+					echo json_encode([
+						'status'	=>	500,
+						'msg'		=>	'Data rekam_medis gagal diedit'
+					]);
+				}
+			}
 		} catch (Exception $e) {
 			echo json_encode([
 					'status'	=>	500,
@@ -446,11 +487,12 @@ class rekam_medis extends MY_Controller {
 
             $status_rekam_medis = $this->db->query('select nama, color from status_rekam_medis where id='.$field['status_rekam_medis_id'])->row_array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
-            $row[]		=	'<a href="rekam_medis/edit_page/'.$field['id'].'" class="app-item"><b>'. $field['tanggal'] . '</b></a>';
+            $row[]		=	'<a href="rekam_medis/edit_page/'.$field['id'].'" class="app-item"><b>'. date('d-m-Y', strtotime($field['tanggal'])) . '</b></a>';
             $row[]		=	!empty($santri['nama']) ? '<b style="color:black">'.strtoupper($santri['nama']).'</b>' : '-';
             $row[]		=	$keluhan;
             $row[]		=	$obat;
             $row[]		=	'<b style="color : '.$status_rekam_medis['color'].'">'.$status_rekam_medis['nama'].'</b>' ;
+			$row[]		=	(!empty($field['foto'])) ? '<a target="__blank" href="'.base_url('inc/media/rekam_medis/'.$field['foto']).'">Download</a>' : "Tidak Ada";
             $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;
             $row[]		=	'<ul class="text-center icons-list">
             					<li class="dropdown">
@@ -458,7 +500,6 @@ class rekam_medis extends MY_Controller {
             							<i class="icon-menu9"></i>
             						</a>
             						<ul class="dropdown-menu dropdown-menu-right">
-            							<li><a href="rekam_medis/look_page/'.$field['id'].'" class="app-item"><i class="icon-eye"></i> Lihat</a></li>
             							<li><a href="rekam_medis/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah</a></li>
             							<li><a  onclick="change_status('.$field['id'].','.$field['status_aktif'].');"><i class="icon-close2"></i> '.(($field['status_aktif'] == 1) ? "Nonaktifkan" : "Aktifkan" ).'</a></li>
             							<li><a  onclick="delete_item('.$field['id'].');"><i class="icon-trash"></i> Hapus</a></li>

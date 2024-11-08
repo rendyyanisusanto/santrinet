@@ -13,11 +13,11 @@
 					<button class="btn btn-bulk-delete btn-danger" onclick="bulk_delete()" style="display: none;"><i class="icon-close2"></i> Hapus Data</button>
 				</div>
 				<div class="heading-elements">
-					<div class="heading-btn">
+					<!-- <div class="heading-btn">
 						<button type="button" class="btn btn-danger btn-icon" onclick="print_pdf();"><i class="icon-file-pdf"></i></button>
 						<button type="button" class="btn btn-success btn-icon" onclick="print_excel();"><i class="icon-file-excel"></i></button>
 						<button type="button" class="btn btn-info btn-print btn-icon" onclick="print();"><i class="icon-printer"></i></button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="panel-body" >
@@ -31,6 +31,7 @@
 								<th width="20%">Keluhan</th>
 								<th width="20%">Obat</th>
 								<th width="10%">St. Rawat</th>
+								<th width="10%">Foto</th>
 								<th width="10%">Status</th>
 								<th width="2%" class="text-center">Actions</th>
 							</tr>
