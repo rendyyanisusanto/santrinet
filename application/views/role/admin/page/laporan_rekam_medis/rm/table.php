@@ -48,15 +48,15 @@
                                 <?php $rowspan = count($data_tanggal['records']); ?>
                                 <!-- Baris pertama untuk tanggal -->
                                 <tr >
-                                    <td rowspan="<?= $rowspan + 1; ?>"><?= date('d/m/Y', strtotime($tanggal)); ?></td>
-                                    <td><?= $data_tanggal['records'][0]['status_rekam_medis']; ?></td>
+                                    <td rowspan="<?= $rowspan + 1; ?>"><a onclick="detail_rm_tanggal('<?php echo $tanggal ?>');"><?= date('d/m/Y', strtotime($tanggal)); ?></a></td>
+                                    <td><a style="color:black;"  onclick="detail_rm_tanggal('<?php echo $tanggal ?>');"><?= $data_tanggal['records'][0]['status_rekam_medis']; ?></a></td>
                                     <td><?= $data_tanggal['records'][0]['jumlah']; ?></td>
                                     <td rowspan="<?= $rowspan + 1; ?>" class="total-row"><?= $data_tanggal['total']; ?></td>
                                 </tr>
                                 <!-- Baris berikutnya untuk jenis dan jumlah -->
                                 <?php for ($i = 1; $i < $rowspan; $i++): ?>
                                     <tr>
-                                        <td><?= $data_tanggal['records'][$i]['status_rekam_medis']; ?></td>
+                                        <td><a style="color:black;" onclick="detail_rm_tanggal('<?php echo $tanggal ?>');"><?= $data_tanggal['records'][$i]['status_rekam_medis']; ?></a></td>
                                         <td><?= $data_tanggal['records'][$i]['jumlah']; ?></td>
                                     </tr>
                                 <?php endfor; ?>

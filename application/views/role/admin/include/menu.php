@@ -60,6 +60,9 @@
 							<li class="dropdown-header">Pelanggaran</li>
 							
 							<li><a class="app-item" href="pelanggaran/get_data"><i class="icon-align-center-horizontal"></i> Pelanggaran</a></li>
+							<li><a class="app-item" href="surat_pernyataan/get_data"><i class="icon-align-center-horizontal"></i> Surat Pernyataan(SP)</a></li>
+							<li><a class="app-item" href="pelanggaran/get_data"><i class="icon-align-center-horizontal"></i> Berita Acara Pemeriksaan (BAP)</a></li>
+							<li class="dropdown-header">Master Data</li>
 							<li><a class="app-item" href="tatib/get_data"><i class="icon-align-center-horizontal"></i> Tatib</a></li>
 							<li><a class="app-item" href="kategori_tatib/get_data"><i class="icon-align-center-horizontal"></i> Kategori Tatib</a></li>
 

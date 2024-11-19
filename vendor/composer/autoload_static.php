@@ -34,7 +34,9 @@ class ComposerStaticInitdaeb672f772b08cd2b6eeacf86a679a6
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Http\\Client\\' => 16,
             'PhpParser\\' => 10,
+            'PhpOffice\\PhpWord\\' => 18,
             'PhpOffice\\PhpSpreadsheet\\' => 25,
+            'PhpOffice\\Math\\' => 15,
         ),
         'M' => 
         array (
@@ -75,7 +77,7 @@ class ComposerStaticInitdaeb672f772b08cd2b6eeacf86a679a6
         ),
         'Svg\\' => 
         array (
-            0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+            0 => __DIR__ . '/..' . '/dompdf/php-svg-lib/src/Svg',
         ),
         'Sabberworm\\CSS\\' => 
         array (
@@ -98,9 +100,17 @@ class ComposerStaticInitdaeb672f772b08cd2b6eeacf86a679a6
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'PhpOffice\\PhpWord\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoffice/phpword/src/PhpWord',
+        ),
         'PhpOffice\\PhpSpreadsheet\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoffice/phpspreadsheet/src/PhpSpreadsheet',
+        ),
+        'PhpOffice\\Math\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoffice/math/src/Math',
         ),
         'MyCLabs\\Enum\\' => 
         array (
@@ -128,7 +138,7 @@ class ComposerStaticInitdaeb672f772b08cd2b6eeacf86a679a6
         ),
         'FontLib\\' => 
         array (
-            0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+            0 => __DIR__ . '/..' . '/dompdf/php-font-lib/src/FontLib',
         ),
         'Dompdf\\' => 
         array (

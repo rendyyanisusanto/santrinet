@@ -29,7 +29,7 @@ class Laporan_rekam_medis extends MY_Controller {
 	    $result = $this->db->query('SELECT 
 	                                    tanggal_periode.tanggal, 
 	                                    srm.nama AS status_rekam_medis, 
-	                                    COUNT(DISTINCT rm.santri_id) AS jumlah
+	                                    COUNT(rm.id) AS jumlah
 	                                FROM 
 	                                    (SELECT CURDATE() - INTERVAL seq DAY AS tanggal
 	                                     FROM (SELECT 0 AS seq UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6) AS days) AS tanggal_periode
@@ -80,6 +80,18 @@ class Laporan_rekam_medis extends MY_Controller {
 
 
 	    $this->my_view([$data['param']['parents_link'] . '/rm/table', $data['param']['parents_link'] . '/rm/js_rm'], $data);
+	}
+
+	function rm_daily(){
+
+	}
+
+	function detail_rm_tanggal(){
+	    $data['param'] = $this->arr;
+		$tanggal = $_POST['tanggal'];
+		$data['tanggal']= $tanggal;
+		$data['res']	=	$this->db->query('select tanggal,kode,diagnosis,(select nama from santri where santri_id=santri.id) as nama, (select color from status_rekam_medis where status_rekam_medis_id=status_rekam_medis.id) as color_rm, (select nama from status_rekam_medis where status_rekam_medis_id=status_rekam_medis.id) as nama_rm from rekam_medis where tanggal = "'.$tanggal.'"')->result_array();
+	    $this->my_view([$data['param']['parents_link'] . '/rm/detail_rm_tanggal'], $data);
 	}
 }
 

@@ -87,6 +87,7 @@ class tatib extends MY_Controller {
 			$data = [
 				'kode' => $_POST['kode'],
 				'nama' => $_POST['nama'],
+				'poin'	=>	$_POST['poin'],
 				'kategori_tatib_id' => $_POST['kategori_tatib_id'],
 				'status_aktif' => $_POST['status_aktif']
 			];
@@ -116,6 +117,7 @@ class tatib extends MY_Controller {
 			$data = [
 				'kode' => $_POST['kode'],
 				'nama' => $_POST['nama'],
+				'poin'	=>	$_POST['poin'],
 				'kategori_tatib_id' => $_POST['kategori_tatib_id'],
 				'status_aktif' => $_POST['status_aktif']
 			];

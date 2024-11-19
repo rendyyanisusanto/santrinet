@@ -25,7 +25,7 @@
                             <div class="col-md-6">
                                 <div class="panel panel-body">
                                     
-                                    <form id="app-presence-daily" class="form-horizontal" action="Presensi/get_presence_daily" method="POST">
+                                    <form id="app-rm-daily" class="form-horizontal" action="laporan_rekam_medis/get_presence_daily" method="POST">
                                         <div class="form-group">
                                                 <label class="col-lg-3 control-label">Tanggal : <i class="text-danger">*</i></label>
                                                 <div class="col-lg-9">
@@ -33,13 +33,13 @@
                                                 </div>
                                         </div>
 
-                                        <button type="button" onclick="get_presence_daily();" class="btn btn-primary btn-sm"><i class="icon-spinner"></i> Proses</button>
+                                        <button type="button" onclick="get_rm_daily();" class="btn btn-primary btn-sm"><i class="icon-spinner"></i> Proses</button>
                                     </form>
                                 </div>
                             </div>
                             
                         </div>
-                        <div class="content-presensce-daily" style="padding: 1%;background:gray;">
+                        <div class="content-rm-daily" style="padding: 1%;background:gray;">
 
                         </div>
                     </div>
@@ -88,4 +88,17 @@
         </div>
     </div>
 
+</div>
+
+<div class="modal modal-rm-tanggal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body modal-rm-tanggal-div">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-close2"></i> Close</button>
+              </div>
+        </div>
+    </div>
 </div>
