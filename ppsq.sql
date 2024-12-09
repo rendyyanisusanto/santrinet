@@ -1,17 +1,17 @@
 /*
- Navicat Premium Dump SQL
+ Navicat Premium Data Transfer
 
- Source Server         : LOCAL
+ Source Server         : server debian
  Source Server Type    : MySQL
- Source Server Version : 100432 (10.4.32-MariaDB)
- Source Host           : localhost:3306
+ Source Server Version : 100526
+ Source Host           : 192.168.100.100:3306
  Source Schema         : ppsq
 
  Target Server Type    : MySQL
- Target Server Version : 100432 (10.4.32-MariaDB)
+ Target Server Version : 100526
  File Encoding         : 65001
 
- Date: 08/11/2024 08:41:04
+ Date: 09/12/2024 13:46:12
 */
 
 SET NAMES utf8mb4;
@@ -22,85 +22,85 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `akun`;
 CREATE TABLE `akun`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `no_ref` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `nama` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  `indukakun_id` int NULL DEFAULT NULL,
+  `indukakun_id` int(11) NULL DEFAULT NULL,
   `saldo_normal` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  `create_at` timestamp NULL DEFAULT current_timestamp,
-  `is_edit` int NULL DEFAULT NULL,
+  `create_at` timestamp(0) NULL DEFAULT current_timestamp(),
+  `is_edit` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of akun
 -- ----------------------------
-INSERT INTO `akun` VALUES (1, '1101', 'Kas', 1, 'D', '2020-12-11 16:39:34', 0);
-INSERT INTO `akun` VALUES (2, '1102', 'BANK', 1, 'D', '2020-12-11 16:39:44', 0);
-INSERT INTO `akun` VALUES (3, '1103', 'Deposito', 1, 'D', '2020-12-11 16:39:55', 0);
-INSERT INTO `akun` VALUES (4, '1104', 'Piutang', 1, 'D', '2020-12-11 16:40:04', 0);
-INSERT INTO `akun` VALUES (5, '1105', 'Persediaan', 1, 'D', '2020-12-11 16:40:12', 0);
-INSERT INTO `akun` VALUES (6, '1201', 'Aktiva Tetap', 2, 'D', '2020-12-11 16:40:39', 0);
-INSERT INTO `akun` VALUES (7, '1202', 'Penyusutan', 2, 'D', '2020-12-11 16:40:47', 0);
-INSERT INTO `akun` VALUES (8, '1203', 'Investasi', 2, 'D', '2020-12-11 16:40:58', 0);
-INSERT INTO `akun` VALUES (9, '2101', 'Hutang Usaha', 3, 'K', '2020-12-11 16:41:10', 0);
-INSERT INTO `akun` VALUES (10, '2102', 'Hutang Pajak', 3, 'K', '2020-12-11 16:41:22', 0);
-INSERT INTO `akun` VALUES (11, '2103', 'Kewajiban Lancar Lain', 3, 'K', '2020-12-11 16:41:35', 0);
-INSERT INTO `akun` VALUES (12, '2201', 'Hutang Pihak ke 3', 4, 'K', '2020-12-11 16:41:49', 0);
-INSERT INTO `akun` VALUES (13, '2202', 'Hutang Program Lain', 4, 'K', '2020-12-11 16:42:01', 0);
-INSERT INTO `akun` VALUES (14, '2203', 'Kewajiban Jangka Panjang Lain', 4, 'K', '2020-12-11 16:42:16', 0);
-INSERT INTO `akun` VALUES (15, '3101', 'Modal Usaha', 5, 'K', '2020-12-11 16:42:26', 0);
-INSERT INTO `akun` VALUES (16, '3102', 'Prive', 5, 'D', '2020-12-11 16:42:35', 0);
-INSERT INTO `akun` VALUES (17, '4101', 'Donasi', 6, 'D', '2020-12-11 16:42:47', 0);
-INSERT INTO `akun` VALUES (18, '4102', 'Sumbangan', 6, 'D', '2020-12-11 16:42:55', 0);
-INSERT INTO `akun` VALUES (19, '4201', 'Penghasilan Layanan', 7, 'K', '2020-12-11 16:43:12', 0);
-INSERT INTO `akun` VALUES (20, '4202', 'Pendapatan', 7, 'K', '2020-12-11 16:43:35', 0);
-INSERT INTO `akun` VALUES (21, '4301', 'Pendapatan Lain', 8, 'K', '2020-12-11 16:44:06', 0);
-INSERT INTO `akun` VALUES (22, '5101', 'Beban Gaji', 9, 'D', '2020-12-11 16:44:15', 0);
-INSERT INTO `akun` VALUES (23, '5102', 'Biaya Perjalanan', 9, 'D', '2020-12-11 16:44:27', 0);
-INSERT INTO `akun` VALUES (24, '5103', 'Biaya Kantor', 9, 'D', '2020-12-11 16:44:42', 0);
-INSERT INTO `akun` VALUES (25, '5104', 'Biaya Sewa', 9, 'D', '2020-12-11 16:44:52', 0);
-INSERT INTO `akun` VALUES (26, '5105', 'Biaya Pemeliharaan', 9, 'D', '2020-12-11 16:45:02', 0);
-INSERT INTO `akun` VALUES (27, '5106', 'Biaya Rapat', 9, 'D', '2020-12-11 16:45:14', 0);
-INSERT INTO `akun` VALUES (28, '5107', 'Biaya Lain', 9, 'D', '2020-12-11 16:45:20', 0);
-INSERT INTO `akun` VALUES (35, '4104', 'Diskon Lain', 6, 'D', '2022-07-23 08:31:56', 0);
-INSERT INTO `akun` VALUES (36, '4203', 'Diskon Penjualan', 7, 'D', '2023-05-04 20:27:20', 0);
-INSERT INTO `akun` VALUES (37, '1106', 'Diskon Pembelian', 1, 'K', '2023-05-04 20:30:00', 0);
-INSERT INTO `akun` VALUES (38, '1108', 'PPn Pembelian', 1, 'K', '2023-05-05 21:03:37', 0);
-INSERT INTO `akun` VALUES (39, '4204', 'PPn Penjualan', 7, 'D', '2023-05-05 21:03:56', 0);
-INSERT INTO `akun` VALUES (40, '1108', 'Persediaan Produk', 1, 'D', '2023-05-21 07:35:11', 0);
+INSERT INTO `akun` VALUES (1, '1101', 'Kas', 1, 'D', '2020-12-12 04:39:34', 0);
+INSERT INTO `akun` VALUES (2, '1102', 'BANK', 1, 'D', '2020-12-12 04:39:44', 0);
+INSERT INTO `akun` VALUES (3, '1103', 'Deposito', 1, 'D', '2020-12-12 04:39:55', 0);
+INSERT INTO `akun` VALUES (4, '1104', 'Piutang', 1, 'D', '2020-12-12 04:40:04', 0);
+INSERT INTO `akun` VALUES (5, '1105', 'Persediaan', 1, 'D', '2020-12-12 04:40:12', 0);
+INSERT INTO `akun` VALUES (6, '1201', 'Aktiva Tetap', 2, 'D', '2020-12-12 04:40:39', 0);
+INSERT INTO `akun` VALUES (7, '1202', 'Penyusutan', 2, 'D', '2020-12-12 04:40:47', 0);
+INSERT INTO `akun` VALUES (8, '1203', 'Investasi', 2, 'D', '2020-12-12 04:40:58', 0);
+INSERT INTO `akun` VALUES (9, '2101', 'Hutang Usaha', 3, 'K', '2020-12-12 04:41:10', 0);
+INSERT INTO `akun` VALUES (10, '2102', 'Hutang Pajak', 3, 'K', '2020-12-12 04:41:22', 0);
+INSERT INTO `akun` VALUES (11, '2103', 'Kewajiban Lancar Lain', 3, 'K', '2020-12-12 04:41:35', 0);
+INSERT INTO `akun` VALUES (12, '2201', 'Hutang Pihak ke 3', 4, 'K', '2020-12-12 04:41:49', 0);
+INSERT INTO `akun` VALUES (13, '2202', 'Hutang Program Lain', 4, 'K', '2020-12-12 04:42:01', 0);
+INSERT INTO `akun` VALUES (14, '2203', 'Kewajiban Jangka Panjang Lain', 4, 'K', '2020-12-12 04:42:16', 0);
+INSERT INTO `akun` VALUES (15, '3101', 'Modal Usaha', 5, 'K', '2020-12-12 04:42:26', 0);
+INSERT INTO `akun` VALUES (16, '3102', 'Prive', 5, 'D', '2020-12-12 04:42:35', 0);
+INSERT INTO `akun` VALUES (17, '4101', 'Donasi', 6, 'D', '2020-12-12 04:42:47', 0);
+INSERT INTO `akun` VALUES (18, '4102', 'Sumbangan', 6, 'D', '2020-12-12 04:42:55', 0);
+INSERT INTO `akun` VALUES (19, '4201', 'Penghasilan Layanan', 7, 'K', '2020-12-12 04:43:12', 0);
+INSERT INTO `akun` VALUES (20, '4202', 'Pendapatan', 7, 'K', '2020-12-12 04:43:35', 0);
+INSERT INTO `akun` VALUES (21, '4301', 'Pendapatan Lain', 8, 'K', '2020-12-12 04:44:06', 0);
+INSERT INTO `akun` VALUES (22, '5101', 'Beban Gaji', 9, 'D', '2020-12-12 04:44:15', 0);
+INSERT INTO `akun` VALUES (23, '5102', 'Biaya Perjalanan', 9, 'D', '2020-12-12 04:44:27', 0);
+INSERT INTO `akun` VALUES (24, '5103', 'Biaya Kantor', 9, 'D', '2020-12-12 04:44:42', 0);
+INSERT INTO `akun` VALUES (25, '5104', 'Biaya Sewa', 9, 'D', '2020-12-12 04:44:52', 0);
+INSERT INTO `akun` VALUES (26, '5105', 'Biaya Pemeliharaan', 9, 'D', '2020-12-12 04:45:02', 0);
+INSERT INTO `akun` VALUES (27, '5106', 'Biaya Rapat', 9, 'D', '2020-12-12 04:45:14', 0);
+INSERT INTO `akun` VALUES (28, '5107', 'Biaya Lain', 9, 'D', '2020-12-12 04:45:20', 0);
+INSERT INTO `akun` VALUES (35, '4104', 'Diskon Lain', 6, 'D', '2022-07-23 19:31:56', 0);
+INSERT INTO `akun` VALUES (36, '4203', 'Diskon Penjualan', 7, 'D', '2023-05-05 07:27:20', 0);
+INSERT INTO `akun` VALUES (37, '1106', 'Diskon Pembelian', 1, 'K', '2023-05-05 07:30:00', 0);
+INSERT INTO `akun` VALUES (38, '1108', 'PPn Pembelian', 1, 'K', '2023-05-06 08:03:37', 0);
+INSERT INTO `akun` VALUES (39, '4204', 'PPn Penjualan', 7, 'D', '2023-05-06 08:03:56', 0);
+INSERT INTO `akun` VALUES (40, '1108', 'Persediaan Produk', 1, 'D', '2023-05-21 18:35:11', 0);
 
 -- ----------------------------
 -- Table structure for asrama
 -- ----------------------------
 DROP TABLE IF EXISTS `asrama`;
 CREATE TABLE `asrama`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `created_at` timestamp(0) NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of asrama
 -- ----------------------------
-INSERT INTO `asrama` VALUES (2, 'A', 'Asrama A', '#000000', 1, '2024-11-01 16:02:04');
-INSERT INTO `asrama` VALUES (3, 'B', 'Asrama B', '#0537ff', 1, '2024-11-01 16:02:15');
-INSERT INTO `asrama` VALUES (4, 'C', 'Asrama C', '#ff0000', 1, '2024-11-01 16:02:25');
+INSERT INTO `asrama` VALUES (2, 'A', 'Asrama A', '#000000', 1, '2024-11-02 03:02:04');
+INSERT INTO `asrama` VALUES (3, 'B', 'Asrama B', '#0537ff', 1, '2024-11-02 03:02:15');
+INSERT INTO `asrama` VALUES (4, 'C', 'Asrama C', '#ff0000', 1, '2024-11-02 03:02:25');
 
 -- ----------------------------
 -- Table structure for groups
 -- ----------------------------
 DROP TABLE IF EXISTS `groups`;
 CREATE TABLE `groups`  (
-  `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of groups
@@ -119,17 +119,17 @@ INSERT INTO `groups` VALUES (9, 'FINANCE', 'Vindy');
 -- ----------------------------
 DROP TABLE IF EXISTS `groups_detail`;
 CREATE TABLE `groups_detail`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `groups_id` int UNSIGNED NULL DEFAULT NULL,
-  `submenu_id` int NULL DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `groups_id` int(10) UNSIGNED NULL DEFAULT NULL,
+  `submenu_id` int(11) NULL DEFAULT NULL,
   `c` tinyint(1) NULL DEFAULT NULL,
   `r` tinyint(1) NULL DEFAULT NULL,
   `u` tinyint(1) NULL DEFAULT NULL,
   `d` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `groups_id`(`groups_id` ASC) USING BTREE,
+  INDEX `groups_id`(`groups_id`) USING BTREE,
   CONSTRAINT `groups_detail_ibfk_1` FOREIGN KEY (`groups_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 385 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 385 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of groups_detail
@@ -368,15 +368,15 @@ INSERT INTO `groups_detail` VALUES (384, 4, 33, 0, 0, 0, 0);
 -- ----------------------------
 DROP TABLE IF EXISTS `kamar`;
 CREATE TABLE `kamar`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `asrama_id` int NULL DEFAULT NULL,
+  `asrama_id` int(11) NULL DEFAULT NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `asrama_id`(`asrama_id` ASC) USING BTREE,
+  INDEX `asrama_id`(`asrama_id`) USING BTREE,
   CONSTRAINT `kamar_ibfk_1` FOREIGN KEY (`asrama_id`) REFERENCES `asrama` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of kamar
@@ -394,34 +394,30 @@ INSERT INTO `kamar` VALUES (7, 'C2', 'Kamar C2', 4, 1);
 -- ----------------------------
 DROP TABLE IF EXISTS `kamar_santri`;
 CREATE TABLE `kamar_santri`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `santri_id` int NULL DEFAULT NULL,
-  `kamar_id` int NULL DEFAULT NULL,
-  `tahun` int NULL DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `santri_id` int(11) NULL DEFAULT NULL,
+  `kamar_id` int(11) NULL DEFAULT NULL,
+  `tahun` int(11) NULL DEFAULT NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `kamar_id`(`kamar_id` ASC) USING BTREE,
-  INDEX `santri_id`(`santri_id` ASC) USING BTREE,
+  INDEX `kamar_id`(`kamar_id`) USING BTREE,
+  INDEX `santri_id`(`santri_id`) USING BTREE,
   CONSTRAINT `kamar_santri_ibfk_2` FOREIGN KEY (`kamar_id`) REFERENCES `kamar` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `kamar_santri_ibfk_3` FOREIGN KEY (`santri_id`) REFERENCES `santri` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of kamar_santri
--- ----------------------------
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for kategori_tatib
 -- ----------------------------
 DROP TABLE IF EXISTS `kategori_tatib`;
 CREATE TABLE `kategori_tatib`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `status_aktif` int NULL DEFAULT NULL,
+  `status_aktif` int(11) NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of kategori_tatib
@@ -435,12 +431,12 @@ INSERT INTO `kategori_tatib` VALUES (3, 'C', 'BERAT', 1, 'red');
 -- ----------------------------
 DROP TABLE IF EXISTS `keluhan`;
 CREATE TABLE `keluhan`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `status_aktif` int NULL DEFAULT 1,
+  `status_aktif` int(11) NULL DEFAULT 1,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 171 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 171 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of keluhan
@@ -621,11 +617,11 @@ INSERT INTO `keluhan` VALUES (170, 'Kaki Bolong', NULL, 1);
 -- ----------------------------
 DROP TABLE IF EXISTS `keluhan_rm`;
 CREATE TABLE `keluhan_rm`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `rekam_medis_id` int NULL DEFAULT NULL,
-  `keluhan_id` int NULL DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rekam_medis_id` int(11) NULL DEFAULT NULL,
+  `keluhan_id` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of keluhan_rm
@@ -670,11 +666,11 @@ INSERT INTO `keluhan_rm` VALUES (39, 15, 170);
 -- ----------------------------
 DROP TABLE IF EXISTS `lembaga_pengurus`;
 CREATE TABLE `lembaga_pengurus`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of lembaga_pengurus
@@ -695,146 +691,142 @@ INSERT INTO `lembaga_pengurus` VALUES (10, 'J', 'PAU');
 -- ----------------------------
 DROP TABLE IF EXISTS `login_attempts`;
 CREATE TABLE `login_attempts`  (
-  `id` mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
   `ip_address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `login` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `time` int UNSIGNED NULL DEFAULT NULL,
+  `time` int(10) UNSIGNED NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 279 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of login_attempts
--- ----------------------------
+) ENGINE = InnoDB AUTO_INCREMENT = 280 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for madin
 -- ----------------------------
 DROP TABLE IF EXISTS `madin`;
 CREATE TABLE `madin`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `status_aktif` int(11) NULL DEFAULT NULL,
+  `created_at` timestamp(0) NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 104 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 104 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of madin
 -- ----------------------------
-INSERT INTO `madin` VALUES (1, 'M1688', 'Ula', '#ff0000', 1, '2024-11-01 14:42:53');
-INSERT INTO `madin` VALUES (3, 'M2412', 'Tsani', '#000000', 1, '2024-11-01 14:50:33');
-INSERT INTO `madin` VALUES (4, 'K001', 'KELAS 1A', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (5, 'K002', 'KELAS 1B', '#d8abab', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (6, 'K003', 'KELAS 1C', '#fa0000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (7, 'K004', 'KELAS 2A', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (8, 'K005', 'KELAS 2B', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (9, 'K006', 'KELAS 2C', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (10, 'K007', 'KELAS 3A', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (11, 'K008', 'KELAS 3B', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (12, 'K009', 'KELAS 3C', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (13, 'K010', 'KELAS 4A', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (14, 'K011', 'KELAS 4B', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (15, 'K012', 'KELAS 4C', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (16, 'K013', 'KELAS 5A', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (17, 'K014', 'KELAS 5B', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (18, 'K015', 'KELAS 5C', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (19, 'K016', 'KELAS 6A', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (20, 'K017', 'KELAS 6B', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (21, 'K018', 'KELAS 6C', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (22, 'K019', 'KELAS 7A', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (23, 'K020', 'KELAS 7B', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (24, 'K021', 'KELAS 7C', '#000000', 1, '2024-11-01 15:08:33');
-INSERT INTO `madin` VALUES (25, 'K022', 'KELAS 8A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (26, 'K023', 'KELAS 8B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (27, 'K024', 'KELAS 8C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (28, 'K025', 'KELAS 9A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (29, 'K026', 'KELAS 9B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (30, 'K027', 'KELAS 9C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (31, 'K028', 'KELAS 10A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (32, 'K029', 'KELAS 10B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (33, 'K030', 'KELAS 10C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (34, 'K031', 'KELAS 11A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (35, 'K032', 'KELAS 11B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (36, 'K033', 'KELAS 11C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (37, 'K034', 'KELAS 12A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (38, 'K035', 'KELAS 12B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (39, 'K036', 'KELAS 12C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (40, 'K037', 'KELAS 13A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (41, 'K038', 'KELAS 13B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (42, 'K039', 'KELAS 13C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (43, 'K040', 'KELAS 14A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (44, 'K041', 'KELAS 14B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (45, 'K042', 'KELAS 14C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (46, 'K043', 'KELAS 15A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (47, 'K044', 'KELAS 15B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (48, 'K045', 'KELAS 15C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (49, 'K046', 'KELAS 16A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (50, 'K047', 'KELAS 16B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (51, 'K048', 'KELAS 16C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (52, 'K049', 'KELAS 17A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (53, 'K050', 'KELAS 17B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (54, 'K051', 'KELAS 17C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (55, 'K052', 'KELAS 18A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (56, 'K053', 'KELAS 18B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (57, 'K054', 'KELAS 18C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (58, 'K055', 'KELAS 19A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (59, 'K056', 'KELAS 19B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (60, 'K057', 'KELAS 19C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (61, 'K058', 'KELAS 20A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (62, 'K059', 'KELAS 20B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (63, 'K060', 'KELAS 20C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (64, 'K061', 'KELAS 21A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (65, 'K062', 'KELAS 21B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (66, 'K063', 'KELAS 21C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (67, 'K064', 'KELAS 22A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (68, 'K065', 'KELAS 22B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (69, 'K066', 'KELAS 22C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (70, 'K067', 'KELAS 23A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (71, 'K068', 'KELAS 23B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (72, 'K069', 'KELAS 23C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (73, 'K070', 'KELAS 24A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (74, 'K071', 'KELAS 24B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (75, 'K072', 'KELAS 24C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (76, 'K073', 'KELAS 25A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (77, 'K074', 'KELAS 25B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (78, 'K075', 'KELAS 25C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (79, 'K076', 'KELAS 26A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (80, 'K077', 'KELAS 26B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (81, 'K078', 'KELAS 26C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (82, 'K079', 'KELAS 27A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (83, 'K080', 'KELAS 27B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (84, 'K081', 'KELAS 27C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (85, 'K082', 'KELAS 28A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (86, 'K083', 'KELAS 28B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (87, 'K084', 'KELAS 28C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (88, 'K085', 'KELAS 29A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (89, 'K086', 'KELAS 29B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (90, 'K087', 'KELAS 29C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (91, 'K088', 'KELAS 30A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (92, 'K089', 'KELAS 30B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (93, 'K090', 'KELAS 30C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (94, 'K091', 'KELAS 31A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (95, 'K092', 'KELAS 31B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (96, 'K093', 'KELAS 31C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (97, 'K094', 'KELAS 32A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (98, 'K095', 'KELAS 32B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (99, 'K096', 'KELAS 32C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (100, 'K097', 'KELAS 33A', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (101, 'K098', 'KELAS 33B', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (102, 'K099', 'KELAS 33C', '#000000', 1, '2024-11-01 15:08:34');
-INSERT INTO `madin` VALUES (103, 'K100', 'KELAS 34A', '#000000', 1, '2024-11-01 15:08:34');
+INSERT INTO `madin` VALUES (1, 'M1688', 'Ula', '#ff0000', 1, '2024-11-02 01:42:53');
+INSERT INTO `madin` VALUES (3, 'M2412', 'Tsani', '#000000', 1, '2024-11-02 01:50:33');
+INSERT INTO `madin` VALUES (4, 'K001', 'KELAS 1A', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (5, 'K002', 'KELAS 1B', '#d8abab', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (6, 'K003', 'KELAS 1C', '#fa0000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (7, 'K004', 'KELAS 2A', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (8, 'K005', 'KELAS 2B', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (9, 'K006', 'KELAS 2C', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (10, 'K007', 'KELAS 3A', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (11, 'K008', 'KELAS 3B', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (12, 'K009', 'KELAS 3C', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (13, 'K010', 'KELAS 4A', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (14, 'K011', 'KELAS 4B', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (15, 'K012', 'KELAS 4C', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (16, 'K013', 'KELAS 5A', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (17, 'K014', 'KELAS 5B', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (18, 'K015', 'KELAS 5C', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (19, 'K016', 'KELAS 6A', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (20, 'K017', 'KELAS 6B', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (21, 'K018', 'KELAS 6C', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (22, 'K019', 'KELAS 7A', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (23, 'K020', 'KELAS 7B', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (24, 'K021', 'KELAS 7C', '#000000', 1, '2024-11-02 02:08:33');
+INSERT INTO `madin` VALUES (25, 'K022', 'KELAS 8A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (26, 'K023', 'KELAS 8B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (27, 'K024', 'KELAS 8C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (28, 'K025', 'KELAS 9A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (29, 'K026', 'KELAS 9B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (30, 'K027', 'KELAS 9C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (31, 'K028', 'KELAS 10A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (32, 'K029', 'KELAS 10B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (33, 'K030', 'KELAS 10C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (34, 'K031', 'KELAS 11A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (35, 'K032', 'KELAS 11B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (36, 'K033', 'KELAS 11C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (37, 'K034', 'KELAS 12A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (38, 'K035', 'KELAS 12B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (39, 'K036', 'KELAS 12C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (40, 'K037', 'KELAS 13A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (41, 'K038', 'KELAS 13B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (42, 'K039', 'KELAS 13C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (43, 'K040', 'KELAS 14A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (44, 'K041', 'KELAS 14B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (45, 'K042', 'KELAS 14C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (46, 'K043', 'KELAS 15A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (47, 'K044', 'KELAS 15B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (48, 'K045', 'KELAS 15C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (49, 'K046', 'KELAS 16A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (50, 'K047', 'KELAS 16B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (51, 'K048', 'KELAS 16C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (52, 'K049', 'KELAS 17A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (53, 'K050', 'KELAS 17B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (54, 'K051', 'KELAS 17C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (55, 'K052', 'KELAS 18A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (56, 'K053', 'KELAS 18B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (57, 'K054', 'KELAS 18C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (58, 'K055', 'KELAS 19A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (59, 'K056', 'KELAS 19B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (60, 'K057', 'KELAS 19C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (61, 'K058', 'KELAS 20A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (62, 'K059', 'KELAS 20B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (63, 'K060', 'KELAS 20C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (64, 'K061', 'KELAS 21A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (65, 'K062', 'KELAS 21B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (66, 'K063', 'KELAS 21C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (67, 'K064', 'KELAS 22A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (68, 'K065', 'KELAS 22B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (69, 'K066', 'KELAS 22C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (70, 'K067', 'KELAS 23A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (71, 'K068', 'KELAS 23B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (72, 'K069', 'KELAS 23C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (73, 'K070', 'KELAS 24A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (74, 'K071', 'KELAS 24B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (75, 'K072', 'KELAS 24C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (76, 'K073', 'KELAS 25A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (77, 'K074', 'KELAS 25B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (78, 'K075', 'KELAS 25C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (79, 'K076', 'KELAS 26A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (80, 'K077', 'KELAS 26B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (81, 'K078', 'KELAS 26C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (82, 'K079', 'KELAS 27A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (83, 'K080', 'KELAS 27B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (84, 'K081', 'KELAS 27C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (85, 'K082', 'KELAS 28A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (86, 'K083', 'KELAS 28B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (87, 'K084', 'KELAS 28C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (88, 'K085', 'KELAS 29A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (89, 'K086', 'KELAS 29B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (90, 'K087', 'KELAS 29C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (91, 'K088', 'KELAS 30A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (92, 'K089', 'KELAS 30B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (93, 'K090', 'KELAS 30C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (94, 'K091', 'KELAS 31A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (95, 'K092', 'KELAS 31B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (96, 'K093', 'KELAS 31C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (97, 'K094', 'KELAS 32A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (98, 'K095', 'KELAS 32B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (99, 'K096', 'KELAS 32C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (100, 'K097', 'KELAS 33A', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (101, 'K098', 'KELAS 33B', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (102, 'K099', 'KELAS 33C', '#000000', 1, '2024-11-02 02:08:34');
+INSERT INTO `madin` VALUES (103, 'K100', 'KELAS 34A', '#000000', 1, '2024-11-02 02:08:34');
 
 -- ----------------------------
 -- Table structure for menu
 -- ----------------------------
 DROP TABLE IF EXISTS `menu`;
 CREATE TABLE `menu`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `menu` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of menu
@@ -853,12 +845,12 @@ INSERT INTO `menu` VALUES (8, 'HR');
 -- ----------------------------
 DROP TABLE IF EXISTS `obat`;
 CREATE TABLE `obat`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `status_aktif` int NULL DEFAULT 1,
+  `status_aktif` int(11) NULL DEFAULT 1,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of obat
@@ -971,11 +963,11 @@ INSERT INTO `obat` VALUES (102, 'OBTA001', 'OBAT REFLEXIN', 1);
 -- ----------------------------
 DROP TABLE IF EXISTS `obat_rm`;
 CREATE TABLE `obat_rm`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `rekam_medis_id` int NULL DEFAULT NULL,
-  `obat_id` int NULL DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rekam_medis_id` int(11) NULL DEFAULT NULL,
+  `obat_id` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 40 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of obat_rm
@@ -1019,59 +1011,66 @@ INSERT INTO `obat_rm` VALUES (39, 15, 99);
 -- ----------------------------
 DROP TABLE IF EXISTS `pelanggaran`;
 CREATE TABLE `pelanggaran`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `santri_id` int(11) NULL DEFAULT NULL,
   `pelanggaran` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `tatib_id` int NULL DEFAULT NULL,
+  `tatib_id` int(11) NULL DEFAULT NULL,
   `takzir` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `pengurus_id` int NULL DEFAULT NULL,
-  `pelapor_id` int NULL DEFAULT NULL,
+  `pengurus_id` int(11) NULL DEFAULT NULL,
+  `pelapor_id` int(11) NULL DEFAULT NULL,
   `status_dokumen_pelanggaran` enum('BELUM_MENGAMBIL','MENGAMBIL_BELUM_MENGEMBALIKAN','MENGAMBIL_SUDAH_MENGEMBALIKAN') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `tanggal` date NULL DEFAULT NULL,
+  `status_aktif` tinyint(1) NULL DEFAULT NULL,
+  `kronologi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `foto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `uuid` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `status_takzir` enum('BELUM','SUDAH') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'BELUM',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of pelanggaran
 -- ----------------------------
+INSERT INTO `pelanggaran` VALUES (1, 'P9363', 1021, 'BELUM', 41, 'Nasehat + Gundul + SP1', 36, 9, 'BELUM_MENGAMBIL', '2024-11-08', 1, 'tes', 'e126391a91c049b228b2bb8d076aca65.jpg', 'e7349158-225a-40fa-8e6c-ddfd13e74722', 'BELUM');
+INSERT INTO `pelanggaran` VALUES (2, 'P7208', 448, 'Berbohong membawa makanan banyak', 11, 'Nasehat + Gundul + SP1', 39, 44, 'BELUM_MENGAMBIL', '2024-11-08', 1, 'tidak jujur', '7f0128159bdf1c460560206a8c45e861.png', '82de3159-e826-4e9d-82ce-24f1306e0c31', 'BELUM');
+INSERT INTO `pelanggaran` VALUES (3, 'P5925', 384, 'Menjemur pakaian', 62, 'Nasehat + Gundul + SP1', 40, 45, 'BELUM_MENGAMBIL', '2024-11-08', 1, 'menjemur pakaian', 'f4c3f5e29d01eaed4c0835dd2e4fdfd5.jpg', '48ee6a47-a60e-49d5-8434-1565d39ff95b', 'BELUM');
+INSERT INTO `pelanggaran` VALUES (4, 'P7665', 1261, 'Merokok, Kabur, Berbohong', 41, 'Nasehat + Gundul + SP1', 47, 46, 'BELUM_MENGAMBIL', '2024-11-08', 1, 'menjemur pakaian', NULL, 'f2ab6e44-6faa-4a91-9ee8-bd3ddf6a862e', 'BELUM');
+INSERT INTO `pelanggaran` VALUES (5, 'P3671', 448, 'Merokok di kamar mandi  ', 41, '', 0, 24, 'BELUM_MENGAMBIL', '2024-11-09', 1, '', NULL, 'd5565ad0-0dfe-4437-8388-32157aacae0c', 'BELUM');
 
 -- ----------------------------
 -- Table structure for pendidikan_santri
 -- ----------------------------
 DROP TABLE IF EXISTS `pendidikan_santri`;
 CREATE TABLE `pendidikan_santri`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `santri_id` int NULL DEFAULT NULL,
-  `madin_id` int NULL DEFAULT NULL,
-  `tahfidz_id` int NULL DEFAULT NULL,
-  `sekolah_id` int NULL DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `santri_id` int(11) NULL DEFAULT NULL,
+  `madin_id` int(11) NULL DEFAULT NULL,
+  `tahfidz_id` int(11) NULL DEFAULT NULL,
+  `sekolah_id` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `madin_id`(`madin_id` ASC) USING BTREE,
-  INDEX `tahfidz_id`(`tahfidz_id` ASC) USING BTREE,
-  INDEX `sekolah_id`(`sekolah_id` ASC) USING BTREE,
-  INDEX `santri_id`(`santri_id` ASC) USING BTREE,
+  INDEX `madin_id`(`madin_id`) USING BTREE,
+  INDEX `tahfidz_id`(`tahfidz_id`) USING BTREE,
+  INDEX `sekolah_id`(`sekolah_id`) USING BTREE,
+  INDEX `santri_id`(`santri_id`) USING BTREE,
   CONSTRAINT `pendidikan_santri_ibfk_2` FOREIGN KEY (`madin_id`) REFERENCES `madin` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `pendidikan_santri_ibfk_3` FOREIGN KEY (`tahfidz_id`) REFERENCES `tahfidz` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `pendidikan_santri_ibfk_4` FOREIGN KEY (`sekolah_id`) REFERENCES `sekolah` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `pendidikan_santri_ibfk_5` FOREIGN KEY (`santri_id`) REFERENCES `santri` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
-
--- ----------------------------
--- Records of pendidikan_santri
--- ----------------------------
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for pengurus
 -- ----------------------------
 DROP TABLE IF EXISTS `pengurus`;
 CREATE TABLE `pengurus`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `santri_id` int NULL DEFAULT NULL,
-  `lembaga_pengurus_id` int NULL DEFAULT NULL,
-  `status_aktif` int NULL DEFAULT NULL,
+  `santri_id` int(11) NULL DEFAULT NULL,
+  `lembaga_pengurus_id` int(11) NULL DEFAULT NULL,
+  `status_aktif` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 48 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 48 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of pengurus
@@ -1129,13 +1128,13 @@ INSERT INTO `pengurus` VALUES (47, '1266', 1266, 1, 1);
 -- ----------------------------
 DROP TABLE IF EXISTS `perawat`;
 CREATE TABLE `perawat`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `no_hp` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `status_aktif` tinyint NULL DEFAULT NULL,
+  `status_aktif` tinyint(4) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of perawat
@@ -1175,7 +1174,7 @@ CREATE TABLE `profil_website`  (
   `lng` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `lat` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `api_fingerprint` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of profil_website
@@ -1187,20 +1186,20 @@ INSERT INTO `profil_website` VALUES ('SIM PONDOK', 'Sumberpasir', '085894632505'
 -- ----------------------------
 DROP TABLE IF EXISTS `rekam_medis`;
 CREATE TABLE `rekam_medis`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `santri_id` int NULL DEFAULT NULL,
-  `status_rekam_medis_id` int NULL DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `santri_id` int(11) NULL DEFAULT NULL,
+  `status_rekam_medis_id` int(11) NULL DEFAULT NULL,
   `tanggal` date NULL DEFAULT NULL,
   `foto` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `uuid` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
-  `perawat_id` int NULL DEFAULT NULL,
+  `perawat_id` int(11) NULL DEFAULT NULL,
   `diagnosis` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `catatan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `lama_sakit` int NULL DEFAULT NULL,
+  `lama_sakit` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of rekam_medis
@@ -1224,7 +1223,7 @@ INSERT INTO `rekam_medis` VALUES (15, 1357, 2, '2024-11-07', '777f78cbb7c8b24600
 -- ----------------------------
 DROP TABLE IF EXISTS `santri`;
 CREATE TABLE `santri`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nis` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `jenis_kelamin` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -1237,7 +1236,7 @@ CREATE TABLE `santri`  (
   `no_hp_ibu` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1359 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1359 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of santri
@@ -2605,35 +2604,35 @@ INSERT INTO `santri` VALUES (1358, '0118060077', 'Muhammad Hilmy Zulfikar', NULL
 -- ----------------------------
 DROP TABLE IF EXISTS `sekolah`;
 CREATE TABLE `sekolah`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `status_aktif` int(11) NULL DEFAULT NULL,
+  `created_at` timestamp(0) NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sekolah
 -- ----------------------------
-INSERT INTO `sekolah` VALUES (1, 'SD', 'SD IT Asy-Syadzili', '#000000', 1, '2024-11-01 15:20:55');
-INSERT INTO `sekolah` VALUES (2, 'SMP', 'SMP IT ASY-SYADZILI', '#000000', 1, '2024-11-01 15:22:05');
-INSERT INTO `sekolah` VALUES (3, 'SMA ', 'SMA IT ASY-SYADZILI', '#000000', 1, '2024-11-01 15:22:05');
-INSERT INTO `sekolah` VALUES (4, 'SMK', 'SMK IT ASY-SYADZILI', '#000000', 1, '2024-11-01 15:22:05');
+INSERT INTO `sekolah` VALUES (1, 'SD', 'SD IT Asy-Syadzili', '#000000', 1, '2024-11-02 02:20:55');
+INSERT INTO `sekolah` VALUES (2, 'SMP', 'SMP IT ASY-SYADZILI', '#000000', 1, '2024-11-02 02:22:05');
+INSERT INTO `sekolah` VALUES (3, 'SMA ', 'SMA IT ASY-SYADZILI', '#000000', 1, '2024-11-02 02:22:05');
+INSERT INTO `sekolah` VALUES (4, 'SMK', 'SMK IT ASY-SYADZILI', '#000000', 1, '2024-11-02 02:22:05');
 
 -- ----------------------------
 -- Table structure for setting_status
 -- ----------------------------
 DROP TABLE IF EXISTS `setting_status`;
 CREATE TABLE `setting_status`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `status` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `groups` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of setting_status
@@ -2648,13 +2647,13 @@ INSERT INTO `setting_status` VALUES (4, 'Non Aktif', '0', 'warning', 'active');
 -- ----------------------------
 DROP TABLE IF EXISTS `setting_table`;
 CREATE TABLE `setting_table`  (
-  `id_setting_table` int NOT NULL AUTO_INCREMENT,
+  `id_setting_table` int(11) NOT NULL AUTO_INCREMENT,
   `table` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `name` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `value` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `keterangan` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   PRIMARY KEY (`id_setting_table`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 123 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 125 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of setting_table
@@ -2673,19 +2672,21 @@ INSERT INTO `setting_table` VALUES (119, 'kamar', 'kode', 'K{order_number}', NUL
 INSERT INTO `setting_table` VALUES (120, 'rekam_medis', 'kode', 'RM{rand}', NULL);
 INSERT INTO `setting_table` VALUES (121, 'keluhan', 'kode', 'KEL{rand}', NULL);
 INSERT INTO `setting_table` VALUES (122, 'tatib', 'kode', 'KT{rand}', NULL);
+INSERT INTO `setting_table` VALUES (123, 'pelanggaran', 'kode', 'P{rand}', NULL);
+INSERT INTO `setting_table` VALUES (124, 'obat', 'kode', 'OBT{rand}', NULL);
 
 -- ----------------------------
 -- Table structure for status_rekam_medis
 -- ----------------------------
 DROP TABLE IF EXISTS `status_rekam_medis`;
 CREATE TABLE `status_rekam_medis`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `color` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `status_aktif` tinyint(1) NULL DEFAULT 1,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of status_rekam_medis
@@ -2699,16 +2700,16 @@ INSERT INTO `status_rekam_medis` VALUES (3, 'Istirahat di Kamar', '#d35400', 1, 
 -- ----------------------------
 DROP TABLE IF EXISTS `submenu`;
 CREATE TABLE `submenu`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `menu_id` int NULL DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `menu_id` int(11) NULL DEFAULT NULL,
   `submenu` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `link` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  `c` tinyint NULL DEFAULT NULL,
-  `r` tinyint NULL DEFAULT NULL,
-  `u` tinyint NULL DEFAULT NULL,
-  `d` tinyint NULL DEFAULT NULL,
+  `c` tinyint(4) NULL DEFAULT NULL,
+  `r` tinyint(4) NULL DEFAULT NULL,
+  `u` tinyint(4) NULL DEFAULT NULL,
+  `d` tinyint(4) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of submenu
@@ -2752,157 +2753,174 @@ INSERT INTO `submenu` VALUES (34, 2, 'Mutasi Bahan', 'mutasi_bahan/get_data', 1,
 -- ----------------------------
 DROP TABLE IF EXISTS `surat_ijin_poskestren`;
 CREATE TABLE `surat_ijin_poskestren`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `rekam_medis_id` int NULL DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `rekam_medis_id` int(11) NULL DEFAULT NULL,
   `tanggal` date NULL DEFAULT NULL,
   `keperluan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `tanggal_kembali` date NULL DEFAULT NULL,
   `foto` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of surat_ijin_poskestren
+-- Table structure for surat_pernyataan
 -- ----------------------------
+DROP TABLE IF EXISTS `surat_pernyataan`;
+CREATE TABLE `surat_pernyataan`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pelanggaran_id` int(11) NULL DEFAULT NULL,
+  `santri_id` int(11) NULL DEFAULT NULL,
+  `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `tanggal` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `jenis` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of surat_pernyataan
+-- ----------------------------
+INSERT INTO `surat_pernyataan` VALUES (9, 4, 1261, 't43t323r2r', '2024-11-09', 1);
+INSERT INTO `surat_pernyataan` VALUES (10, 5, 448, '\'fowdwd', '2024-11-09', 1);
+INSERT INTO `surat_pernyataan` VALUES (11, 5, 448, 'r2r2', '2024-11-09', 1);
+INSERT INTO `surat_pernyataan` VALUES (12, 5, 448, 'SO/24/07/10011', '2024-11-13', 1);
 
 -- ----------------------------
 -- Table structure for tahfidz
 -- ----------------------------
 DROP TABLE IF EXISTS `tahfidz`;
 CREATE TABLE `tahfidz`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `status_aktif` int(11) NULL DEFAULT NULL,
+  `created_at` timestamp(0) NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tahfidz
 -- ----------------------------
-INSERT INTO `tahfidz` VALUES (1, 'T6252', '1A', '#e69494', 1, '2024-11-01 15:10:55');
-INSERT INTO `tahfidz` VALUES (3, 'T001', 'TAHFIDZ 1A', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (4, 'T002', 'TAHFIDZ 1B', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (5, 'T003', 'TAHFIDZ 1C', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (6, 'T004', 'TAHFIDZ 2A', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (7, 'T005', 'TAHFIDZ 2B', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (8, 'T006', 'TAHFIDZ 2C', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (9, 'T007', 'TAHFIDZ 3A', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (10, 'T008', 'TAHFIDZ 3B', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (11, 'T009', 'TAHFIDZ 3C', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (12, 'T010', 'TAHFIDZ 4A', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (13, 'T011', 'TAHFIDZ 4B', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (14, 'T012', 'TAHFIDZ 4C', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (15, 'T013', 'TAHFIDZ 5A', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (16, 'T014', 'TAHFIDZ 5B', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (17, 'T015', 'TAHFIDZ 5C', '#000000', 1, '2024-11-01 15:16:31');
-INSERT INTO `tahfidz` VALUES (18, 'T016', 'TAHFIDZ 6A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (19, 'T017', 'TAHFIDZ 6B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (20, 'T018', 'TAHFIDZ 6C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (21, 'T019', 'TAHFIDZ 7A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (22, 'T020', 'TAHFIDZ 7B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (23, 'T021', 'TAHFIDZ 7C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (24, 'T022', 'TAHFIDZ 8A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (25, 'T023', 'TAHFIDZ 8B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (26, 'T024', 'TAHFIDZ 8C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (27, 'T025', 'TAHFIDZ 9A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (28, 'T026', 'TAHFIDZ 9B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (29, 'T027', 'TAHFIDZ 9C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (30, 'T028', 'TAHFIDZ 10A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (31, 'T029', 'TAHFIDZ 10B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (32, 'T030', 'TAHFIDZ 10C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (33, 'T031', 'TAHFIDZ 11A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (34, 'T032', 'TAHFIDZ 11B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (35, 'T033', 'TAHFIDZ 11C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (36, 'T034', 'TAHFIDZ 12A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (37, 'T035', 'TAHFIDZ 12B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (38, 'T036', 'TAHFIDZ 12C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (39, 'T037', 'TAHFIDZ 13A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (40, 'T038', 'TAHFIDZ 13B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (41, 'T039', 'TAHFIDZ 13C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (42, 'T040', 'TAHFIDZ 14A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (43, 'T041', 'TAHFIDZ 14B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (44, 'T042', 'TAHFIDZ 14C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (45, 'T043', 'TAHFIDZ 15A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (46, 'T044', 'TAHFIDZ 15B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (47, 'T045', 'TAHFIDZ 15C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (48, 'T046', 'TAHFIDZ 16A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (49, 'T047', 'TAHFIDZ 16B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (50, 'T048', 'TAHFIDZ 16C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (51, 'T049', 'TAHFIDZ 17A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (52, 'T050', 'TAHFIDZ 17B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (53, 'T051', 'TAHFIDZ 17C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (54, 'T052', 'TAHFIDZ 18A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (55, 'T053', 'TAHFIDZ 18B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (56, 'T054', 'TAHFIDZ 18C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (57, 'T055', 'TAHFIDZ 19A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (58, 'T056', 'TAHFIDZ 19B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (59, 'T057', 'TAHFIDZ 19C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (60, 'T058', 'TAHFIDZ 20A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (61, 'T059', 'TAHFIDZ 20B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (62, 'T060', 'TAHFIDZ 20C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (63, 'T061', 'TAHFIDZ 21A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (64, 'T062', 'TAHFIDZ 21B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (65, 'T063', 'TAHFIDZ 21C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (66, 'T064', 'TAHFIDZ 22A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (67, 'T065', 'TAHFIDZ 22B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (68, 'T066', 'TAHFIDZ 22C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (69, 'T067', 'TAHFIDZ 23A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (70, 'T068', 'TAHFIDZ 23B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (71, 'T069', 'TAHFIDZ 23C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (72, 'T070', 'TAHFIDZ 24A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (73, 'T071', 'TAHFIDZ 24B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (74, 'T072', 'TAHFIDZ 24C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (75, 'T073', 'TAHFIDZ 25A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (76, 'T074', 'TAHFIDZ 25B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (77, 'T075', 'TAHFIDZ 25C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (78, 'T076', 'TAHFIDZ 26A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (79, 'T077', 'TAHFIDZ 26B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (80, 'T078', 'TAHFIDZ 26C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (81, 'T079', 'TAHFIDZ 27A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (82, 'T080', 'TAHFIDZ 27B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (83, 'T081', 'TAHFIDZ 27C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (84, 'T082', 'TAHFIDZ 28A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (85, 'T083', 'TAHFIDZ 28B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (86, 'T084', 'TAHFIDZ 28C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (87, 'T085', 'TAHFIDZ 29A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (88, 'T086', 'TAHFIDZ 29B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (89, 'T087', 'TAHFIDZ 29C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (90, 'T088', 'TAHFIDZ 30A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (91, 'T089', 'TAHFIDZ 30B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (92, 'T090', 'TAHFIDZ 30C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (93, 'T091', 'TAHFIDZ 31A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (94, 'T092', 'TAHFIDZ 31B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (95, 'T093', 'TAHFIDZ 31C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (96, 'T094', 'TAHFIDZ 32A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (97, 'T095', 'TAHFIDZ 32B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (98, 'T096', 'TAHFIDZ 32C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (99, 'T097', 'TAHFIDZ 33A', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (100, 'T098', 'TAHFIDZ 33B', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (101, 'T099', 'TAHFIDZ 33C', '#000000', 1, '2024-11-01 15:16:32');
-INSERT INTO `tahfidz` VALUES (102, 'T100', 'TAHFIDZ 34A', '#000000', 1, '2024-11-01 15:16:32');
+INSERT INTO `tahfidz` VALUES (1, 'T6252', '1A', '#e69494', 1, '2024-11-02 02:10:55');
+INSERT INTO `tahfidz` VALUES (3, 'T001', 'TAHFIDZ 1A', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (4, 'T002', 'TAHFIDZ 1B', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (5, 'T003', 'TAHFIDZ 1C', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (6, 'T004', 'TAHFIDZ 2A', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (7, 'T005', 'TAHFIDZ 2B', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (8, 'T006', 'TAHFIDZ 2C', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (9, 'T007', 'TAHFIDZ 3A', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (10, 'T008', 'TAHFIDZ 3B', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (11, 'T009', 'TAHFIDZ 3C', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (12, 'T010', 'TAHFIDZ 4A', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (13, 'T011', 'TAHFIDZ 4B', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (14, 'T012', 'TAHFIDZ 4C', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (15, 'T013', 'TAHFIDZ 5A', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (16, 'T014', 'TAHFIDZ 5B', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (17, 'T015', 'TAHFIDZ 5C', '#000000', 1, '2024-11-02 02:16:31');
+INSERT INTO `tahfidz` VALUES (18, 'T016', 'TAHFIDZ 6A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (19, 'T017', 'TAHFIDZ 6B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (20, 'T018', 'TAHFIDZ 6C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (21, 'T019', 'TAHFIDZ 7A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (22, 'T020', 'TAHFIDZ 7B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (23, 'T021', 'TAHFIDZ 7C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (24, 'T022', 'TAHFIDZ 8A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (25, 'T023', 'TAHFIDZ 8B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (26, 'T024', 'TAHFIDZ 8C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (27, 'T025', 'TAHFIDZ 9A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (28, 'T026', 'TAHFIDZ 9B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (29, 'T027', 'TAHFIDZ 9C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (30, 'T028', 'TAHFIDZ 10A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (31, 'T029', 'TAHFIDZ 10B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (32, 'T030', 'TAHFIDZ 10C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (33, 'T031', 'TAHFIDZ 11A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (34, 'T032', 'TAHFIDZ 11B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (35, 'T033', 'TAHFIDZ 11C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (36, 'T034', 'TAHFIDZ 12A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (37, 'T035', 'TAHFIDZ 12B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (38, 'T036', 'TAHFIDZ 12C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (39, 'T037', 'TAHFIDZ 13A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (40, 'T038', 'TAHFIDZ 13B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (41, 'T039', 'TAHFIDZ 13C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (42, 'T040', 'TAHFIDZ 14A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (43, 'T041', 'TAHFIDZ 14B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (44, 'T042', 'TAHFIDZ 14C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (45, 'T043', 'TAHFIDZ 15A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (46, 'T044', 'TAHFIDZ 15B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (47, 'T045', 'TAHFIDZ 15C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (48, 'T046', 'TAHFIDZ 16A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (49, 'T047', 'TAHFIDZ 16B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (50, 'T048', 'TAHFIDZ 16C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (51, 'T049', 'TAHFIDZ 17A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (52, 'T050', 'TAHFIDZ 17B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (53, 'T051', 'TAHFIDZ 17C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (54, 'T052', 'TAHFIDZ 18A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (55, 'T053', 'TAHFIDZ 18B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (56, 'T054', 'TAHFIDZ 18C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (57, 'T055', 'TAHFIDZ 19A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (58, 'T056', 'TAHFIDZ 19B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (59, 'T057', 'TAHFIDZ 19C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (60, 'T058', 'TAHFIDZ 20A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (61, 'T059', 'TAHFIDZ 20B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (62, 'T060', 'TAHFIDZ 20C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (63, 'T061', 'TAHFIDZ 21A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (64, 'T062', 'TAHFIDZ 21B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (65, 'T063', 'TAHFIDZ 21C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (66, 'T064', 'TAHFIDZ 22A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (67, 'T065', 'TAHFIDZ 22B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (68, 'T066', 'TAHFIDZ 22C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (69, 'T067', 'TAHFIDZ 23A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (70, 'T068', 'TAHFIDZ 23B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (71, 'T069', 'TAHFIDZ 23C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (72, 'T070', 'TAHFIDZ 24A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (73, 'T071', 'TAHFIDZ 24B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (74, 'T072', 'TAHFIDZ 24C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (75, 'T073', 'TAHFIDZ 25A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (76, 'T074', 'TAHFIDZ 25B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (77, 'T075', 'TAHFIDZ 25C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (78, 'T076', 'TAHFIDZ 26A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (79, 'T077', 'TAHFIDZ 26B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (80, 'T078', 'TAHFIDZ 26C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (81, 'T079', 'TAHFIDZ 27A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (82, 'T080', 'TAHFIDZ 27B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (83, 'T081', 'TAHFIDZ 27C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (84, 'T082', 'TAHFIDZ 28A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (85, 'T083', 'TAHFIDZ 28B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (86, 'T084', 'TAHFIDZ 28C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (87, 'T085', 'TAHFIDZ 29A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (88, 'T086', 'TAHFIDZ 29B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (89, 'T087', 'TAHFIDZ 29C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (90, 'T088', 'TAHFIDZ 30A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (91, 'T089', 'TAHFIDZ 30B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (92, 'T090', 'TAHFIDZ 30C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (93, 'T091', 'TAHFIDZ 31A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (94, 'T092', 'TAHFIDZ 31B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (95, 'T093', 'TAHFIDZ 31C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (96, 'T094', 'TAHFIDZ 32A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (97, 'T095', 'TAHFIDZ 32B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (98, 'T096', 'TAHFIDZ 32C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (99, 'T097', 'TAHFIDZ 33A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (100, 'T098', 'TAHFIDZ 33B', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (101, 'T099', 'TAHFIDZ 33C', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (102, 'T100', 'TAHFIDZ 34A', '#000000', 1, '2024-11-02 02:16:32');
 
 -- ----------------------------
 -- Table structure for tatib
 -- ----------------------------
 DROP TABLE IF EXISTS `tatib`;
 CREATE TABLE `tatib`  (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `kategori_tatib_id` int NULL DEFAULT NULL,
-  `status_aktif` int NULL DEFAULT NULL,
-  `poin` int NULL DEFAULT NULL,
+  `kategori_tatib_id` int(11) NULL DEFAULT NULL,
+  `status_aktif` int(11) NULL DEFAULT NULL,
+  `poin` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 62 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 63 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tatib
 -- ----------------------------
-INSERT INTO `tatib` VALUES (1, 'A1', 'Dilarang menjemur pakaian', 1, 1, 10);
 INSERT INTO `tatib` VALUES (2, 'A2', 'Membawa dan/menyimpan uang diatas 50.000', 1, 1, 10);
 INSERT INTO `tatib` VALUES (3, 'A3', 'Melakukan hal lain saat kegiatan', 1, 1, 10);
 INSERT INTO `tatib` VALUES (4, 'A4', 'Memakai pakaian dengan gambar/simbol, gelang, kalung dan aksesoris yang tidak wajar', 1, 1, 10);
@@ -2961,13 +2979,14 @@ INSERT INTO `tatib` VALUES (56, 'C23', 'Tidak melaksanakan Puasa Ramadhan', 3, 1
 INSERT INTO `tatib` VALUES (57, 'C24', 'Membawa, mengedarkan, dan atau menggunakan minuman keras dan obat-obatan terlarang (Narkoba).', 3, 1, 50);
 INSERT INTO `tatib` VALUES (58, 'C25', 'Penganiayaan/Pemukulan', 3, 1, 50);
 INSERT INTO `tatib` VALUES (59, 'C26', 'Berzina/Homo', 3, 1, 50);
+INSERT INTO `tatib` VALUES (62, 'A1', 'Dilarang Menjemur Pakaian ', 1, 1, 10);
 
 -- ----------------------------
 -- Table structure for users
 -- ----------------------------
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users`  (
-  `id` mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
   `ip_address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `username` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -2976,11 +2995,11 @@ CREATE TABLE `users`  (
   `activation_code` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `forgotten_password_selector` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `forgotten_password_code` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `forgotten_password_time` int UNSIGNED NULL DEFAULT NULL,
+  `forgotten_password_time` int(10) UNSIGNED NULL DEFAULT NULL,
   `remember_selector` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `remember_code` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `created_on` int UNSIGNED NOT NULL,
-  `last_login` int UNSIGNED NULL DEFAULT NULL,
+  `created_on` int(10) UNSIGNED NOT NULL,
+  `last_login` int(10) UNSIGNED NULL DEFAULT NULL,
   `active` tinyint(1) UNSIGNED NULL DEFAULT NULL,
   `first_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `last_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -2988,19 +3007,19 @@ CREATE TABLE `users`  (
   `phone` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `pin` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `salt` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `anggota_id` int NULL DEFAULT NULL,
+  `anggota_id` int(11) NULL DEFAULT NULL,
   `table` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `email`(`email` ASC) USING BTREE,
-  UNIQUE INDEX `activation_selector`(`activation_selector` ASC) USING BTREE,
-  UNIQUE INDEX `forgotten_password_selector`(`forgotten_password_selector` ASC) USING BTREE,
-  UNIQUE INDEX `remember_selector`(`remember_selector` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+  UNIQUE INDEX `email`(`email`) USING BTREE,
+  UNIQUE INDEX `activation_selector`(`activation_selector`) USING BTREE,
+  UNIQUE INDEX `forgotten_password_selector`(`forgotten_password_selector`) USING BTREE,
+  UNIQUE INDEX `remember_selector`(`remember_selector`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, '127.0.0.1', 'administrator', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1730986253, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (1, '127.0.0.1', 'administrator', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1732166503, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, NULL, NULL);
 INSERT INTO `users` VALUES (7, '::1', 'ahm', '$2y$10$Hojls1F0e38bTgB9Gyn8Cer.L.3Ak0T3rx5MyDvE3teoxXmawwGFG', 'ahmad@impact.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1692973423, 1715747442, 1, 'AHM', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `users` VALUES (8, '112.215.237.81', 'rendy', '$2y$10$Zexem4W9luDl6kK6lUJfTet.gqskrcQqkFbK9osLRfEVYgp3wRJuq', 'rendy@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1697964271, 1697964280, 1, 'rendy', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `users` VALUES (21, '158.140.169.138', 'totok', '$2y$10$52VxVZPcFFMmD.WCYdihZeAUexuJHiEELQlR7jNlOuQWuKZwVy5te', 'totok@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1715824768, 1720236542, 1, 'SUHARIYANTO/TOTOK', NULL, NULL, NULL, NULL, NULL, 57, 'karyawan');
@@ -3013,11 +3032,11 @@ INSERT INTO `users` VALUES (24, '125.163.127.49', 'markus', '$2y$10$qnjYJ.5QAYbo
 -- ----------------------------
 DROP TABLE IF EXISTS `users_groups`;
 CREATE TABLE `users_groups`  (
-  `id` mediumint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `user_id` mediumint UNSIGNED NOT NULL,
-  `group_id` mediumint UNSIGNED NOT NULL,
+  `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `user_id` mediumint(8) UNSIGNED NOT NULL,
+  `group_id` mediumint(8) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users_groups
@@ -3046,6 +3065,6 @@ INSERT INTO `users_groups` VALUES (19, 24, 5);
 -- View structure for v_groups_detail_submenu
 -- ----------------------------
 DROP VIEW IF EXISTS `v_groups_detail_submenu`;
-CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_groups_detail_submenu` AS select `groups_detail`.`id` AS `id`,`groups_detail`.`groups_id` AS `groups_id`,`groups_detail`.`submenu_id` AS `submenu_id`,`groups_detail`.`c` AS `c`,`groups_detail`.`r` AS `r`,`groups_detail`.`u` AS `u`,`groups_detail`.`d` AS `d`,`submenu`.`menu_id` AS `menu_id`,`submenu`.`submenu` AS `submenu`,`submenu`.`link` AS `link` from (`groups_detail` join `submenu` on(`groups_detail`.`submenu_id` = `submenu`.`id`)) ; ;
+CREATE ALGORITHM = UNDEFINED DEFINER = `root`@`localhost` SQL SECURITY DEFINER VIEW `v_groups_detail_submenu` AS select `groups_detail`.`id` AS `id`,`groups_detail`.`groups_id` AS `groups_id`,`groups_detail`.`submenu_id` AS `submenu_id`,`groups_detail`.`c` AS `c`,`groups_detail`.`r` AS `r`,`groups_detail`.`u` AS `u`,`groups_detail`.`d` AS `d`,`submenu`.`menu_id` AS `menu_id`,`submenu`.`submenu` AS `submenu`,`submenu`.`link` AS `link` from (`groups_detail` join `submenu` on(`groups_detail`.`submenu_id` = `submenu`.`id`));
 
 SET FOREIGN_KEY_CHECKS = 1;
