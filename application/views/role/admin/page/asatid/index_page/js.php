@@ -224,11 +224,4 @@
         }
         return false;
     }
-    function change_status_santri(id="", status="")
-    {
-        if (id != '') {
-            $('.modal-change-status').modal('toggle');
-        }
-        return false;
-    }
 </script>

@@ -21,13 +21,16 @@
 				</div>
 			</div>
 			<div class="panel-body" >
-				<div class="table-responsive">
-					<table class="table datatable-basic table-bordered table-xxs table-framed table-striped table-hover"  id="tabel-data">
+				<div class="table-responsive" style="min-height: 500px;">
+					<table  class="table datatable-basic table-bordered table-xxs table-framed table-striped table-hover"  id="tabel-data">
 						<thead>
 							<tr>
 								<th width="2%"><input type="checkbox" class="bulk-check" name=""></th>
-								<th width="10%">NIS</th>
+								<th width="10%">Kode</th>
 								<th>Nama</th>
+								<th width="1%">JK</th>
+								<th>TTL</th>
+								<th>No HP</th>
 								<th width="10%">Status</th>
 								<th width="2%" class="text-center">Actions</th>
 							</tr>
