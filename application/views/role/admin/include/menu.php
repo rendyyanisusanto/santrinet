@@ -17,8 +17,9 @@
 							<li class="dropdown-header">Optional layouts</li>
 							<li><a class="app-item" href="santri/get_data"><i class="icon-align-center-horizontal"></i> Pendataan Santri</a></li>
 							<li><a class="app-item" href="santri/get_data"><i class="icon-align-center-horizontal"></i> Pendataan Pengurus</a></li>
-							<li><a class="app-item" href="santri/get_data"><i class="icon-align-center-horizontal"></i> Lembaga Pengurus</a></li>
-							
+							<li><a class="app-item" href="santri/get_data"><i class="icon-align-center-horizontal"></i> Pendataan Kafil</a></li>
+							<li><a class="app-item" href="santri/get_data"><i class="icon-align-center-horizontal"></i> Pendataan Asatid</a></li>
+							<li><a class="app-item" href="santri/get_data"><i class="icon-align-center-horizontal"></i> Pendataan Alumni</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
