@@ -79,6 +79,15 @@
             },
             ],
     } );
+    $('.submit-change').on('submit', function(e){
+        send_ajax($(this).attr('action'), $(this).serialize()).then(function(data){
+            var resp = JSON.parse(data);
+            toastr.success(resp.msg);
+            table.ajax.reload();
+            $('.modal-change-status').modal('toggle');
+        })
+        return false;
+    });
 
     function search()
     {
@@ -227,6 +236,8 @@
     function change_status_santri(id="", status="")
     {
         if (id != '') {
+            $('.change_id').val(id);
+            $('.status_santri').val(status);
             $('.modal-change-status').modal('toggle');
         }
         return false;

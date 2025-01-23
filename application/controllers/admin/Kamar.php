@@ -22,6 +22,15 @@ class kamar extends MY_Controller {
 		$data['account']	=	$this->get_user_account();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index',$data['param']['parents_link'].'/index_page/modal',$data['param']['parents_link'].'/index_page/js'],$data);
 	}
+
+	public function kamar_santri()
+	{
+		$this->arr['title'] = "Setting Kamar Santri";
+		$data['param'] 		= 	$this->arr;
+		$data['account']	=	$this->get_user_account();
+		$data['kamar']		=	$this->db->query('select id, nama from kamar where status_aktif=1')->result_array();
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/kamar_santri/index', $data['param']['parents_link'].'/kamar_santri/js'],$data);
+	}
 	public function add_page()
 	{
 		$data['param'] 		= 	$this->arr;
@@ -213,6 +222,34 @@ class kamar extends MY_Controller {
 			]);
 		}
 	}
+
+	function add_kamar_santri(){
+		try {
+			
+			$data = [
+				'santri_id'	=>	$_POST['santri_id'],
+				'kamar_id'	=>	$_POST['kamar_id'],
+				'tahun'		=>	'',
+				'status_aktif'	=>	1
+			];
+			if ($this->save_data('kamar_santri', $data)) {
+				echo json_encode([
+					'status'	=>	200,
+					'msg'		=>	'Data kamar santri berhasil ditambahkan'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	'Data kamar santri gagal ditambahkan'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	$e
+			]);
+		}
+	}
 	function update_data()
 	{
 		
@@ -283,6 +320,28 @@ class kamar extends MY_Controller {
 			]);
 		}
 		
+	}
+
+	function delete_kamar_santri(){
+		try {
+			$dt = $this->arr;
+			if ($this->db->delete("kamar_santri", ["id"=>$_POST['id']])) {
+				echo json_encode([
+					'status'	=>  200,
+					'msg'		=>	'Data berhasil terhapus'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>  500,
+					'msg'		=>	'Data gagal terhapus'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'status'	=>  500,
+				'msg'		=>	$e
+			]);
+		}
 	}
 	function change_status(){
 		try {
@@ -419,4 +478,30 @@ class kamar extends MY_Controller {
         echo json_encode($output);
 	}
 
+	function get_table_kamar_santri(){
+		
+		$data['param'] 		= 	$this->arr;
+		$search = $_POST['search'];
+		$data['santri']	=	$this->db->query('SELECT 
+			s.id, s.nama
+		FROM 
+			santri s
+		LEFT JOIN 
+			kamar_santri ks ON s.id = ks.santri_id
+		WHERE 
+			ks.santri_id IS NULL
+		AND 
+			s.nama LIKE "%' . $search . '%"
+		LIMIT 20;')->result_array();
+
+		$this->my_view([$data['param']['parents_link'].'/kamar_santri/table'], $data);
+	}
+
+	function get_table_kamar_for_santri(){
+		$id = $_POST['id'];
+		
+		$data['param'] 		= 	$this->arr;
+		$data['kamar_santri']	=	$this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama, (select nama from kamar where kamar.id = kamar_id) as kamar from kamar_santri where kamar_id='.$id)->result_array();
+		$this->my_view([$data['param']['parents_link'].'/kamar_santri/table_kamar'], $data);
+	}
 }

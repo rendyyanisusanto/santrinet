@@ -252,6 +252,30 @@ class santri extends MY_Controller {
 			]);
 		}
 	}
+
+	function change_status_santri(){
+		try{
+			if($_POST['id'] != ''){
+				$this->my_update('santri', ['status_santri' => $_POST['status_santri']], ['id' => $_POST['id']]);
+
+				echo json_encode([
+					'status'	=>	200,
+					'msg'		=>	'Status santri berhasil diubah'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	'ID tidak ditemukan'
+				]);
+			}
+		}catch(Exception $e){
+			echo json_encode([
+				'status'	=>	500,
+				'msg'		=>	$e
+			]);
+		}
+		
+	}
 	function bulk_delete()
 	{
 		try {

@@ -1,9 +1,10 @@
 <div class="modal modal-change-status">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form class="submit-print" action="<?= $data_get['param']['table'] ?>/change_status_santri">
+			<form class="submit-change" action="<?= $data_get['param']['table'] ?>/change_status_santri">
 			<div class="modal-body">
 				<center><h3><b>Ubah Status Santri</b></h3></center>
+				<input type="hidden" name="id" class="change_id">
 				<select class="form-control status_santri" name="status_santri">
 					<option value="AKTIF">SANTRI AKTIF</option>
 					<option value="ALUMNI">ALUMNI</option>
