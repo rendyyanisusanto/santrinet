@@ -11,7 +11,7 @@
 						<fieldset>
 							<legend class="text-semibold"><?php echo $data_get['param']['title'] ?> - <b>TAMBAH DATA</b></legend>
 							
-
+							
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Kode : <i class="text-danger">*</i></label>
@@ -35,6 +35,20 @@
 										<select class="form-control" name="jenis_kelamin">
 											<option value="L">Laki-laki</option>
 											<option value="P">Perempuan</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Lembaga Pengurus : <i class="text-danger">*</i></label>
+									<div class="col-lg-6">
+										<select class="form-control" name="lembaga_pengurus_id">
+											<?php
+												foreach ($data_get['lembaga_pengurus'] as $key => $value) {
+													?>
+														<option value="<?= $value['id']?>"><?= $value['kode']?> - <?= $value['nama']?></option>
+													<?php
+												}
+											?>
 										</select>
 									</div>
 								</div>

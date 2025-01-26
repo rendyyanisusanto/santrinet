@@ -25,6 +25,7 @@ class pengurus extends MY_Controller {
 	{
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
+		$data['lembaga_pengurus']	=	$this->db->query('select id, kode, nama from lembaga_pengurus')->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
 	function import_page(){
@@ -193,6 +194,7 @@ class pengurus extends MY_Controller {
 				'jenis_kelamin'		=>	$_POST['jenis_kelamin'],
 				'tempat_lahir'		=>	$_POST['tempat_lahir'],
 				'tanggal_lahir'		=>	$_POST['tanggal_lahir'],
+				'lembaga_pengurus_id'=>	$_POST['lembaga_pengurus_id'],
 				'no_hp'				=>	$_POST['no_hp'],
 				'status_aktif' 		=> $_POST['status_aktif']
 			];
@@ -390,13 +392,12 @@ class pengurus extends MY_Controller {
         foreach ($list as $field) {
             $no++;
             $row        =   array();
+			$lembaga_pengurus = $this->db->query('select id, kode, nama from lembaga_pengurus where id='.$field['lembaga_pengurus_id'])->row_array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]		=	'<a href="pengurus/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
-            $row[]		=	$field['jenis_kelamin'];
-            $row[]		=	$field['tempat_lahir'].' / '.$field['tanggal_lahir'];
             $row[]		=	$field['no_hp'];
-            $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;
+            $row[]		=	$lembaga_pengurus['kode'].' - '.$lembaga_pengurus['nama'];
             $row[]		=	'<ul class="text-center icons-list">
             					<li class="dropdown">
             						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -405,8 +406,8 @@ class pengurus extends MY_Controller {
             						<ul class="dropdown-menu dropdown-menu-right">
             							<li><a href="pengurus/look_page/'.$field['id'].'" class="app-item"><i class="icon-eye"></i> Lihat</a></li>
             							<li><a href="pengurus/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah</a></li>
-            							<li><a  onclick="change_status('.$field['id'].','.$field['status_aktif'].');"><i class="icon-close2"></i> '.(($field['status_aktif'] == 1) ? "Nonaktifkan" : "Aktifkan" ).'</a></li>
-            							<li><a  onclick="delete_item('.$field['id'].');"><i class="icon-trash"></i> Hapus</a></li>
+            							<li><a onclick="change_status('.$field['id'].','.$field['status_aktif'].');"><i class="icon-close2"></i> '.(($field['status_aktif'] == 1) ? "Nonaktifkan" : "Aktifkan" ).'</a></li>
+            							<li><a onclick="delete_item('.$field['id'].');"><i class="icon-trash"></i> Hapus</a></li>
             						</ul>
             					</li>
             				</ul>';

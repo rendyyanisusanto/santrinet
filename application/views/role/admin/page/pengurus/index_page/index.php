@@ -1,12 +1,12 @@
 <!-- include -->
 <link href="<?php echo base_url('inc/select2/') ?>/select2.css" rel="stylesheet" />
-<script src="<?php echo base_url('inc/limitless/global_assets/')?>js/plugins/forms/selects/select2.min.js"></script>
-<script src="<?php echo base_url('inc/limitless/global_assets/');?>/js/plugins/tables/datatables/datatables.min.js"></script>
+<script src="<?php echo base_url('inc/limitless/global_assets/') ?>js/plugins/forms/selects/select2.min.js"></script>
+<script src="<?php echo base_url('inc/limitless/global_assets/'); ?>/js/plugins/tables/datatables/datatables.min.js"></script>
 <!-- /include -->
 
 <div class="row">
 	<div class="col-md-12">
-		<div class="panel panel-default" >
+		<div class="panel panel-default">
 			<div class="panel-heading">
 				<div class="panel-title">
 					<a href="<?php echo $data_get['param']['table'] ?>/add_page" style="color:white;" class="btn btn-primary app-item"><i class="icon-plus3"></i> Tambah <?php echo $data_get['param']['title'] ?></a>
@@ -20,33 +20,31 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-body" >
+			<div class="panel-body">
 				<div class="table-responsive" style="min-height: 500px;">
-					<table  class="table datatable-basic table-bordered table-xxs table-framed table-striped table-hover"  id="tabel-data">
+					<table class="table datatable-basic table-bordered table-xxs table-framed table-striped table-hover" id="tabel-data">
 						<thead>
 							<tr>
 								<th width="2%"><input type="checkbox" class="bulk-check" name=""></th>
 								<th width="10%">Kode</th>
 								<th>Nama</th>
-								<th width="1%">JK</th>
-								<th>TTL</th>
 								<th>No HP</th>
-								<th width="10%">Status</th>
+								<th>Lembaga</th>
 								<th width="2%" class="text-center">Actions</th>
 							</tr>
 						</thead>
-					<tbody></tbody>
-				</table>
+						<tbody></tbody>
+					</table>
+				</div>
 			</div>
-		</div>
-		<div class="panel-footer"><a class="heading-elements-toggle"><i class="icon-more"></i></a>
-		<div class="heading-elements">
-			<div class="heading-btn pull-right">
-				<!-- <button type="button" class="btn btn-default btn-icon btn-custom-search" onclick="custom_search();"><i class="icon-search4"></i> Custom Search</button> -->
-				<a href="<?= $data_get['param']['table'] ?>/import_page" class="btn btn-default btn-icon app-item"><i class="icon-upload"></i> Import Data</a>
+			<div class="panel-footer"><a class="heading-elements-toggle"><i class="icon-more"></i></a>
+				<div class="heading-elements">
+					<div class="heading-btn pull-right">
+						<!-- <button type="button" class="btn btn-default btn-icon btn-custom-search" onclick="custom_search();"><i class="icon-search4"></i> Custom Search</button> -->
+						<a href="<?= $data_get['param']['table'] ?>/import_page" class="btn btn-default btn-icon app-item"><i class="icon-upload"></i> Import Data</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-</div>
 </div>

@@ -25,6 +25,13 @@ class pelanggaran extends MY_Controller {
 		$data['account']	=	$this->get_user_account();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index',$data['param']['parents_link'].'/index_page/js'],$data);
 	}
+
+	function pengajuan(){
+		$this->arr['title']	=	"Pengajuan Laporan Pelanggaran";
+		$data['param'] 		= 	$this->arr;
+		$data['account']	=	$this->get_user_account();
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/pengajuan_pelanggaran/index',$data['param']['parents_link'].'/pengajuan_pelanggaran/js'],$data);
+	}
 	public function add_page()
 	{
 		$data['param'] 		= 	$this->arr;
@@ -48,6 +55,21 @@ class pelanggaran extends MY_Controller {
 			if (!empty($data['data_edit'])) {
 				$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/edit_page/index',$data['param']['parents_link'].'/edit_page/js', 'role/global/modal_setting'],$data);
 			}			
+		}
+	}
+	public function change_pengajuan($id = ""){
+		if (!empty($id)) {
+			$data['param'] 		= 	$this->arr;
+			$data['id']			=	$id;
+			$data['data_edit']	=	$this->my_where($data['param']['table'], [
+				$data['param']['id']	=>	$id
+			])->row_array();
+			$data['santri']		=	$this->db->query('select id, nama from santri where id = '.$data['data_edit']['santri_id'])->row_array();
+			$data['tatib']		=	$this->db->query('select id, kode, nama from tatib where id = '.$data['data_edit']['tatib_id'])->row_array();
+			$data['pelapor']		=	$this->db->query('select id, nama from pengurus where id = '.$data['data_edit']['pelapor_id'])->row_array();
+			if (!empty($data['data_edit'])) {
+				$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/change_pengajuan/index',$data['param']['parents_link'].'/change_pengajuan/js', 'role/global/modal_setting'],$data);
+			}
 		}
 	}
 	public function look_page($id='')
@@ -214,7 +236,7 @@ class pelanggaran extends MY_Controller {
 					'pelapor_id'				=>	$_POST['pelapor_id'],
 					'status_dokumen_pelanggaran'=>	$_POST['status_dokumen_pelanggaran'],
 					'kronologi'					=>	$_POST['kronologi'],
-
+					'status_pengajuan'		=>	'BUKAN PENGAJUAN'
 
 				];
 				if ($this->save_data('pelanggaran', $data)) {
@@ -237,14 +259,26 @@ class pelanggaran extends MY_Controller {
 			]);
 		}
 	}
-	function update_data()
+	function update_data_pengajuan()
 	{
 		
 		try {
 			
 			$data = [
-				'kode' => $_POST['kode'],
-				'nama' => $_POST['nama'],
+				'santri_id'				=>	$_POST['santri_id'],
+				'pelanggaran'			=>	$_POST['pelanggaran'],
+				'tanggal'				=>	$_POST['tanggal'],
+				'kode'					=>	$_POST['kode'],
+				'tatib_id'				=>	$_POST['tatib_id'],
+				'status_aktif'			=>	$_POST['status_aktif'],
+				'takzir'				=>	$_POST['takzir'],
+				'status_takzir'				=>	$_POST['status_takzir'],
+				'pengurus_id'				=>	$_POST['pengurus_id'],
+				'pelapor_id'				=>	$_POST['pelapor_id'],
+				'status_dokumen_pelanggaran'=>	$_POST['status_dokumen_pelanggaran'],
+				'kronologi'					=>	$_POST['kronologi'],
+				'status_pengajuan'		=>	'DITERIMA'
+
 			];
 			if ($this->my_update('pelanggaran', $data, [$this->arr['id'] => $_POST['id']])) {
 				echo json_encode([
@@ -419,15 +453,18 @@ class pelanggaran extends MY_Controller {
 	public function datatable()
 	{
        	$_POST['frm']   =   $this->arr;
-        $list           =   $this->mod_datatable->get_datatables();
+		   $this->db->where('pelanggaran.status_pengajuan','BUKAN PENGAJUAN');
+		   $this->db->or_where('pelanggaran.status_pengajuan','');
+		$list           =   $this->mod_datatable->get_datatables();
         $data           =   array();
         $no             =   $_POST['start'];
+
         foreach ($list as $field) {
             $no++;
             $row        =   array();
             $santri 	= $this->db->query('select nama from santri where id = '.$field['santri_id'])->row_array();
-            $pelapor 	= $this->db->query('select nama from santri inner join pengurus on pengurus.santri_id=santri.id where pengurus.id = '.$field['pelapor_id'])->row_array();
-            $pengurus 	= $this->db->query('select nama from santri inner join pengurus on pengurus.santri_id=santri.id where pengurus.id = '.$field['pengurus_id'])->row_array();
+            $pelapor 	= $this->db->query('select nama from pengurus where pengurus.id = '.$field['pelapor_id'])->row_array();
+            $pengurus 	= $this->db->query('select nama from pengurus where pengurus.id = '.$field['pengurus_id'])->row_array();
             $kategori_tatib = $this->db->query('select nama, (select nama from kategori_tatib where kategori_tatib.id = kategori_tatib_id) as kategori_tatib from pelanggaran left join tatib on tatib.id=tatib_id where tatib.id='.$field['tatib_id'])->row_array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]		=	date('d/m/Y', strtotime($field['tanggal']));
@@ -498,16 +535,12 @@ class pelanggaran extends MY_Controller {
 		$searchTerm = $this->input->post('searchTerm');
 	     $fetched_records = $this->db->query("
 			SELECT 
-			    santri.id AS santri_id,
-			    santri.nis,
-			    santri.nama,
 			    pengurus.id AS pengurus_id,
 			    pengurus.kode,
+			    pengurus.nama,
 			    pengurus.lembaga_pengurus_id
 			FROM 
-			    santri
-			JOIN 
-			    pengurus ON santri.id = pengurus.santri_id where nama like '%".$searchTerm."%' order by pengurus.id DESC limit 10");
+			    pengurus where nama like '%".$searchTerm."%' order by pengurus.id DESC limit 10");
 	     $bahan = $fetched_records->result_array();
 
 	     $data = array();
@@ -521,20 +554,16 @@ class pelanggaran extends MY_Controller {
 		$searchTerm = $this->input->post('searchTerm');
 	     $fetched_records = $this->db->query("
 			SELECT 
-			    santri.id AS santri_id,
-			    santri.nis,
-			    santri.nama,
+			    pengurus.nama,
 			    pengurus.id AS pengurus_id,
 			    pengurus.kode AS pengurus_kode,
 			    lembaga_pengurus.nama AS nama_lembaga
 			FROM 
-			    santri
-			JOIN 
-			    pengurus ON santri.id = pengurus.santri_id
+			    pengurus
 			JOIN 
 			    lembaga_pengurus ON pengurus.lembaga_pengurus_id = lembaga_pengurus.id
 			WHERE 
-			    pengurus.lembaga_pengurus_id = 1 and santri.nama like '%".$searchTerm."%' order by pengurus.id DESC limit 10");
+			    pengurus.lembaga_pengurus_id = 1 and pengurus.nama like '%".$searchTerm."%' order by pengurus.id DESC limit 10");
 	     $bahan = $fetched_records->result_array();
 
 	     $data = array();
@@ -621,4 +650,30 @@ class pelanggaran extends MY_Controller {
 
 		return base_url('inc/temp_doc/'.$uuid.'.docx');
     }
+
+	function get_pengajuan(){
+		$data['pengajuan']	=	$this->db->query('SELECT 
+			id, 
+			(SELECT nama FROM santri WHERE santri.id = santri_id) AS nama_santri, 
+			(SELECT nama FROM pengurus WHERE pengurus.id = pelapor_id) AS nama_pelapor, 
+			kode, 
+			tanggal, 
+			status_pengajuan, 
+			pelanggaran 
+		FROM pelanggaran 
+		WHERE status_pengajuan <> "BUKAN PENGAJUAN" AND status_pengajuan <> "" 
+		ORDER BY 
+			CASE 
+				WHEN status_pengajuan = "BELUM DIPROSES" THEN 1 
+				WHEN status_pengajuan = "DITERIMA" THEN 2 
+				WHEN status_pengajuan = "DITOLAK" THEN 3 
+				ELSE 4 
+			END,
+			id DESC
+		limit 10;
+')->result_array();
+		
+		$data['param'] 		= 	$this->arr;
+		$this->my_view([ $data['param']['parents_link'].'/pengajuan_pelanggaran/table_pengajuan'],$data);
+	}
 }

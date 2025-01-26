@@ -447,11 +447,12 @@ class kamar extends MY_Controller {
             $no++;
             $row        =   array();
             $asrama		=	$this->db->query('select nama, color from asrama  where id='.$field['asrama_id'])->row_array();
+			$jumlah		=	$this->db->query('select count(*) as jml from kamar_santri where kamar_id='.$field['id'])->row_array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]		=	'<a href="kamar/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
             $row[]		=	!empty($asrama['nama']) ? '<b style="color:'.$asrama['color'].'">'.strtoupper($asrama['nama']).'</b>' : '-';
             $row[]		=	!empty($field['nama']) ? '<b style="color:'.$field['color'].'">'.strtoupper($field['nama']).'</b>' : '-';
-            $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;
+			$row[]		=	$jumlah['jml'];
             $row[]		=	'<ul class="text-center icons-list">
             					<li class="dropdown">
             						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
