@@ -454,6 +454,7 @@ class pelanggaran extends MY_Controller {
 	{
        	$_POST['frm']   =   $this->arr;
 		   $this->db->where('pelanggaran.status_pengajuan','BUKAN PENGAJUAN');
+		   $this->db->or_where('pelanggaran.status_pengajuan','DITERIMA');
 		   $this->db->or_where('pelanggaran.status_pengajuan','');
 		$list           =   $this->mod_datatable->get_datatables();
         $data           =   array();

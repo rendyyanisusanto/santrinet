@@ -100,7 +100,7 @@ class Pengajuan_pelanggaran extends CI_Controller {
 					$foto = $upload_data['file_name'];
 	
 					// Kompres gambar
-					$this->_compress_image('./uploads/pelanggaran/' . $foto);
+					$this->_compress_image('./inc/media/pelanggaran/' . $foto);
 				} else {
 					// Jika upload gagal, kembalikan error
 					echo json_encode([
