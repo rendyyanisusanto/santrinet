@@ -4,27 +4,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-class santri extends MY_Controller {
+class personals extends MY_Controller {
 	public $arr = [
-			'title'				=>	'Master Data Santri',
-			'table'				=>	'santri',
-			'column'			=>	[ 'nis','nama', 'jenis_kelamin','tempat_lahir','tanggal_lahir','nama_ayah','nama_ibu','no_hp_ayah','no_hp_ibu','status_aktif'],
-			'column_order'		=>	[ 'id','nis','nama', 'jenis_kelamin','tempat_lahir','tanggal_lahir','nama_ayah','nama_ibu','no_hp_ayah','no_hp_ibu','status_aktif'],
-			'column_search'		=>	[ 'id','nis','nama', 'jenis_kelamin','tempat_lahir','tanggal_lahir','nama_ayah','nama_ibu','no_hp_ayah','no_hp_ibu','status_aktif'],
+			'title'				=>	'Master Data Personals',
+			'table'				=>	'personals',
+			'column'			=>	[ 'kode','nama', 'foto', 'status_aktif'],
+			'column_order'		=>	[ 'id','kode','nama', 'foto', 'status_aktif'],
+			'column_search'		=>	[ 'id','kode','nama', 'foto', 'status_aktif'],
 			'order'				=>	['id'	=>	'DESC'],
 			'id'				=>	'id',
-			'parents_link'		=>	'role/admin/page/santri'
+			'parents_link'		=>	'role/admin/page/personals'
 	];
 	public function get_data()
 	{
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
-		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index',$data['param']['parents_link'].'/index_page/modal_change_status_santri',$data['param']['parents_link'].'/index_page/js'],$data);
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index',$data['param']['parents_link'].'/index_page/js'],$data);
 	}
 	public function add_page()
 	{
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
+        $data['titles']     =   $this->db->query('select id, name from titles')->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
 	function import_page(){
@@ -72,7 +73,7 @@ class santri extends MY_Controller {
 		}else{
 			$data[$data['param']['table']]		=	$this->db->query('select * from '.$data['param']['table'].' where id IN('.(implode(',', $_POST['data_get'])).')')->result_array();	
 		}
-		$this->load->view('role/admin/page/santri/print_page/print_web', $data);
+		$this->load->view('role/admin/page/personals/print_page/print_web', $data);
 	}
 	function print_excel(){
 		$data['param']	=	$this->arr;
@@ -151,7 +152,7 @@ class santri extends MY_Controller {
 	    ];
 
 		$param	=	[
-	          	'url'			=>	'role/admin/page/santri/print_page/cetak_pdf',
+	          	'url'			=>	'role/admin/page/personals/print_page/cetak_pdf',
 	          	'customPaper'	=>	'A4',
 	          	'data_value'	=>	[
 			           	"data"		=>	$data[$data['param']['table']],
@@ -195,21 +196,19 @@ class santri extends MY_Controller {
 				'tanggal_lahir'		=>	$_POST['tanggal_lahir'],
 				'nama_ayah'			=>	$_POST['nama_ayah'],
 				'nama_ibu'			=>	$_POST['nama_ibu'],
-				'nama_wali'			=>	$_POST['nama_wali'],
 				'no_hp_ayah'		=>	$_POST['no_hp_ayah'],
 				'no_hp_ibu'			=>	$_POST['no_hp_ibu'],
-				'no_hp_wali'			=>	$_POST['no_hp_wali'],
-				'status' 			=> $_POST['status']
+				'status_aktif' 		=> $_POST['status_aktif']
 			];
-			if ($this->save_data('santri', $data)) {
+			if ($this->save_data('personals', $data)) {
 				echo json_encode([
 					'status'	=>	200,
-					'msg'		=>	'Data santri berhasil ditambahkan'
+					'msg'		=>	'Data personals berhasil ditambahkan'
 				]);
 			}else{
 				echo json_encode([
 					'status'	=>	500,
-					'msg'		=>	'Data santri gagal ditambahkan'
+					'msg'		=>	'Data personals gagal ditambahkan'
 				]);
 			}
 		} catch (Exception $e) {
@@ -236,15 +235,15 @@ class santri extends MY_Controller {
 				'no_hp_ibu'			=>	$_POST['no_hp_ibu'],
 				'status_aktif' 		=> $_POST['status_aktif']
 			];
-			if ($this->my_update('santri', $data, [$this->arr['id'] => $_POST['id']])) {
+			if ($this->my_update('personals', $data, [$this->arr['id'] => $_POST['id']])) {
 				echo json_encode([
 					'status'	=>	200,
-					'msg'		=>	'Data santri berhasil ditambahkan'
+					'msg'		=>	'Data personals berhasil ditambahkan'
 				]);
 			}else{
 				echo json_encode([
 					'status'	=>	500,
-					'msg'		=>	'Data santri gagal ditambahkan'
+					'msg'		=>	'Data personals gagal ditambahkan'
 				]);
 			}
 		} catch (Exception $e) {
@@ -255,14 +254,14 @@ class santri extends MY_Controller {
 		}
 	}
 
-	function change_status_santri(){
+	function change_status_personals(){
 		try{
 			if($_POST['id'] != ''){
-				$this->my_update('santri', ['status_santri' => $_POST['status_santri']], ['id' => $_POST['id']]);
+				$this->my_update('personals', ['status_personals' => $_POST['status_personals']], ['id' => $_POST['id']]);
 
 				echo json_encode([
 					'status'	=>	200,
-					'msg'		=>	'Status santri berhasil diubah'
+					'msg'		=>	'Status personals berhasil diubah'
 				]);
 			}else{
 				echo json_encode([
@@ -395,7 +394,7 @@ class santri extends MY_Controller {
 					'status_aktif'	=>	1
 				];
 				try {
-					$this->save_data('santri', $send);					
+					$this->save_data('personals', $send);					
 				} catch (Exception $e) {
 					break;
 				}
@@ -423,17 +422,17 @@ class santri extends MY_Controller {
             $no++;
             $row        =   array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
-            $row[]		=	'<a href="santri/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
+            $row[]		=	'<a href="personals/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
-            $row[]		=	'<a onclick="change_status_santri('.$field['id'].','."'".$field['status_santri']."'".')"><span class="label label-block label-rounded label-'.(($field['status_santri'] == "AKTIF") ? "success" : "info").'">'.$field['status_santri'].'</span></a>' ;
+            $row[]		=	'<a onclick="change_status_personals('.$field['id'].','."'".$field['status_personals']."'".')"><span class="label label-block label-rounded label-'.(($field['status_personals'] == "AKTIF") ? "success" : "info").'">'.$field['status_personals'].'</span></a>' ;
             $row[]		=	'<ul class="text-center icons-list">
             					<li class="dropdown">
             						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
             							<i class="icon-menu9"></i>
             						</a>
             						<ul class="dropdown-menu dropdown-menu-right">
-            							<li><a href="santri/look_page/'.$field['id'].'" class="app-item"><i class="icon-eye"></i> Lihat</a></li>
-            							<li><a href="santri/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah</a></li>
+            							<li><a href="personals/look_page/'.$field['id'].'" class="app-item"><i class="icon-eye"></i> Lihat</a></li>
+            							<li><a href="personals/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah</a></li>
             							<li><a  onclick="change_status('.$field['id'].','.$field['status_aktif'].');"><i class="icon-close2"></i> '.(($field['status_aktif'] == 1) ? "Nonaktifkan" : "Aktifkan" ).'</a></li>
             							<li><a  onclick="delete_item('.$field['id'].');"><i class="icon-trash"></i> Hapus</a></li>
             						</ul>
