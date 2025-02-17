@@ -5,6 +5,7 @@
             echo "<tr>";
             echo "<td>".($key+1)."</td>";
             echo "<td>".$value['nama']."</td>";
+            echo "<td>".$value['nama_asrama']."</td>";
             echo "<td><button class='btn btn-primary' onclick='tambahSantriKamar(".$value['id'].")'><i class='icon-circle-right2'></i></button></td>";
             echo "</tr>";
         }

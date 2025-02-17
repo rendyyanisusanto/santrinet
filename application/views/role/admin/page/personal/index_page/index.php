@@ -25,11 +25,12 @@
 					<table class="table datatable-basic table-bordered table-xxs table-framed table-striped table-hover"  id="tabel-data">
 						<thead>
 							<tr>
-								<th width="2%"><input type="checkbox" class="bulk-check" name=""></th>
+								<th width="2%">Foto</th>
 								<th width="10%">NIS</th>
 								<th>Nama</th>
-								<th width="10%">Status</th>
-								<th width="2%" class="text-center">Actions</th>
+								<th width="10%">Asatid</th>
+								<th width="10%">Kafil</th>
+								<th width="10%">Pengurus</th>
 							</tr>
 						</thead>
 					<tbody></tbody>

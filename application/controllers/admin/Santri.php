@@ -523,7 +523,9 @@ class santri extends MY_Controller {
 
 	public function datatable()
 	{
-       	$_POST['frm']   =   $this->arr;
+       	$this->arr['table'] = 'v_santri_aktif';
+		$_POST['frm']   =   $this->arr;
+
         $list           =   $this->mod_datatable->get_datatables();
         $data           =   array();
         $no             =   $_POST['start'];

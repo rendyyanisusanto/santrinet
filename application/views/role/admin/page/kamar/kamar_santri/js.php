@@ -1,15 +1,16 @@
 <script>
     load_table_santri();
 
-    function load_table_santri(search=''){
-        send_ajax('Kamar/get_table_kamar_santri',{search:search}).then(function(data){
+    function load_table_santri(search='', opt=''){
+        send_ajax('Kamar/get_table_kamar_santri',{search:search, opt:opt}).then(function(data){
             $('#santriList').html(data);
         });
     }
 
     function filterSantri(){
         var search = $('#searchSantri').val();
-        load_table_santri(search);
+        var opt = $('#asrama_id').val();
+        load_table_santri(search, opt);
     }
 
     function tampilkanSantriDiKamar(){

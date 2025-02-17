@@ -5,10 +5,10 @@
 
 			<div class="navbar-collapse collapse" id="navbar-second-toggle">
 				<ul class="nav navbar-nav">
-					<li><a class="app-item" href="Dashboard/get_data"><i class="icon-display4 position-left"></i> Dashboard</a></li>
+					<li><a class="app-item" href="Dashboard/get_data"><i class="icon-display4 position-left"></i> Menu</a></li>
 
 
-					<li class="dropdown">
+					<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<i class="icon-office position-left"></i> Administrasi<span class="caret"></span>
 						</a>
@@ -99,7 +99,7 @@
 							<li class="dropdown-header">Optional layouts</li>
 							<li><a class="app-item" href="Users/edit_user_page"><i class="icon-align-center-horizontal"></i> Edit Akun</a></li>
 						</ul>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>

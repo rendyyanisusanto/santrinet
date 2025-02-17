@@ -9,11 +9,23 @@
             </div>
             <div class="panel-body" style="max-height: 500px; overflow-y: auto;">
                 <input type="text" id="searchSantri" class="form-control" placeholder="Cari Santri..." onkeyup="filterSantri()">
+                <br>
+                <select name="asrama" id="asrama_id" onchange="filterSantri();" class="form-control">
+                    <option value="">Pilih Asrama</option>
+                    <?php
+                        foreach ($data_get['asrama'] as $key => $value) {
+                            ?>
+                                <option value="<?= $value['id']?>"><?= $value['nama'];?></option>
+                            <?php
+                        }
+                    ?>
+                </select>
                 <table class="table table-bordered table-xxs table-striped" style="margin-top: 10px;">
                     <thead>
                         <tr>
                             <th width="1%">No</th>
                             <th>Nama Santri</th>
+                            <th>Asrama</th>
                             <th width="2%">Aksi</th>
                         </tr>
                     </thead>

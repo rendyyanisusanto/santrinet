@@ -28,6 +28,7 @@ class kamar extends MY_Controller {
 		$this->arr['title'] = "Setting Kamar Santri";
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
+		$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
 		$data['kamar']		=	$this->db->query('select id, nama from kamar where status_aktif=1')->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/kamar_santri/index', $data['param']['parents_link'].'/kamar_santri/js'],$data);
 	}
@@ -483,8 +484,9 @@ class kamar extends MY_Controller {
 		
 		$data['param'] 		= 	$this->arr;
 		$search = $_POST['search'];
+		$opt = $_POST['opt'];
 		$data['santri']	=	$this->db->query('SELECT 
-			s.id, s.nama
+			s.id, s.nama, (select nama from asrama where asrama.id = s.asrama_id) as nama_asrama
 		FROM 
 			santri s
 		LEFT JOIN 
@@ -493,6 +495,7 @@ class kamar extends MY_Controller {
 			ks.santri_id IS NULL
 		AND 
 			s.nama LIKE "%' . $search . '%"
+		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
 		LIMIT 20;')->result_array();
 
 		$this->my_view([$data['param']['parents_link'].'/kamar_santri/table'], $data);

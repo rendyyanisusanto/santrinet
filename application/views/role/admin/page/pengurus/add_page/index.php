@@ -1,4 +1,3 @@
-<!-- include -->
 <link href="<?php echo base_url('inc/select2/') ?>/select2.css" rel="stylesheet" />
 <script src="<?php echo base_url('inc/limitless/global_assets/')?>js/plugins/forms/selects/select2.min.js"></script>
 <!-- /include -->
@@ -14,14 +13,10 @@
 							
 							<div class="col-md-6">
 								<div class="form-group">
-									<label class="col-lg-3 control-label">Kode : <i class="text-danger">*</i></label>
-									<div class="col-lg-4">
-										<input type="text" placeholder="" required name="kode" class="form-control kode">
-									</div> 
-									<div class="col-lg-3">
-						              	<button class="btn btn-xs btn-warning" data-toggle="tooltip" onclick="reload_table('<?php echo $data_get['param']['table']; ?>','kode','kode');" data-placement="top" title="Reload Kode" type="button"><i class="icon-pencil7"></i></button>
-						              	<button class="btn btn-xs btn-info" type="button" onclick="setting_table('<?php echo $data_get['param']['table']; ?>','kode');" data-toggle="tooltip" data-placement="top" title="Setting Kode" ><i class="icon-cog3"></i></button>
-						            </div>
+									<label class="col-lg-3 control-label">NIS : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder=""  name="nis" class="form-control">
+									</div>
 								</div>
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Nama : <i class="text-danger">*</i></label>
@@ -30,7 +25,7 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-lg-3 control-label">Jenis Kelamin : <i class="text-danger">*</i></label>
+									<label class="col-lg-3 control-label">Jenis Kelamin :  </label>
 									<div class="col-lg-6">
 										<select class="form-control" name="jenis_kelamin">
 											<option value="L">Laki-laki</option>
@@ -39,13 +34,69 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-lg-3 control-label">Lembaga Pengurus : <i class="text-danger">*</i></label>
+									<label class="col-lg-3 control-label">Tempat Lahir : </label>
 									<div class="col-lg-6">
-										<select class="form-control" name="lembaga_pengurus_id">
+										<input type="text" placeholder=""  name="tempat_lahir" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Tanggal Lahir : </label>
+									<div class="col-lg-6">
+										<input type="date" placeholder=""  name="tanggal_lahir" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Nama Ayah : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder="" name="nama_ayah" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-lg-3 control-label">No HP Ayah : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder="" name="no_hp_ayah" class="form-control">
+									</div>
+								</div>
+								
+							
+
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Nama Ibu : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder="" name="nama_ibu" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-lg-3 control-label">No HP Ibu : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder="" name="no_hp_ibu" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Nama Wali : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder="" name="nama_wali" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-lg-3 control-label">No HP Wali : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder="" name="no_hp_wali" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Asrama : </label>
+									<div class="col-lg-6">
+										<select name="asrama_id" id="" class="form-control">
 											<?php
-												foreach ($data_get['lembaga_pengurus'] as $key => $value) {
+												foreach ($data_get['asrama'] as $key => $value) {
 													?>
-														<option value="<?= $value['id']?>"><?= $value['kode']?> - <?= $value['nama']?></option>
+													<option value="<?= $value['id']?>"><?= $value['nama']?></option>
 													<?php
 												}
 											?>
@@ -53,30 +104,22 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-lg-3 control-label">Tempat Lahir : <i class="text-danger">*</i></label>
+									<label class="col-lg-3 control-label">Foto : </label>
 									<div class="col-lg-6">
-										<input type="text" placeholder="" required name="tempat_lahir" class="form-control">
+										<input type="file" placeholder="" name="foto" class="form-control">
 									</div>
 								</div>
-								<div class="form-group">
-									<label class="col-lg-3 control-label">Tangga Lahir : <i class="text-danger">*</i></label>
+								<div class="form-group" id="lembaga_pengurus">
+									<label class="col-lg-3 control-label">Lembaga :</label>
 									<div class="col-lg-6">
-										<input type="date" placeholder="" required name="tanggal_lahir" class="form-control">
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-lg-3 control-label">No HP: <i class="text-danger">*</i></label>
-									<div class="col-lg-6">
-										<input type="text" placeholder="" required name="no_hp" class="form-control">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-lg-3 control-label">Status : <i class="text-danger">*</i></label>
-									<div class="col-lg-6">
-										<select name="status_aktif" required class="form-control">
-											<option value="1">AKTIF</option>
-											<option value="0">TIDAK AKTIF</option>
+										<select name="lembaga_pengurus_id" class="form-control">
+											<?php
+												foreach ($data_get['lembaga_pengurus'] as $key => $value) {
+													?>
+													<option value="<?= $value['id']?>"><?= $value['nama']?></option>
+													<?php
+												}
+											?>
 										</select>
 									</div>
 								</div>
@@ -99,3 +142,6 @@
 		</div>
 	</div>
 </div>
+
+
+

@@ -6,7 +6,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class asatid extends MY_Controller {
 	public $arr = [
-			'title'				=>	'Master Data asatid',
+			'title'				=>	'Master Data Asatid',
 			'table'				=>	'asatid',
 			'column'			=>	[ 'kode','nama', 'jenis_kelamin','tempat_lahir','tanggal_lahir','status_aktif'],
 			'column_order'		=>	[ 'id','kode','nama', 'jenis_kelamin','tempat_lahir','tanggal_lahir','status_aktif'],
@@ -25,6 +25,7 @@ class asatid extends MY_Controller {
 	{
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
+		$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
 	function import_page(){
@@ -186,31 +187,72 @@ class asatid extends MY_Controller {
 	function simpan_data()
 	{
 		try {
+			$foto_nama = null;
+			
+			if (!empty($_FILES['foto']['name'])) {
+				$config['upload_path']   = './inc/media/santri/';
+				$config['allowed_types'] = 'jpg|jpeg|png';
+				$config['max_size']      = 2048; // 2MB
+				$config['file_name']     = time() . '_' . $_FILES['foto']['name'];
+				
+				$this->load->library('upload', $config);
+				
+				if ($this->upload->do_upload('foto')) {
+					$upload_data = $this->upload->data();
+					$foto_nama = $upload_data['file_name'];
+					
+					// Kompres gambar menggunakan Intervention Image
+					$this->load->library('image_lib');
+					
+					$config_img['image_library']  = 'gd2';
+					$config_img['source_image']   = './uploads/santri/' . $foto_nama;
+					$config_img['new_image']      = './uploads/santri/' . $foto_nama;
+					$config_img['quality']        = '50%'; // Kompres lebih tinggi
+					$config_img['maintain_ratio'] = TRUE;
+					$config_img['width']          = 500;
+					$config_img['height']         = 500;
+					
+					$this->image_lib->initialize($config_img);
+					$this->image_lib->resize();
+				}
+			}
 			
 			$data = [
-				'nama' 				=> $_POST['nama'],
-				'kode'				=>	$_POST['kode'],
-				'jenis_kelamin'		=>	$_POST['jenis_kelamin'],
-				'tempat_lahir'		=>	$_POST['tempat_lahir'],
-				'tanggal_lahir'		=>	$_POST['tanggal_lahir'],
-				'no_hp'				=>	$_POST['no_hp'],
-				'status_aktif' 		=> $_POST['status_aktif']
+				'nama'           => $_POST['nama'],
+				'nis'            => $_POST['nis'],
+				'jenis_kelamin'  => $_POST['jenis_kelamin'],
+				'tempat_lahir'   => $_POST['tempat_lahir'],
+				'tanggal_lahir'  => $_POST['tanggal_lahir'],
+				'nama_ayah'      => $_POST['nama_ayah'],
+				'nama_ibu'       => $_POST['nama_ibu'],
+				'nama_wali'      => $_POST['nama_wali'],
+				'no_hp_ayah'     => $_POST['no_hp_ayah'],
+				'no_hp_ibu'      => $_POST['no_hp_ibu'],
+				'no_hp_wali'     => $_POST['no_hp_wali'],
+				'asrama_id'         => $_POST['asrama_id'],
+				'status_santri'         => "AKTIF",
+				'foto'           => $foto_nama
 			];
-			if ($this->save_data('asatid', $data)) {
+			
+			if ($this->db->insert('santri', $data)) {
+				$santri_id = $this->db->insert_id(); // Ambil ID santri yang baru disimpan
+				 // Cek checkbox yang dicentang
+				 $this->db->insert('asatid', ['santri_id'=>$santri_id]);
+
 				echo json_encode([
-					'status'	=>	200,
-					'msg'		=>	'Data asatid berhasil ditambahkan'
+					'status' => 200,
+					'msg'    => 'Data pengurus berhasil ditambahkan'
 				]);
-			}else{
+			} else {
 				echo json_encode([
-					'status'	=>	500,
-					'msg'		=>	'Data asatid gagal ditambahkan'
+					'status' => 500,
+					'msg'    => 'Data pengurus gagal ditambahkan'
 				]);
 			}
 		} catch (Exception $e) {
 			echo json_encode([
-					'status'	=>	500,
-					'msg'		=>	$e
+				'status' => 500,
+				'msg'    => $e->getMessage()
 			]);
 		}
 	}
@@ -383,20 +425,17 @@ class asatid extends MY_Controller {
 
 	public function datatable()
 	{
+		$this->arr['table']	=	'v_asatid';
        	$_POST['frm']   =   $this->arr;
         $list           =   $this->mod_datatable->get_datatables();
         $data           =   array();
         $no             =   $_POST['start'];
         foreach ($list as $field) {
-            $no++;
+			$no++;
             $row        =   array();
-            $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
-            $row[]		=	'<a href="asatid/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
+            $row[]      =   (!empty($field['foto'])) ? '<img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="max-width: 50px">' : '<img src="'.base_url('inc/media/no_image.jpg').'" style="max-width: 50px">';
+            $row[]		=	'<a href="santri/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
-            $row[]		=	$field['jenis_kelamin'];
-            $row[]		=	$field['tempat_lahir'].' / '.$field['tanggal_lahir'];
-            $row[]		=	$field['no_hp'];
-            $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;
             $row[]		=	'<ul class="text-center icons-list">
             					<li class="dropdown">
             						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
