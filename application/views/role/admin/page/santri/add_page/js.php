@@ -23,4 +23,13 @@
 		        });
 		    return false;
 		});
+		$(document).ready(function () {
+			$('#role_pengurus').change(function () {
+				if ($(this).is(':checked')) {
+					$('#lembaga_pengurus').show();
+				} else {
+					$('#lembaga_pengurus').hide();
+				}
+			});
+		});
 	</script>

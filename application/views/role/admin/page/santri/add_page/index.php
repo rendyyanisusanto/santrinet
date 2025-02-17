@@ -3,7 +3,7 @@
 <script src="<?php echo base_url('inc/limitless/global_assets/')?>js/plugins/forms/selects/select2.min.js"></script>
 <!-- /include -->
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-12">
 		<div class="panel">
 			<form id="app-submit" class="form-horizontal" action="<?php echo $data_get['param']['table'] ?>/simpan_data" method="POST">
 				<div class="panel-body">	
@@ -11,18 +11,8 @@
 						<fieldset>
 							<legend class="text-semibold"><?php echo $data_get['param']['title'] ?> - <b>TAMBAH DATA</b></legend>
 							
-
-							<div class="col-md-12">
-								
-								<div class="form-group">
-									<label class="col-lg-3 control-label">Status : <i class="text-danger">*</i></label>
-									<div class="col-lg-6">
-										<select class="form-control" name="status">
-											<option value="AKTIF">SANTRI AKTIF</option>
-											<option value="ALUMNI">ALUMNI</option>
-										</select>
-									</div>
-								</div>
+							
+							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-3 control-label">NIS : </label>
 									<div class="col-lg-6">
@@ -69,6 +59,11 @@
 										<input type="text" placeholder="" name="no_hp_ayah" class="form-control">
 									</div>
 								</div>
+								
+							
+
+							</div>
+							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Nama Ibu : </label>
 									<div class="col-lg-6">
@@ -96,6 +91,20 @@
 									</div>
 								</div>
 								<div class="form-group">
+									<label class="col-lg-3 control-label">Asrama : </label>
+									<div class="col-lg-6">
+										<select name="asrama_id" id="" class="form-control">
+											<?php
+												foreach ($data_get['asrama'] as $key => $value) {
+													?>
+													<option value="<?= $value['id']?>"><?= $value['nama']?></option>
+													<?php
+												}
+											?>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
 									<label class="col-lg-3 control-label">Foto : </label>
 									<div class="col-lg-6">
 										<input type="file" placeholder="" name="foto" class="form-control">
@@ -104,10 +113,24 @@
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Role : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input type="checkbox" name="role[]" value="SANTRI"> SANTRI <br>
+										<input type="checkbox" name="role[]" checked value="SANTRI"> SANTRI <br>
 										<input type="checkbox" name="role[]" value="KAFIL"> KAFIL<br>
 										<input type="checkbox" name="role[]" value="ASATID"> ASATID<br>
-										<input type="checkbox" name="role[]" value="PENGURUS"> PENGURUS
+										<input type="checkbox" name="role[]" id="role_pengurus" value="PENGURUS"> PENGURUS
+									</div>
+								</div>
+								<div class="form-group" id="lembaga_pengurus" style="display: none;">
+									<label class="col-lg-3 control-label">Lembaga :</label>
+									<div class="col-lg-6">
+										<select name="lembaga_pengurus_id" class="form-control">
+											<?php
+												foreach ($data_get['lembaga_pengurus'] as $key => $value) {
+													?>
+													<option value="<?= $value['id']?>"><?= $value['nama']?></option>
+													<?php
+												}
+											?>
+										</select>
 									</div>
 								</div>
 							</div>

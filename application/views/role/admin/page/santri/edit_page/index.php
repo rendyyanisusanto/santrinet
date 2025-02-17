@@ -11,9 +11,8 @@
 						<fieldset>
 							<legend class="text-semibold"><?php echo $data_get['param']['title'] ?> - <b>UPDATE DATA</b></legend>
 							
-
 							<div class="col-md-6">
-								<input type="hidden" value="<?= $data_get['data_edit']['id'] ?>" name="id">
+							<input type="hidden" value="<?= $data_get['data_edit']['id'] ?>" name="id">
 								
 								<div class="form-group">
 									<label class="col-lg-3 control-label">NIS : <i class="text-danger">*</i></label>
@@ -39,49 +38,87 @@
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Tempat Lahir : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input type="text" placeholder="" required value="<?= $data_get['data_edit']['tempat_lahir'] ?>" name="tempat_lahir" class="form-control">
+										<input type="text" placeholder=""  value="<?= $data_get['data_edit']['tempat_lahir'] ?>" name="tempat_lahir" class="form-control">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Tangga Lahir : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input type="date" placeholder="" required value="<?= $data_get['data_edit']['tanggal_lahir'] ?>" name="tanggal_lahir" class="form-control">
+										<input type="date" placeholder=""  value="<?= $data_get['data_edit']['tanggal_lahir'] ?>" name="tanggal_lahir" class="form-control">
 									</div>
 								</div>
+								
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Nama Ayah : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input type="text" placeholder="" required value="<?= $data_get['data_edit']['nama_ayah'] ?>" name="nama_ayah" class="form-control">
+										<input type="text" placeholder=""  value="<?= $data_get['data_edit']['nama_ayah'] ?>" name="nama_ayah" class="form-control">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label class="col-lg-3 control-label">No HP Ayah : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input type="text" placeholder="" required value="<?= $data_get['data_edit']['no_hp_ayah'] ?>" name="no_hp_ayah" class="form-control">
+										<input type="text" placeholder=""  value="<?= $data_get['data_edit']['no_hp_ayah'] ?>" name="no_hp_ayah" class="form-control">
 									</div>
 								</div>
+							</div>
+							<div class="col-md-6">
+								
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Nama Ibu : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input type="text" placeholder="" required value="<?= $data_get['data_edit']['nama_ibu'] ?>" name="nama_ibu" class="form-control">
+										<input type="text" placeholder=""  value="<?= $data_get['data_edit']['nama_ibu'] ?>" name="nama_ibu" class="form-control">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label class="col-lg-3 control-label">No HP Ibu : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input type="text" placeholder="" required value="<?= $data_get['data_edit']['no_hp_ibu'] ?>" name="no_hp_ibu" class="form-control">
+										<input type="text" placeholder=""  value="<?= $data_get['data_edit']['no_hp_ibu'] ?>" name="no_hp_ibu" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Nama Wali : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder="" value="<?= $data_get['data_edit']['nama_wali'] ?>" name="nama_wali" class="form-control">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-lg-3 control-label">No HP Wali : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder="" value="<?= $data_get['data_edit']['no_hp_wali'] ?>" name="no_hp_wali" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Asrama : </label>
+									<div class="col-lg-6">
+										<select name="asrama_id" id="" class="form-control">
+											<?php
+												foreach ($data_get['asrama'] as $key => $value) {
+													?>
+													<option <?= ($value['id'] == $data_get['data_edit']['asrama_id']) ? "selected":""; ?> value="<?= $value['id']?>"><?= $value['nama']?></option>
+													<?php
+												}
+											?>
+										</select>
 									</div>
 								</div>
 								
 								<div class="form-group">
-									<label class="col-lg-3 control-label">Status : <i class="text-danger">*</i></label>
+									<label class="col-lg-3 control-label">Foto : </label>
 									<div class="col-lg-6">
-										<select name="status_aktif" required class="form-control">
-											<option <?= ($data_get['data_edit']['status_aktif'] == 1) ? "selected":""; ?> value="1">AKTIF</option>
-											<option <?= ($data_get['data_edit']['status_aktif'] == 0) ? "selected":""; ?> value="0">TIDAK AKTIF</option>
-										</select>
+										<input type="hidden" name="foto_lama" value="<?= $data_get['data_edit']['foto']?>">
+										<input type="file" placeholder="" name="foto" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Role : <i class="text-danger">*</i></label>
+									<div class="col-lg-6">
+										<input type="checkbox" name="role[]" value="SANTRI"> SANTRI <br>
+										<input type="checkbox" name="role[]" value="KAFIL"> KAFIL<br>
+										<input type="checkbox" name="role[]" value="ASATID"> ASATID<br>
+										<input type="checkbox" name="role[]" value="PENGURUS"> PENGURUS
 									</div>
 								</div>
 							</div>

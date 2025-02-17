@@ -26,6 +26,7 @@
 						<thead>
 							<tr>
 								<th width="2%"><input type="checkbox" class="bulk-check" name=""></th>
+								<th width="2%">Foto</th>
 								<th width="10%">NIS</th>
 								<th>Nama</th>
 								<th width="10%">Status</th>

@@ -25,6 +25,8 @@ class santri extends MY_Controller {
 	{
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
+		$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
+		$data['lembaga_pengurus']		=	$this->db->query('select id, nama from lembaga_pengurus')->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
 	function import_page(){
@@ -36,6 +38,7 @@ class santri extends MY_Controller {
 		if (!empty($id)) {
 			$data['param'] 		= 	$this->arr;
 			$data['id']			=	$id;
+			$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
 			$data['data_edit']	=	$this->my_where($data['param']['table'], [
 				$data['param']['id']	=>	$id
 			])->row_array();
@@ -186,74 +189,179 @@ class santri extends MY_Controller {
 	function simpan_data()
 	{
 		try {
+			$foto_nama = null;
+			
+			if (!empty($_FILES['foto']['name'])) {
+				$config['upload_path']   = './inc/media/santri/';
+				$config['allowed_types'] = 'jpg|jpeg|png';
+				$config['max_size']      = 2048; // 2MB
+				$config['file_name']     = time() . '_' . $_FILES['foto']['name'];
+				
+				$this->load->library('upload', $config);
+				
+				if ($this->upload->do_upload('foto')) {
+					$upload_data = $this->upload->data();
+					$foto_nama = $upload_data['file_name'];
+					
+					// Kompres gambar menggunakan Intervention Image
+					$this->load->library('image_lib');
+					
+					$config_img['image_library']  = 'gd2';
+					$config_img['source_image']   = './uploads/santri/' . $foto_nama;
+					$config_img['new_image']      = './uploads/santri/' . $foto_nama;
+					$config_img['quality']        = '50%'; // Kompres lebih tinggi
+					$config_img['maintain_ratio'] = TRUE;
+					$config_img['width']          = 500;
+					$config_img['height']         = 500;
+					
+					$this->image_lib->initialize($config_img);
+					$this->image_lib->resize();
+				}
+			}
 			
 			$data = [
-				'nama' 				=> $_POST['nama'],
-				'nis'				=>	$_POST['nis'],
-				'jenis_kelamin'		=>	$_POST['jenis_kelamin'],
-				'tempat_lahir'		=>	$_POST['tempat_lahir'],
-				'tanggal_lahir'		=>	$_POST['tanggal_lahir'],
-				'nama_ayah'			=>	$_POST['nama_ayah'],
-				'nama_ibu'			=>	$_POST['nama_ibu'],
-				'nama_wali'			=>	$_POST['nama_wali'],
-				'no_hp_ayah'		=>	$_POST['no_hp_ayah'],
-				'no_hp_ibu'			=>	$_POST['no_hp_ibu'],
-				'no_hp_wali'			=>	$_POST['no_hp_wali'],
-				'status' 			=> $_POST['status']
+				'nama'           => $_POST['nama'],
+				'nis'            => $_POST['nis'],
+				'jenis_kelamin'  => $_POST['jenis_kelamin'],
+				'tempat_lahir'   => $_POST['tempat_lahir'],
+				'tanggal_lahir'  => $_POST['tanggal_lahir'],
+				'nama_ayah'      => $_POST['nama_ayah'],
+				'nama_ibu'       => $_POST['nama_ibu'],
+				'nama_wali'      => $_POST['nama_wali'],
+				'no_hp_ayah'     => $_POST['no_hp_ayah'],
+				'no_hp_ibu'      => $_POST['no_hp_ibu'],
+				'no_hp_wali'     => $_POST['no_hp_wali'],
+				'asrama_id'         => $_POST['asrama_id'],
+				'status_santri'         => "AKTIF",
+				'foto'           => $foto_nama
 			];
-			if ($this->save_data('santri', $data)) {
+			
+			if ($this->db->insert('santri', $data)) {
+				$santri_id = $this->db->insert_id(); // Ambil ID santri yang baru disimpan
+				 // Cek checkbox yang dicentang
+				 if (!empty($_POST['role']) && is_array($_POST['role'])) {
+					foreach ($_POST['role'] as $role) {
+						if ($role == "KAFIL") {
+							$this->db->insert('kafil', ['santri_id' => $santri_id]);
+						} elseif ($role == "ASATID") {
+							$this->db->insert('asatid', ['santri_id' => $santri_id]);
+						} elseif ($role == "PENGURUS") {
+							$data_pengurus = [
+								'santri_id'          => $santri_id,
+								'lembaga_pengurus_id' => $_POST['lembaga_pengurus_id']
+							];
+							$this->db->insert('pengurus', $data_pengurus);
+						}
+					}
+				}
+
 				echo json_encode([
-					'status'	=>	200,
-					'msg'		=>	'Data santri berhasil ditambahkan'
+					'status' => 200,
+					'msg'    => 'Data santri berhasil ditambahkan'
 				]);
-			}else{
+			} else {
 				echo json_encode([
-					'status'	=>	500,
-					'msg'		=>	'Data santri gagal ditambahkan'
+					'status' => 500,
+					'msg'    => 'Data santri gagal ditambahkan'
 				]);
 			}
 		} catch (Exception $e) {
 			echo json_encode([
-					'status'	=>	500,
-					'msg'		=>	$e
+				'status' => 500,
+				'msg'    => $e->getMessage()
 			]);
 		}
 	}
 	function update_data()
 	{
-		
 		try {
+			$foto_nama = $this->input->post('foto_lama'); // Gunakan foto lama jika tidak ada yang baru
+			
+			if (!empty($_FILES['foto']['name'])) {
+				$config['upload_path']   = './inc/media/santri/';
+				$config['allowed_types'] = 'jpg|jpeg|png';
+				$config['max_size']      = 1024; // 1MB
+				$config['file_name']     = time() . '_' . $_FILES['foto']['name'];
+				
+				$this->load->library('upload', $config);
+				
+				if ($this->upload->do_upload('foto')) {
+					$upload_data = $this->upload->data();
+					$foto_nama = $upload_data['file_name'];
+					
+					// Kompres gambar menggunakan Intervention Image
+					$this->load->library('image_lib');
+					
+					$config_img['image_library']  = 'gd2';
+					$config_img['source_image']   = './inc/media/santri/' . $foto_nama;
+					$config_img['new_image']      = './inc/media/santri/' . $foto_nama;
+					$config_img['quality']        = '50%'; // Kompres lebih tinggi
+					$config_img['maintain_ratio'] = TRUE;
+					$config_img['width']          = 500;
+					$config_img['height']         = 500;
+					
+					$this->image_lib->initialize($config_img);
+					$this->image_lib->resize();
+				}
+			}
 			
 			$data = [
-				'nama' 	=> $_POST['nama'],
-				'nis'	=>	$_POST['nis'],
-				'jenis_kelamin'		=>	$_POST['jenis_kelamin'],
-				'tempat_lahir'		=>	$_POST['tempat_lahir'],
-				'tanggal_lahir'		=>	$_POST['tanggal_lahir'],
-				'nama_ayah'			=>	$_POST['nama_ayah'],
-				'nama_ibu'			=>	$_POST['nama_ibu'],
-				'no_hp_ayah'		=>	$_POST['no_hp_ayah'],
-				'no_hp_ibu'			=>	$_POST['no_hp_ibu'],
-				'status_aktif' 		=> $_POST['status_aktif']
+				'nama'           => $_POST['nama'],
+				'nis'            => $_POST['nis'],
+				'jenis_kelamin'  => $_POST['jenis_kelamin'],
+				'tempat_lahir'   => $_POST['tempat_lahir'],
+				'tanggal_lahir'  => $_POST['tanggal_lahir'],
+				'nama_ayah'      => $_POST['nama_ayah'],
+				'nama_ibu'       => $_POST['nama_ibu'],
+				'nama_wali'      => $_POST['nama_wali'],
+				'no_hp_ayah'     => $_POST['no_hp_ayah'],
+				'no_hp_ibu'      => $_POST['no_hp_ibu'],
+				'no_hp_wali'     => $_POST['no_hp_wali'],
+				'asrama_id'      => $_POST['asrama_id'],
+				'foto'           => $foto_nama
 			];
-			if ($this->my_update('santri', $data, [$this->arr['id'] => $_POST['id']])) {
+			
+			if ($this->my_update('santri', $data, ['id' => $_POST['id']])) {
+				// Update data santri
+				// 🚨 Hapus role lama sebelum menambahkan yang baru
+				$this->db->delete('kafil', ['santri_id' => $_POST['id']]);
+				$this->db->delete('asatid', ['santri_id' => $_POST['id']]);
+				$this->db->delete('pengurus', ['santri_id' => $_POST['id']]);
+		
+				// 🚀 Tambahkan role baru jika ada
+				if (!empty($_POST['role']) && is_array($_POST['role'])) {
+					foreach ($_POST['role'] as $role) {
+						if ($role == "KAFIL") {
+							$this->db->insert('kafil', ['santri_id' => $_POST['id']]);
+						} elseif ($role == "ASATID") {
+							$this->db->insert('asatid', ['santri_id' => $_POST['id']]);
+						} elseif ($role == "PENGURUS") {
+							$data_pengurus = [
+								'santri_id'           => $_POST['id'],
+								'lembaga_pengurus_id' => $_POST['lembaga_pengurus_id']
+							];
+							$this->db->insert('pengurus', $data_pengurus);
+						}
+					}
+				}
 				echo json_encode([
-					'status'	=>	200,
-					'msg'		=>	'Data santri berhasil ditambahkan'
+					'status' => 200,
+					'msg'    => 'Data santri berhasil diperbarui'
 				]);
-			}else{
+			} else {
 				echo json_encode([
-					'status'	=>	500,
-					'msg'		=>	'Data santri gagal ditambahkan'
+					'status' => 500,
+					'msg'    => 'Data santri gagal diperbarui'
 				]);
 			}
 		} catch (Exception $e) {
 			echo json_encode([
-					'status'	=>	500,
-					'msg'		=>	$e
+				'status' => 500,
+				'msg'    => $e->getMessage()
 			]);
 		}
 	}
+	
 
 	function change_status_santri(){
 		try{
@@ -423,6 +531,7 @@ class santri extends MY_Controller {
             $no++;
             $row        =   array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
+            $row[]      =   (!empty($field['foto'])) ? '<img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="max-width: 50px">' : '<img src="'.base_url('inc/media/no_image.jpg').'" style="max-width: 50px">';
             $row[]		=	'<a href="santri/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	'<a onclick="change_status_santri('.$field['id'].','."'".$field['status_santri']."'".')"><span class="label label-block label-rounded label-'.(($field['status_santri'] == "AKTIF") ? "success" : "info").'">'.$field['status_santri'].'</span></a>' ;
