@@ -14,7 +14,7 @@
 							
 							<div class="col-md-6">
 								<div class="form-group">
-									<label class="col-lg-3 control-label">NIS : </label>
+									<label class="col-lg-3 control-label">NIP : </label>
 									<div class="col-lg-6">
 										<input type="text" placeholder=""  name="nis" class="form-control">
 									</div>
@@ -23,6 +23,12 @@
 									<label class="col-lg-3 control-label">Nama : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
 										<input type="text" placeholder="" required name="nama" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">NIK : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder=""  name="nik" class="form-control">
 									</div>
 								</div>
 								<div class="form-group">
@@ -60,10 +66,6 @@
 									</div>
 								</div>
 								
-							
-
-							</div>
-							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Nama Ibu : </label>
 									<div class="col-lg-6">
@@ -90,6 +92,10 @@
 										<input type="text" placeholder="" name="no_hp_wali" class="form-control">
 									</div>
 								</div>
+
+							</div>
+							<div class="col-md-6">
+								
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Asrama : </label>
 									<div class="col-lg-6">
@@ -133,6 +139,29 @@
 										</select>
 									</div>
 								</div>
+
+								<hr>
+								<b >Dokumen Tambahan</b>
+								<div class="additional-document">
+									<div style="margin-top: 10px;" class="form-group">
+										<div class="col-lg-3">
+											<input type="text" placeholder="" name="dokumen[0][name]" value="KTP" readonly class="form-control">
+										</div>
+										<div class="col-lg-6">
+											<input type="file" placeholder="" name="dokumen[0][val]" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-lg-3">
+											<input type="text" placeholder="" name="dokumen[1][name]" value="KK" readonly class="form-control">
+										</div>
+										<div class="col-lg-6">
+											<input type="file" placeholder="" name="dokumen[1][val]" class="form-control">
+										</div>
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-default btn-add" onclick="add_document();"><i class="icon-plus3"></i> Tambah Dokumen</button>
 							</div>
 							
 						</fieldset>

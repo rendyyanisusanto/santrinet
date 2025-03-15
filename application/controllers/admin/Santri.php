@@ -222,6 +222,7 @@ class santri extends MY_Controller {
 			$data = [
 				'nama'           => $_POST['nama'],
 				'nis'            => $_POST['nis'],
+				'nik'            => $_POST['nik'],
 				'jenis_kelamin'  => $_POST['jenis_kelamin'],
 				'tempat_lahir'   => $_POST['tempat_lahir'],
 				'tanggal_lahir'  => $_POST['tanggal_lahir'],
@@ -255,6 +256,41 @@ class santri extends MY_Controller {
 					}
 				}
 
+				 // **Proses Upload Dokumen Tambahan**
+				 if (!empty($_FILES['dokumen']['name'])) {
+					foreach ($_FILES['dokumen']['name'] as $key => $name) {
+						if (!empty($name['val'])) {
+							$_FILES['file_dokumen']['name']     = $name['val'];
+							$_FILES['file_dokumen']['type']     = $_FILES['dokumen']['type'][$key]['val'];
+							$_FILES['file_dokumen']['tmp_name'] = $_FILES['dokumen']['tmp_name'][$key]['val'];
+							$_FILES['file_dokumen']['error']    = $_FILES['dokumen']['error'][$key]['val'];
+							$_FILES['file_dokumen']['size']     = $_FILES['dokumen']['size'][$key]['val'];
+	
+							$upload_path = './inc/media/santri/dokumen_santri/';
+							$file_name = time() . '_' . $_FILES['file_dokumen']['name'];
+	
+							$config_dokumen['upload_path']   = $upload_path;
+							$config_dokumen['allowed_types'] = '*'; // Semua tipe file
+							$config_dokumen['max_size']      = 5120; // 5MB
+							$config_dokumen['file_name']     = $file_name;
+	
+							// $this->upload->initialize($config_dokumen);
+							$this->load->library('upload', $config_dokumen);
+	
+							if ($this->upload->do_upload('file_dokumen')) {
+								$upload_data = $this->upload->data();
+	
+								// Simpan ke database
+								$data_dokumen = [
+									'santri_id' => $santri_id,
+									'fname' => $_POST['dokumen'][$key]['name'],
+									'file' => $upload_data['file_name']
+								];
+								$this->db->insert('santri_dokumen', $data_dokumen);
+							}
+						}
+					}
+				}
 				echo json_encode([
 					'status' => 200,
 					'msg'    => 'Data santri berhasil ditambahkan'

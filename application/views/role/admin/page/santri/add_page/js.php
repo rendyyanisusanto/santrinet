@@ -32,4 +32,18 @@
 				}
 			});
 		});
+
+		function add_document(){
+			let uuid = generateUUID();
+			let panel = '<div class="form-group">';
+				panel +='					<div class="col-lg-3">';
+				panel +='						<input type="text" placeholder="" name="dokumen['+uuid+'][name]" class="form-control">';
+				panel +='					</div>';
+				panel +='					<div class="col-lg-6">';
+				panel +='						<input type="file" placeholder="" name="dokumen['+uuid+'][val]" class="form-control">';
+				panel +='					</div>';
+				panel +='				</div>';
+
+			$('.additional-document').append(panel);
+		}
 	</script>

@@ -3,15 +3,15 @@
 
  Source Server         : LOCAL
  Source Server Type    : MySQL
- Source Server Version : 100432 (10.4.32-MariaDB)
+ Source Server Version : 100422 (10.4.22-MariaDB)
  Source Host           : localhost:3306
  Source Schema         : ppsq
 
  Target Server Type    : MySQL
- Target Server Version : 100432 (10.4.32-MariaDB)
+ Target Server Version : 100422 (10.4.22-MariaDB)
  File Encoding         : 65001
 
- Date: 15/02/2025 07:31:42
+ Date: 15/03/2025 09:55:26
 */
 
 SET NAMES utf8mb4;
@@ -27,7 +27,7 @@ CREATE TABLE `akun`  (
   `nama` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `indukakun_id` int NULL DEFAULT NULL,
   `saldo_normal` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  `create_at` timestamp NULL DEFAULT current_timestamp,
+  `create_at` timestamp NULL DEFAULT current_timestamp(),
   `is_edit` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
@@ -78,7 +78,7 @@ CREATE TABLE `alumni`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `santri_id` int NULL DEFAULT NULL,
   `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP,
   `tahun_lulus` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `santri_id`(`santri_id` ASC) USING BTREE,
@@ -95,21 +95,17 @@ CREATE TABLE `alumni`  (
 DROP TABLE IF EXISTS `asatid`;
 CREATE TABLE `asatid`  (
   `id` int NOT NULL AUTO_INCREMENT,
-  `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `jenis_kelamin` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `tempat_lahir` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `tanggal_lahir` date NULL DEFAULT NULL,
-  `alamat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `status_aktif` tinyint(1) NULL DEFAULT NULL,
-  `no_hp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `santri_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of asatid
 -- ----------------------------
-INSERT INTO `asatid` VALUES (1, 'AS9382', 'Avi Hendratmoko', 'L', 'malang', '2025-01-22', NULL, 1, '00077');
+INSERT INTO `asatid` VALUES (1, 77);
+INSERT INTO `asatid` VALUES (2, 1363);
+INSERT INTO `asatid` VALUES (3, 1364);
+INSERT INTO `asatid` VALUES (4, 1366);
 
 -- ----------------------------
 -- Table structure for asrama
@@ -121,7 +117,7 @@ CREATE TABLE `asrama`  (
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
@@ -412,7 +408,7 @@ CREATE TABLE `jadwal_presensi`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `waktu_presensi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of jadwal_presensi
@@ -426,14 +422,16 @@ INSERT INTO `jadwal_presensi` VALUES (2, 'Malam');
 DROP TABLE IF EXISTS `kafil`;
 CREATE TABLE `kafil`  (
   `id` int NOT NULL AUTO_INCREMENT,
-  `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `santri_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of kafil
 -- ----------------------------
+INSERT INTO `kafil` VALUES (2, 1363);
+INSERT INTO `kafil` VALUES (3, 1364);
+INSERT INTO `kafil` VALUES (4, 1367);
 
 -- ----------------------------
 -- Table structure for kamar
@@ -476,11 +474,12 @@ CREATE TABLE `kamar_santri`  (
   INDEX `santri_id`(`santri_id` ASC) USING BTREE,
   CONSTRAINT `kamar_santri_ibfk_2` FOREIGN KEY (`kamar_id`) REFERENCES `kamar` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `kamar_santri_ibfk_3` FOREIGN KEY (`santri_id`) REFERENCES `santri` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of kamar_santri
 -- ----------------------------
+INSERT INTO `kamar_santri` VALUES (22, 1360, 1, 0, 1);
 
 -- ----------------------------
 -- Table structure for kategori_tatib
@@ -788,7 +787,7 @@ CREATE TABLE `madin`  (
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 104 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
@@ -1150,23 +1149,16 @@ CREATE TABLE `pendidikan_santri`  (
 DROP TABLE IF EXISTS `pengurus`;
 CREATE TABLE `pengurus`  (
   `id` int NOT NULL AUTO_INCREMENT,
-  `kode` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `santri_id` int NULL DEFAULT NULL,
   `lembaga_pengurus_id` int NULL DEFAULT NULL,
-  `jenis_kelamin` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `tempat_lahir` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `tanggal_lahir` date NULL DEFAULT NULL,
-  `alamat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `status_aktif` tinyint(1) NULL DEFAULT NULL,
-  `no_hp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 52 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 54 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of pengurus
 -- ----------------------------
-INSERT INTO `pengurus` VALUES (50, 'P1055', 'M. Irfaur Rizki', 1, 'L', 'Malang', '2007-01-01', NULL, 1, '085894635005');
-INSERT INTO `pengurus` VALUES (51, 'P8901', 'Dhoni Ahmad Muhajjir', 2, 'L', 'Malang', '2025-01-24', NULL, 1, '081933046907');
+INSERT INTO `pengurus` VALUES (52, 1364, 7);
+INSERT INTO `pengurus` VALUES (53, 1365, 6);
 
 -- ----------------------------
 -- Table structure for perawat
@@ -1190,6 +1182,26 @@ INSERT INTO `perawat` VALUES (3, 'A3', 'Mufid', '131231', 1);
 INSERT INTO `perawat` VALUES (4, 'A4', 'U.  Umam', '817382', 1);
 
 -- ----------------------------
+-- Table structure for perijinan_santri
+-- ----------------------------
+DROP TABLE IF EXISTS `perijinan_santri`;
+CREATE TABLE `perijinan_santri`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `santri_id` int NULL DEFAULT NULL,
+  `tanggal_ijin` date NULL DEFAULT NULL,
+  `tanggal_kembali` date NULL DEFAULT NULL,
+  `alasan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `jenis_ijin` enum('PULANG','SAKIT','ACARA KELUARGA','URUSAN LAIN') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `status_aktif` tinyint NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of perijinan_santri
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for personal_titles
 -- ----------------------------
 DROP TABLE IF EXISTS `personal_titles`;
@@ -1198,7 +1210,7 @@ CREATE TABLE `personal_titles`  (
   `personal_id` int NULL DEFAULT NULL,
   `titles_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of personal_titles
@@ -1216,7 +1228,7 @@ CREATE TABLE `personals`  (
   `status` enum('SANTRI','ALUMNI','LAINNYA') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of personals
@@ -1237,7 +1249,7 @@ CREATE TABLE `presensi_santri`  (
   INDEX `presensi_santri_ibfk_2`(`jadwal_presensi_id` ASC) USING BTREE,
   CONSTRAINT `presensi_santri_ibfk_1` FOREIGN KEY (`santri_id`) REFERENCES `santri` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `presensi_santri_ibfk_2` FOREIGN KEY (`jadwal_presensi_id`) REFERENCES `jadwal_presensi` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of presensi_santri
@@ -1333,18 +1345,51 @@ CREATE TABLE `santri`  (
   `nama_ibu` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `no_hp_ayah` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `no_hp_ibu` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `status_aktif` tinyint(1) NULL DEFAULT NULL,
+  `status_aktif` tinyint(1) NULL DEFAULT 1,
   `status_santri` enum('ALUMNI','AKTIF') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama_wali` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `no_hp_wali` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `foto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `asrama_id` int NULL DEFAULT NULL,
+  `nik` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1359 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1372 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of santri
 -- ----------------------------
+INSERT INTO `santri` VALUES (1359, '123', 'Rendy Yani Susanto', 'L', 'Malang', '1993-01-03', NULL, 'Sugianto', 'BBB', '08588238', '31820381', 1, 'AKTIF', 'CCC', '83102390', '1739698515_Sertifikat_Donasi_(1).jpg', 3, NULL);
+INSERT INTO `santri` VALUES (1360, '44223', 'yayan', 'L', 'Malang', '2025-02-16', NULL, 'Ponidi', '', '', '', 1, 'AKTIF', '', '', '1739703605_multiply.png', 2, NULL);
+INSERT INTO `santri` VALUES (1361, '44332', 'Muh. Saifuddin Zakaria', 'L', '', '0000-00-00', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, NULL);
+INSERT INTO `santri` VALUES (1362, '37128739', 'jaskjdla', 'L', '', '0000-00-00', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, NULL);
+INSERT INTO `santri` VALUES (1363, '898098', 'CIcik WInarsih', 'L', '', '0000-00-00', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, NULL);
+INSERT INTO `santri` VALUES (1364, '13291', 'Muhammad Hilmy Zulfikar', 'L', '', '0000-00-00', NULL, '', '', '', '', 1, 'AKTIF', '', '', '1739705622_WhatsApp_Image_2025-01-07_at_18_41_09.jpeg', 3, NULL);
+INSERT INTO `santri` VALUES (1365, '83127931', 'Pengurus 1', 'L', 'Malang', '2025-02-17', NULL, 'aaa', 'bbb', '8028103', '91839012', 1, 'AKTIF', 'ccc', '89048302', '1739770548_46A.jpg', 3, NULL);
+INSERT INTO `santri` VALUES (1366, '38127398', 'Asatid 1', 'L', 'Malang', '2025-02-18', NULL, 'MAMA', 'BBB', '08588238', '31820381', 1, 'AKTIF', 'CCC', '83102390', '1739773496_46B.jpg', 3, NULL);
+INSERT INTO `santri` VALUES (1367, '0118060077', 'kafil 1', 'L', 'Malang', '2025-02-17', NULL, 'MAMA', '', '', '', 1, 'AKTIF', '', '', '1739774757_Sertifikat_Donasi_(3).jpg', 2, NULL);
+INSERT INTO `santri` VALUES (1368, '3213123', 'Rendy Yani Susanto', 'L', 'Malang', '2025-03-04', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '44341231232');
+INSERT INTO `santri` VALUES (1369, '32131', 'CIcik WInarsih', 'L', 'Malang', '2025-03-04', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '350741115505');
+INSERT INTO `santri` VALUES (1370, '12323', 'Rendy Yani Susanto123', 'L', '', '0000-00-00', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '5544');
+INSERT INTO `santri` VALUES (1371, '0118060077', 'Rendy Yani Susanto 444', 'L', 'Malang', '2025-03-04', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '44341231232');
+
+-- ----------------------------
+-- Table structure for santri_dokumen
+-- ----------------------------
+DROP TABLE IF EXISTS `santri_dokumen`;
+CREATE TABLE `santri_dokumen`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `santri_id` int NULL DEFAULT NULL,
+  `fname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `file` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of santri_dokumen
+-- ----------------------------
+INSERT INTO `santri_dokumen` VALUES (1, 1371, 'KTP', '1741058559_SPLKS_-_UBIG_-_PROVINSI_-_2025-18.pdf');
+INSERT INTO `santri_dokumen` VALUES (2, 1371, 'KK', '1741058559_SPLKS_-_UBIG_-_PROVINSI_-_2025-181.pdf');
+INSERT INTO `santri_dokumen` VALUES (3, 1371, 'tes', '1741058559_SPLKS_-_UBIG_-_PROVINSI_-_2025-182.pdf');
 
 -- ----------------------------
 -- Table structure for sekolah
@@ -1356,7 +1401,7 @@ CREATE TABLE `sekolah`  (
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
@@ -1502,7 +1547,7 @@ INSERT INTO `submenu` VALUES (34, 6, 'Laporan Rekam Medis', NULL, 1, 1, 1, 1, 'i
 INSERT INTO `submenu` VALUES (35, 6, 'Laporan Ijin', NULL, 1, 1, 1, 1, 'icon-file-text2');
 INSERT INTO `submenu` VALUES (36, 2, 'Setting Kamar Santri', 'kamar/kamar_santri', 1, 1, 1, 1, 'icon-folder3');
 INSERT INTO `submenu` VALUES (37, 10, 'Presensi Harian Santri', 'presensi_harian/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (38, 1, 'Master Data Personal', 'personals/get_data', 1, 1, 1, 1, 'icon-folder3');
+INSERT INTO `submenu` VALUES (38, 1, 'Semua Data Santri & Pengurus', 'personal/get_data', 1, 1, 1, 1, 'icon-folder3');
 
 -- ----------------------------
 -- Table structure for surat_ijin_poskestren
@@ -1555,7 +1600,7 @@ CREATE TABLE `tahfidz`  (
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
@@ -1749,7 +1794,7 @@ CREATE TABLE `titles`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of titles
@@ -1797,7 +1842,7 @@ CREATE TABLE `users`  (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, '127.0.0.1', 'administrator', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1739352462, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (1, '127.0.0.1', 'administrator', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1741825623, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, NULL, NULL);
 INSERT INTO `users` VALUES (7, '::1', 'ahm', '$2y$10$Hojls1F0e38bTgB9Gyn8Cer.L.3Ak0T3rx5MyDvE3teoxXmawwGFG', 'ahmad@impact.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1692973423, 1715747442, 1, 'AHM', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `users` VALUES (8, '112.215.237.81', 'rendy', '$2y$10$Zexem4W9luDl6kK6lUJfTet.gqskrcQqkFbK9osLRfEVYgp3wRJuq', 'rendy@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1697964271, 1697964280, 1, 'rendy', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `users` VALUES (21, '158.140.169.138', 'totok', '$2y$10$52VxVZPcFFMmD.WCYdihZeAUexuJHiEELQlR7jNlOuQWuKZwVy5te', 'totok@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1715824768, 1720236542, 1, 'SUHARIYANTO/TOTOK', NULL, NULL, NULL, NULL, NULL, 57, 'karyawan');
@@ -1840,9 +1885,105 @@ INSERT INTO `users_groups` VALUES (18, 23, 5);
 INSERT INTO `users_groups` VALUES (19, 24, 5);
 
 -- ----------------------------
+-- View structure for v_all_data
+-- ----------------------------
+DROP VIEW IF EXISTS `v_all_data`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_all_data` AS SELECT
+        s.*, 
+        IFNULL(a.santri_id, 0) AS asatid, 
+        IFNULL(k.santri_id, 0) AS kafil, 
+        IFNULL(lp.nama, "-") AS pengurus
+    FROM santri s
+    LEFT JOIN asatid a ON s.id = a.santri_id
+    LEFT JOIN kafil k ON s.id = k.santri_id
+    LEFT JOIN pengurus p ON s.id = p.santri_id
+    LEFT JOIN lembaga_pengurus lp ON p.lembaga_pengurus_id = lp.id
+    ORDER BY s.nama ASC ;
+
+-- ----------------------------
+-- View structure for v_asatid
+-- ----------------------------
+DROP VIEW IF EXISTS `v_asatid`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_asatid` AS SELECT
+	asatid.id AS id_asatid, 
+	santri.*
+FROM
+	asatid
+	INNER JOIN
+	santri
+	ON 
+		asatid.santri_id = santri.id ;
+
+-- ----------------------------
 -- View structure for v_groups_detail_submenu
 -- ----------------------------
 DROP VIEW IF EXISTS `v_groups_detail_submenu`;
-CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_groups_detail_submenu` AS select `groups_detail`.`id` AS `id`,`groups_detail`.`groups_id` AS `groups_id`,`groups_detail`.`submenu_id` AS `submenu_id`,`groups_detail`.`c` AS `c`,`groups_detail`.`r` AS `r`,`groups_detail`.`u` AS `u`,`groups_detail`.`d` AS `d`,`submenu`.`menu_id` AS `menu_id`,`submenu`.`submenu` AS `submenu`,`submenu`.`link` AS `link` from (`groups_detail` join `submenu` on(`groups_detail`.`submenu_id` = `submenu`.`id`)) ; ;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_groups_detail_submenu` AS select `groups_detail`.`id` AS `id`,`groups_detail`.`groups_id` AS `groups_id`,`groups_detail`.`submenu_id` AS `submenu_id`,`groups_detail`.`c` AS `c`,`groups_detail`.`r` AS `r`,`groups_detail`.`u` AS `u`,`groups_detail`.`d` AS `d`,`submenu`.`menu_id` AS `menu_id`,`submenu`.`submenu` AS `submenu`,`submenu`.`link` AS `link` from (`groups_detail` join `submenu` on(`groups_detail`.`submenu_id` = `submenu`.`id`)) ;
+
+-- ----------------------------
+-- View structure for v_kafil
+-- ----------------------------
+DROP VIEW IF EXISTS `v_kafil`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_kafil` AS SELECT
+	santri.*
+FROM
+	santri
+	INNER JOIN
+	kafil
+	ON 
+		santri.id = kafil.santri_id ;
+
+-- ----------------------------
+-- View structure for v_pengurus
+-- ----------------------------
+DROP VIEW IF EXISTS `v_pengurus`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_pengurus` AS SELECT
+	pengurus.id AS id_pengurus, 
+	lembaga_pengurus.id, 
+	lembaga_pengurus.kode, 
+	lembaga_pengurus.nama as nama_lembaga, 
+	santri.id AS id_santri, 
+	santri.nis, 
+	santri.nama, 
+	santri.jenis_kelamin, 
+	santri.tempat_lahir, 
+	santri.tanggal_lahir, 
+	santri.alamat, 
+	santri.nama_ayah, 
+	santri.nama_ibu, 
+	santri.no_hp_ayah, 
+	santri.no_hp_ibu, 
+	santri.status_aktif, 
+	santri.status_santri, 
+	santri.nama_wali, 
+	santri.no_hp_wali, 
+	santri.foto, 
+	santri.asrama_id
+FROM
+	pengurus
+	INNER JOIN
+	santri
+	ON 
+		pengurus.santri_id = santri.id
+	INNER JOIN
+	lembaga_pengurus
+	ON 
+		pengurus.lembaga_pengurus_id = lembaga_pengurus.id ;
+
+-- ----------------------------
+-- View structure for v_santri_aktif
+-- ----------------------------
+DROP VIEW IF EXISTS `v_santri_aktif`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_santri_aktif` AS SELECT 
+        s.*, 
+        (SELECT nama FROM asrama WHERE asrama.id = s.asrama_id) AS nama_asrama
+    FROM santri s
+    LEFT JOIN kafil k ON s.id = k.santri_id
+    LEFT JOIN asatid a ON s.id = a.santri_id
+    LEFT JOIN pengurus p ON s.id = p.santri_id
+    WHERE k.santri_id IS NULL 
+      AND a.santri_id IS NULL 
+      AND p.santri_id IS NULL 
+      AND s.status_aktif = 1 ;
 
 SET FOREIGN_KEY_CHECKS = 1;
