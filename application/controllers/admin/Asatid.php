@@ -28,6 +28,14 @@ class asatid extends MY_Controller {
 		$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
+	
+	public function add_page_asatid()
+	{
+		$data['param'] 		= 	$this->arr;
+		$data['account']	=	$this->get_user_account();
+		$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page_asatid/index',$data['param']['parents_link'].'/add_page_asatid/js' ],$data);
+	}
 	function import_page(){
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
@@ -459,6 +467,58 @@ class asatid extends MY_Controller {
         );
 
         echo json_encode($output);
+	}
+	
+	function get_table_asatid_santri(){
+		
+		$data['param'] 		= 	$this->arr;
+		$search = $_POST['search'];
+		$opt = $_POST['opt'];
+		$data['santri']	=	$this->db->query('SELECT 
+			s.id, s.nama, (select nama from asrama where asrama.id = s.asrama_id) as nama_asrama
+		FROM 
+			santri s
+		LEFT JOIN 
+			asatid ps ON s.id = ps.santri_id
+		WHERE 
+			ps.santri_id IS NULL
+		AND 
+			s.nama LIKE "%' . $search . '%"
+		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
+		LIMIT 20;')->result_array();
+
+		$this->my_view([$data['param']['parents_link'].'/add_page_asatid/table'], $data);
+	}
+	function get_table_asatid(){
+		$id = $_POST['id'];
+		
+		$data['param'] 		= 	$this->arr;
+		$data['asatid']	=	$this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama from asatid')->result_array();
+		$this->my_view([$data['param']['parents_link'].'/add_page_asatid/table_asatid'], $data);
+	}
+	function save_table_asatid(){
+		try {
+			
+			$data = [
+				'santri_id'	=>	$_POST['santri_id']
+			];
+			if ($this->save_data('asatid', $data)) {
+				echo json_encode([
+					'status'	=>	200,
+					'msg'		=>	'Data asatid berhasil ditambahkan'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	'Data asatid gagal ditambahkan'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	$e
+			]);
+		}
 	}
 
 }

@@ -27,7 +27,16 @@ class users extends MY_Controller {
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
 		$data['groups']		=	$this->my_where('groups', [])->result_array();
+		$data['santri']		=	$this->my_where('santri', ['status_aktif'=>1])->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
+	}
+	public function edit_user_page()
+	{
+		$data['param'] 		= 	$this->arr;
+		$data['account']	=	$this->get_user_account();
+		$data['groups']		=	$this->my_where('groups', [])->result_array();
+		$data['karyawan']		=	$this->my_where('karyawan', ['status'=>1])->result_array();
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/edit_user_page/index',$data['param']['parents_link'].'/edit_user_page/js'],$data);
 	}
 	function import_page(){
 		$data['param'] 		= 	$this->arr;
@@ -110,6 +119,8 @@ class users extends MY_Controller {
 				'email'		=>	$_POST['email'],
 				'additional_data'	=>	[
 					'first_name'	=>	$_POST['name'],
+					'anggota_id' 	=>	$_POST['anggota_id'],
+					'table' => 	'karyawan'	
 				],
 				'group'	=>	[$_POST['groups_id']]
 			];
@@ -163,6 +174,35 @@ class users extends MY_Controller {
 					'msg'		=>	'Data users gagal ditambahkan'
 				]);
 			}
+		} catch (Exception $e) {
+			echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	$e
+			]);
+		}
+	}
+	function update_data_user()
+	{
+		
+		try {
+			
+			$id = $_POST['id'];
+			$data = [
+				'username'	=>	$_POST['username'],
+				'email'		=>	$_POST['email'],
+			];
+			if (!empty($_POST['password'])) {
+					$data['password']	=	$_POST['password'];
+			}
+			if (!empty($_POST['pin'])) {
+					$data['pin']	=	$_POST['pin'];
+			}
+			$this->ion_auth->update($id, $data);
+			echo json_encode([
+					'status'	=>	200,
+					'msg'		=>	'Data users berhasil ditambahkan'
+				]);
+			
 		} catch (Exception $e) {
 			echo json_encode([
 					'status'	=>	500,
@@ -224,6 +264,30 @@ class users extends MY_Controller {
 		}
 		
 	}
+
+	function get_detail_user($id = ""){
+		try {
+			if ($id !== "") {
+				$data['karyawan']	=	$this->my_where('karyawan', ['id'=>$id])->row_array();
+				echo json_encode([
+					'status'	=>  200,
+					'msg'		=>	'Data berhasil diambil',
+					'data' 		=> $data
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>  500,
+					'msg'		=>	'Data gagal diambil'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'status'	=>  500,
+				'msg'		=>	$e
+			]);
+		}
+	}
+
 	public function datatable()
 	{
        	$_POST['frm']   =   $this->arr;

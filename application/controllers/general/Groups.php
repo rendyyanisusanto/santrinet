@@ -13,7 +13,7 @@ class groups extends MY_Controller {
 			'column_search'		=>	[ 'id','name','description'],
 			'order'				=>	['id'	=>	'DESC'],
 			'id'				=>	'id',
-			'parents_link'		=>	'role/admin/page/groups'
+			'parents_link'		=>	'role/general/page/groups'
 	];
 
 	public function get_data()

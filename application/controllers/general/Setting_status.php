@@ -6,15 +6,19 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class setting_status extends MY_Controller {
 	public $arr = [
-			'title'				=>	'Master Data Status Karyawan',
+			'title'				=>	'setting status',
 			'table'				=>	'setting_status',
-			'column'			=>	[ 'kode','nama', 'color','status'],
-			'column_order'		=>	[ 'id','kode','nama', 'color','status'],
-			'column_search'		=>	[ 'id','kode','nama', 'color','status'],
+			'column'			=>	[ 'name','groups', 'color','status'],
+			'column_order'		=>	[ 'id','name','groups', 'color','status'],
+			'column_search'		=>	[ 'id','name','groups', 'color','status'],
 			'order'				=>	['id'	=>	'DESC'],
 			'id'				=>	'id',
 			'parents_link'		=>	'role/general/page/setting_status'
 	];
+
+
+
+
 
 	public function get_data()
 	{
@@ -214,15 +218,12 @@ class setting_status extends MY_Controller {
 	}
 	function update_data()
 	{
-		
 		try {
 			
 			$data = [
-				'kode' => $_POST['kode'],
-				'nama' => $_POST['nama'],
+				'name' => $_POST['name'],
+				'groups' => $_POST['groups'],
 				'color' => $_POST['color'],
-				'status' => $_POST['status'],
-				'updated_by' => $this->get_user_account()['id']
 			];
 			if ($this->my_update('setting_status', $data, [$this->arr['id'] => $_POST['id']])) {
 				echo json_encode([
@@ -393,15 +394,9 @@ class setting_status extends MY_Controller {
             $row        =   array();
             $created_by 	=	((!empty($field['created_by'])) ? $this->my_where('users', ['id'=>$field['created_by']])->row_array()['username'] : '-');
             $updated_by 	=	((!empty($field['updated_at'])) ? $this->my_where('users', ['id'=>$field['updated_by']])->row_array()['username'] : '-');
-            $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
-            $row[]		=	'<a href="setting_status/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
-            $row[]		=	!empty($field['nama']) ? '<b style="color:'.$field['color'].'">'.strtoupper($field['nama']).'</b>' : '-';
-            $row[]		=	!empty($field['color']) ? $field['color'] : '-';
-            $row[]		=	($field['status'] == 1) ? '<span class="label label-block label-rounded label-success">AKTIF</span>' : '<span class="label label-block label-rounded label-danger">TIDAK AKTIF</span>';
-            $row[]		=	$field['created_at'];
-            $row[]		=	$created_by;
-            $row[]		=	$field['updated_at'];
-            $row[]		=	$updated_by;
+            $row[]		=	!empty($field['name']) ? '<span class="label label-block label-rounded label-'.$field['color'].'">'.$field['name'].'</span>' : '-';
+            $row[]		=	$field['status'];
+            $row[]		=	$field['groups'];
 
             $row[]		=	'<ul class="text-center icons-list">
             					<li class="dropdown">
@@ -409,10 +404,7 @@ class setting_status extends MY_Controller {
             							<i class="icon-menu9"></i>
             						</a>
             						<ul class="dropdown-menu dropdown-menu-right">
-            							<li><a href="setting_status/look_page/'.$field['id'].'" class="app-item"><i class="icon-eye"></i> Lihat</a></li>
             							<li><a href="setting_status/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah</a></li>
-            							<li><a  onclick="change_status('.$field['id'].','.$field['status'].');"><i class="icon-close2"></i> '.(($field['status'] == 1) ? "Nonaktifkan" : "Aktifkan" ).'</a></li>
-            							<li><a  onclick="delete_item('.$field['id'].');"><i class="icon-trash"></i> Hapus</a></li>
             						</ul>
             					</li>
             				</ul>';

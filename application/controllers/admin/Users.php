@@ -27,7 +27,7 @@ class users extends MY_Controller {
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
 		$data['groups']		=	$this->my_where('groups', [])->result_array();
-		$data['karyawan']		=	$this->my_where('karyawan', ['status'=>1])->result_array();
+		$data['santri']		=	$this->my_where('santri', ['status_aktif'=>1])->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
 	public function edit_user_page()

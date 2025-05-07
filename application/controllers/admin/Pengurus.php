@@ -29,6 +29,14 @@ class pengurus extends MY_Controller {
 		$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
+	public function add_page_pengurus()
+	{
+		$data['param'] 		= 	$this->arr;
+		$data['account']	=	$this->get_user_account();
+		$data['lembaga_pengurus']	=	$this->db->query('select id, kode, nama from lembaga_pengurus')->result_array();
+		$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page_pengurus/index',$data['param']['parents_link'].'/add_page_pengurus/js' ],$data);
+	}
 	function import_page(){
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
@@ -184,12 +192,35 @@ class pengurus extends MY_Controller {
 		$data['city_id']	=	(isset($_POST['city_id'])) ? $_POST['city_id'] : "";
 		$this->my_view([$data['param']['parents_link'].'/add_page/city'], $data);
 	}
-
+	function save_table_pengurus(){
+		try {
+			
+			$data = [
+				'santri_id'	=>	$_POST['santri_id'],
+				'lembaga_pengurus_id'	=>	$_POST['lembaga_pengurus_id']
+			];
+			if ($this->save_data('pengurus', $data)) {
+				echo json_encode([
+					'status'	=>	200,
+					'msg'		=>	'Data pengurus berhasil ditambahkan'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	'Data pengurus gagal ditambahkan'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	$e
+			]);
+		}
+	}
 	function simpan_data()
 	{
 		try {
 			$foto_nama = null;
-			
 			if (!empty($_FILES['foto']['name'])) {
 				$config['upload_path']   = './inc/media/santri/';
 				$config['allowed_types'] = 'jpg|jpeg|png';
@@ -330,6 +361,7 @@ class pengurus extends MY_Controller {
 		}
 		
 	}
+	
 	function change_status(){
 		try {
 			$dt = $this->arr;
@@ -464,4 +496,31 @@ class pengurus extends MY_Controller {
         echo json_encode($output);
 	}
 
+	function get_table_pengurus_santri(){
+		
+		$data['param'] 		= 	$this->arr;
+		$search = $_POST['search'];
+		$opt = $_POST['opt'];
+		$data['santri']	=	$this->db->query('SELECT 
+			s.id, s.nama, (select nama from asrama where asrama.id = s.asrama_id) as nama_asrama
+		FROM 
+			santri s
+		LEFT JOIN 
+			pengurus ps ON s.id = ps.santri_id
+		WHERE 
+			ps.santri_id IS NULL
+		AND 
+			s.nama LIKE "%' . $search . '%"
+		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
+		LIMIT 20;')->result_array();
+
+		$this->my_view([$data['param']['parents_link'].'/add_page_pengurus/table'], $data);
+	}
+	function get_table_pengurus(){
+		$id = $_POST['id'];
+		
+		$data['param'] 		= 	$this->arr;
+		$data['pengurus']	=	$this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama, (select nama from lembaga_pengurus where lembaga_pengurus.id = lembaga_pengurus_id) as lembaga from pengurus where lembaga_pengurus_id='.$id)->result_array();
+		$this->my_view([$data['param']['parents_link'].'/add_page_pengurus/table_pengurus'], $data);
+	}
 }

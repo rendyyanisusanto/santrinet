@@ -28,6 +28,13 @@ class kafil extends MY_Controller {
 		$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
+	public function add_page_kafil()
+	{
+		$data['param'] 		= 	$this->arr;
+		$data['account']	=	$this->get_user_account();
+		$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page_kafil/index',$data['param']['parents_link'].'/add_page_kafil/js' ],$data);
+	}
 	function import_page(){
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
@@ -460,4 +467,54 @@ class kafil extends MY_Controller {
         echo json_encode($output);
 	}
 
+	
+	function get_table_kafil_santri(){
+		
+		$data['param'] 		= 	$this->arr;
+		$search = $_POST['search'];
+		$opt = $_POST['opt'];
+		$data['santri']	=	$this->db->query('SELECT 
+			s.id, s.nama, (select nama from asrama where asrama.id = s.asrama_id) as nama_asrama
+		FROM 
+			santri s
+		LEFT JOIN 
+			kafil ps ON s.id = ps.santri_id
+		WHERE 
+			ps.santri_id IS NULL
+		AND 
+			s.nama LIKE "%' . $search . '%"
+		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
+		LIMIT 20;')->result_array();
+
+		$this->my_view([$data['param']['parents_link'].'/add_page_kafil/table'], $data);
+	}
+	function get_table_kafil(){
+		$data['param'] 		= 	$this->arr;
+		$data['kafil']	=	$this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama from kafil')->result_array();
+		$this->my_view([$data['param']['parents_link'].'/add_page_kafil/table_kafil'], $data);
+	}
+	function save_table_kafil(){
+		try {
+			
+			$data = [
+				'santri_id'	=>	$_POST['santri_id']
+			];
+			if ($this->save_data('kafil', $data)) {
+				echo json_encode([
+					'status'	=>	200,
+					'msg'		=>	'Data kafil berhasil ditambahkan'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	'Data kafil gagal ditambahkan'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	$e
+			]);
+		}
+	}
 }

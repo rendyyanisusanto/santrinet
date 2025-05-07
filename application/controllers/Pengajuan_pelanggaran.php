@@ -46,17 +46,13 @@ class Pengajuan_pelanggaran extends CI_Controller {
 	function get_pelapor_select(){
 		$searchTerm = $this->input->post('searchTerm');
 	     $fetched_records = $this->db->query("
-			SELECT 
-			    pengurus.id AS pengurus_id,
-			    pengurus.kode,
-			    pengurus.nama,
-			    pengurus.lembaga_pengurus_id
-			FROM 
-			    pengurus where nama like '%".$searchTerm."%' order by pengurus.id DESC limit 10");
-	     $bahan = $fetched_records->result_array();
+			SELECT s.*, p.id as pengurus_id
+			FROM santri s
+			JOIN pengurus p ON s.id = p.santri_id where nama like '%".$searchTerm."%' order by p.id DESC limit 10");
+	     $pengurus = $fetched_records->result_array();
 
 	     $data = array();
-	     foreach($bahan as $user){
+	     foreach($pengurus as $user){
 	        $data[] = array("id"=>$user['pengurus_id'], "text"=> $user['nama']);
 	     }
 
