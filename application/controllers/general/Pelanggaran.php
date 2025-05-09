@@ -654,24 +654,33 @@ class pelanggaran extends MY_Controller {
 
 	function get_pengajuan(){
 		$data['pengajuan']	=	$this->db->query('SELECT 
-			id, 
-			(SELECT nama FROM santri WHERE santri.id = santri_id) AS nama_santri, 
-			(SELECT nama FROM pengurus WHERE pengurus.id = pelapor_id) AS nama_pelapor, 
-			kode, 
-			tanggal, 
-			status_pengajuan, 
-			pelanggaran 
-		FROM pelanggaran 
-		WHERE status_pengajuan <> "BUKAN PENGAJUAN" AND status_pengajuan <> "" 
-		ORDER BY 
-			CASE 
-				WHEN status_pengajuan = "BELUM DIPROSES" THEN 1 
-				WHEN status_pengajuan = "DITERIMA" THEN 2 
-				WHEN status_pengajuan = "DITOLAK" THEN 3 
-				ELSE 4 
-			END,
-			id DESC
-		limit 10;
+				p.id, 
+				s.nama AS nama_santri,
+				pelapor_santri.nama AS nama_pelapor,
+				p.kode, 
+				p.tanggal, 
+				p.status_pengajuan, 
+				p.pelanggaran 
+			FROM pelanggaran p
+			-- join ke santri pelanggar
+			LEFT JOIN santri s ON s.id = p.santri_id
+			-- join ke pengurus (pelapor)
+			LEFT JOIN pengurus peng ON peng.id = p.pelapor_id
+			-- join ke santri dari pengurus (untuk nama pelapor)
+			LEFT JOIN santri pelapor_santri ON pelapor_santri.id = peng.santri_id
+			WHERE 
+				p.status_pengajuan <> "BUKAN PENGAJUAN" AND 
+				p.status_pengajuan <> "" 
+			ORDER BY 
+				CASE 
+					WHEN p.status_pengajuan = "BELUM DIPROSES" THEN 1 
+					WHEN p.status_pengajuan = "DITERIMA" THEN 2 
+					WHEN p.status_pengajuan = "DITOLAK" THEN 3 
+					ELSE 4 
+				END,
+				p.id DESC
+			LIMIT 10;
+
 ')->result_array();
 		
 		$data['param'] 		= 	$this->arr;
