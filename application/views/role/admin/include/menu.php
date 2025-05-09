@@ -6,6 +6,7 @@
 			<div class="navbar-collapse collapse" id="navbar-second-toggle">
 				<ul class="nav navbar-nav">
 					<li><a class="app-item" href="Dashboard/get_data"><i class="icon-display4 position-left"></i> Menu</a></li>
+					<li><a class="app-item" href="Users/get_data"><i class="icon-users position-left"></i> Users</a></li>
 
 
 					<!-- <li class="dropdown">
