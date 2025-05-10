@@ -66,7 +66,7 @@ class pelanggaran extends MY_Controller {
 			])->row_array();
 			$data['santri']		=	$this->db->query('select id, nama from santri where id = '.$data['data_edit']['santri_id'])->row_array();
 			$data['tatib']		=	$this->db->query('select id, kode, nama from tatib where id = '.$data['data_edit']['tatib_id'])->row_array();
-			$data['pelapor']		=	$this->db->query('select id, nama from pengurus where id = '.$data['data_edit']['pelapor_id'])->row_array();
+			$data['pelapor']		=	$this->db->query('select id, (select nama from santri where santri.id=pengurus.santri_id) as nama from pengurus where id = '.$data['data_edit']['pelapor_id'])->row_array();
 			if (!empty($data['data_edit'])) {
 				$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/change_pengajuan/index',$data['param']['parents_link'].'/change_pengajuan/js', 'role/global/modal_setting'],$data);
 			}

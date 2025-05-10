@@ -66,7 +66,7 @@ class pelanggaran extends MY_Controller {
 			])->row_array();
 			$data['santri']		=	$this->db->query('select id, nama from santri where id = '.$data['data_edit']['santri_id'])->row_array();
 			$data['tatib']		=	$this->db->query('select id, kode, nama from tatib where id = '.$data['data_edit']['tatib_id'])->row_array();
-			$data['pelapor']		=	$this->db->query('select id, nama from pengurus where id = '.$data['data_edit']['pelapor_id'])->row_array();
+			$data['pelapor']		=	$this->db->query('select id, (select nama from santri where santri.id=pengurus.santri_id) as nama from pengurus where id = '.$data['data_edit']['pelapor_id'])->row_array();
 			if (!empty($data['data_edit'])) {
 				$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/change_pengajuan/index',$data['param']['parents_link'].'/change_pengajuan/js', 'role/global/modal_setting'],$data);
 			}
@@ -537,11 +537,15 @@ class pelanggaran extends MY_Controller {
 	     $fetched_records = $this->db->query("
 			SELECT 
 			    pengurus.id AS pengurus_id,
-			    pengurus.kode,
-			    pengurus.nama,
+				santri.nama,
 			    pengurus.lembaga_pengurus_id
 			FROM 
-			    pengurus where nama like '%".$searchTerm."%' order by pengurus.id DESC limit 10");
+			    pengurus 
+			Inner join 
+				santri
+			ON santri.id = santri_id	
+			where santri.nama like '%".$searchTerm."%' 
+			order by pengurus.id DESC limit 10");
 	     $bahan = $fetched_records->result_array();
 
 	     $data = array();
@@ -555,16 +559,17 @@ class pelanggaran extends MY_Controller {
 		$searchTerm = $this->input->post('searchTerm');
 	     $fetched_records = $this->db->query("
 			SELECT 
-			    pengurus.nama,
+				santri.nama,
 			    pengurus.id AS pengurus_id,
-			    pengurus.kode AS pengurus_kode,
 			    lembaga_pengurus.nama AS nama_lembaga
 			FROM 
 			    pengurus
 			JOIN 
 			    lembaga_pengurus ON pengurus.lembaga_pengurus_id = lembaga_pengurus.id
+			JOIN 
+				santri ON santri.id = santri_id
 			WHERE 
-			    pengurus.lembaga_pengurus_id = 1 and pengurus.nama like '%".$searchTerm."%' order by pengurus.id DESC limit 10");
+			    pengurus.lembaga_pengurus_id = 1 and santri.nama like '%".$searchTerm."%' order by pengurus.id DESC limit 10");
 	     $bahan = $fetched_records->result_array();
 
 	     $data = array();
