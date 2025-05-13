@@ -2,7 +2,7 @@
     load_table_santri();
 
     function load_table_santri(search='', opt=''){
-        send_ajax('Madin/get_table_peserta_madin',{search:search, opt:opt}).then(function(data){
+        send_ajax('tahfidz/get_table_peserta_tahfidz',{search:search, opt:opt}).then(function(data){
             $('#santriList').html(data);
         });
     }
@@ -13,27 +13,27 @@
         load_table_santri(search, opt);
     }
 
-    function tampilkanPesertaMadin(){
-        var id = $('#madinSelect').val();
+    function tampilkanPesertatahfidz(){
+        var id = $('#tahfidzSelect').val();
         
-        send_ajax('Madin/get_peserta_madin',{id:id}).then(function(data){
-            $('#pesertaMadinList').html(data);
+        send_ajax('tahfidz/get_peserta_tahfidz',{id:id}).then(function(data){
+            $('#pesertatahfidzList').html(data);
         });
     }
 
-    function tambahPesertaMadin(id){
-        var madin_id = $('#madinSelect').val();
-        if(madin_id == ''){
-            toastr.error('Pilih kelas madin terlebih dahulu');
+    function tambahPesertatahfidz(id){
+        var tahfidz_id = $('#tahfidzSelect').val();
+        if(tahfidz_id == ''){
+            toastr.error('Pilih kelas tahfidz terlebih dahulu');
             
         }else{
 
-            send_ajax('Madin/add_peserta_madin',{santri_id:id, madin_id:madin_id}).then(function(data){
+            send_ajax('tahfidz/add_peserta_tahfidz',{santri_id:id, tahfidz_id:tahfidz_id}).then(function(data){
                 var response = JSON.parse(data);
                         if (response.status == 200) {
                             toastr.success(response.msg);
                             load_table_santri();
-                            tampilkanPesertaMadin();
+                            tampilkanPesertatahfidz();
                         }else{
                             toastr.error(response.msg);
                         }
@@ -43,12 +43,12 @@
     }
 
     function hapus_santri(id){
-        send_ajax('Madin/delete_peserta_madin',{id:id}).then(function(data){
+        send_ajax('tahfidz/delete_peserta_tahfidz',{id:id}).then(function(data){
             var response = JSON.parse(data);
             if (response.status == 200) {
 			            toastr.success(response.msg);
                         load_table_santri();
-                        tampilkanPesertaMadin();
+                        tampilkanPesertatahfidz();
 		            }else{
 			            toastr.error(response.msg);
 		            }

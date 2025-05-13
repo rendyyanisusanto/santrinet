@@ -101,6 +101,32 @@ class madin extends MY_Controller {
 			]);
 		}
 	}
+	
+	function add_peserta_madin(){
+		try {
+			
+			$data = [
+				'santri_id'	=>	$_POST['santri_id'],
+				'madin_id'	=>	$_POST['madin_id']
+			];
+			if ($this->save_data('peserta_madin', $data)) {
+				echo json_encode([
+					'status'	=>	200,
+					'msg'		=>	'Data peserta madin berhasil ditambahkan'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	'Data peserta madin gagal ditambahkan'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	$e
+			]);
+		}
+	}
 	function update_data()
 	{
 		
@@ -131,7 +157,27 @@ class madin extends MY_Controller {
 			]);
 		}
 	}
-
+	function delete_peserta_madin(){
+		try {
+			$dt = $this->arr;
+			if ($this->db->delete("peserta_madin", ["id"=>$_POST['id']])) {
+				echo json_encode([
+					'status'	=>  200,
+					'msg'		=>	'Data berhasil terhapus'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>  500,
+					'msg'		=>	'Data gagal terhapus'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'status'	=>  500,
+				'msg'		=>	$e
+			]);
+		}
+	}
 	public function datatable()
 	{
 		if (($_POST['kode'] !== '')) {
@@ -177,7 +223,7 @@ class madin extends MY_Controller {
 	}
 
 	
-	function get_table_kamar_santri(){
+	function get_table_peserta_madin(){
 		
 		$data['param'] 		= 	$this->arr;
 		$search = $_POST['search'];
@@ -187,9 +233,9 @@ class madin extends MY_Controller {
 		FROM 
 			santri s
 		LEFT JOIN 
-			kamar_santri ks ON s.id = ks.santri_id
+			peserta_madin pm ON s.id = pm.santri_id
 		WHERE 
-			ks.santri_id IS NULL
+			pm.santri_id IS NULL
 		AND 
 			s.nama LIKE "%' . $search . '%"
 		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
