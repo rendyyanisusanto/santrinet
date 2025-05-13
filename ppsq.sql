@@ -1,17 +1,17 @@
 /*
  Navicat Premium Dump SQL
 
- Source Server         : LOCAL
+ Source Server         : localhost
  Source Server Type    : MySQL
- Source Server Version : 100422 (10.4.22-MariaDB)
+ Source Server Version : 100432 (10.4.32-MariaDB)
  Source Host           : localhost:3306
  Source Schema         : ppsq
 
  Target Server Type    : MySQL
- Target Server Version : 100422 (10.4.22-MariaDB)
+ Target Server Version : 100432 (10.4.32-MariaDB)
  File Encoding         : 65001
 
- Date: 15/03/2025 09:55:26
+ Date: 13/05/2025 10:15:37
 */
 
 SET NAMES utf8mb4;
@@ -97,15 +97,13 @@ CREATE TABLE `asatid`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `santri_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of asatid
 -- ----------------------------
-INSERT INTO `asatid` VALUES (1, 77);
-INSERT INTO `asatid` VALUES (2, 1363);
-INSERT INTO `asatid` VALUES (3, 1364);
-INSERT INTO `asatid` VALUES (4, 1366);
+INSERT INTO `asatid` VALUES (6, 1360);
+INSERT INTO `asatid` VALUES (7, 1366);
 
 -- ----------------------------
 -- Table structure for asrama
@@ -137,19 +135,20 @@ CREATE TABLE `groups`  (
   `name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of groups
 -- ----------------------------
 INSERT INTO `groups` VALUES (1, 'admin', 'Administrator');
-INSERT INTO `groups` VALUES (2, 'general', 'General User');
-INSERT INTO `groups` VALUES (4, 'Gudang', 'Khusus administrasi gudang');
-INSERT INTO `groups` VALUES (5, 'driver', 'Driver');
-INSERT INTO `groups` VALUES (6, 'Co Admin', 'untuk asisten admin');
-INSERT INTO `groups` VALUES (7, 'Warehouse 2', 'Khusus admin warehouse 2');
-INSERT INTO `groups` VALUES (8, 'Produksi', 'Ningsih');
-INSERT INTO `groups` VALUES (9, 'FINANCE', 'Vindy');
+INSERT INTO `groups` VALUES (10, 'SUPERADMIN', 'Grup untuk administrator');
+INSERT INTO `groups` VALUES (11, 'PAU', 'Grup untuk PAU/ADMINISTRASI');
+INSERT INTO `groups` VALUES (12, 'ASRAMA', 'Grup untuk ASRAMA');
+INSERT INTO `groups` VALUES (13, 'KETERTIBAN', 'Grup untuk ketertiban');
+INSERT INTO `groups` VALUES (14, 'TAHFIDZ', 'Grup untuk tahfidz');
+INSERT INTO `groups` VALUES (15, 'MADIN', 'Grup untuk madin');
+INSERT INTO `groups` VALUES (16, 'UKP', 'Grup untuk Unit Kesehatan Pesantren');
+INSERT INTO `groups` VALUES (17, 'KETUA KAMAR', 'Grup untuk ketua kamar');
 
 -- ----------------------------
 -- Table structure for groups_detail
@@ -166,239 +165,315 @@ CREATE TABLE `groups_detail`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `groups_id`(`groups_id` ASC) USING BTREE,
   CONSTRAINT `groups_detail_ibfk_1` FOREIGN KEY (`groups_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 385 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 689 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of groups_detail
 -- ----------------------------
-INSERT INTO `groups_detail` VALUES (124, 5, 1, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (125, 5, 2, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (126, 5, 3, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (127, 5, 4, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (128, 5, 5, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (129, 5, 6, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (130, 5, 29, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (131, 5, 30, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (132, 5, 31, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (133, 5, 7, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (134, 5, 8, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (135, 5, 9, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (136, 5, 10, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (137, 5, 11, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (138, 5, 12, 0, 1, 0, 0);
-INSERT INTO `groups_detail` VALUES (139, 5, 13, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (140, 5, 14, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (141, 5, 15, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (142, 5, 16, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (143, 5, 17, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (144, 5, 18, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (145, 5, 19, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (146, 5, 20, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (147, 5, 21, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (148, 5, 22, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (149, 5, 23, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (150, 5, 24, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (151, 5, 25, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (152, 5, 26, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (153, 5, 27, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (154, 5, 32, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (155, 5, 33, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (156, 1, 1, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (157, 1, 2, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (158, 1, 3, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (159, 1, 4, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (160, 1, 5, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (161, 1, 6, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (162, 1, 29, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (163, 1, 30, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (164, 1, 31, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (165, 1, 7, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (166, 1, 8, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (167, 1, 9, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (168, 1, 10, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (169, 1, 11, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (170, 1, 12, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (171, 1, 13, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (172, 1, 14, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (173, 1, 15, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (174, 1, 16, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (175, 1, 17, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (176, 1, 18, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (177, 1, 19, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (178, 1, 20, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (179, 1, 21, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (180, 1, 22, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (181, 1, 23, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (182, 1, 24, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (183, 1, 25, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (184, 1, 26, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (185, 1, 27, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (186, 1, 32, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (187, 1, 33, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (188, 6, 1, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (189, 6, 2, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (190, 6, 3, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (191, 6, 4, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (192, 6, 5, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (193, 6, 6, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (194, 6, 29, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (195, 6, 30, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (196, 6, 31, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (197, 6, 7, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (198, 6, 8, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (199, 6, 9, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (200, 6, 10, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (201, 6, 11, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (202, 6, 12, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (203, 6, 13, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (204, 6, 14, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (205, 6, 15, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (206, 6, 16, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (207, 6, 17, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (208, 6, 18, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (209, 6, 19, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (210, 6, 20, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (211, 6, 21, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (212, 6, 22, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (213, 6, 23, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (214, 6, 24, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (215, 6, 25, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (216, 6, 26, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (217, 6, 27, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (218, 6, 32, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (219, 6, 33, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (253, 7, 1, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (254, 7, 2, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (255, 7, 3, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (256, 7, 4, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (257, 7, 5, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (258, 7, 6, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (259, 7, 29, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (260, 7, 30, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (261, 7, 31, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (262, 7, 34, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (263, 7, 7, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (264, 7, 8, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (265, 7, 9, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (266, 7, 10, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (267, 7, 11, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (268, 7, 12, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (269, 7, 13, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (270, 7, 14, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (271, 7, 15, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (272, 7, 16, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (273, 7, 17, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (274, 7, 18, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (275, 7, 19, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (276, 7, 20, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (277, 7, 21, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (278, 7, 22, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (279, 7, 23, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (280, 7, 24, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (281, 7, 25, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (282, 7, 26, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (283, 7, 27, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (284, 7, 32, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (285, 7, 33, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (286, 8, 1, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (287, 8, 2, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (288, 8, 3, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (289, 8, 4, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (290, 8, 5, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (291, 8, 6, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (292, 8, 29, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (293, 8, 30, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (294, 8, 31, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (295, 8, 34, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (296, 8, 7, 1, 1, 1, 0);
-INSERT INTO `groups_detail` VALUES (297, 8, 8, 1, 1, 1, 0);
-INSERT INTO `groups_detail` VALUES (298, 8, 9, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (299, 8, 10, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (300, 8, 11, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (301, 8, 12, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (302, 8, 13, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (303, 8, 14, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (304, 8, 15, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (305, 8, 16, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (306, 8, 17, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (307, 8, 18, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (308, 8, 19, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (309, 8, 20, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (310, 8, 21, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (311, 8, 22, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (312, 8, 23, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (313, 8, 24, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (314, 8, 25, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (315, 8, 26, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (316, 8, 27, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (317, 8, 32, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (318, 8, 33, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (319, 9, 1, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (320, 9, 2, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (321, 9, 3, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (322, 9, 4, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (323, 9, 5, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (324, 9, 6, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (325, 9, 29, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (326, 9, 30, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (327, 9, 31, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (328, 9, 34, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (329, 9, 7, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (330, 9, 8, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (331, 9, 9, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (332, 9, 10, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (333, 9, 11, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (334, 9, 12, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (335, 9, 13, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (336, 9, 14, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (337, 9, 15, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (338, 9, 16, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (339, 9, 17, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (340, 9, 18, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (341, 9, 19, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (342, 9, 20, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (343, 9, 21, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (344, 9, 22, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (345, 9, 23, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (346, 9, 24, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (347, 9, 25, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (348, 9, 26, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (349, 9, 27, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (350, 9, 32, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (351, 9, 33, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (352, 4, 1, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (353, 4, 2, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (354, 4, 3, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (355, 4, 4, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (356, 4, 5, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (357, 4, 6, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (358, 4, 29, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (359, 4, 30, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (360, 4, 31, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (361, 4, 34, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (362, 4, 7, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (363, 4, 8, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (364, 4, 9, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (365, 4, 10, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (366, 4, 11, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (367, 4, 12, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (368, 4, 13, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (369, 4, 14, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (370, 4, 15, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (371, 4, 16, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (372, 4, 17, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (373, 4, 18, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (374, 4, 19, 1, 1, 1, 1);
-INSERT INTO `groups_detail` VALUES (375, 4, 20, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (376, 4, 21, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (377, 4, 22, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (378, 4, 23, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (379, 4, 24, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (380, 4, 25, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (381, 4, 26, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (382, 4, 27, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (383, 4, 32, 0, 0, 0, 0);
-INSERT INTO `groups_detail` VALUES (384, 4, 33, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (385, 10, 1, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (386, 10, 2, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (387, 10, 3, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (388, 10, 4, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (389, 10, 5, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (390, 10, 6, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (391, 10, 7, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (392, 10, 8, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (393, 10, 9, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (394, 10, 38, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (395, 10, 10, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (396, 10, 11, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (397, 10, 12, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (398, 10, 36, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (399, 10, 13, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (400, 10, 14, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (401, 10, 15, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (402, 10, 16, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (403, 10, 17, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (404, 10, 18, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (405, 10, 19, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (406, 10, 20, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (407, 10, 21, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (408, 10, 22, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (409, 10, 23, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (410, 10, 24, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (411, 10, 25, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (412, 10, 26, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (413, 10, 27, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (414, 10, 28, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (415, 10, 29, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (416, 10, 30, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (417, 10, 31, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (418, 10, 32, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (419, 10, 33, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (420, 10, 34, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (421, 10, 35, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (422, 10, 37, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (423, 11, 1, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (424, 11, 2, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (425, 11, 3, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (426, 11, 4, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (427, 11, 5, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (428, 11, 6, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (429, 11, 7, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (430, 11, 8, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (431, 11, 9, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (432, 11, 38, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (433, 11, 10, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (434, 11, 11, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (435, 11, 12, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (436, 11, 36, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (437, 11, 13, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (438, 11, 14, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (439, 11, 15, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (440, 11, 16, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (441, 11, 17, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (442, 11, 18, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (443, 11, 19, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (444, 11, 20, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (445, 11, 21, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (446, 11, 22, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (447, 11, 23, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (448, 11, 24, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (449, 11, 25, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (450, 11, 26, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (451, 11, 27, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (452, 11, 28, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (453, 11, 29, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (454, 11, 30, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (455, 11, 31, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (456, 11, 32, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (457, 11, 33, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (458, 11, 34, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (459, 11, 35, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (460, 11, 37, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (461, 12, 1, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (462, 12, 2, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (463, 12, 3, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (464, 12, 4, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (465, 12, 5, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (466, 12, 6, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (467, 12, 7, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (468, 12, 8, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (469, 12, 9, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (470, 12, 38, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (471, 12, 10, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (472, 12, 11, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (473, 12, 12, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (474, 12, 36, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (475, 12, 13, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (476, 12, 14, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (477, 12, 15, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (478, 12, 16, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (479, 12, 17, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (480, 12, 18, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (481, 12, 19, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (482, 12, 20, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (483, 12, 21, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (484, 12, 22, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (485, 12, 23, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (486, 12, 24, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (487, 12, 25, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (488, 12, 26, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (489, 12, 27, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (490, 12, 28, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (491, 12, 29, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (492, 12, 30, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (493, 12, 31, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (494, 12, 32, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (495, 12, 33, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (496, 12, 34, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (497, 12, 35, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (498, 12, 37, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (499, 13, 1, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (500, 13, 2, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (501, 13, 3, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (502, 13, 4, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (503, 13, 5, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (504, 13, 6, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (505, 13, 7, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (506, 13, 8, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (507, 13, 9, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (508, 13, 38, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (509, 13, 10, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (510, 13, 11, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (511, 13, 12, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (512, 13, 36, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (513, 13, 13, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (514, 13, 14, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (515, 13, 15, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (516, 13, 16, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (517, 13, 17, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (518, 13, 18, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (519, 13, 19, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (520, 13, 20, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (521, 13, 21, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (522, 13, 22, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (523, 13, 23, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (524, 13, 24, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (525, 13, 25, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (526, 13, 26, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (527, 13, 27, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (528, 13, 28, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (529, 13, 29, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (530, 13, 30, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (531, 13, 31, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (532, 13, 32, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (533, 13, 33, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (534, 13, 34, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (535, 13, 35, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (536, 13, 37, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (537, 14, 1, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (538, 14, 2, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (539, 14, 3, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (540, 14, 4, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (541, 14, 5, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (542, 14, 6, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (543, 14, 7, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (544, 14, 8, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (545, 14, 9, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (546, 14, 38, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (547, 14, 10, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (548, 14, 11, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (549, 14, 12, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (550, 14, 36, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (551, 14, 13, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (552, 14, 14, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (553, 14, 15, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (554, 14, 16, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (555, 14, 17, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (556, 14, 18, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (557, 14, 19, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (558, 14, 20, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (559, 14, 21, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (560, 14, 22, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (561, 14, 23, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (562, 14, 24, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (563, 14, 25, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (564, 14, 26, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (565, 14, 27, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (566, 14, 28, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (567, 14, 29, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (568, 14, 30, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (569, 14, 31, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (570, 14, 32, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (571, 14, 33, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (572, 14, 34, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (573, 14, 35, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (574, 14, 37, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (575, 15, 1, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (576, 15, 2, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (577, 15, 3, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (578, 15, 4, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (579, 15, 5, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (580, 15, 6, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (581, 15, 7, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (582, 15, 8, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (583, 15, 9, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (584, 15, 38, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (585, 15, 10, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (586, 15, 11, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (587, 15, 12, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (588, 15, 36, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (589, 15, 13, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (590, 15, 14, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (591, 15, 15, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (592, 15, 16, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (593, 15, 17, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (594, 15, 18, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (595, 15, 19, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (596, 15, 20, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (597, 15, 21, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (598, 15, 22, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (599, 15, 23, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (600, 15, 24, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (601, 15, 25, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (602, 15, 26, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (603, 15, 27, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (604, 15, 28, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (605, 15, 29, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (606, 15, 30, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (607, 15, 31, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (608, 15, 32, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (609, 15, 33, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (610, 15, 34, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (611, 15, 35, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (612, 15, 37, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (613, 16, 1, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (614, 16, 2, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (615, 16, 3, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (616, 16, 4, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (617, 16, 5, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (618, 16, 6, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (619, 16, 7, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (620, 16, 8, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (621, 16, 9, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (622, 16, 38, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (623, 16, 10, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (624, 16, 11, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (625, 16, 12, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (626, 16, 36, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (627, 16, 13, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (628, 16, 14, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (629, 16, 15, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (630, 16, 16, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (631, 16, 17, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (632, 16, 18, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (633, 16, 19, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (634, 16, 20, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (635, 16, 21, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (636, 16, 22, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (637, 16, 23, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (638, 16, 24, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (639, 16, 25, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (640, 16, 26, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (641, 16, 27, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (642, 16, 28, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (643, 16, 29, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (644, 16, 30, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (645, 16, 31, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (646, 16, 32, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (647, 16, 33, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (648, 16, 34, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (649, 16, 35, 1, 1, 1, 1);
+INSERT INTO `groups_detail` VALUES (650, 16, 37, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (651, 17, 1, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (652, 17, 2, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (653, 17, 3, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (654, 17, 4, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (655, 17, 5, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (656, 17, 6, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (657, 17, 7, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (658, 17, 8, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (659, 17, 9, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (660, 17, 38, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (661, 17, 10, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (662, 17, 11, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (663, 17, 12, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (664, 17, 36, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (665, 17, 13, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (666, 17, 14, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (667, 17, 15, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (668, 17, 16, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (669, 17, 17, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (670, 17, 18, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (671, 17, 19, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (672, 17, 20, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (673, 17, 21, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (674, 17, 22, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (675, 17, 23, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (676, 17, 24, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (677, 17, 25, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (678, 17, 26, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (679, 17, 27, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (680, 17, 28, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (681, 17, 29, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (682, 17, 30, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (683, 17, 31, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (684, 17, 32, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (685, 17, 33, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (686, 17, 34, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (687, 17, 35, 0, 0, 0, 0);
+INSERT INTO `groups_detail` VALUES (688, 17, 37, 1, 1, 1, 1);
 
 -- ----------------------------
 -- Table structure for jadwal_presensi
@@ -424,14 +499,14 @@ CREATE TABLE `kafil`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `santri_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of kafil
 -- ----------------------------
-INSERT INTO `kafil` VALUES (2, 1363);
-INSERT INTO `kafil` VALUES (3, 1364);
-INSERT INTO `kafil` VALUES (4, 1367);
+INSERT INTO `kafil` VALUES (6, 1359);
+INSERT INTO `kafil` VALUES (8, 1360);
+INSERT INTO `kafil` VALUES (10, 1369);
 
 -- ----------------------------
 -- Table structure for kamar
@@ -474,12 +549,13 @@ CREATE TABLE `kamar_santri`  (
   INDEX `santri_id`(`santri_id` ASC) USING BTREE,
   CONSTRAINT `kamar_santri_ibfk_2` FOREIGN KEY (`kamar_id`) REFERENCES `kamar` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `kamar_santri_ibfk_3` FOREIGN KEY (`santri_id`) REFERENCES `santri` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 24 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of kamar_santri
 -- ----------------------------
 INSERT INTO `kamar_santri` VALUES (22, 1360, 1, 0, 1);
+INSERT INTO `kamar_santri` VALUES (23, 1359, NULL, 0, 1);
 
 -- ----------------------------
 -- Table structure for kategori_tatib
@@ -1109,14 +1185,12 @@ CREATE TABLE `pelanggaran`  (
   `status_takzir` enum('BELUM','SUDAH') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'BELUM',
   `status_pengajuan` enum('BUKAN PENGAJUAN','BELUM DIPROSES','DITERIMA','DITOLAK') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'BUKAN PENGAJUAN',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of pelanggaran
 -- ----------------------------
-INSERT INTO `pelanggaran` VALUES (6, '968284427', 1358, 'asd', 62, 'tes', 50, 51, 'BELUM_MENGAMBIL', '2025-01-24', 1, 'asdasd', 'f6c58c21e5a340183a048913dc2eaba3.jpeg', NULL, 'BELUM', 'DITERIMA');
-INSERT INTO `pelanggaran` VALUES (7, '1405522001', 1357, 'dasdasd', 59, 'coba', 50, 51, 'BELUM_MENGAMBIL', '2025-01-24', 1, 'asd', '98994b94baaf4e7eb0ed81bc48b3d053.png', NULL, 'BELUM', 'DITERIMA');
-INSERT INTO `pelanggaran` VALUES (8, '1511421364', 1358, 'dsadasaaa', 57, NULL, NULL, 50, NULL, '2025-01-24', 1, 'aaassd', NULL, NULL, 'BELUM', 'BELUM DIPROSES');
+INSERT INTO `pelanggaran` VALUES (9, '266228499', 1364, 'merokok', 41, 'rerere', 60, 60, 'BELUM_MENGAMBIL', '2025-05-07', 1, 'jdlkasjdlkasjlkdjal', 'e1e8945e8c4468d9a9b6447524962264.png', NULL, 'BELUM', 'DITERIMA');
 
 -- ----------------------------
 -- Table structure for pendidikan_santri
@@ -1152,13 +1226,16 @@ CREATE TABLE `pengurus`  (
   `santri_id` int NULL DEFAULT NULL,
   `lembaga_pengurus_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 54 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 61 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of pengurus
 -- ----------------------------
 INSERT INTO `pengurus` VALUES (52, 1364, 7);
 INSERT INTO `pengurus` VALUES (53, 1365, 6);
+INSERT INTO `pengurus` VALUES (58, 1359, 1);
+INSERT INTO `pengurus` VALUES (59, 1360, 1);
+INSERT INTO `pengurus` VALUES (60, 1372, 1);
 
 -- ----------------------------
 -- Table structure for perawat
@@ -1195,7 +1272,7 @@ CREATE TABLE `perijinan_santri`  (
   `kode` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` tinyint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of perijinan_santri
@@ -1232,6 +1309,21 @@ CREATE TABLE `personals`  (
 
 -- ----------------------------
 -- Records of personals
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for peserta_madin
+-- ----------------------------
+DROP TABLE IF EXISTS `peserta_madin`;
+CREATE TABLE `peserta_madin`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `santri_id` int NULL DEFAULT NULL,
+  `madin_id` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of peserta_madin
 -- ----------------------------
 
 -- ----------------------------
@@ -1353,7 +1445,7 @@ CREATE TABLE `santri`  (
   `asrama_id` int NULL DEFAULT NULL,
   `nik` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1372 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1374 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of santri
@@ -1367,10 +1459,12 @@ INSERT INTO `santri` VALUES (1364, '13291', 'Muhammad Hilmy Zulfikar', 'L', '', 
 INSERT INTO `santri` VALUES (1365, '83127931', 'Pengurus 1', 'L', 'Malang', '2025-02-17', NULL, 'aaa', 'bbb', '8028103', '91839012', 1, 'AKTIF', 'ccc', '89048302', '1739770548_46A.jpg', 3, NULL);
 INSERT INTO `santri` VALUES (1366, '38127398', 'Asatid 1', 'L', 'Malang', '2025-02-18', NULL, 'MAMA', 'BBB', '08588238', '31820381', 1, 'AKTIF', 'CCC', '83102390', '1739773496_46B.jpg', 3, NULL);
 INSERT INTO `santri` VALUES (1367, '0118060077', 'kafil 1', 'L', 'Malang', '2025-02-17', NULL, 'MAMA', '', '', '', 1, 'AKTIF', '', '', '1739774757_Sertifikat_Donasi_(3).jpg', 2, NULL);
-INSERT INTO `santri` VALUES (1368, '3213123', 'Rendy Yani Susanto', 'L', 'Malang', '2025-03-04', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '44341231232');
-INSERT INTO `santri` VALUES (1369, '32131', 'CIcik WInarsih', 'L', 'Malang', '2025-03-04', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '350741115505');
+INSERT INTO `santri` VALUES (1368, '3213123', 'Rendy Yani Susanto11', 'L', 'Malang', '2025-03-04', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '44341231232');
+INSERT INTO `santri` VALUES (1369, '32131', 'CIcik Wiinarsih', 'L', 'Malang', '2025-03-04', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '350741115505');
 INSERT INTO `santri` VALUES (1370, '12323', 'Rendy Yani Susanto123', 'L', '', '0000-00-00', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '5544');
 INSERT INTO `santri` VALUES (1371, '0118060077', 'Rendy Yani Susanto 444', 'L', 'Malang', '2025-03-04', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '44341231232');
+INSERT INTO `santri` VALUES (1372, '-', 'M. Irfaur Rizky', 'L', '', '0000-00-00', NULL, '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '');
+INSERT INTO `santri` VALUES (1373, '3891', 'Mochamad Basuki Rahmat', 'L', 'Malang', '2008-12-29', NULL, '', '', '', '', 1, 'AKTIF', '', '', '1746858405_ZIDAN_ARDANI_HIDAYANTO.png', 2, '18239');
 
 -- ----------------------------
 -- Table structure for santri_dokumen
@@ -1382,7 +1476,7 @@ CREATE TABLE `santri_dokumen`  (
   `fname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `file` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of santri_dokumen
@@ -1511,9 +1605,9 @@ CREATE TABLE `submenu`  (
 -- Records of submenu
 -- ----------------------------
 INSERT INTO `submenu` VALUES (1, 1, 'Master Data Santri', 'santri/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (2, 1, 'Master Data Pengurus', 'pengurus/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (3, 1, 'Master Data Asatid', 'asatid/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (4, 1, 'Master Data Kafil', 'kafil/get_data', 1, 1, 1, 1, 'icon-folder3');
+INSERT INTO `submenu` VALUES (2, 1, 'Master Data Pengurus', 'pengurus/add_page_pengurus', 1, 1, 1, 1, 'icon-folder3');
+INSERT INTO `submenu` VALUES (3, 1, 'Master Data Asatid', 'asatid/add_page_asatid', 1, 1, 1, 1, 'icon-folder3');
+INSERT INTO `submenu` VALUES (4, 1, 'Master Data Kafil', 'kafil/add_page_kafil', 1, 1, 1, 1, 'icon-folder3');
 INSERT INTO `submenu` VALUES (5, 1, 'Master Data Alumni', 'santri/get_data', 1, 1, 1, 1, 'icon-folder3');
 INSERT INTO `submenu` VALUES (6, 1, 'Master Data Madin', 'madin/get_data', 1, 1, 1, 1, 'icon-folder3');
 INSERT INTO `submenu` VALUES (7, 1, 'Master Data Tahfidz', 'tahfidz/get_data', 1, 1, 1, 1, 'icon-folder3');
@@ -1837,18 +1931,18 @@ CREATE TABLE `users`  (
   UNIQUE INDEX `activation_selector`(`activation_selector` ASC) USING BTREE,
   UNIQUE INDEX `forgotten_password_selector`(`forgotten_password_selector` ASC) USING BTREE,
   UNIQUE INDEX `remember_selector`(`remember_selector` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, '127.0.0.1', 'administrator', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1741825623, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, NULL, NULL);
-INSERT INTO `users` VALUES (7, '::1', 'ahm', '$2y$10$Hojls1F0e38bTgB9Gyn8Cer.L.3Ak0T3rx5MyDvE3teoxXmawwGFG', 'ahmad@impact.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1692973423, 1715747442, 1, 'AHM', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `users` VALUES (8, '112.215.237.81', 'rendy', '$2y$10$Zexem4W9luDl6kK6lUJfTet.gqskrcQqkFbK9osLRfEVYgp3wRJuq', 'rendy@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1697964271, 1697964280, 1, 'rendy', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `users` VALUES (21, '158.140.169.138', 'totok', '$2y$10$52VxVZPcFFMmD.WCYdihZeAUexuJHiEELQlR7jNlOuQWuKZwVy5te', 'totok@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1715824768, 1720236542, 1, 'SUHARIYANTO/TOTOK', NULL, NULL, NULL, NULL, NULL, 57, 'karyawan');
-INSERT INTO `users` VALUES (22, '158.140.169.138', 'soedjai', '$2y$10$3hiEa1ssO8w61iuwlFQWK.tINivkNd55qcvI3/T2rYXYBsUP.7Zm2', 'soedjai@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1715827049, 1724508985, 1, 'SOEDJAI', NULL, NULL, NULL, NULL, NULL, 55, 'karyawan');
-INSERT INTO `users` VALUES (23, '103.181.255.125', 'agus', '$2y$10$Ux1Jpu54FFtiHkepou9Y1e39yOgAbAMHPd/mHEzxjVl0QVKYPpFAm', '-', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1715850306, 1715921393, 1, 'AGUS JUNIANTO/ENCEK', NULL, NULL, NULL, NULL, NULL, 64, 'karyawan');
-INSERT INTO `users` VALUES (24, '125.163.127.49', 'markus', '$2y$10$qnjYJ.5QAYboVBxffZQxuuBY6fhclSmifFLu0gsHZr6a9RDza59Fa', 'markus@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1716171935, 1717824868, 1, 'TANO/MARKUS', NULL, NULL, NULL, NULL, NULL, 56, 'karyawan');
+INSERT INTO `users` VALUES (1, '127.0.0.1', 'administrator', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1747099649, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (25, '::1', 'mir', '$2y$10$7CtyYQ1SxDYSjYyssEFWle4FJD.12O9biLP5vcH4wAi37v5lNTawW', 'irfaur@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1746599349, 1746599358, 1, 'M. Irfaur Rizky', NULL, NULL, NULL, NULL, NULL, 1372, 'karyawan');
+INSERT INTO `users` VALUES (26, '::1', 'rendy', '$2y$10$Bz3IJjHsT86GzE0hb5IBZeZVubG9Resb/W1YIWVGG7rOE1uzTlNEO', 'rendyyanisusanto@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1746607038, 1746607047, 1, 'rendy', NULL, NULL, NULL, NULL, NULL, 1359, 'karyawan');
+INSERT INTO `users` VALUES (27, '::1', 'pau', '$2y$10$Q2Qu7gbHIE1VxCY0OxOgJORnU.smVgiY0C0wp7TbNnCvJkv4oac4O', 'pau@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1746862620, NULL, 1, 'pau', NULL, NULL, NULL, NULL, NULL, 1359, 'karyawan');
+INSERT INTO `users` VALUES (28, '::1', 'ketertiban', '$2y$10$Nwq8ZZTjwzgZKryPFffCjOB9TGz0VZcC/61Zr10EoIVxUGic3Zy7W', 'ketertiban@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1746862651, NULL, 1, 'ketertiban', NULL, NULL, NULL, NULL, NULL, 1359, 'karyawan');
+INSERT INTO `users` VALUES (29, '::1', 'asrama', '$2y$10$KdfMqD5THqlp5hY9.sJmjusqw1BY.ltF3tjBafAQl/Jqere9AvVOu', 'asrama@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1746862712, NULL, 1, 'asrama', NULL, NULL, NULL, NULL, NULL, 1368, 'karyawan');
+INSERT INTO `users` VALUES (30, '::1', 'ketuakamar', '$2y$10$oe.kt.bsjj13t09fEz0woOmYp7cNf1NwxFi7EfTAW6W8iOGxHM8q2', 'ketuakamar@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1746862749, NULL, 1, 'ketuakamar', NULL, NULL, NULL, NULL, NULL, 1359, 'karyawan');
 
 -- ----------------------------
 -- Table structure for users_groups
@@ -1859,7 +1953,7 @@ CREATE TABLE `users_groups`  (
   `user_id` mediumint UNSIGNED NOT NULL,
   `group_id` mediumint UNSIGNED NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 26 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users_groups
@@ -1883,6 +1977,12 @@ INSERT INTO `users_groups` VALUES (16, 21, 5);
 INSERT INTO `users_groups` VALUES (17, 22, 5);
 INSERT INTO `users_groups` VALUES (18, 23, 5);
 INSERT INTO `users_groups` VALUES (19, 24, 5);
+INSERT INTO `users_groups` VALUES (20, 25, 13);
+INSERT INTO `users_groups` VALUES (21, 26, 11);
+INSERT INTO `users_groups` VALUES (22, 27, 11);
+INSERT INTO `users_groups` VALUES (23, 28, 13);
+INSERT INTO `users_groups` VALUES (24, 29, 12);
+INSERT INTO `users_groups` VALUES (25, 30, 17);
 
 -- ----------------------------
 -- View structure for v_all_data
@@ -1898,7 +1998,7 @@ CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_all_data` AS SELECT
     LEFT JOIN kafil k ON s.id = k.santri_id
     LEFT JOIN pengurus p ON s.id = p.santri_id
     LEFT JOIN lembaga_pengurus lp ON p.lembaga_pengurus_id = lp.id
-    ORDER BY s.nama ASC ;
+    ORDER BY s.nama ASC ; ;
 
 -- ----------------------------
 -- View structure for v_asatid
@@ -1912,13 +2012,13 @@ FROM
 	INNER JOIN
 	santri
 	ON 
-		asatid.santri_id = santri.id ;
+		asatid.santri_id = santri.id ; ;
 
 -- ----------------------------
 -- View structure for v_groups_detail_submenu
 -- ----------------------------
 DROP VIEW IF EXISTS `v_groups_detail_submenu`;
-CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_groups_detail_submenu` AS select `groups_detail`.`id` AS `id`,`groups_detail`.`groups_id` AS `groups_id`,`groups_detail`.`submenu_id` AS `submenu_id`,`groups_detail`.`c` AS `c`,`groups_detail`.`r` AS `r`,`groups_detail`.`u` AS `u`,`groups_detail`.`d` AS `d`,`submenu`.`menu_id` AS `menu_id`,`submenu`.`submenu` AS `submenu`,`submenu`.`link` AS `link` from (`groups_detail` join `submenu` on(`groups_detail`.`submenu_id` = `submenu`.`id`)) ;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_groups_detail_submenu` AS select `groups_detail`.`id` AS `id`,`groups_detail`.`groups_id` AS `groups_id`,`groups_detail`.`submenu_id` AS `submenu_id`,`groups_detail`.`c` AS `c`,`groups_detail`.`r` AS `r`,`groups_detail`.`u` AS `u`,`groups_detail`.`d` AS `d`,`submenu`.`menu_id` AS `menu_id`,`submenu`.`submenu` AS `submenu`,`submenu`.`link` AS `link` from (`groups_detail` join `submenu` on(`groups_detail`.`submenu_id` = `submenu`.`id`)) ; ;
 
 -- ----------------------------
 -- View structure for v_kafil
@@ -1931,7 +2031,7 @@ FROM
 	INNER JOIN
 	kafil
 	ON 
-		santri.id = kafil.santri_id ;
+		santri.id = kafil.santri_id ; ;
 
 -- ----------------------------
 -- View structure for v_pengurus
@@ -1968,7 +2068,7 @@ FROM
 	INNER JOIN
 	lembaga_pengurus
 	ON 
-		pengurus.lembaga_pengurus_id = lembaga_pengurus.id ;
+		pengurus.lembaga_pengurus_id = lembaga_pengurus.id ; ;
 
 -- ----------------------------
 -- View structure for v_santri_aktif
@@ -1984,6 +2084,6 @@ CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_santri_aktif` AS SELEC
     WHERE k.santri_id IS NULL 
       AND a.santri_id IS NULL 
       AND p.santri_id IS NULL 
-      AND s.status_aktif = 1 ;
+      AND s.status_aktif = 1 ; ;
 
 SET FOREIGN_KEY_CHECKS = 1;
