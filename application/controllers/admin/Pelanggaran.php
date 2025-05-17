@@ -25,7 +25,20 @@ class pelanggaran extends MY_Controller {
 		$data['account']	=	$this->get_user_account();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index',$data['param']['parents_link'].'/index_page/js'],$data);
 	}
+	function get_data_card(){
+		$data['param'] 		= 	$this->arr;
+		$data['account']	=	$this->get_user_account();
+		$query = $this->db->query(' 
+		SELECT 
+		pelanggaran.*,
+		santri.nama, 
+		santri.nis
+		FROM `pelanggaran` INNER JOIN santri on pelanggaran.santri_id = santri.id
+		where pelanggaran.status_aktif=1 order by id desc limit 10')->result_array();
 
+		$data['data'] = $query;
+		$this->my_view([$data['param']['parents_link'].'/index_page/card_content'],$data);
+	}
 	function pengajuan(){
 		$this->arr['title']	=	"Pengajuan Laporan Pelanggaran";
 		$data['param'] 		= 	$this->arr;
@@ -659,34 +672,34 @@ class pelanggaran extends MY_Controller {
 
 	function get_pengajuan(){
 		$data['pengajuan']	=	$this->db->query('SELECT 
-				p.id, 
-				s.nama AS nama_santri,
-				pelapor_santri.nama AS nama_pelapor,
-				p.kode, 
-				p.tanggal, 
-				p.status_pengajuan, 
-				p.pelanggaran 
-			FROM pelanggaran p
-			-- join ke santri pelanggar
-			LEFT JOIN santri s ON s.id = p.santri_id
-			-- join ke pengurus (pelapor)
-			LEFT JOIN pengurus peng ON peng.id = p.pelapor_id
-			-- join ke santri dari pengurus (untuk nama pelapor)
-			LEFT JOIN santri pelapor_santri ON pelapor_santri.id = peng.santri_id
-			WHERE 
-				p.status_pengajuan <> "BUKAN PENGAJUAN" AND 
-				p.status_pengajuan <> "" 
-			ORDER BY 
-				CASE 
-					WHEN p.status_pengajuan = "BELUM DIPROSES" THEN 1 
-					WHEN p.status_pengajuan = "DITERIMA" THEN 2 
-					WHEN p.status_pengajuan = "DITOLAK" THEN 3 
-					ELSE 4 
-				END,
-				p.id DESC
-			LIMIT 10;
+						p.id, 
+						s.nama AS nama_santri,
+						pelapor_santri.nama AS nama_pelapor,
+						p.kode, 
+						p.tanggal, 
+						p.status_pengajuan, 
+						p.pelanggaran 
+					FROM pelanggaran p
+					-- join ke santri pelanggar
+					LEFT JOIN santri s ON s.id = p.santri_id
+					-- join ke pengurus (pelapor)
+					LEFT JOIN pengurus peng ON peng.id = p.pelapor_id
+					-- join ke santri dari pengurus (untuk nama pelapor)
+					LEFT JOIN santri pelapor_santri ON pelapor_santri.id = peng.santri_id
+					WHERE 
+						p.status_pengajuan <> "BUKAN PENGAJUAN" AND 
+						p.status_pengajuan <> "" 
+					ORDER BY 
+						CASE 
+							WHEN p.status_pengajuan = "BELUM DIPROSES" THEN 1 
+							WHEN p.status_pengajuan = "DITERIMA" THEN 2 
+							WHEN p.status_pengajuan = "DITOLAK" THEN 3 
+							ELSE 4 
+						END,
+						p.id DESC
+					LIMIT 10;
 
-')->result_array();
+		')->result_array();
 		
 		$data['param'] 		= 	$this->arr;
 		$this->my_view([ $data['param']['parents_link'].'/pengajuan_pelanggaran/table_pengajuan'],$data);

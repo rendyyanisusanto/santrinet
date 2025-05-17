@@ -19,7 +19,8 @@ class santri extends MY_Controller {
 	{
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
-		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index',$data['param']['parents_link'].'/index_page/modal_change_status_santri',$data['param']['parents_link'].'/index_page/js'],$data);
+		// $this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index',$data['param']['parents_link'].'/index_page/modal_change_status_santri',$data['param']['parents_link'].'/index_page/js'],$data);
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page_card/index',$data['param']['parents_link'].'/index_page_card/js'],$data);
 	}
 	public function add_page()
 	{
@@ -569,7 +570,7 @@ class santri extends MY_Controller {
             $no++;
             $row        =   array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
-            $row[]      =   (!empty($field['foto'])) ? '<img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="max-width: 50px">' : '<img src="'.base_url('inc/media/no_image.jpg').'" style="max-width: 50px">';
+            $row[]      =   (!empty($field['foto'])) ? '<center><img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="width: 30px;height:40px;"></center>' : '<center><img src="'.base_url('inc/media/no_image.jpg').'" style="width: 40px;height:40px;"></center>';
             $row[]		=	'<a href="santri/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	'<a onclick="change_status_santri('.$field['id'].','."'".$field['status_santri']."'".')"><span class="label label-block label-rounded label-'.(($field['status_santri'] == "AKTIF") ? "success" : "info").'">'.$field['status_santri'].'</span></a>' ;
