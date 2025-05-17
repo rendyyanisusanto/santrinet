@@ -39,7 +39,7 @@ class presensi_harian extends MY_Controller {
 			foreach ($kamar as $key => $value) {
 				$status_presensi = [];
 				foreach ($jadwal as $key => $value_jadwal) {
-					$status_presensi[$value_jadwal['id']]['jadwal'] = $value;
+					$status_presensi[$value_jadwal['id']]['jadwal'] = $value_jadwal;
 					$status_presensi[$value_jadwal['id']]['data'] = $this->db->query('SELECT 
 							ks.kamar_id,
 							COUNT(s.id) AS total_santri,
