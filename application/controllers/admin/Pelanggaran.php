@@ -23,7 +23,7 @@ class pelanggaran extends MY_Controller {
 	{
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
-		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index',$data['param']['parents_link'].'/index_page/js'],$data);
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index_bcp',$data['param']['parents_link'].'/index_page/js_bcp'],$data);
 	}
 	function get_data_card(){
 		$data['param'] 		= 	$this->arr;
@@ -477,8 +477,8 @@ class pelanggaran extends MY_Controller {
             $no++;
             $row        =   array();
             $santri 	= $this->db->query('select nama from santri where id = '.$field['santri_id'])->row_array();
-            $pelapor 	= $this->db->query('select nama from pengurus where pengurus.id = '.$field['pelapor_id'])->row_array();
-            $pengurus 	= $this->db->query('select nama from pengurus where pengurus.id = '.$field['pengurus_id'])->row_array();
+            $pelapor 	= $this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama from pengurus where pengurus.id = '.$field['pelapor_id'])->row_array();
+            $pengurus 	= $this->db->query('select  id, (select nama from santri where santri.id = santri_id) as nama from pengurus where pengurus.id = '.$field['pengurus_id'])->row_array();
             $kategori_tatib = $this->db->query('select nama, (select nama from kategori_tatib where kategori_tatib.id = kategori_tatib_id) as kategori_tatib from pelanggaran left join tatib on tatib.id=tatib_id where tatib.id='.$field['tatib_id'])->row_array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]		=	date('d/m/Y', strtotime($field['tanggal']));

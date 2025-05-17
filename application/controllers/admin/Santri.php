@@ -19,8 +19,8 @@ class santri extends MY_Controller {
 	{
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
-		// $this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index',$data['param']['parents_link'].'/index_page/modal_change_status_santri',$data['param']['parents_link'].'/index_page/js'],$data);
-		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page_card/index',$data['param']['parents_link'].'/index_page_card/js'],$data);
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page/index',$data['param']['parents_link'].'/index_page/modal_change_status_santri',$data['param']['parents_link'].'/index_page/js'],$data);
+		// $this->my_view(['role/global/page_header',$data['param']['parents_link'].'/index_page_card/index',$data['param']['parents_link'].'/index_page_card/js'],$data);
 	}
 	public function add_page()
 	{
