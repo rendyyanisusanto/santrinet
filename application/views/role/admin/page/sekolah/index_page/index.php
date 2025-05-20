@@ -10,6 +10,7 @@
 			<div class="panel-heading">
 				<div class="panel-title">
 					<a href="<?php echo $data_get['param']['table'] ?>/add_page" style="color:white;" class="btn btn-primary app-item"><i class="icon-plus3"></i> Tambah <?php echo $data_get['param']['title'] ?></a>
+					<a href="<?php echo $data_get['param']['table'] ?>/peserta_sekolah" style="color:white;" class="btn btn-primary app-item"><i class="icon-plus3"></i> Tambah Peserta <?php echo $data_get['param']['title'] ?></a>
 					<button class="btn btn-bulk-delete btn-danger" onclick="bulk_delete()" style="display: none;"><i class="icon-close2"></i> Hapus Data</button>
 				</div>
 				<div class="heading-elements">
@@ -39,7 +40,6 @@
 		<div class="panel-footer"><a class="heading-elements-toggle"><i class="icon-more"></i></a>
 		<div class="heading-elements">
 			<div class="heading-btn pull-right">
-				<!-- <button type="button" class="btn btn-default btn-icon btn-custom-search" onclick="custom_search();"><i class="icon-search4"></i> Custom Search</button> -->
 				<a href="<?= $data_get['param']['table'] ?>/import_page" class="btn btn-default btn-icon app-item"><i class="icon-upload"></i> Import Data</a>
 			</div>
 		</div>

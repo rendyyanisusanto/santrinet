@@ -31,7 +31,7 @@
 								<th>Nama</th>
 								<th>Tatib</th>
 								<th>J. Pelanggaran</th>
-								<th>Pelanggaran</th>
+								<!-- <th>Pelanggaran</th> -->
 								<th>Takzir</th>
 								<th>ST. Takzir</th>
 								<th>Dokumen</th>

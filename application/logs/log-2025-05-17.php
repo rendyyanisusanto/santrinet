@@ -10439,3 +10439,5322 @@ INFO - 2025-05-17 10:03:16 --> Model "SMMP_Model" initialized
 INFO - 2025-05-17 10:03:16 --> Model "SMMP_datatable" initialized
 INFO - 2025-05-17 10:03:16 --> Final output sent to browser
 DEBUG - 2025-05-17 10:03:16 --> Total execution time: 0.4502
+INFO - 2025-05-17 11:21:30 --> Config Class Initialized
+INFO - 2025-05-17 11:21:30 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:21:30 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:30 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:30 --> URI Class Initialized
+INFO - 2025-05-17 11:21:30 --> Router Class Initialized
+INFO - 2025-05-17 11:21:30 --> Output Class Initialized
+INFO - 2025-05-17 11:21:30 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:30 --> Input Class Initialized
+INFO - 2025-05-17 11:21:30 --> Language Class Initialized
+INFO - 2025-05-17 11:21:30 --> Loader Class Initialized
+INFO - 2025-05-17 11:21:30 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:30 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:21:30 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:30 --> Email Class Initialized
+INFO - 2025-05-17 11:21:30 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:30 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:30 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:30 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:21:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:21:30 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:30 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:30 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:30 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:30 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:30 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:30 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:30 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//head.php
+INFO - 2025-05-17 11:21:30 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/include/menu.php
+INFO - 2025-05-17 11:21:30 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//navbar.php
+INFO - 2025-05-17 11:21:30 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//content.php
+INFO - 2025-05-17 11:21:30 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//footer.php
+INFO - 2025-05-17 11:21:30 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:30 --> Total execution time: 0.0863
+INFO - 2025-05-17 11:21:31 --> Config Class Initialized
+INFO - 2025-05-17 11:21:31 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:21:31 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:31 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:31 --> URI Class Initialized
+INFO - 2025-05-17 11:21:31 --> Router Class Initialized
+INFO - 2025-05-17 11:21:31 --> Output Class Initialized
+INFO - 2025-05-17 11:21:31 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:31 --> Input Class Initialized
+INFO - 2025-05-17 11:21:31 --> Language Class Initialized
+INFO - 2025-05-17 11:21:31 --> Loader Class Initialized
+INFO - 2025-05-17 11:21:31 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:31 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:21:31 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:31 --> Email Class Initialized
+INFO - 2025-05-17 11:21:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:31 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:31 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:31 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:21:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:21:31 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:31 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:31 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:31 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:31 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:31 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:21:31 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:21:31 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:21:31 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:31 --> Total execution time: 0.0857
+INFO - 2025-05-17 11:21:31 --> Config Class Initialized
+INFO - 2025-05-17 11:21:31 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:21:31 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:31 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:31 --> URI Class Initialized
+INFO - 2025-05-17 11:21:31 --> Router Class Initialized
+INFO - 2025-05-17 11:21:31 --> Output Class Initialized
+INFO - 2025-05-17 11:21:31 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:31 --> Input Class Initialized
+INFO - 2025-05-17 11:21:31 --> Language Class Initialized
+INFO - 2025-05-17 11:21:31 --> Loader Class Initialized
+INFO - 2025-05-17 11:21:31 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:31 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:21:31 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:31 --> Email Class Initialized
+INFO - 2025-05-17 11:21:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:31 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:31 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:31 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:21:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:21:31 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:31 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:31 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:31 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:31 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:31 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:21:31 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:31 --> Total execution time: 0.0964
+INFO - 2025-05-17 11:21:36 --> Config Class Initialized
+INFO - 2025-05-17 11:21:36 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:21:36 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:36 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:36 --> URI Class Initialized
+INFO - 2025-05-17 11:21:36 --> Router Class Initialized
+INFO - 2025-05-17 11:21:36 --> Output Class Initialized
+INFO - 2025-05-17 11:21:36 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:36 --> Input Class Initialized
+INFO - 2025-05-17 11:21:36 --> Language Class Initialized
+INFO - 2025-05-17 11:21:36 --> Loader Class Initialized
+INFO - 2025-05-17 11:21:36 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:36 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:21:36 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:36 --> Email Class Initialized
+INFO - 2025-05-17 11:21:36 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:36 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:36 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:36 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:21:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:21:36 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:36 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:36 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:36 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:36 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:36 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:36 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:36 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:21:36 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:21:36 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:21:36 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:36 --> Total execution time: 0.1331
+INFO - 2025-05-17 11:21:36 --> Config Class Initialized
+INFO - 2025-05-17 11:21:36 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:21:36 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:36 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:36 --> URI Class Initialized
+INFO - 2025-05-17 11:21:36 --> Router Class Initialized
+INFO - 2025-05-17 11:21:36 --> Output Class Initialized
+INFO - 2025-05-17 11:21:36 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:36 --> Input Class Initialized
+INFO - 2025-05-17 11:21:36 --> Language Class Initialized
+INFO - 2025-05-17 11:21:36 --> Loader Class Initialized
+INFO - 2025-05-17 11:21:36 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:36 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:21:36 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:36 --> Email Class Initialized
+INFO - 2025-05-17 11:21:36 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:36 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:36 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:36 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:21:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:21:36 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:36 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:36 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:36 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:36 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:36 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:36 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:36 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:21:36 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:21:36 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:21:36 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:36 --> Total execution time: 0.1018
+INFO - 2025-05-17 11:21:38 --> Config Class Initialized
+INFO - 2025-05-17 11:21:38 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:38 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:38 --> URI Class Initialized
+INFO - 2025-05-17 11:21:38 --> Router Class Initialized
+INFO - 2025-05-17 11:21:38 --> Output Class Initialized
+INFO - 2025-05-17 11:21:38 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:38 --> Input Class Initialized
+INFO - 2025-05-17 11:21:38 --> Language Class Initialized
+INFO - 2025-05-17 11:21:38 --> Loader Class Initialized
+INFO - 2025-05-17 11:21:38 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:38 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:38 --> Email Class Initialized
+INFO - 2025-05-17 11:21:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:38 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:38 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:38 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:21:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:21:38 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:38 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:38 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:38 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:38 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:38 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 11:21:38 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 11:21:38 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 11:21:38 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:38 --> Total execution time: 0.4404
+INFO - 2025-05-17 11:21:38 --> Config Class Initialized
+INFO - 2025-05-17 11:21:38 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:38 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:38 --> URI Class Initialized
+INFO - 2025-05-17 11:21:38 --> Router Class Initialized
+INFO - 2025-05-17 11:21:38 --> Output Class Initialized
+INFO - 2025-05-17 11:21:38 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:38 --> Input Class Initialized
+INFO - 2025-05-17 11:21:38 --> Language Class Initialized
+INFO - 2025-05-17 11:21:38 --> Loader Class Initialized
+INFO - 2025-05-17 11:21:38 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:38 --> Config Class Initialized
+INFO - 2025-05-17 11:21:38 --> Hooks Class Initialized
+INFO - 2025-05-17 11:21:38 --> Config Class Initialized
+INFO - 2025-05-17 11:21:38 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:38 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:38 --> URI Class Initialized
+INFO - 2025-05-17 11:21:38 --> Router Class Initialized
+INFO - 2025-05-17 11:21:38 --> Config Class Initialized
+INFO - 2025-05-17 11:21:38 --> Hooks Class Initialized
+INFO - 2025-05-17 11:21:38 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:38 --> Output Class Initialized
+INFO - 2025-05-17 11:21:38 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:38 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> UTF-8 Support Enabled
+DEBUG - 2025-05-17 11:21:38 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:38 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:38 --> URI Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:38 --> Input Class Initialized
+INFO - 2025-05-17 11:21:38 --> Language Class Initialized
+INFO - 2025-05-17 11:21:38 --> URI Class Initialized
+INFO - 2025-05-17 11:21:38 --> Router Class Initialized
+INFO - 2025-05-17 11:21:38 --> Output Class Initialized
+INFO - 2025-05-17 11:21:38 --> Loader Class Initialized
+INFO - 2025-05-17 11:21:38 --> Router Class Initialized
+INFO - 2025-05-17 11:21:38 --> Security Class Initialized
+INFO - 2025-05-17 11:21:38 --> Helper loaded: uuid_helper
+DEBUG - 2025-05-17 11:21:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:38 --> Input Class Initialized
+INFO - 2025-05-17 11:21:38 --> Output Class Initialized
+INFO - 2025-05-17 11:21:38 --> Language Class Initialized
+INFO - 2025-05-17 11:21:38 --> Email Class Initialized
+INFO - 2025-05-17 11:21:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:38 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:38 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:21:38 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 11:21:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:38 --> Input Class Initialized
+INFO - 2025-05-17 11:21:38 --> Language Class Initialized
+INFO - 2025-05-17 11:21:38 --> Loader Class Initialized
+INFO - 2025-05-17 11:21:38 --> Email Class Initialized
+INFO - 2025-05-17 11:21:38 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:38 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:38 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:38 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:21:38 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:38 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:21:38 --> Loader Class Initialized
+DEBUG - 2025-05-17 11:21:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:21:38 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:38 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 11:21:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:21:38 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:21:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:38 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:38 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:21:38 --> Email Class Initialized
+INFO - 2025-05-17 11:21:38 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2025-05-17 11:21:38 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:38 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:38 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:38 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:21:38 --> Email Class Initialized
+INFO - 2025-05-17 11:21:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:38 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:38 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:38 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:21:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 11:21:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 11:21:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:38 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:38 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:38 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:38 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 11:21:38 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 11:21:38 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 11:21:38 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:38 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:38 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:38 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:38 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:38 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 11:21:38 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 11:21:38 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 11:21:38 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:38 --> Total execution time: 0.2087
+INFO - 2025-05-17 11:21:38 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:38 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 11:21:39 --> Config Class Initialized
+INFO - 2025-05-17 11:21:39 --> Config Class Initialized
+INFO - 2025-05-17 11:21:39 --> Hooks Class Initialized
+INFO - 2025-05-17 11:21:39 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:21:39 --> UTF-8 Support Enabled
+DEBUG - 2025-05-17 11:21:39 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:39 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:39 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:39 --> URI Class Initialized
+INFO - 2025-05-17 11:21:39 --> URI Class Initialized
+INFO - 2025-05-17 11:21:39 --> Router Class Initialized
+INFO - 2025-05-17 11:21:39 --> Router Class Initialized
+INFO - 2025-05-17 11:21:39 --> Output Class Initialized
+INFO - 2025-05-17 11:21:39 --> Output Class Initialized
+INFO - 2025-05-17 11:21:39 --> Security Class Initialized
+INFO - 2025-05-17 11:21:39 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2025-05-17 11:21:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:39 --> Input Class Initialized
+INFO - 2025-05-17 11:21:39 --> Language Class Initialized
+INFO - 2025-05-17 11:21:39 --> Input Class Initialized
+INFO - 2025-05-17 11:21:39 --> Config Class Initialized
+INFO - 2025-05-17 11:21:39 --> Hooks Class Initialized
+INFO - 2025-05-17 11:21:39 --> Language Class Initialized
+INFO - 2025-05-17 11:21:39 --> Loader Class Initialized
+INFO - 2025-05-17 11:21:39 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:39 --> Loader Class Initialized
+DEBUG - 2025-05-17 11:21:39 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:21:39 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:21:39 --> URI Class Initialized
+INFO - 2025-05-17 11:21:39 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:39 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:21:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:39 --> Cart Class Initialized
+DEBUG - 2025-05-17 11:21:39 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:39 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:39 --> Router Class Initialized
+INFO - 2025-05-17 11:21:39 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:39 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:39 --> Output Class Initialized
+INFO - 2025-05-17 11:21:39 --> Email Class Initialized
+INFO - 2025-05-17 11:21:39 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:39 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:39 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 11:21:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 11:21:39 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:39 --> Total execution time: 0.2584
+INFO - 2025-05-17 11:21:39 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:39 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:21:39 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:21:39 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 11:21:39 --> Security Class Initialized
+DEBUG - 2025-05-17 11:21:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:21:39 --> Input Class Initialized
+INFO - 2025-05-17 11:21:39 --> Language Class Initialized
+INFO - 2025-05-17 11:21:39 --> Loader Class Initialized
+DEBUG - 2025-05-17 11:21:39 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:21:39 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:21:39 --> Email Class Initialized
+INFO - 2025-05-17 11:21:39 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:39 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:39 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:39 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:21:39 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:21:39 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 11:21:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:21:39 --> Email Class Initialized
+INFO - 2025-05-17 11:21:39 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:21:39 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:21:39 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:21:39 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:21:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 11:21:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 11:21:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:39 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:39 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:39 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:39 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 11:21:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 11:21:39 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:39 --> Total execution time: 0.4268
+INFO - 2025-05-17 11:21:39 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:39 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:39 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:39 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:39 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:39 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 11:21:39 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 11:21:39 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 11:21:39 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:39 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:39 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:39 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:39 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:39 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 11:21:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 11:21:39 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:39 --> Total execution time: 0.2890
+INFO - 2025-05-17 11:21:39 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:21:39 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:21:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:21:39 --> Cart Class Initialized
+INFO - 2025-05-17 11:21:39 --> Controller Class Initialized
+INFO - 2025-05-17 11:21:39 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:21:39 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:21:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 11:21:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 11:21:39 --> Final output sent to browser
+DEBUG - 2025-05-17 11:21:39 --> Total execution time: 0.3650
+INFO - 2025-05-17 11:22:48 --> Config Class Initialized
+INFO - 2025-05-17 11:22:48 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:48 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:48 --> URI Class Initialized
+INFO - 2025-05-17 11:22:48 --> Router Class Initialized
+INFO - 2025-05-17 11:22:48 --> Output Class Initialized
+INFO - 2025-05-17 11:22:48 --> Security Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:48 --> Input Class Initialized
+INFO - 2025-05-17 11:22:48 --> Language Class Initialized
+INFO - 2025-05-17 11:22:48 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:48 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:48 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:48 --> Email Class Initialized
+INFO - 2025-05-17 11:22:48 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:48 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:48 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:48 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:22:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:48 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:48 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:48 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:48 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:48 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:48 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:22:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:22:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:22:48 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:48 --> Total execution time: 0.0897
+INFO - 2025-05-17 11:22:48 --> Config Class Initialized
+INFO - 2025-05-17 11:22:48 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:48 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:48 --> Config Class Initialized
+INFO - 2025-05-17 11:22:48 --> Hooks Class Initialized
+INFO - 2025-05-17 11:22:48 --> URI Class Initialized
+INFO - 2025-05-17 11:22:48 --> Router Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:48 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:48 --> URI Class Initialized
+INFO - 2025-05-17 11:22:48 --> Output Class Initialized
+INFO - 2025-05-17 11:22:48 --> Security Class Initialized
+INFO - 2025-05-17 11:22:48 --> Router Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:48 --> Output Class Initialized
+INFO - 2025-05-17 11:22:48 --> Input Class Initialized
+INFO - 2025-05-17 11:22:48 --> Language Class Initialized
+INFO - 2025-05-17 11:22:48 --> Security Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:48 --> Input Class Initialized
+INFO - 2025-05-17 11:22:48 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:48 --> Language Class Initialized
+INFO - 2025-05-17 11:22:48 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:48 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:48 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:48 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:48 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:22:48 --> Email Class Initialized
+INFO - 2025-05-17 11:22:48 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2025-05-17 11:22:48 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:48 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:48 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:48 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:22:48 --> Email Class Initialized
+INFO - 2025-05-17 11:22:48 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:48 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:48 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:48 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:22:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:48 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 11:22:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:48 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:48 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:48 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:48 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:48 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:22:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:22:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:22:48 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:48 --> Total execution time: 0.0864
+INFO - 2025-05-17 11:22:48 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:48 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 11:22:48 --> Config Class Initialized
+INFO - 2025-05-17 11:22:48 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:48 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:48 --> URI Class Initialized
+INFO - 2025-05-17 11:22:48 --> Router Class Initialized
+INFO - 2025-05-17 11:22:48 --> Output Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:48 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:48 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:48 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:48 --> Security Class Initialized
+INFO - 2025-05-17 11:22:48 --> Model "SMMP_datatable" initialized
+DEBUG - 2025-05-17 11:22:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:48 --> Input Class Initialized
+INFO - 2025-05-17 11:22:48 --> Language Class Initialized
+INFO - 2025-05-17 11:22:48 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:48 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:48 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:48 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:48 --> Email Class Initialized
+INFO - 2025-05-17 11:22:48 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:48 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:48 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:22:48 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:22:48 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:48 --> Total execution time: 0.1346
+DEBUG - 2025-05-17 11:22:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:48 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:48 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:48 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:48 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:48 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:48 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:22:48 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:48 --> Total execution time: 0.0878
+INFO - 2025-05-17 11:22:51 --> Config Class Initialized
+INFO - 2025-05-17 11:22:51 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:51 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:51 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:51 --> URI Class Initialized
+INFO - 2025-05-17 11:22:51 --> Router Class Initialized
+INFO - 2025-05-17 11:22:51 --> Output Class Initialized
+INFO - 2025-05-17 11:22:51 --> Security Class Initialized
+DEBUG - 2025-05-17 11:22:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:51 --> Input Class Initialized
+INFO - 2025-05-17 11:22:51 --> Language Class Initialized
+INFO - 2025-05-17 11:22:51 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:51 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:51 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:51 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:51 --> Email Class Initialized
+INFO - 2025-05-17 11:22:51 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:51 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:51 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:51 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:22:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:51 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:51 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:51 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:51 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:51 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:51 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:51 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:51 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:22:51 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:22:51 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:22:51 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:51 --> Total execution time: 0.0844
+INFO - 2025-05-17 11:22:51 --> Config Class Initialized
+INFO - 2025-05-17 11:22:51 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:51 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:51 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:51 --> URI Class Initialized
+INFO - 2025-05-17 11:22:51 --> Router Class Initialized
+INFO - 2025-05-17 11:22:51 --> Output Class Initialized
+INFO - 2025-05-17 11:22:51 --> Security Class Initialized
+DEBUG - 2025-05-17 11:22:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:51 --> Input Class Initialized
+INFO - 2025-05-17 11:22:51 --> Language Class Initialized
+INFO - 2025-05-17 11:22:51 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:51 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:51 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:51 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:51 --> Email Class Initialized
+INFO - 2025-05-17 11:22:51 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:51 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:51 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:51 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:22:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:51 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:51 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:51 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:51 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:51 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:51 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:51 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:51 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:22:51 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:22:51 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:22:51 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:51 --> Total execution time: 0.0934
+INFO - 2025-05-17 11:22:54 --> Config Class Initialized
+INFO - 2025-05-17 11:22:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:54 --> URI Class Initialized
+INFO - 2025-05-17 11:22:54 --> Router Class Initialized
+INFO - 2025-05-17 11:22:54 --> Output Class Initialized
+INFO - 2025-05-17 11:22:54 --> Security Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:54 --> Input Class Initialized
+INFO - 2025-05-17 11:22:54 --> Language Class Initialized
+INFO - 2025-05-17 11:22:54 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:54 --> Email Class Initialized
+INFO - 2025-05-17 11:22:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:22:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:54 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:54 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:54 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:54 --> Total execution time: 0.0973
+INFO - 2025-05-17 11:22:54 --> Config Class Initialized
+INFO - 2025-05-17 11:22:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:54 --> URI Class Initialized
+INFO - 2025-05-17 11:22:54 --> Router Class Initialized
+INFO - 2025-05-17 11:22:54 --> Output Class Initialized
+INFO - 2025-05-17 11:22:54 --> Security Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:54 --> Input Class Initialized
+INFO - 2025-05-17 11:22:54 --> Language Class Initialized
+INFO - 2025-05-17 11:22:54 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:54 --> Email Class Initialized
+INFO - 2025-05-17 11:22:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:22:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:54 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:54 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:22:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:22:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:22:54 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:54 --> Total execution time: 0.0863
+INFO - 2025-05-17 11:22:54 --> Config Class Initialized
+INFO - 2025-05-17 11:22:54 --> Hooks Class Initialized
+INFO - 2025-05-17 11:22:54 --> Config Class Initialized
+INFO - 2025-05-17 11:22:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:54 --> URI Class Initialized
+INFO - 2025-05-17 11:22:54 --> URI Class Initialized
+INFO - 2025-05-17 11:22:54 --> Router Class Initialized
+INFO - 2025-05-17 11:22:54 --> Router Class Initialized
+INFO - 2025-05-17 11:22:54 --> Output Class Initialized
+INFO - 2025-05-17 11:22:54 --> Output Class Initialized
+INFO - 2025-05-17 11:22:54 --> Security Class Initialized
+INFO - 2025-05-17 11:22:54 --> Security Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:54 --> Input Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:54 --> Language Class Initialized
+INFO - 2025-05-17 11:22:54 --> Input Class Initialized
+INFO - 2025-05-17 11:22:54 --> Language Class Initialized
+INFO - 2025-05-17 11:22:54 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:54 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:54 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:22:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 11:22:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:54 --> Email Class Initialized
+INFO - 2025-05-17 11:22:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:54 --> Email Class Initialized
+INFO - 2025-05-17 11:22:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:54 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:22:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:22:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:54 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 11:22:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:54 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:54 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:22:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:22:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:22:54 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:54 --> Total execution time: 0.2422
+INFO - 2025-05-17 11:22:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:54 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 11:22:54 --> Config Class Initialized
+INFO - 2025-05-17 11:22:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:54 --> URI Class Initialized
+INFO - 2025-05-17 11:22:54 --> Router Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:54 --> Output Class Initialized
+INFO - 2025-05-17 11:22:54 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:54 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:54 --> Security Class Initialized
+INFO - 2025-05-17 11:22:54 --> Model "SMMP_datatable" initialized
+DEBUG - 2025-05-17 11:22:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:54 --> Input Class Initialized
+INFO - 2025-05-17 11:22:54 --> Language Class Initialized
+INFO - 2025-05-17 11:22:54 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:54 --> Email Class Initialized
+INFO - 2025-05-17 11:22:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:54 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:22:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:22:54 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:54 --> Total execution time: 0.2952
+DEBUG - 2025-05-17 11:22:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:54 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:54 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:22:54 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:54 --> Total execution time: 0.1003
+INFO - 2025-05-17 11:22:56 --> Config Class Initialized
+INFO - 2025-05-17 11:22:56 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:56 --> URI Class Initialized
+INFO - 2025-05-17 11:22:56 --> Router Class Initialized
+INFO - 2025-05-17 11:22:56 --> Output Class Initialized
+INFO - 2025-05-17 11:22:56 --> Security Class Initialized
+DEBUG - 2025-05-17 11:22:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:56 --> Input Class Initialized
+INFO - 2025-05-17 11:22:56 --> Language Class Initialized
+INFO - 2025-05-17 11:22:56 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:56 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:56 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:56 --> Email Class Initialized
+INFO - 2025-05-17 11:22:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:56 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:22:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:56 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:56 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:22:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:22:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:22:56 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:56 --> Total execution time: 0.0835
+INFO - 2025-05-17 11:22:56 --> Config Class Initialized
+INFO - 2025-05-17 11:22:56 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:22:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:22:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:22:56 --> URI Class Initialized
+INFO - 2025-05-17 11:22:56 --> Router Class Initialized
+INFO - 2025-05-17 11:22:56 --> Output Class Initialized
+INFO - 2025-05-17 11:22:56 --> Security Class Initialized
+DEBUG - 2025-05-17 11:22:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:22:56 --> Input Class Initialized
+INFO - 2025-05-17 11:22:56 --> Language Class Initialized
+INFO - 2025-05-17 11:22:56 --> Loader Class Initialized
+INFO - 2025-05-17 11:22:56 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:22:56 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:22:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:22:56 --> Email Class Initialized
+INFO - 2025-05-17 11:22:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:22:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:22:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:22:56 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:22:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:22:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:22:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:22:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:22:56 --> Cart Class Initialized
+INFO - 2025-05-17 11:22:56 --> Controller Class Initialized
+INFO - 2025-05-17 11:22:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:22:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:22:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:22:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:22:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:22:56 --> Final output sent to browser
+DEBUG - 2025-05-17 11:22:56 --> Total execution time: 0.0844
+INFO - 2025-05-17 11:23:00 --> Config Class Initialized
+INFO - 2025-05-17 11:23:00 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:23:00 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:23:00 --> URI Class Initialized
+INFO - 2025-05-17 11:23:00 --> Router Class Initialized
+INFO - 2025-05-17 11:23:00 --> Output Class Initialized
+INFO - 2025-05-17 11:23:00 --> Security Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:23:00 --> Input Class Initialized
+INFO - 2025-05-17 11:23:00 --> Language Class Initialized
+INFO - 2025-05-17 11:23:00 --> Loader Class Initialized
+INFO - 2025-05-17 11:23:00 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:23:00 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:23:00 --> Email Class Initialized
+INFO - 2025-05-17 11:23:00 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:23:00 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:23:00 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:23:00 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:23:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:23:00 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:23:00 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:23:00 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:23:00 --> Cart Class Initialized
+INFO - 2025-05-17 11:23:00 --> Controller Class Initialized
+INFO - 2025-05-17 11:23:00 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:23:00 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:23:00 --> Final output sent to browser
+DEBUG - 2025-05-17 11:23:00 --> Total execution time: 0.1257
+INFO - 2025-05-17 11:23:00 --> Config Class Initialized
+INFO - 2025-05-17 11:23:00 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:23:00 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:23:00 --> URI Class Initialized
+INFO - 2025-05-17 11:23:00 --> Router Class Initialized
+INFO - 2025-05-17 11:23:00 --> Output Class Initialized
+INFO - 2025-05-17 11:23:00 --> Security Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:23:00 --> Input Class Initialized
+INFO - 2025-05-17 11:23:00 --> Language Class Initialized
+INFO - 2025-05-17 11:23:00 --> Loader Class Initialized
+INFO - 2025-05-17 11:23:00 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:23:00 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:23:00 --> Email Class Initialized
+INFO - 2025-05-17 11:23:00 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:23:00 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:23:00 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:23:00 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:23:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:23:00 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:23:00 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:23:00 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:23:00 --> Cart Class Initialized
+INFO - 2025-05-17 11:23:00 --> Controller Class Initialized
+INFO - 2025-05-17 11:23:00 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:23:00 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:23:00 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:23:00 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:23:00 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:23:00 --> Final output sent to browser
+DEBUG - 2025-05-17 11:23:00 --> Total execution time: 0.0928
+INFO - 2025-05-17 11:23:00 --> Config Class Initialized
+INFO - 2025-05-17 11:23:00 --> Hooks Class Initialized
+INFO - 2025-05-17 11:23:00 --> Config Class Initialized
+INFO - 2025-05-17 11:23:00 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:23:00 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:23:00 --> URI Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:23:00 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:23:00 --> URI Class Initialized
+INFO - 2025-05-17 11:23:00 --> Router Class Initialized
+INFO - 2025-05-17 11:23:00 --> Router Class Initialized
+INFO - 2025-05-17 11:23:00 --> Output Class Initialized
+INFO - 2025-05-17 11:23:00 --> Output Class Initialized
+INFO - 2025-05-17 11:23:00 --> Security Class Initialized
+INFO - 2025-05-17 11:23:00 --> Security Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:23:00 --> Input Class Initialized
+INFO - 2025-05-17 11:23:00 --> Language Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:23:00 --> Input Class Initialized
+INFO - 2025-05-17 11:23:00 --> Language Class Initialized
+INFO - 2025-05-17 11:23:00 --> Loader Class Initialized
+INFO - 2025-05-17 11:23:00 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:23:00 --> Loader Class Initialized
+INFO - 2025-05-17 11:23:00 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:23:00 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:23:00 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 11:23:00 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:23:00 --> Email Class Initialized
+INFO - 2025-05-17 11:23:00 --> Email Class Initialized
+INFO - 2025-05-17 11:23:00 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:23:00 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:23:00 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:23:00 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:23:00 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:23:00 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:23:00 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:23:00 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:23:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 11:23:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:23:00 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:23:00 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:23:00 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:23:00 --> Cart Class Initialized
+INFO - 2025-05-17 11:23:00 --> Controller Class Initialized
+INFO - 2025-05-17 11:23:00 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:23:00 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:23:00 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:23:00 --> Final output sent to browser
+DEBUG - 2025-05-17 11:23:00 --> Total execution time: 0.1104
+INFO - 2025-05-17 11:23:00 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:23:00 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:23:00 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:23:00 --> Cart Class Initialized
+INFO - 2025-05-17 11:23:00 --> Controller Class Initialized
+INFO - 2025-05-17 11:23:00 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:23:00 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:23:00 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:23:00 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:23:00 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:23:00 --> Final output sent to browser
+DEBUG - 2025-05-17 11:23:00 --> Total execution time: 0.1655
+INFO - 2025-05-17 11:23:00 --> Config Class Initialized
+INFO - 2025-05-17 11:23:00 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:23:00 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:23:00 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:23:00 --> URI Class Initialized
+INFO - 2025-05-17 11:23:00 --> Router Class Initialized
+INFO - 2025-05-17 11:23:00 --> Output Class Initialized
+INFO - 2025-05-17 11:23:00 --> Security Class Initialized
+DEBUG - 2025-05-17 11:23:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:23:01 --> Input Class Initialized
+INFO - 2025-05-17 11:23:01 --> Language Class Initialized
+INFO - 2025-05-17 11:23:01 --> Loader Class Initialized
+INFO - 2025-05-17 11:23:01 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:23:01 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:23:01 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:23:01 --> Email Class Initialized
+INFO - 2025-05-17 11:23:01 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:23:01 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:23:01 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:23:01 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:23:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:23:01 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:23:01 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:23:01 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:23:01 --> Cart Class Initialized
+INFO - 2025-05-17 11:23:01 --> Controller Class Initialized
+INFO - 2025-05-17 11:23:01 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:23:01 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:23:01 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:23:01 --> Final output sent to browser
+DEBUG - 2025-05-17 11:23:01 --> Total execution time: 0.1016
+INFO - 2025-05-17 11:27:16 --> Config Class Initialized
+INFO - 2025-05-17 11:27:16 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:16 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:16 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:16 --> URI Class Initialized
+INFO - 2025-05-17 11:27:16 --> Router Class Initialized
+INFO - 2025-05-17 11:27:16 --> Output Class Initialized
+INFO - 2025-05-17 11:27:16 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:16 --> Input Class Initialized
+INFO - 2025-05-17 11:27:16 --> Language Class Initialized
+INFO - 2025-05-17 11:27:16 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:16 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:16 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:16 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:16 --> Email Class Initialized
+INFO - 2025-05-17 11:27:16 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:16 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:16 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:16 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:16 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:16 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:16 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:16 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:16 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:16 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:16 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar.php
+INFO - 2025-05-17 11:27:16 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:16 --> Total execution time: 0.0873
+INFO - 2025-05-17 11:27:18 --> Config Class Initialized
+INFO - 2025-05-17 11:27:18 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:18 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:18 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:18 --> URI Class Initialized
+INFO - 2025-05-17 11:27:18 --> Router Class Initialized
+INFO - 2025-05-17 11:27:18 --> Output Class Initialized
+INFO - 2025-05-17 11:27:18 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:18 --> Input Class Initialized
+INFO - 2025-05-17 11:27:18 --> Language Class Initialized
+INFO - 2025-05-17 11:27:18 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:18 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:18 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:18 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:18 --> Email Class Initialized
+INFO - 2025-05-17 11:27:18 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:18 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:18 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:18 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:18 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:18 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:18 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:18 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:18 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:18 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:18 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:18 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:18 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:27:18 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:27:18 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:18 --> Total execution time: 0.0986
+INFO - 2025-05-17 11:27:18 --> Config Class Initialized
+INFO - 2025-05-17 11:27:18 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:18 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:18 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:18 --> URI Class Initialized
+INFO - 2025-05-17 11:27:18 --> Router Class Initialized
+INFO - 2025-05-17 11:27:18 --> Output Class Initialized
+INFO - 2025-05-17 11:27:18 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:18 --> Input Class Initialized
+INFO - 2025-05-17 11:27:18 --> Language Class Initialized
+INFO - 2025-05-17 11:27:18 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:18 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:18 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:18 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:18 --> Email Class Initialized
+INFO - 2025-05-17 11:27:18 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:18 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:18 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:18 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:18 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:18 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:18 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:18 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:18 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:18 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:18 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:18 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:18 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:27:18 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:27:18 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:18 --> Total execution time: 0.0990
+INFO - 2025-05-17 11:27:21 --> Config Class Initialized
+INFO - 2025-05-17 11:27:21 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:21 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:21 --> URI Class Initialized
+INFO - 2025-05-17 11:27:21 --> Router Class Initialized
+INFO - 2025-05-17 11:27:21 --> Output Class Initialized
+INFO - 2025-05-17 11:27:21 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:21 --> Input Class Initialized
+INFO - 2025-05-17 11:27:21 --> Language Class Initialized
+INFO - 2025-05-17 11:27:21 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:21 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:21 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:21 --> Email Class Initialized
+INFO - 2025-05-17 11:27:21 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:21 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:21 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:21 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:21 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:21 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:21 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:21 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:21 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:21 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:21 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:21 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:21 --> Total execution time: 0.0747
+INFO - 2025-05-17 11:27:21 --> Config Class Initialized
+INFO - 2025-05-17 11:27:21 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:21 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:21 --> URI Class Initialized
+INFO - 2025-05-17 11:27:21 --> Router Class Initialized
+INFO - 2025-05-17 11:27:21 --> Output Class Initialized
+INFO - 2025-05-17 11:27:21 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:21 --> Input Class Initialized
+INFO - 2025-05-17 11:27:21 --> Language Class Initialized
+INFO - 2025-05-17 11:27:21 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:21 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:21 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:21 --> Email Class Initialized
+INFO - 2025-05-17 11:27:21 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:21 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:21 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:21 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:21 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:21 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:21 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:21 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:21 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:21 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:21 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:21 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:21 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:27:21 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:27:21 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:21 --> Total execution time: 0.1097
+INFO - 2025-05-17 11:27:21 --> Config Class Initialized
+INFO - 2025-05-17 11:27:21 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:21 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:21 --> URI Class Initialized
+INFO - 2025-05-17 11:27:21 --> Router Class Initialized
+INFO - 2025-05-17 11:27:21 --> Output Class Initialized
+INFO - 2025-05-17 11:27:21 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:21 --> Input Class Initialized
+INFO - 2025-05-17 11:27:21 --> Language Class Initialized
+INFO - 2025-05-17 11:27:21 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:21 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:21 --> Config Class Initialized
+INFO - 2025-05-17 11:27:21 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:21 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:21 --> URI Class Initialized
+INFO - 2025-05-17 11:27:21 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:27:21 --> Router Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:21 --> Output Class Initialized
+INFO - 2025-05-17 11:27:21 --> Email Class Initialized
+INFO - 2025-05-17 11:27:21 --> Security Class Initialized
+INFO - 2025-05-17 11:27:21 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:21 --> Helper loaded: cookie_helper
+DEBUG - 2025-05-17 11:27:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:21 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:21 --> Input Class Initialized
+INFO - 2025-05-17 11:27:21 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:27:21 --> Language Class Initialized
+INFO - 2025-05-17 11:27:21 --> Loader Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:21 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:21 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:21 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 11:27:21 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:21 --> Email Class Initialized
+INFO - 2025-05-17 11:27:21 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:21 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:21 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:21 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 11:27:21 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:21 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:21 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:21 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:21 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:21 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:21 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:27:21 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:27:21 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:21 --> Total execution time: 0.1008
+INFO - 2025-05-17 11:27:21 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:21 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 11:27:21 --> Config Class Initialized
+INFO - 2025-05-17 11:27:21 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:21 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:21 --> URI Class Initialized
+INFO - 2025-05-17 11:27:21 --> Router Class Initialized
+INFO - 2025-05-17 11:27:21 --> Output Class Initialized
+INFO - 2025-05-17 11:27:21 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2025-05-17 11:27:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:21 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:21 --> Input Class Initialized
+INFO - 2025-05-17 11:27:21 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:21 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:21 --> Language Class Initialized
+INFO - 2025-05-17 11:27:21 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:21 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:21 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:21 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:21 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:21 --> Email Class Initialized
+INFO - 2025-05-17 11:27:21 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:21 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:21 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:21 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:21 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:27:21 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:21 --> Total execution time: 0.1496
+INFO - 2025-05-17 11:27:21 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:21 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:21 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:21 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:21 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:21 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:21 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:21 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:27:21 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:21 --> Total execution time: 0.1055
+INFO - 2025-05-17 11:27:26 --> Config Class Initialized
+INFO - 2025-05-17 11:27:26 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:26 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:26 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:26 --> URI Class Initialized
+INFO - 2025-05-17 11:27:26 --> Router Class Initialized
+INFO - 2025-05-17 11:27:26 --> Output Class Initialized
+INFO - 2025-05-17 11:27:26 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:26 --> Input Class Initialized
+INFO - 2025-05-17 11:27:26 --> Language Class Initialized
+INFO - 2025-05-17 11:27:26 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:26 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:26 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:26 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:26 --> Email Class Initialized
+INFO - 2025-05-17 11:27:26 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:26 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:26 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:26 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:26 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:26 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:26 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:26 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:26 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:26 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:26 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:26 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar.php
+INFO - 2025-05-17 11:27:26 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:26 --> Total execution time: 0.0973
+INFO - 2025-05-17 11:27:28 --> Config Class Initialized
+INFO - 2025-05-17 11:27:28 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:28 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:28 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:28 --> URI Class Initialized
+INFO - 2025-05-17 11:27:28 --> Router Class Initialized
+INFO - 2025-05-17 11:27:28 --> Output Class Initialized
+INFO - 2025-05-17 11:27:28 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:28 --> Input Class Initialized
+INFO - 2025-05-17 11:27:28 --> Language Class Initialized
+INFO - 2025-05-17 11:27:28 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:28 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:28 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:28 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:28 --> Email Class Initialized
+INFO - 2025-05-17 11:27:28 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:28 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:28 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:28 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:28 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:28 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:28 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:28 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:28 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:28 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:28 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:28 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:28 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:27:28 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:27:28 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:28 --> Total execution time: 0.0854
+INFO - 2025-05-17 11:27:28 --> Config Class Initialized
+INFO - 2025-05-17 11:27:28 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:28 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:28 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:28 --> URI Class Initialized
+INFO - 2025-05-17 11:27:28 --> Router Class Initialized
+INFO - 2025-05-17 11:27:28 --> Output Class Initialized
+INFO - 2025-05-17 11:27:28 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:28 --> Input Class Initialized
+INFO - 2025-05-17 11:27:28 --> Language Class Initialized
+INFO - 2025-05-17 11:27:28 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:28 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:28 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:28 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:28 --> Email Class Initialized
+INFO - 2025-05-17 11:27:28 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:28 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:28 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:28 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:28 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:28 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:28 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:28 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:28 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:28 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:28 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:28 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:28 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:27:28 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:27:28 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:28 --> Total execution time: 0.0866
+INFO - 2025-05-17 11:27:31 --> Config Class Initialized
+INFO - 2025-05-17 11:27:31 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:31 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:31 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:31 --> URI Class Initialized
+INFO - 2025-05-17 11:27:31 --> Router Class Initialized
+INFO - 2025-05-17 11:27:31 --> Output Class Initialized
+INFO - 2025-05-17 11:27:31 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:31 --> Input Class Initialized
+INFO - 2025-05-17 11:27:31 --> Language Class Initialized
+INFO - 2025-05-17 11:27:31 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:31 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:31 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:31 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:31 --> Email Class Initialized
+INFO - 2025-05-17 11:27:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:31 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:31 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:31 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:31 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:31 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:31 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:31 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:31 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:31 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:31 --> Total execution time: 0.7234
+INFO - 2025-05-17 11:27:31 --> Config Class Initialized
+INFO - 2025-05-17 11:27:31 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:31 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:31 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:31 --> URI Class Initialized
+INFO - 2025-05-17 11:27:31 --> Router Class Initialized
+INFO - 2025-05-17 11:27:31 --> Output Class Initialized
+INFO - 2025-05-17 11:27:31 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:31 --> Input Class Initialized
+INFO - 2025-05-17 11:27:31 --> Language Class Initialized
+INFO - 2025-05-17 11:27:31 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:31 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:31 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:31 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:31 --> Email Class Initialized
+INFO - 2025-05-17 11:27:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:31 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:31 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:31 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:31 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:31 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:31 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:31 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:31 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:31 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:31 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:31 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:27:31 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:27:31 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:31 --> Total execution time: 0.1021
+INFO - 2025-05-17 11:27:31 --> Config Class Initialized
+INFO - 2025-05-17 11:27:31 --> Hooks Class Initialized
+INFO - 2025-05-17 11:27:31 --> Config Class Initialized
+INFO - 2025-05-17 11:27:31 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:31 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:31 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 11:27:31 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:31 --> URI Class Initialized
+INFO - 2025-05-17 11:27:31 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:31 --> URI Class Initialized
+INFO - 2025-05-17 11:27:31 --> Router Class Initialized
+INFO - 2025-05-17 11:27:31 --> Router Class Initialized
+INFO - 2025-05-17 11:27:31 --> Output Class Initialized
+INFO - 2025-05-17 11:27:31 --> Security Class Initialized
+INFO - 2025-05-17 11:27:31 --> Output Class Initialized
+DEBUG - 2025-05-17 11:27:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:31 --> Input Class Initialized
+INFO - 2025-05-17 11:27:31 --> Security Class Initialized
+INFO - 2025-05-17 11:27:31 --> Language Class Initialized
+DEBUG - 2025-05-17 11:27:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:32 --> Input Class Initialized
+INFO - 2025-05-17 11:27:32 --> Language Class Initialized
+INFO - 2025-05-17 11:27:32 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:32 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:32 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:32 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:32 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:27:32 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:32 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:32 --> Email Class Initialized
+DEBUG - 2025-05-17 11:27:32 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:32 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:32 --> Email Class Initialized
+INFO - 2025-05-17 11:27:32 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:32 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:32 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:27:32 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:32 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:32 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 11:27:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:32 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:32 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:32 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:32 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:32 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:32 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:27:32 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:27:32 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:32 --> Total execution time: 0.0997
+INFO - 2025-05-17 11:27:32 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:32 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 11:27:32 --> Config Class Initialized
+INFO - 2025-05-17 11:27:32 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:32 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:32 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:32 --> URI Class Initialized
+INFO - 2025-05-17 11:27:32 --> Router Class Initialized
+DEBUG - 2025-05-17 11:27:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:32 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:32 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:32 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:32 --> Output Class Initialized
+INFO - 2025-05-17 11:27:32 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:32 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:32 --> Input Class Initialized
+INFO - 2025-05-17 11:27:32 --> Language Class Initialized
+INFO - 2025-05-17 11:27:32 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:32 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:32 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:32 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:32 --> Email Class Initialized
+INFO - 2025-05-17 11:27:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:32 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:32 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:32 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:27:32 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:32 --> Total execution time: 0.1524
+INFO - 2025-05-17 11:27:32 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:32 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:32 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:32 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:32 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:32 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:32 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:27:32 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:32 --> Total execution time: 0.0908
+INFO - 2025-05-17 11:27:35 --> Config Class Initialized
+INFO - 2025-05-17 11:27:35 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:35 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:35 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:35 --> URI Class Initialized
+INFO - 2025-05-17 11:27:35 --> Router Class Initialized
+INFO - 2025-05-17 11:27:35 --> Output Class Initialized
+INFO - 2025-05-17 11:27:35 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:35 --> Input Class Initialized
+INFO - 2025-05-17 11:27:35 --> Language Class Initialized
+INFO - 2025-05-17 11:27:35 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:35 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:35 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:35 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:35 --> Email Class Initialized
+INFO - 2025-05-17 11:27:35 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:35 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:35 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:35 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:35 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:35 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:35 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:35 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:35 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:35 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:35 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:35 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar.php
+INFO - 2025-05-17 11:27:35 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:35 --> Total execution time: 0.0864
+INFO - 2025-05-17 11:27:39 --> Config Class Initialized
+INFO - 2025-05-17 11:27:39 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:39 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:39 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:39 --> URI Class Initialized
+INFO - 2025-05-17 11:27:39 --> Router Class Initialized
+INFO - 2025-05-17 11:27:39 --> Output Class Initialized
+INFO - 2025-05-17 11:27:39 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:39 --> Input Class Initialized
+INFO - 2025-05-17 11:27:39 --> Language Class Initialized
+INFO - 2025-05-17 11:27:39 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:39 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:39 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:39 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:39 --> Email Class Initialized
+INFO - 2025-05-17 11:27:39 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:39 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:39 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:39 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:39 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:39 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:39 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:39 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:39 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:39 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:39 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:27:39 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:27:39 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:39 --> Total execution time: 0.0801
+INFO - 2025-05-17 11:27:40 --> Config Class Initialized
+INFO - 2025-05-17 11:27:40 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:40 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:40 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:40 --> URI Class Initialized
+INFO - 2025-05-17 11:27:40 --> Router Class Initialized
+INFO - 2025-05-17 11:27:40 --> Output Class Initialized
+INFO - 2025-05-17 11:27:40 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:40 --> Input Class Initialized
+INFO - 2025-05-17 11:27:40 --> Language Class Initialized
+INFO - 2025-05-17 11:27:40 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:40 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:40 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:40 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:40 --> Email Class Initialized
+INFO - 2025-05-17 11:27:40 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:40 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:40 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:40 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:40 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:40 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:40 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:40 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:40 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:40 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:40 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:40 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:40 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:27:40 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:27:40 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:40 --> Total execution time: 0.0844
+INFO - 2025-05-17 11:27:41 --> Config Class Initialized
+INFO - 2025-05-17 11:27:41 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:41 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:41 --> URI Class Initialized
+INFO - 2025-05-17 11:27:41 --> Router Class Initialized
+INFO - 2025-05-17 11:27:41 --> Output Class Initialized
+INFO - 2025-05-17 11:27:41 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:41 --> Input Class Initialized
+INFO - 2025-05-17 11:27:41 --> Language Class Initialized
+INFO - 2025-05-17 11:27:41 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:41 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:41 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:41 --> Email Class Initialized
+INFO - 2025-05-17 11:27:41 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:41 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:41 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:41 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:41 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:41 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:41 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:41 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:41 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:41 --> Total execution time: 0.0736
+INFO - 2025-05-17 11:27:41 --> Config Class Initialized
+INFO - 2025-05-17 11:27:41 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:41 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:41 --> URI Class Initialized
+INFO - 2025-05-17 11:27:41 --> Router Class Initialized
+INFO - 2025-05-17 11:27:41 --> Output Class Initialized
+INFO - 2025-05-17 11:27:41 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:41 --> Input Class Initialized
+INFO - 2025-05-17 11:27:41 --> Language Class Initialized
+INFO - 2025-05-17 11:27:41 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:41 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:41 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:41 --> Email Class Initialized
+INFO - 2025-05-17 11:27:41 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:41 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:41 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:41 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:41 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:41 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:41 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:41 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:41 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:41 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:27:41 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:27:41 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:41 --> Total execution time: 0.0849
+INFO - 2025-05-17 11:27:41 --> Config Class Initialized
+INFO - 2025-05-17 11:27:41 --> Config Class Initialized
+INFO - 2025-05-17 11:27:41 --> Hooks Class Initialized
+INFO - 2025-05-17 11:27:41 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:41 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:41 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:41 --> URI Class Initialized
+INFO - 2025-05-17 11:27:41 --> URI Class Initialized
+INFO - 2025-05-17 11:27:41 --> Router Class Initialized
+INFO - 2025-05-17 11:27:41 --> Router Class Initialized
+INFO - 2025-05-17 11:27:41 --> Output Class Initialized
+INFO - 2025-05-17 11:27:41 --> Output Class Initialized
+INFO - 2025-05-17 11:27:41 --> Security Class Initialized
+INFO - 2025-05-17 11:27:41 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:41 --> Input Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:41 --> Language Class Initialized
+INFO - 2025-05-17 11:27:41 --> Input Class Initialized
+INFO - 2025-05-17 11:27:41 --> Language Class Initialized
+INFO - 2025-05-17 11:27:41 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:41 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:41 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:41 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:41 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:27:41 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 11:27:41 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:41 --> Email Class Initialized
+INFO - 2025-05-17 11:27:41 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:41 --> Email Class Initialized
+INFO - 2025-05-17 11:27:41 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:41 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 11:27:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:41 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:41 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:41 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:41 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:41 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:41 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:41 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:27:41 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:41 --> Total execution time: 0.0946
+INFO - 2025-05-17 11:27:41 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:41 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:41 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:41 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:41 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:41 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:41 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:41 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:27:41 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:27:41 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:41 --> Total execution time: 0.1447
+INFO - 2025-05-17 11:27:41 --> Config Class Initialized
+INFO - 2025-05-17 11:27:41 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:41 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:41 --> URI Class Initialized
+INFO - 2025-05-17 11:27:41 --> Router Class Initialized
+INFO - 2025-05-17 11:27:41 --> Output Class Initialized
+INFO - 2025-05-17 11:27:41 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:41 --> Input Class Initialized
+INFO - 2025-05-17 11:27:41 --> Language Class Initialized
+INFO - 2025-05-17 11:27:41 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:41 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:41 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:41 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:41 --> Email Class Initialized
+INFO - 2025-05-17 11:27:41 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:41 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:41 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:41 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:41 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:41 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:41 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:41 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:41 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:42 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:27:42 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:42 --> Total execution time: 0.0909
+INFO - 2025-05-17 11:27:47 --> Config Class Initialized
+INFO - 2025-05-17 11:27:47 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:47 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:47 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:47 --> URI Class Initialized
+INFO - 2025-05-17 11:27:47 --> Router Class Initialized
+INFO - 2025-05-17 11:27:47 --> Output Class Initialized
+INFO - 2025-05-17 11:27:47 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:47 --> Input Class Initialized
+INFO - 2025-05-17 11:27:47 --> Language Class Initialized
+INFO - 2025-05-17 11:27:47 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:47 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:47 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:47 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:47 --> Email Class Initialized
+INFO - 2025-05-17 11:27:47 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:47 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:47 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:47 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:47 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:47 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:47 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:47 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:47 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:47 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:47 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:47 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar.php
+INFO - 2025-05-17 11:27:47 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:47 --> Total execution time: 0.0884
+INFO - 2025-05-17 11:27:48 --> Config Class Initialized
+INFO - 2025-05-17 11:27:48 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:48 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:48 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:48 --> URI Class Initialized
+INFO - 2025-05-17 11:27:48 --> Router Class Initialized
+INFO - 2025-05-17 11:27:48 --> Output Class Initialized
+INFO - 2025-05-17 11:27:48 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:48 --> Input Class Initialized
+INFO - 2025-05-17 11:27:48 --> Language Class Initialized
+INFO - 2025-05-17 11:27:48 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:48 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:48 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:48 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:48 --> Email Class Initialized
+INFO - 2025-05-17 11:27:48 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:48 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:48 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:48 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:48 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:48 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:48 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:48 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:48 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:48 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:27:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:27:48 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:48 --> Total execution time: 0.0894
+INFO - 2025-05-17 11:27:48 --> Config Class Initialized
+INFO - 2025-05-17 11:27:48 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:48 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:48 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:48 --> URI Class Initialized
+INFO - 2025-05-17 11:27:48 --> Router Class Initialized
+INFO - 2025-05-17 11:27:48 --> Output Class Initialized
+INFO - 2025-05-17 11:27:48 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:48 --> Input Class Initialized
+INFO - 2025-05-17 11:27:48 --> Language Class Initialized
+INFO - 2025-05-17 11:27:48 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:48 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:48 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:48 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:48 --> Email Class Initialized
+INFO - 2025-05-17 11:27:48 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:48 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:48 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:48 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:48 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:48 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:48 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:48 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:48 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:48 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/index.php
+INFO - 2025-05-17 11:27:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/add_page/js.php
+INFO - 2025-05-17 11:27:48 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:48 --> Total execution time: 0.0829
+INFO - 2025-05-17 11:27:51 --> Config Class Initialized
+INFO - 2025-05-17 11:27:51 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:51 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:51 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:51 --> URI Class Initialized
+INFO - 2025-05-17 11:27:51 --> Router Class Initialized
+INFO - 2025-05-17 11:27:51 --> Output Class Initialized
+INFO - 2025-05-17 11:27:51 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:51 --> Input Class Initialized
+INFO - 2025-05-17 11:27:51 --> Language Class Initialized
+INFO - 2025-05-17 11:27:51 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:51 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:51 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:51 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:51 --> Email Class Initialized
+INFO - 2025-05-17 11:27:51 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:51 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:51 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:51 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:51 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:51 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:51 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:51 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:51 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:51 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:51 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:51 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:51 --> Total execution time: 0.0898
+INFO - 2025-05-17 11:27:52 --> Config Class Initialized
+INFO - 2025-05-17 11:27:52 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:52 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:52 --> URI Class Initialized
+INFO - 2025-05-17 11:27:52 --> Router Class Initialized
+INFO - 2025-05-17 11:27:52 --> Output Class Initialized
+INFO - 2025-05-17 11:27:52 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:52 --> Input Class Initialized
+INFO - 2025-05-17 11:27:52 --> Language Class Initialized
+INFO - 2025-05-17 11:27:52 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:52 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:52 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:52 --> Email Class Initialized
+INFO - 2025-05-17 11:27:52 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:52 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:52 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:52 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:52 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:52 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:52 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:52 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:52 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:52 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:52 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:52 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:27:52 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:27:52 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:52 --> Total execution time: 0.0989
+INFO - 2025-05-17 11:27:52 --> Config Class Initialized
+INFO - 2025-05-17 11:27:52 --> Config Class Initialized
+INFO - 2025-05-17 11:27:52 --> Hooks Class Initialized
+INFO - 2025-05-17 11:27:52 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> UTF-8 Support Enabled
+DEBUG - 2025-05-17 11:27:52 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:52 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:52 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:52 --> URI Class Initialized
+INFO - 2025-05-17 11:27:52 --> URI Class Initialized
+INFO - 2025-05-17 11:27:52 --> Router Class Initialized
+INFO - 2025-05-17 11:27:52 --> Router Class Initialized
+INFO - 2025-05-17 11:27:52 --> Output Class Initialized
+INFO - 2025-05-17 11:27:52 --> Output Class Initialized
+INFO - 2025-05-17 11:27:52 --> Security Class Initialized
+INFO - 2025-05-17 11:27:52 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:52 --> Input Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:52 --> Language Class Initialized
+INFO - 2025-05-17 11:27:52 --> Input Class Initialized
+INFO - 2025-05-17 11:27:52 --> Language Class Initialized
+INFO - 2025-05-17 11:27:52 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:52 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:52 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:52 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:52 --> Database Driver Class Initialized
+INFO - 2025-05-17 11:27:52 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 11:27:52 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:52 --> Email Class Initialized
+INFO - 2025-05-17 11:27:52 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:52 --> Email Class Initialized
+INFO - 2025-05-17 11:27:52 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:52 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:52 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:52 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:52 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:27:52 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:52 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 11:27:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:52 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 11:27:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 11:27:52 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:52 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:52 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:52 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:52 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:52 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 11:27:52 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 11:27:52 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 11:27:52 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:52 --> Total execution time: 0.0904
+INFO - 2025-05-17 11:27:52 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:52 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 11:27:52 --> Config Class Initialized
+INFO - 2025-05-17 11:27:52 --> Hooks Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> UTF-8 Support Enabled
+INFO - 2025-05-17 11:27:52 --> Utf8 Class Initialized
+INFO - 2025-05-17 11:27:52 --> URI Class Initialized
+INFO - 2025-05-17 11:27:52 --> Router Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:52 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:52 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:52 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:52 --> Output Class Initialized
+INFO - 2025-05-17 11:27:52 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:52 --> Security Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 11:27:52 --> Input Class Initialized
+INFO - 2025-05-17 11:27:52 --> Language Class Initialized
+INFO - 2025-05-17 11:27:52 --> Loader Class Initialized
+INFO - 2025-05-17 11:27:52 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 11:27:52 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 11:27:52 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 11:27:52 --> Email Class Initialized
+INFO - 2025-05-17 11:27:52 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 11:27:52 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 11:27:52 --> Helper loaded: language_helper
+INFO - 2025-05-17 11:27:52 --> Helper loaded: url_helper
+INFO - 2025-05-17 11:27:52 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:27:52 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 11:27:52 --> Total execution time: 0.1550
+INFO - 2025-05-17 11:27:52 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 11:27:52 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 11:27:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 11:27:52 --> Cart Class Initialized
+INFO - 2025-05-17 11:27:52 --> Controller Class Initialized
+INFO - 2025-05-17 11:27:52 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 11:27:52 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 11:27:52 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 11:27:52 --> Final output sent to browser
+DEBUG - 2025-05-17 11:27:52 --> Total execution time: 0.1008
+INFO - 2025-05-17 14:24:24 --> Config Class Initialized
+INFO - 2025-05-17 14:24:24 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:24:25 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:24:25 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:24:25 --> URI Class Initialized
+INFO - 2025-05-17 14:24:25 --> Router Class Initialized
+INFO - 2025-05-17 14:24:25 --> Output Class Initialized
+INFO - 2025-05-17 14:24:25 --> Security Class Initialized
+DEBUG - 2025-05-17 14:24:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:24:25 --> Input Class Initialized
+INFO - 2025-05-17 14:24:25 --> Language Class Initialized
+INFO - 2025-05-17 14:24:25 --> Config Class Initialized
+INFO - 2025-05-17 14:24:25 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:24:25 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:24:25 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:24:25 --> URI Class Initialized
+INFO - 2025-05-17 14:24:25 --> Router Class Initialized
+INFO - 2025-05-17 14:24:25 --> Output Class Initialized
+INFO - 2025-05-17 14:24:25 --> Security Class Initialized
+DEBUG - 2025-05-17 14:24:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:24:25 --> Input Class Initialized
+INFO - 2025-05-17 14:24:25 --> Language Class Initialized
+INFO - 2025-05-17 14:24:25 --> Loader Class Initialized
+INFO - 2025-05-17 14:24:25 --> Loader Class Initialized
+INFO - 2025-05-17 14:24:25 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:24:25 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:24:25 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:24:25 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:24:25 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:24:25 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:24:25 --> Email Class Initialized
+INFO - 2025-05-17 14:24:25 --> Email Class Initialized
+INFO - 2025-05-17 14:24:25 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:24:25 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:24:25 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:24:25 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:24:25 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:24:25 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:24:25 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:24:25 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:24:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:24:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:24:25 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:24:25 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:24:25 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:24:25 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:24:26 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2025-05-17 14:24:26 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:24:26 --> Cart Class Initialized
+INFO - 2025-05-17 14:24:26 --> Controller Class Initialized
+INFO - 2025-05-17 14:24:26 --> Cart Class Initialized
+INFO - 2025-05-17 14:24:26 --> Controller Class Initialized
+INFO - 2025-05-17 14:24:26 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:24:26 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:24:26 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:24:26 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:24:26 --> Config Class Initialized
+INFO - 2025-05-17 14:24:26 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:24:26 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:24:26 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:24:26 --> URI Class Initialized
+INFO - 2025-05-17 14:24:26 --> Router Class Initialized
+INFO - 2025-05-17 14:24:26 --> Output Class Initialized
+INFO - 2025-05-17 14:24:26 --> Security Class Initialized
+DEBUG - 2025-05-17 14:24:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:24:26 --> Input Class Initialized
+INFO - 2025-05-17 14:24:26 --> Language Class Initialized
+INFO - 2025-05-17 14:24:26 --> Loader Class Initialized
+INFO - 2025-05-17 14:24:26 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:24:26 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:24:26 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:24:26 --> Email Class Initialized
+INFO - 2025-05-17 14:24:26 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:24:26 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:24:26 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:24:26 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:24:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:24:26 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:24:26 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:24:26 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:24:26 --> Cart Class Initialized
+INFO - 2025-05-17 14:24:26 --> Controller Class Initialized
+DEBUG - 2025-05-17 14:24:26 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:24:26 --> Helper loaded: form_helper
+INFO - 2025-05-17 14:24:26 --> Form Validation Class Initialized
+INFO - 2025-05-17 14:24:26 --> Language file loaded: language/english/auth_lang.php
+INFO - 2025-05-17 14:24:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\auth\login.php
+INFO - 2025-05-17 14:24:27 --> Final output sent to browser
+DEBUG - 2025-05-17 14:24:27 --> Total execution time: 0.3554
+INFO - 2025-05-17 14:24:32 --> Config Class Initialized
+INFO - 2025-05-17 14:24:32 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:24:32 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:24:32 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:24:32 --> URI Class Initialized
+INFO - 2025-05-17 14:24:32 --> Router Class Initialized
+INFO - 2025-05-17 14:24:32 --> Output Class Initialized
+INFO - 2025-05-17 14:24:32 --> Security Class Initialized
+DEBUG - 2025-05-17 14:24:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:24:32 --> Input Class Initialized
+INFO - 2025-05-17 14:24:32 --> Language Class Initialized
+INFO - 2025-05-17 14:24:32 --> Loader Class Initialized
+INFO - 2025-05-17 14:24:32 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:24:32 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:24:32 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:24:32 --> Email Class Initialized
+INFO - 2025-05-17 14:24:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:24:32 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:24:32 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:24:32 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:24:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:24:32 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:24:32 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:24:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:24:32 --> Cart Class Initialized
+INFO - 2025-05-17 14:24:32 --> Controller Class Initialized
+DEBUG - 2025-05-17 14:24:32 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:24:32 --> Helper loaded: form_helper
+INFO - 2025-05-17 14:24:32 --> Form Validation Class Initialized
+INFO - 2025-05-17 14:24:32 --> Language file loaded: language/english/auth_lang.php
+INFO - 2025-05-17 14:24:32 --> Language file loaded: language/english/form_validation_lang.php
+INFO - 2025-05-17 14:24:32 --> Helper loaded: date_helper
+INFO - 2025-05-17 14:24:33 --> Config Class Initialized
+INFO - 2025-05-17 14:24:33 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:24:33 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:24:33 --> URI Class Initialized
+INFO - 2025-05-17 14:24:33 --> Router Class Initialized
+INFO - 2025-05-17 14:24:33 --> Output Class Initialized
+INFO - 2025-05-17 14:24:33 --> Security Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:24:33 --> Input Class Initialized
+INFO - 2025-05-17 14:24:33 --> Language Class Initialized
+INFO - 2025-05-17 14:24:33 --> Loader Class Initialized
+INFO - 2025-05-17 14:24:33 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:24:33 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:24:33 --> Email Class Initialized
+INFO - 2025-05-17 14:24:33 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:24:33 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:24:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:24:33 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:24:33 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:24:33 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:24:33 --> Cart Class Initialized
+INFO - 2025-05-17 14:24:33 --> Controller Class Initialized
+INFO - 2025-05-17 14:24:33 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:24:33 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//head.php
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/include/menu.php
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//navbar.php
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//content.php
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//footer.php
+INFO - 2025-05-17 14:24:33 --> Final output sent to browser
+DEBUG - 2025-05-17 14:24:33 --> Total execution time: 0.1753
+INFO - 2025-05-17 14:24:33 --> Config Class Initialized
+INFO - 2025-05-17 14:24:33 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:24:33 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:24:33 --> URI Class Initialized
+INFO - 2025-05-17 14:24:33 --> Router Class Initialized
+INFO - 2025-05-17 14:24:33 --> Output Class Initialized
+INFO - 2025-05-17 14:24:33 --> Security Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:24:33 --> Input Class Initialized
+INFO - 2025-05-17 14:24:33 --> Language Class Initialized
+INFO - 2025-05-17 14:24:33 --> Loader Class Initialized
+INFO - 2025-05-17 14:24:33 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:24:33 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:24:33 --> Email Class Initialized
+INFO - 2025-05-17 14:24:33 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:24:33 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:24:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:24:33 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:24:33 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:24:33 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:24:33 --> Cart Class Initialized
+INFO - 2025-05-17 14:24:33 --> Controller Class Initialized
+INFO - 2025-05-17 14:24:33 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:24:33 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:24:33 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:24:33 --> Final output sent to browser
+DEBUG - 2025-05-17 14:24:33 --> Total execution time: 0.1799
+INFO - 2025-05-17 14:24:33 --> Config Class Initialized
+INFO - 2025-05-17 14:24:33 --> Hooks Class Initialized
+INFO - 2025-05-17 14:24:33 --> Config Class Initialized
+INFO - 2025-05-17 14:24:33 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> UTF-8 Support Enabled
+DEBUG - 2025-05-17 14:24:33 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:24:33 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:24:33 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:24:33 --> URI Class Initialized
+INFO - 2025-05-17 14:24:33 --> URI Class Initialized
+INFO - 2025-05-17 14:24:33 --> Router Class Initialized
+INFO - 2025-05-17 14:24:33 --> Router Class Initialized
+INFO - 2025-05-17 14:24:33 --> Output Class Initialized
+INFO - 2025-05-17 14:24:33 --> Output Class Initialized
+INFO - 2025-05-17 14:24:33 --> Security Class Initialized
+INFO - 2025-05-17 14:24:33 --> Security Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2025-05-17 14:24:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:24:33 --> Input Class Initialized
+INFO - 2025-05-17 14:24:33 --> Input Class Initialized
+INFO - 2025-05-17 14:24:33 --> Language Class Initialized
+INFO - 2025-05-17 14:24:33 --> Language Class Initialized
+INFO - 2025-05-17 14:24:33 --> Loader Class Initialized
+INFO - 2025-05-17 14:24:33 --> Loader Class Initialized
+INFO - 2025-05-17 14:24:33 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:24:33 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:24:33 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:24:33 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:24:33 --> Email Class Initialized
+INFO - 2025-05-17 14:24:33 --> Email Class Initialized
+INFO - 2025-05-17 14:24:33 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:24:33 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:24:33 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:24:33 --> Config Class Initialized
+INFO - 2025-05-17 14:24:33 --> Hooks Class Initialized
+INFO - 2025-05-17 14:24:33 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:24:33 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:24:33 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:24:33 --> URI Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:24:33 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:24:33 --> Router Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:24:33 --> Output Class Initialized
+INFO - 2025-05-17 14:24:33 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:24:33 --> Security Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:24:33 --> Input Class Initialized
+INFO - 2025-05-17 14:24:33 --> Language Class Initialized
+INFO - 2025-05-17 14:24:33 --> Loader Class Initialized
+INFO - 2025-05-17 14:24:33 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:24:33 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:24:33 --> Email Class Initialized
+INFO - 2025-05-17 14:24:33 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:24:33 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:24:33 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:24:33 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:24:33 --> Cart Class Initialized
+INFO - 2025-05-17 14:24:33 --> Controller Class Initialized
+DEBUG - 2025-05-17 14:24:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:24:33 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:24:33 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:24:33 --> Final output sent to browser
+DEBUG - 2025-05-17 14:24:33 --> Total execution time: 0.1320
+INFO - 2025-05-17 14:24:33 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:24:33 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:24:33 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:24:33 --> Cart Class Initialized
+INFO - 2025-05-17 14:24:33 --> Controller Class Initialized
+INFO - 2025-05-17 14:24:33 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:24:33 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:24:33 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:24:33 --> Final output sent to browser
+DEBUG - 2025-05-17 14:24:33 --> Total execution time: 0.2054
+INFO - 2025-05-17 14:24:33 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:24:33 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:24:33 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:24:33 --> Cart Class Initialized
+INFO - 2025-05-17 14:24:33 --> Controller Class Initialized
+INFO - 2025-05-17 14:24:33 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:24:33 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 14:24:33 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:24:34 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 14:25:44 --> Config Class Initialized
+INFO - 2025-05-17 14:25:44 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:25:44 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:25:44 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:25:44 --> URI Class Initialized
+INFO - 2025-05-17 14:25:44 --> Router Class Initialized
+INFO - 2025-05-17 14:25:44 --> Output Class Initialized
+INFO - 2025-05-17 14:25:44 --> Security Class Initialized
+DEBUG - 2025-05-17 14:25:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:25:44 --> Input Class Initialized
+INFO - 2025-05-17 14:25:44 --> Language Class Initialized
+INFO - 2025-05-17 14:25:45 --> Loader Class Initialized
+INFO - 2025-05-17 14:25:45 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:25:45 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:25:45 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:25:45 --> Email Class Initialized
+INFO - 2025-05-17 14:25:45 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:25:45 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:25:45 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:25:45 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:25:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:25:45 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:25:45 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:25:45 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:25:45 --> Cart Class Initialized
+INFO - 2025-05-17 14:25:45 --> Controller Class Initialized
+INFO - 2025-05-17 14:25:45 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:25:45 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:25:45 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:25:45 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/pelanggaran/pengajuan_pelanggaran/index.php
+INFO - 2025-05-17 14:25:45 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/pelanggaran/pengajuan_pelanggaran/js.php
+INFO - 2025-05-17 14:25:45 --> Final output sent to browser
+DEBUG - 2025-05-17 14:25:45 --> Total execution time: 0.2212
+INFO - 2025-05-17 14:25:45 --> Config Class Initialized
+INFO - 2025-05-17 14:25:45 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:25:45 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:25:45 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:25:45 --> URI Class Initialized
+INFO - 2025-05-17 14:25:45 --> Config Class Initialized
+INFO - 2025-05-17 14:25:45 --> Hooks Class Initialized
+INFO - 2025-05-17 14:25:45 --> Router Class Initialized
+INFO - 2025-05-17 14:25:45 --> Output Class Initialized
+DEBUG - 2025-05-17 14:25:45 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:25:45 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:25:45 --> URI Class Initialized
+INFO - 2025-05-17 14:25:45 --> Security Class Initialized
+DEBUG - 2025-05-17 14:25:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:25:45 --> Router Class Initialized
+INFO - 2025-05-17 14:25:45 --> Input Class Initialized
+INFO - 2025-05-17 14:25:45 --> Language Class Initialized
+INFO - 2025-05-17 14:25:45 --> Output Class Initialized
+INFO - 2025-05-17 14:25:45 --> Security Class Initialized
+DEBUG - 2025-05-17 14:25:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:25:45 --> Input Class Initialized
+INFO - 2025-05-17 14:25:45 --> Language Class Initialized
+INFO - 2025-05-17 14:25:45 --> Loader Class Initialized
+INFO - 2025-05-17 14:25:45 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:25:45 --> Loader Class Initialized
+INFO - 2025-05-17 14:25:45 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:25:45 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:25:45 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:25:45 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:25:45 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:25:45 --> Email Class Initialized
+INFO - 2025-05-17 14:25:45 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:25:45 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:25:45 --> Email Class Initialized
+INFO - 2025-05-17 14:25:45 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:25:45 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:25:45 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:25:45 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:25:45 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:25:45 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:25:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:25:45 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 14:25:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:25:45 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:25:45 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:25:45 --> Cart Class Initialized
+INFO - 2025-05-17 14:25:45 --> Controller Class Initialized
+INFO - 2025-05-17 14:25:45 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:25:45 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:25:45 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:25:45 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/pelanggaran/pengajuan_pelanggaran/index.php
+INFO - 2025-05-17 14:25:45 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/pelanggaran/pengajuan_pelanggaran/js.php
+INFO - 2025-05-17 14:25:45 --> Final output sent to browser
+DEBUG - 2025-05-17 14:25:45 --> Total execution time: 0.0962
+INFO - 2025-05-17 14:25:45 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:25:45 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:25:45 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:25:45 --> Config Class Initialized
+INFO - 2025-05-17 14:25:45 --> Hooks Class Initialized
+INFO - 2025-05-17 14:25:45 --> Cart Class Initialized
+INFO - 2025-05-17 14:25:45 --> Controller Class Initialized
+INFO - 2025-05-17 14:25:45 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:25:45 --> Model "SMMP_datatable" initialized
+DEBUG - 2025-05-17 14:25:45 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:25:45 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:25:45 --> URI Class Initialized
+INFO - 2025-05-17 14:25:45 --> Router Class Initialized
+INFO - 2025-05-17 14:25:45 --> Output Class Initialized
+INFO - 2025-05-17 14:25:45 --> Security Class Initialized
+DEBUG - 2025-05-17 14:25:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:25:45 --> Input Class Initialized
+INFO - 2025-05-17 14:25:45 --> Language Class Initialized
+INFO - 2025-05-17 14:25:45 --> Loader Class Initialized
+INFO - 2025-05-17 14:25:45 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:25:45 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:25:45 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:25:45 --> Email Class Initialized
+INFO - 2025-05-17 14:25:45 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:25:45 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:25:45 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:25:45 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:25:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:25:45 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/pelanggaran/pengajuan_pelanggaran/table_pengajuan.php
+INFO - 2025-05-17 14:25:45 --> Final output sent to browser
+DEBUG - 2025-05-17 14:25:45 --> Total execution time: 0.1899
+INFO - 2025-05-17 14:25:45 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:25:45 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:25:45 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:25:45 --> Cart Class Initialized
+INFO - 2025-05-17 14:25:45 --> Controller Class Initialized
+INFO - 2025-05-17 14:25:45 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:25:45 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:25:45 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/pelanggaran/pengajuan_pelanggaran/table_pengajuan.php
+INFO - 2025-05-17 14:25:45 --> Final output sent to browser
+DEBUG - 2025-05-17 14:25:45 --> Total execution time: 0.1189
+INFO - 2025-05-17 14:37:08 --> Config Class Initialized
+INFO - 2025-05-17 14:37:08 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:08 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:08 --> URI Class Initialized
+INFO - 2025-05-17 14:37:08 --> Router Class Initialized
+INFO - 2025-05-17 14:37:08 --> Output Class Initialized
+INFO - 2025-05-17 14:37:08 --> Security Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:08 --> Input Class Initialized
+INFO - 2025-05-17 14:37:08 --> Language Class Initialized
+INFO - 2025-05-17 14:37:08 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:08 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:08 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:08 --> Email Class Initialized
+INFO - 2025-05-17 14:37:08 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:08 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:08 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:08 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:37:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:08 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:08 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:08 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:08 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:08 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:08 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:08 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:08 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:37:08 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:37:08 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:37:08 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:08 --> Total execution time: 0.0949
+INFO - 2025-05-17 14:37:08 --> Config Class Initialized
+INFO - 2025-05-17 14:37:08 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:08 --> Config Class Initialized
+INFO - 2025-05-17 14:37:08 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:08 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:08 --> URI Class Initialized
+INFO - 2025-05-17 14:37:08 --> URI Class Initialized
+INFO - 2025-05-17 14:37:08 --> Router Class Initialized
+INFO - 2025-05-17 14:37:08 --> Config Class Initialized
+INFO - 2025-05-17 14:37:08 --> Output Class Initialized
+INFO - 2025-05-17 14:37:08 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:08 --> Config Class Initialized
+INFO - 2025-05-17 14:37:08 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:08 --> Router Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:08 --> Security Class Initialized
+INFO - 2025-05-17 14:37:08 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:08 --> URI Class Initialized
+INFO - 2025-05-17 14:37:08 --> Input Class Initialized
+INFO - 2025-05-17 14:37:08 --> Output Class Initialized
+INFO - 2025-05-17 14:37:08 --> Language Class Initialized
+INFO - 2025-05-17 14:37:08 --> Security Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:08 --> Router Class Initialized
+INFO - 2025-05-17 14:37:08 --> Input Class Initialized
+INFO - 2025-05-17 14:37:08 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:08 --> Language Class Initialized
+INFO - 2025-05-17 14:37:08 --> Output Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:08 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:08 --> Security Class Initialized
+INFO - 2025-05-17 14:37:08 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:08 --> URI Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:08 --> Input Class Initialized
+INFO - 2025-05-17 14:37:08 --> Router Class Initialized
+INFO - 2025-05-17 14:37:08 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:08 --> Output Class Initialized
+INFO - 2025-05-17 14:37:08 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:08 --> Language Class Initialized
+INFO - 2025-05-17 14:37:08 --> Security Class Initialized
+DEBUG - 2025-05-17 14:37:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:08 --> Input Class Initialized
+INFO - 2025-05-17 14:37:09 --> Language Class Initialized
+INFO - 2025-05-17 14:37:09 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:09 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:37:09 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:09 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:09 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:09 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:37:09 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:09 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:09 --> Email Class Initialized
+INFO - 2025-05-17 14:37:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:09 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:37:09 --> Email Class Initialized
+INFO - 2025-05-17 14:37:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:09 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:37:09 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:37:09 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:09 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:37:09 --> Email Class Initialized
+INFO - 2025-05-17 14:37:09 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2025-05-17 14:37:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:09 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:09 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:09 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:37:09 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:37:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:09 --> Email Class Initialized
+INFO - 2025-05-17 14:37:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:09 --> Helper loaded: cookie_helper
+DEBUG - 2025-05-17 14:37:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:09 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:09 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:37:09 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:37:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:37:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:09 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:09 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 14:37:09 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:37:09 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 14:37:09 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:09 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:09 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:09 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:09 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:37:09 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:37:09 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:37:09 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:09 --> Total execution time: 0.1483
+INFO - 2025-05-17 14:37:09 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:09 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:37:09 --> Config Class Initialized
+INFO - 2025-05-17 14:37:09 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:09 --> Config Class Initialized
+DEBUG - 2025-05-17 14:37:09 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:09 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:09 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:37:09 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:09 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:09 --> URI Class Initialized
+INFO - 2025-05-17 14:37:09 --> URI Class Initialized
+INFO - 2025-05-17 14:37:09 --> Config Class Initialized
+INFO - 2025-05-17 14:37:09 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:09 --> Router Class Initialized
+INFO - 2025-05-17 14:37:09 --> Router Class Initialized
+INFO - 2025-05-17 14:37:09 --> Output Class Initialized
+INFO - 2025-05-17 14:37:09 --> Output Class Initialized
+DEBUG - 2025-05-17 14:37:09 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:09 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:09 --> Security Class Initialized
+INFO - 2025-05-17 14:37:09 --> URI Class Initialized
+INFO - 2025-05-17 14:37:09 --> Security Class Initialized
+INFO - 2025-05-17 14:37:09 --> Router Class Initialized
+DEBUG - 2025-05-17 14:37:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:09 --> Input Class Initialized
+INFO - 2025-05-17 14:37:09 --> Language Class Initialized
+INFO - 2025-05-17 14:37:09 --> Output Class Initialized
+DEBUG - 2025-05-17 14:37:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:09 --> Input Class Initialized
+INFO - 2025-05-17 14:37:09 --> Language Class Initialized
+INFO - 2025-05-17 14:37:09 --> Security Class Initialized
+INFO - 2025-05-17 14:37:09 --> Loader Class Initialized
+DEBUG - 2025-05-17 14:37:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:09 --> Input Class Initialized
+INFO - 2025-05-17 14:37:09 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:09 --> Language Class Initialized
+INFO - 2025-05-17 14:37:09 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:09 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:09 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:09 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:09 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:09 --> Controller Class Initialized
+DEBUG - 2025-05-17 14:37:09 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:09 --> Email Class Initialized
+INFO - 2025-05-17 14:37:09 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:37:09 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:37:09 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2025-05-17 14:37:09 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:37:09 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:09 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:09 --> Email Class Initialized
+INFO - 2025-05-17 14:37:09 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:37:09 --> Email Class Initialized
+INFO - 2025-05-17 14:37:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:09 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:37:09 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:37:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:37:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:09 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:37:09 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:37:09 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:09 --> Total execution time: 0.2255
+INFO - 2025-05-17 14:37:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 14:37:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:09 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:09 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:09 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:09 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:37:09 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:37:09 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:09 --> Total execution time: 0.2710
+INFO - 2025-05-17 14:37:09 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:09 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:09 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:09 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:09 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:37:09 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:37:09 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:09 --> Total execution time: 0.1372
+INFO - 2025-05-17 14:37:09 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:09 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:09 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:09 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:09 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:37:09 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:37:09 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:09 --> Total execution time: 0.1794
+INFO - 2025-05-17 14:37:09 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:09 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:09 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:09 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:09 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 14:37:09 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:37:09 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 14:37:54 --> Config Class Initialized
+INFO - 2025-05-17 14:37:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:54 --> URI Class Initialized
+INFO - 2025-05-17 14:37:54 --> Router Class Initialized
+INFO - 2025-05-17 14:37:54 --> Output Class Initialized
+INFO - 2025-05-17 14:37:54 --> Security Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:54 --> Input Class Initialized
+INFO - 2025-05-17 14:37:54 --> Language Class Initialized
+INFO - 2025-05-17 14:37:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:54 --> Email Class Initialized
+INFO - 2025-05-17 14:37:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:37:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:37:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 14:37:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 14:37:54 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:54 --> Total execution time: 0.1330
+INFO - 2025-05-17 14:37:54 --> Config Class Initialized
+INFO - 2025-05-17 14:37:54 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:54 --> Config Class Initialized
+INFO - 2025-05-17 14:37:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:54 --> URI Class Initialized
+INFO - 2025-05-17 14:37:54 --> URI Class Initialized
+INFO - 2025-05-17 14:37:54 --> Router Class Initialized
+INFO - 2025-05-17 14:37:54 --> Router Class Initialized
+INFO - 2025-05-17 14:37:54 --> Output Class Initialized
+INFO - 2025-05-17 14:37:54 --> Output Class Initialized
+INFO - 2025-05-17 14:37:54 --> Security Class Initialized
+INFO - 2025-05-17 14:37:54 --> Security Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:54 --> Input Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:54 --> Input Class Initialized
+INFO - 2025-05-17 14:37:54 --> Language Class Initialized
+INFO - 2025-05-17 14:37:54 --> Language Class Initialized
+INFO - 2025-05-17 14:37:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:54 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:37:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:37:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:54 --> Email Class Initialized
+INFO - 2025-05-17 14:37:54 --> Email Class Initialized
+INFO - 2025-05-17 14:37:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:54 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:37:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:37:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:37:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 14:37:54 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:54 --> Total execution time: 0.1269
+INFO - 2025-05-17 14:37:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:37:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/index.php
+INFO - 2025-05-17 14:37:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/js.php
+INFO - 2025-05-17 14:37:54 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:54 --> Total execution time: 0.2039
+INFO - 2025-05-17 14:37:54 --> Config Class Initialized
+INFO - 2025-05-17 14:37:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:54 --> URI Class Initialized
+INFO - 2025-05-17 14:37:54 --> Router Class Initialized
+INFO - 2025-05-17 14:37:54 --> Output Class Initialized
+INFO - 2025-05-17 14:37:54 --> Security Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:54 --> Input Class Initialized
+INFO - 2025-05-17 14:37:54 --> Language Class Initialized
+INFO - 2025-05-17 14:37:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:54 --> Email Class Initialized
+INFO - 2025-05-17 14:37:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:37:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/presensi_harian/index_page/table_data_kamar_init.php
+INFO - 2025-05-17 14:37:54 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:54 --> Total execution time: 0.0818
+INFO - 2025-05-17 14:37:56 --> Config Class Initialized
+INFO - 2025-05-17 14:37:56 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:56 --> URI Class Initialized
+INFO - 2025-05-17 14:37:56 --> Router Class Initialized
+INFO - 2025-05-17 14:37:56 --> Output Class Initialized
+INFO - 2025-05-17 14:37:56 --> Security Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:56 --> Input Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language Class Initialized
+INFO - 2025-05-17 14:37:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:56 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:56 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:56 --> Email Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:37:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:56 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:37:56 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:56 --> Total execution time: 0.0922
+INFO - 2025-05-17 14:37:56 --> Config Class Initialized
+INFO - 2025-05-17 14:37:56 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:56 --> URI Class Initialized
+INFO - 2025-05-17 14:37:56 --> Router Class Initialized
+INFO - 2025-05-17 14:37:56 --> Output Class Initialized
+INFO - 2025-05-17 14:37:56 --> Security Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:56 --> Input Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language Class Initialized
+INFO - 2025-05-17 14:37:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:56 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:56 --> Config Class Initialized
+INFO - 2025-05-17 14:37:56 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:56 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:37:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:56 --> Config Class Initialized
+INFO - 2025-05-17 14:37:56 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:56 --> URI Class Initialized
+INFO - 2025-05-17 14:37:56 --> Router Class Initialized
+INFO - 2025-05-17 14:37:56 --> Config Class Initialized
+INFO - 2025-05-17 14:37:56 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:56 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:56 --> Email Class Initialized
+INFO - 2025-05-17 14:37:56 --> URI Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:56 --> Router Class Initialized
+INFO - 2025-05-17 14:37:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:37:56 --> Output Class Initialized
+INFO - 2025-05-17 14:37:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:56 --> Output Class Initialized
+INFO - 2025-05-17 14:37:56 --> Security Class Initialized
+INFO - 2025-05-17 14:37:56 --> URI Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:56 --> Security Class Initialized
+INFO - 2025-05-17 14:37:56 --> Router Class Initialized
+INFO - 2025-05-17 14:37:56 --> Input Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:56 --> Input Class Initialized
+INFO - 2025-05-17 14:37:56 --> Output Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language Class Initialized
+INFO - 2025-05-17 14:37:56 --> Security Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2025-05-17 14:37:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:56 --> Input Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language Class Initialized
+INFO - 2025-05-17 14:37:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:56 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:37:56 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:37:56 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:56 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:37:56 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:37:56 --> Email Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:56 --> Helper loaded: cookie_helper
+DEBUG - 2025-05-17 14:37:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:56 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 14:37:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:56 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:37:56 --> Email Class Initialized
+INFO - 2025-05-17 14:37:56 --> Email Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:37:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:37:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:37:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:37:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 14:37:56 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:37:56 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 14:37:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:37:56 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:56 --> Total execution time: 0.1358
+INFO - 2025-05-17 14:37:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:56 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:37:56 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:56 --> Total execution time: 0.2010
+INFO - 2025-05-17 14:37:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:56 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:37:56 --> Config Class Initialized
+INFO - 2025-05-17 14:37:56 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:56 --> URI Class Initialized
+INFO - 2025-05-17 14:37:56 --> Router Class Initialized
+INFO - 2025-05-17 14:37:56 --> Output Class Initialized
+INFO - 2025-05-17 14:37:56 --> Security Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:56 --> Input Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language Class Initialized
+INFO - 2025-05-17 14:37:56 --> Config Class Initialized
+INFO - 2025-05-17 14:37:56 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:56 --> Helper loaded: uuid_helper
+DEBUG - 2025-05-17 14:37:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:56 --> URI Class Initialized
+INFO - 2025-05-17 14:37:56 --> Config Class Initialized
+INFO - 2025-05-17 14:37:56 --> Hooks Class Initialized
+INFO - 2025-05-17 14:37:56 --> Router Class Initialized
+INFO - 2025-05-17 14:37:56 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:37:56 --> Output Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:37:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:37:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:37:56 --> Security Class Initialized
+INFO - 2025-05-17 14:37:56 --> URI Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:56 --> Input Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language Class Initialized
+INFO - 2025-05-17 14:37:56 --> Email Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:56 --> Router Class Initialized
+INFO - 2025-05-17 14:37:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:56 --> Output Class Initialized
+INFO - 2025-05-17 14:37:56 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:37:56 --> Security Class Initialized
+INFO - 2025-05-17 14:37:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:56 --> Helper loaded: uuid_helper
+DEBUG - 2025-05-17 14:37:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:37:56 --> Input Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:37:56 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:56 --> Helper loaded: uuid_helper
+DEBUG - 2025-05-17 14:37:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:37:56 --> Email Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:37:56 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:37:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:37:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:56 --> Email Class Initialized
+INFO - 2025-05-17 14:37:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:37:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:37:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:37:56 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:56 --> Total execution time: 0.2856
+INFO - 2025-05-17 14:37:56 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:37:56 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 14:37:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:37:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:37:56 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:56 --> Total execution time: 0.1147
+INFO - 2025-05-17 14:37:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 14:37:56 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:37:56 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 14:37:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:37:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:37:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:37:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:37:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:37:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:37:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:37:56 --> Final output sent to browser
+DEBUG - 2025-05-17 14:37:56 --> Total execution time: 0.1746
+INFO - 2025-05-17 14:38:03 --> Config Class Initialized
+INFO - 2025-05-17 14:38:03 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:03 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:03 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:03 --> URI Class Initialized
+INFO - 2025-05-17 14:38:03 --> Router Class Initialized
+INFO - 2025-05-17 14:38:03 --> Output Class Initialized
+INFO - 2025-05-17 14:38:03 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:03 --> Input Class Initialized
+INFO - 2025-05-17 14:38:03 --> Language Class Initialized
+INFO - 2025-05-17 14:38:04 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:04 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:04 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:04 --> Email Class Initialized
+INFO - 2025-05-17 14:38:04 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:04 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:04 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:04 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:04 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:04 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:04 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:38:04 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/asatid/add_page_asatid/index.php
+INFO - 2025-05-17 14:38:04 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/asatid/add_page_asatid/js.php
+INFO - 2025-05-17 14:38:04 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:04 --> Total execution time: 0.3433
+INFO - 2025-05-17 14:38:04 --> Config Class Initialized
+INFO - 2025-05-17 14:38:04 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:04 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:04 --> URI Class Initialized
+INFO - 2025-05-17 14:38:04 --> Router Class Initialized
+INFO - 2025-05-17 14:38:04 --> Output Class Initialized
+INFO - 2025-05-17 14:38:04 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:04 --> Input Class Initialized
+INFO - 2025-05-17 14:38:04 --> Language Class Initialized
+INFO - 2025-05-17 14:38:04 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:04 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:04 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:04 --> Email Class Initialized
+INFO - 2025-05-17 14:38:04 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:04 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:04 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:04 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:38:04 --> Config Class Initialized
+INFO - 2025-05-17 14:38:04 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:04 --> Config Class Initialized
+INFO - 2025-05-17 14:38:04 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:04 --> URI Class Initialized
+INFO - 2025-05-17 14:38:04 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:04 --> URI Class Initialized
+INFO - 2025-05-17 14:38:04 --> Router Class Initialized
+INFO - 2025-05-17 14:38:04 --> Router Class Initialized
+INFO - 2025-05-17 14:38:04 --> Output Class Initialized
+INFO - 2025-05-17 14:38:04 --> Output Class Initialized
+INFO - 2025-05-17 14:38:04 --> Security Class Initialized
+INFO - 2025-05-17 14:38:04 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:04 --> Input Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:04 --> Input Class Initialized
+INFO - 2025-05-17 14:38:04 --> Language Class Initialized
+INFO - 2025-05-17 14:38:04 --> Language Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:04 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:04 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:04 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:04 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:04 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:04 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:04 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:04 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:38:04 --> Email Class Initialized
+INFO - 2025-05-17 14:38:04 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2025-05-17 14:38:04 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:04 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:38:04 --> Email Class Initialized
+INFO - 2025-05-17 14:38:04 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:04 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 14:38:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:04 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:04 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:38:04 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/asatid/add_page_asatid/index.php
+INFO - 2025-05-17 14:38:04 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/asatid/add_page_asatid/js.php
+INFO - 2025-05-17 14:38:04 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:04 --> Total execution time: 0.1157
+INFO - 2025-05-17 14:38:04 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:04 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:04 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:04 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:04 --> Config Class Initialized
+INFO - 2025-05-17 14:38:04 --> Config Class Initialized
+INFO - 2025-05-17 14:38:04 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:04 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_datatable" initialized
+DEBUG - 2025-05-17 14:38:04 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:04 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:04 --> URI Class Initialized
+INFO - 2025-05-17 14:38:04 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:04 --> URI Class Initialized
+INFO - 2025-05-17 14:38:04 --> Router Class Initialized
+INFO - 2025-05-17 14:38:04 --> Router Class Initialized
+INFO - 2025-05-17 14:38:04 --> Output Class Initialized
+INFO - 2025-05-17 14:38:04 --> Output Class Initialized
+INFO - 2025-05-17 14:38:04 --> Security Class Initialized
+INFO - 2025-05-17 14:38:04 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2025-05-17 14:38:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:04 --> Input Class Initialized
+INFO - 2025-05-17 14:38:04 --> Input Class Initialized
+INFO - 2025-05-17 14:38:04 --> Language Class Initialized
+INFO - 2025-05-17 14:38:04 --> Language Class Initialized
+INFO - 2025-05-17 14:38:04 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:04 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:04 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:04 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:38:04 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:04 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:38:04 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:04 --> Email Class Initialized
+INFO - 2025-05-17 14:38:04 --> Email Class Initialized
+INFO - 2025-05-17 14:38:04 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:04 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:04 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:04 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:04 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:38:04 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:04 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/asatid/add_page_asatid/table.php
+INFO - 2025-05-17 14:38:04 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:04 --> Total execution time: 0.1806
+INFO - 2025-05-17 14:38:04 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:04 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:04 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:04 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:04 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/asatid/add_page_asatid/table_asatid.php
+INFO - 2025-05-17 14:38:04 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:04 --> Total execution time: 0.2541
+INFO - 2025-05-17 14:38:04 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:04 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:04 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:04 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:04 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/asatid/add_page_asatid/table.php
+INFO - 2025-05-17 14:38:04 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:04 --> Total execution time: 0.2293
+INFO - 2025-05-17 14:38:04 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:04 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:04 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:04 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:04 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:04 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/asatid/add_page_asatid/table_asatid.php
+INFO - 2025-05-17 14:38:04 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:04 --> Total execution time: 0.2713
+INFO - 2025-05-17 14:38:34 --> Config Class Initialized
+INFO - 2025-05-17 14:38:34 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:34 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:34 --> URI Class Initialized
+INFO - 2025-05-17 14:38:34 --> Router Class Initialized
+INFO - 2025-05-17 14:38:34 --> Output Class Initialized
+INFO - 2025-05-17 14:38:34 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:34 --> Input Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language Class Initialized
+INFO - 2025-05-17 14:38:34 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:34 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:34 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:34 --> Email Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:34 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:34 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:34 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:34 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:34 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:34 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:34 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:34 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:34 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:34 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:34 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:38:34 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:38:34 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:38:34 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:34 --> Total execution time: 0.0938
+INFO - 2025-05-17 14:38:34 --> Config Class Initialized
+INFO - 2025-05-17 14:38:34 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:34 --> Config Class Initialized
+INFO - 2025-05-17 14:38:34 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:34 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:34 --> URI Class Initialized
+INFO - 2025-05-17 14:38:34 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:34 --> Config Class Initialized
+INFO - 2025-05-17 14:38:34 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:34 --> Router Class Initialized
+INFO - 2025-05-17 14:38:34 --> URI Class Initialized
+INFO - 2025-05-17 14:38:34 --> Config Class Initialized
+INFO - 2025-05-17 14:38:34 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:34 --> Output Class Initialized
+INFO - 2025-05-17 14:38:34 --> Router Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:34 --> Security Class Initialized
+INFO - 2025-05-17 14:38:34 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:34 --> URI Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:34 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:34 --> Input Class Initialized
+INFO - 2025-05-17 14:38:34 --> URI Class Initialized
+INFO - 2025-05-17 14:38:34 --> Router Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language Class Initialized
+INFO - 2025-05-17 14:38:34 --> Output Class Initialized
+INFO - 2025-05-17 14:38:34 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:34 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:34 --> Output Class Initialized
+INFO - 2025-05-17 14:38:34 --> Security Class Initialized
+INFO - 2025-05-17 14:38:34 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:34 --> Router Class Initialized
+INFO - 2025-05-17 14:38:34 --> Input Class Initialized
+INFO - 2025-05-17 14:38:34 --> Output Class Initialized
+INFO - 2025-05-17 14:38:34 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:38:34 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2025-05-17 14:38:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:34 --> Input Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:34 --> Input Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language Class Initialized
+INFO - 2025-05-17 14:38:34 --> Email Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:34 --> Language Class Initialized
+INFO - 2025-05-17 14:38:34 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:34 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:34 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:34 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:34 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:38:34 --> Loader Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:34 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:34 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:34 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:34 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:34 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:38:34 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:34 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:38:34 --> Email Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:34 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:34 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:38:34 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:34 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:34 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:38:34 --> Email Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:34 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:34 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 14:38:34 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:34 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:34 --> Email Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:34 --> Helper loaded: cookie_helper
+DEBUG - 2025-05-17 14:38:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:34 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:34 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:38:34 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:34 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:34 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:34 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:34 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:34 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:38:34 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:38:34 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:38:34 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:34 --> Total execution time: 0.1091
+INFO - 2025-05-17 14:38:34 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:34 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:38:34 --> Config Class Initialized
+INFO - 2025-05-17 14:38:34 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:34 --> Config Class Initialized
+INFO - 2025-05-17 14:38:34 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> UTF-8 Support Enabled
+DEBUG - 2025-05-17 14:38:34 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:34 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:34 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:34 --> Config Class Initialized
+INFO - 2025-05-17 14:38:34 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:34 --> URI Class Initialized
+INFO - 2025-05-17 14:38:34 --> URI Class Initialized
+INFO - 2025-05-17 14:38:34 --> Router Class Initialized
+INFO - 2025-05-17 14:38:34 --> Router Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> UTF-8 Support Enabled
+DEBUG - 2025-05-17 14:38:34 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:34 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:34 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:34 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:34 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:34 --> Output Class Initialized
+INFO - 2025-05-17 14:38:34 --> URI Class Initialized
+INFO - 2025-05-17 14:38:34 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:34 --> Router Class Initialized
+INFO - 2025-05-17 14:38:34 --> Security Class Initialized
+INFO - 2025-05-17 14:38:34 --> Output Class Initialized
+DEBUG - 2025-05-17 14:38:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:34 --> Output Class Initialized
+INFO - 2025-05-17 14:38:34 --> Input Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language Class Initialized
+INFO - 2025-05-17 14:38:34 --> Security Class Initialized
+INFO - 2025-05-17 14:38:34 --> Security Class Initialized
+ERROR - 2025-05-17 14:38:34 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:38:34 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2025-05-17 14:38:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2025-05-17 14:38:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:34 --> Input Class Initialized
+INFO - 2025-05-17 14:38:34 --> Input Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language Class Initialized
+INFO - 2025-05-17 14:38:34 --> Language Class Initialized
+INFO - 2025-05-17 14:38:34 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:35 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:38:35 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:35 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:35 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:35 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:35 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:35 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:35 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:38:35 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:38:35 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:35 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:38:35 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:35 --> Email Class Initialized
+INFO - 2025-05-17 14:38:35 --> Email Class Initialized
+INFO - 2025-05-17 14:38:35 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:35 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:35 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:35 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:35 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:35 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:35 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:38:35 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:38:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:38:35 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:38:35 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:35 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:35 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:35 --> Email Class Initialized
+INFO - 2025-05-17 14:38:35 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:35 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:35 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:35 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:35 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:35 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:35 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:38:35 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:38:35 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:35 --> Total execution time: 0.2165
+INFO - 2025-05-17 14:38:35 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:35 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:35 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:35 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:35 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:35 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:35 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:35 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:38:35 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:38:35 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:35 --> Total execution time: 0.2718
+INFO - 2025-05-17 14:38:35 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:35 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:35 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:35 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:35 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:35 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:35 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 14:38:35 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:38:35 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 14:38:35 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:35 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:35 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:35 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:35 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:35 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:35 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:35 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:38:35 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:38:35 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:35 --> Total execution time: 0.2224
+INFO - 2025-05-17 14:38:35 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:35 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:35 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:35 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:35 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:35 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:35 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:35 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:38:35 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:38:35 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:35 --> Total execution time: 0.2711
+INFO - 2025-05-17 14:38:37 --> Config Class Initialized
+INFO - 2025-05-17 14:38:37 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:37 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:37 --> URI Class Initialized
+INFO - 2025-05-17 14:38:37 --> Router Class Initialized
+INFO - 2025-05-17 14:38:37 --> Output Class Initialized
+INFO - 2025-05-17 14:38:37 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:37 --> Input Class Initialized
+INFO - 2025-05-17 14:38:37 --> Language Class Initialized
+INFO - 2025-05-17 14:38:37 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:37 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:37 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:37 --> Email Class Initialized
+INFO - 2025-05-17 14:38:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:37 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:37 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:37 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:37 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:37 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:37 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:37 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:37 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:37 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:37 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:38:37 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/personal/index_page/index.php
+INFO - 2025-05-17 14:38:37 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/personal/index_page/modal_change_status_santri.php
+INFO - 2025-05-17 14:38:37 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/personal/index_page/js.php
+INFO - 2025-05-17 14:38:37 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:37 --> Total execution time: 0.2325
+INFO - 2025-05-17 14:38:37 --> Config Class Initialized
+INFO - 2025-05-17 14:38:37 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:37 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:37 --> URI Class Initialized
+INFO - 2025-05-17 14:38:37 --> Router Class Initialized
+INFO - 2025-05-17 14:38:37 --> Output Class Initialized
+INFO - 2025-05-17 14:38:37 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:37 --> Input Class Initialized
+INFO - 2025-05-17 14:38:37 --> Language Class Initialized
+INFO - 2025-05-17 14:38:37 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:37 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:37 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:37 --> Email Class Initialized
+INFO - 2025-05-17 14:38:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:37 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:37 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:37 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:37 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:37 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:37 --> Config Class Initialized
+INFO - 2025-05-17 14:38:37 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:37 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:37 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:37 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:37 --> Model "SMMP_datatable" initialized
+DEBUG - 2025-05-17 14:38:37 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:37 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:37 --> URI Class Initialized
+INFO - 2025-05-17 14:38:37 --> Router Class Initialized
+INFO - 2025-05-17 14:38:37 --> Output Class Initialized
+INFO - 2025-05-17 14:38:37 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:37 --> Input Class Initialized
+INFO - 2025-05-17 14:38:37 --> Language Class Initialized
+INFO - 2025-05-17 14:38:37 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:37 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:37 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:37 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:38:37 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/personal/index_page/index.php
+INFO - 2025-05-17 14:38:37 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/personal/index_page/modal_change_status_santri.php
+INFO - 2025-05-17 14:38:37 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/personal/index_page/js.php
+INFO - 2025-05-17 14:38:37 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:37 --> Total execution time: 0.1138
+INFO - 2025-05-17 14:38:37 --> Email Class Initialized
+INFO - 2025-05-17 14:38:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:37 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:37 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:37 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:37 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:37 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:37 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:37 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:37 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:37 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:37 --> Config Class Initialized
+INFO - 2025-05-17 14:38:37 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:37 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:37 --> URI Class Initialized
+INFO - 2025-05-17 14:38:37 --> Router Class Initialized
+INFO - 2025-05-17 14:38:37 --> Output Class Initialized
+INFO - 2025-05-17 14:38:37 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:37 --> Input Class Initialized
+INFO - 2025-05-17 14:38:37 --> Language Class Initialized
+INFO - 2025-05-17 14:38:37 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:37 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:37 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:37 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:38 --> Email Class Initialized
+INFO - 2025-05-17 14:38:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:38 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:38 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:38 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:38 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:38 --> Total execution time: 0.1225
+INFO - 2025-05-17 14:38:38 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:38 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:38 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:38 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:38 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:38 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:38 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:38 --> Total execution time: 0.1148
+INFO - 2025-05-17 14:38:50 --> Config Class Initialized
+INFO - 2025-05-17 14:38:50 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:50 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:50 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:50 --> URI Class Initialized
+INFO - 2025-05-17 14:38:50 --> Router Class Initialized
+INFO - 2025-05-17 14:38:50 --> Output Class Initialized
+INFO - 2025-05-17 14:38:50 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:50 --> Input Class Initialized
+INFO - 2025-05-17 14:38:50 --> Language Class Initialized
+ERROR - 2025-05-17 14:38:50 --> 404 Page Not Found: admin/Personal/add_page
+INFO - 2025-05-17 14:38:52 --> Config Class Initialized
+INFO - 2025-05-17 14:38:52 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:52 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:52 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:52 --> URI Class Initialized
+INFO - 2025-05-17 14:38:52 --> Router Class Initialized
+INFO - 2025-05-17 14:38:52 --> Output Class Initialized
+INFO - 2025-05-17 14:38:52 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:52 --> Input Class Initialized
+INFO - 2025-05-17 14:38:52 --> Language Class Initialized
+ERROR - 2025-05-17 14:38:52 --> 404 Page Not Found: admin/Personal/add_page
+INFO - 2025-05-17 14:38:54 --> Config Class Initialized
+INFO - 2025-05-17 14:38:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:54 --> URI Class Initialized
+INFO - 2025-05-17 14:38:54 --> Router Class Initialized
+INFO - 2025-05-17 14:38:54 --> Output Class Initialized
+INFO - 2025-05-17 14:38:54 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:54 --> Input Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language Class Initialized
+INFO - 2025-05-17 14:38:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:54 --> Email Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:54 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:38:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:38:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:38:54 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:54 --> Total execution time: 0.0996
+INFO - 2025-05-17 14:38:54 --> Config Class Initialized
+INFO - 2025-05-17 14:38:54 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:54 --> Config Class Initialized
+INFO - 2025-05-17 14:38:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:54 --> Config Class Initialized
+INFO - 2025-05-17 14:38:54 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:54 --> URI Class Initialized
+INFO - 2025-05-17 14:38:54 --> URI Class Initialized
+INFO - 2025-05-17 14:38:54 --> Router Class Initialized
+INFO - 2025-05-17 14:38:54 --> Output Class Initialized
+INFO - 2025-05-17 14:38:54 --> Router Class Initialized
+INFO - 2025-05-17 14:38:54 --> Config Class Initialized
+INFO - 2025-05-17 14:38:54 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:54 --> Output Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:54 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:54 --> URI Class Initialized
+INFO - 2025-05-17 14:38:54 --> Security Class Initialized
+INFO - 2025-05-17 14:38:54 --> URI Class Initialized
+INFO - 2025-05-17 14:38:54 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:54 --> Input Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:54 --> Router Class Initialized
+INFO - 2025-05-17 14:38:54 --> Input Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language Class Initialized
+INFO - 2025-05-17 14:38:54 --> Output Class Initialized
+INFO - 2025-05-17 14:38:54 --> Security Class Initialized
+INFO - 2025-05-17 14:38:54 --> Router Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:54 --> Input Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language Class Initialized
+INFO - 2025-05-17 14:38:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:54 --> Output Class Initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:54 --> Security Class Initialized
+INFO - 2025-05-17 14:38:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:54 --> Input Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language Class Initialized
+INFO - 2025-05-17 14:38:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:54 --> Email Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:54 --> Email Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:54 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:38:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:54 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:38:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:54 --> Email Class Initialized
+INFO - 2025-05-17 14:38:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:54 --> Helper loaded: cookie_helper
+DEBUG - 2025-05-17 14:38:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:54 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:38:54 --> Email Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:54 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 14:38:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:38:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:54 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:38:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:38:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:38:54 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:54 --> Total execution time: 0.2189
+INFO - 2025-05-17 14:38:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:54 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:38:54 --> Config Class Initialized
+INFO - 2025-05-17 14:38:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:54 --> URI Class Initialized
+INFO - 2025-05-17 14:38:54 --> Router Class Initialized
+INFO - 2025-05-17 14:38:54 --> Output Class Initialized
+INFO - 2025-05-17 14:38:54 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:54 --> Input Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language Class Initialized
+INFO - 2025-05-17 14:38:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:54 --> Config Class Initialized
+INFO - 2025-05-17 14:38:54 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:54 --> Config Class Initialized
+INFO - 2025-05-17 14:38:54 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:54 --> URI Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:54 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:38:54 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:54 --> Router Class Initialized
+INFO - 2025-05-17 14:38:54 --> URI Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:54 --> Router Class Initialized
+INFO - 2025-05-17 14:38:54 --> Output Class Initialized
+INFO - 2025-05-17 14:38:54 --> Email Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:54 --> Security Class Initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 14:38:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:54 --> Input Class Initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:38:54 --> Output Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language Class Initialized
+INFO - 2025-05-17 14:38:54 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:54 --> Input Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language Class Initialized
+INFO - 2025-05-17 14:38:54 --> Loader Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2025-05-17 14:38:54 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:38:54 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 14:38:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:54 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:54 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:54 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:38:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:54 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:54 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:54 --> Email Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:54 --> Email Class Initialized
+INFO - 2025-05-17 14:38:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:54 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:38:54 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:54 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:54 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:38:54 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:38:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:38:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:38:54 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:54 --> Total execution time: 0.3460
+INFO - 2025-05-17 14:38:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:38:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:38:54 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:54 --> Total execution time: 0.3867
+INFO - 2025-05-17 14:38:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 14:38:54 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:38:54 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 14:38:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:54 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:54 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:54 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:38:54 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:38:54 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:54 --> Total execution time: 0.2090
+INFO - 2025-05-17 14:38:54 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:54 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:55 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:55 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:55 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:55 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:55 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:55 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:38:55 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:38:55 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:55 --> Total execution time: 0.2675
+INFO - 2025-05-17 14:38:55 --> Config Class Initialized
+INFO - 2025-05-17 14:38:55 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:55 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:55 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:55 --> URI Class Initialized
+INFO - 2025-05-17 14:38:55 --> Router Class Initialized
+INFO - 2025-05-17 14:38:55 --> Output Class Initialized
+INFO - 2025-05-17 14:38:55 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:55 --> Input Class Initialized
+INFO - 2025-05-17 14:38:55 --> Language Class Initialized
+INFO - 2025-05-17 14:38:55 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:55 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:55 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:55 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:55 --> Email Class Initialized
+INFO - 2025-05-17 14:38:55 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:55 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:55 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:55 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:55 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:55 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:55 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:55 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:55 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:55 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:55 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:55 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:38:55 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/index.php
+INFO - 2025-05-17 14:38:55 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/modal_change_status_santri.php
+INFO - 2025-05-17 14:38:55 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/js.php
+INFO - 2025-05-17 14:38:55 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:55 --> Total execution time: 0.1582
+INFO - 2025-05-17 14:38:55 --> Config Class Initialized
+INFO - 2025-05-17 14:38:55 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:55 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:55 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:55 --> URI Class Initialized
+INFO - 2025-05-17 14:38:55 --> Router Class Initialized
+INFO - 2025-05-17 14:38:55 --> Output Class Initialized
+INFO - 2025-05-17 14:38:55 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:55 --> Input Class Initialized
+INFO - 2025-05-17 14:38:55 --> Language Class Initialized
+INFO - 2025-05-17 14:38:55 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:55 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:55 --> Config Class Initialized
+INFO - 2025-05-17 14:38:55 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:55 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:55 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:55 --> URI Class Initialized
+INFO - 2025-05-17 14:38:55 --> Router Class Initialized
+INFO - 2025-05-17 14:38:55 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:38:55 --> Output Class Initialized
+INFO - 2025-05-17 14:38:55 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:55 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:38:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:55 --> Input Class Initialized
+INFO - 2025-05-17 14:38:55 --> Language Class Initialized
+INFO - 2025-05-17 14:38:55 --> Email Class Initialized
+INFO - 2025-05-17 14:38:55 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:55 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:55 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:55 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:55 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:55 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:38:55 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:55 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 14:38:55 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:55 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:38:55 --> Email Class Initialized
+INFO - 2025-05-17 14:38:55 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:55 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:55 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:55 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:38:55 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:55 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:55 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:55 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:55 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:55 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:38:55 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/index.php
+INFO - 2025-05-17 14:38:55 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/modal_change_status_santri.php
+INFO - 2025-05-17 14:38:55 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/js.php
+INFO - 2025-05-17 14:38:55 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:55 --> Total execution time: 0.1041
+INFO - 2025-05-17 14:38:55 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:55 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:55 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:55 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:55 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:55 --> Config Class Initialized
+INFO - 2025-05-17 14:38:55 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:55 --> Hooks Class Initialized
+INFO - 2025-05-17 14:38:55 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:56 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:56 --> UTF-8 Support Enabled
+DEBUG - 2025-05-17 14:38:56 --> Total execution time: 0.1434
+INFO - 2025-05-17 14:38:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:56 --> URI Class Initialized
+INFO - 2025-05-17 14:38:56 --> Router Class Initialized
+INFO - 2025-05-17 14:38:56 --> Output Class Initialized
+INFO - 2025-05-17 14:38:56 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:56 --> Input Class Initialized
+INFO - 2025-05-17 14:38:56 --> Language Class Initialized
+INFO - 2025-05-17 14:38:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:56 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:56 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:56 --> Email Class Initialized
+INFO - 2025-05-17 14:38:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:56 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:56 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:56 --> Total execution time: 0.0895
+INFO - 2025-05-17 14:38:56 --> Config Class Initialized
+INFO - 2025-05-17 14:38:56 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:56 --> URI Class Initialized
+INFO - 2025-05-17 14:38:56 --> Router Class Initialized
+INFO - 2025-05-17 14:38:56 --> Output Class Initialized
+INFO - 2025-05-17 14:38:56 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:56 --> Input Class Initialized
+INFO - 2025-05-17 14:38:56 --> Language Class Initialized
+INFO - 2025-05-17 14:38:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:56 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:56 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:56 --> Email Class Initialized
+INFO - 2025-05-17 14:38:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:56 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:38:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/add_page/index.php
+INFO - 2025-05-17 14:38:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/add_page/js.php
+INFO - 2025-05-17 14:38:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/modal_setting.php
+INFO - 2025-05-17 14:38:56 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:56 --> Total execution time: 0.1780
+INFO - 2025-05-17 14:38:56 --> Config Class Initialized
+INFO - 2025-05-17 14:38:56 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:38:56 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:38:56 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:38:56 --> URI Class Initialized
+INFO - 2025-05-17 14:38:56 --> Router Class Initialized
+INFO - 2025-05-17 14:38:56 --> Output Class Initialized
+INFO - 2025-05-17 14:38:56 --> Security Class Initialized
+DEBUG - 2025-05-17 14:38:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:38:56 --> Input Class Initialized
+INFO - 2025-05-17 14:38:56 --> Language Class Initialized
+INFO - 2025-05-17 14:38:56 --> Loader Class Initialized
+INFO - 2025-05-17 14:38:56 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:38:56 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:38:56 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:38:56 --> Email Class Initialized
+INFO - 2025-05-17 14:38:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:38:56 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:38:56 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:38:56 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:38:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:38:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:38:56 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:38:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:38:56 --> Cart Class Initialized
+INFO - 2025-05-17 14:38:56 --> Controller Class Initialized
+INFO - 2025-05-17 14:38:56 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:38:56 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:38:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:38:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/add_page/index.php
+INFO - 2025-05-17 14:38:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/add_page/js.php
+INFO - 2025-05-17 14:38:56 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/modal_setting.php
+INFO - 2025-05-17 14:38:56 --> Final output sent to browser
+DEBUG - 2025-05-17 14:38:56 --> Total execution time: 0.0919
+INFO - 2025-05-17 14:41:27 --> Config Class Initialized
+INFO - 2025-05-17 14:41:27 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:27 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:27 --> URI Class Initialized
+INFO - 2025-05-17 14:41:27 --> Router Class Initialized
+INFO - 2025-05-17 14:41:27 --> Output Class Initialized
+INFO - 2025-05-17 14:41:27 --> Security Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:27 --> Input Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language Class Initialized
+INFO - 2025-05-17 14:41:27 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:27 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:41:27 --> Email Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:41:27 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:41:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:41:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:27 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:27 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:27 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:41:27 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:41:27 --> Final output sent to browser
+DEBUG - 2025-05-17 14:41:27 --> Total execution time: 0.0957
+INFO - 2025-05-17 14:41:27 --> Config Class Initialized
+INFO - 2025-05-17 14:41:27 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:27 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:27 --> URI Class Initialized
+INFO - 2025-05-17 14:41:27 --> Router Class Initialized
+INFO - 2025-05-17 14:41:27 --> Output Class Initialized
+INFO - 2025-05-17 14:41:27 --> Security Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:27 --> Input Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language Class Initialized
+INFO - 2025-05-17 14:41:27 --> Config Class Initialized
+INFO - 2025-05-17 14:41:27 --> Hooks Class Initialized
+INFO - 2025-05-17 14:41:27 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: uuid_helper
+DEBUG - 2025-05-17 14:41:27 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:27 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:27 --> Config Class Initialized
+INFO - 2025-05-17 14:41:27 --> Hooks Class Initialized
+INFO - 2025-05-17 14:41:27 --> Config Class Initialized
+INFO - 2025-05-17 14:41:27 --> Hooks Class Initialized
+INFO - 2025-05-17 14:41:27 --> URI Class Initialized
+INFO - 2025-05-17 14:41:27 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:27 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:27 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:27 --> URI Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:41:27 --> Router Class Initialized
+INFO - 2025-05-17 14:41:27 --> URI Class Initialized
+INFO - 2025-05-17 14:41:27 --> Output Class Initialized
+INFO - 2025-05-17 14:41:27 --> Router Class Initialized
+INFO - 2025-05-17 14:41:27 --> Security Class Initialized
+INFO - 2025-05-17 14:41:27 --> Router Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:27 --> Input Class Initialized
+INFO - 2025-05-17 14:41:27 --> Email Class Initialized
+INFO - 2025-05-17 14:41:27 --> Output Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:41:27 --> Output Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:27 --> Security Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 14:41:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:41:27 --> Input Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language Class Initialized
+INFO - 2025-05-17 14:41:27 --> Security Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:27 --> Input Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:41:27 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:27 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:27 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:27 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:27 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 14:41:27 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:41:27 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:41:27 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:41:27 --> Email Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:41:27 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:27 --> Email Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:41:27 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2025-05-17 14:41:27 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:41:27 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 14:41:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:41:27 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:41:27 --> Email Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2025-05-17 14:41:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:41:27 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:41:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:41:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:27 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:27 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:41:27 --> Final output sent to browser
+DEBUG - 2025-05-17 14:41:27 --> Total execution time: 0.1286
+INFO - 2025-05-17 14:41:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:27 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:27 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:27 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 14:41:27 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:41:27 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 14:41:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:27 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:27 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:27 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:41:27 --> Final output sent to browser
+DEBUG - 2025-05-17 14:41:27 --> Total execution time: 0.1867
+INFO - 2025-05-17 14:41:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:27 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:27 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:27 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:41:27 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 14:41:27 --> Final output sent to browser
+DEBUG - 2025-05-17 14:41:27 --> Total execution time: 0.2532
+INFO - 2025-05-17 14:41:27 --> Config Class Initialized
+INFO - 2025-05-17 14:41:27 --> Config Class Initialized
+INFO - 2025-05-17 14:41:27 --> Hooks Class Initialized
+INFO - 2025-05-17 14:41:27 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> UTF-8 Support Enabled
+DEBUG - 2025-05-17 14:41:27 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:27 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:27 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:27 --> URI Class Initialized
+INFO - 2025-05-17 14:41:27 --> URI Class Initialized
+INFO - 2025-05-17 14:41:27 --> Router Class Initialized
+INFO - 2025-05-17 14:41:27 --> Router Class Initialized
+INFO - 2025-05-17 14:41:27 --> Output Class Initialized
+INFO - 2025-05-17 14:41:27 --> Output Class Initialized
+INFO - 2025-05-17 14:41:27 --> Security Class Initialized
+INFO - 2025-05-17 14:41:27 --> Security Class Initialized
+INFO - 2025-05-17 14:41:27 --> Config Class Initialized
+INFO - 2025-05-17 14:41:27 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2025-05-17 14:41:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:27 --> Input Class Initialized
+INFO - 2025-05-17 14:41:27 --> Input Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:27 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:27 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:27 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:27 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:41:27 --> URI Class Initialized
+INFO - 2025-05-17 14:41:27 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:41:27 --> Router Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:41:27 --> Output Class Initialized
+INFO - 2025-05-17 14:41:27 --> Security Class Initialized
+INFO - 2025-05-17 14:41:27 --> Email Class Initialized
+DEBUG - 2025-05-17 14:41:27 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:41:27 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2025-05-17 14:41:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:27 --> Input Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:27 --> Language Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:41:27 --> Email Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:41:27 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:41:27 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:41:27 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:27 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:41:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:41:27 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 14:41:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:41:27 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:41:27 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:27 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:41:27 --> Email Class Initialized
+INFO - 2025-05-17 14:41:27 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:41:27 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:41:27 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:41:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:41:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:27 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:27 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 14:41:27 --> Final output sent to browser
+DEBUG - 2025-05-17 14:41:27 --> Total execution time: 0.0859
+INFO - 2025-05-17 14:41:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:27 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:27 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:27 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 14:41:27 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 14:41:27 --> Final output sent to browser
+DEBUG - 2025-05-17 14:41:27 --> Total execution time: 0.1280
+INFO - 2025-05-17 14:41:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:27 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:27 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:27 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:27 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 14:41:27 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 14:41:27 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 14:41:29 --> Config Class Initialized
+INFO - 2025-05-17 14:41:29 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:29 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:29 --> URI Class Initialized
+INFO - 2025-05-17 14:41:29 --> Router Class Initialized
+INFO - 2025-05-17 14:41:29 --> Output Class Initialized
+INFO - 2025-05-17 14:41:29 --> Security Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:29 --> Input Class Initialized
+INFO - 2025-05-17 14:41:29 --> Language Class Initialized
+INFO - 2025-05-17 14:41:29 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:29 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:29 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:41:29 --> Email Class Initialized
+INFO - 2025-05-17 14:41:29 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:41:29 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:29 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:41:29 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:41:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:41:29 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:29 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:29 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:29 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:29 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:29 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:41:29 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:41:29 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/kamar/kamar_santri/index.php
+INFO - 2025-05-17 14:41:29 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/kamar/kamar_santri/js.php
+INFO - 2025-05-17 14:41:29 --> Final output sent to browser
+DEBUG - 2025-05-17 14:41:29 --> Total execution time: 0.1583
+INFO - 2025-05-17 14:41:29 --> Config Class Initialized
+INFO - 2025-05-17 14:41:29 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:29 --> Config Class Initialized
+INFO - 2025-05-17 14:41:29 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:29 --> Hooks Class Initialized
+INFO - 2025-05-17 14:41:29 --> URI Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:29 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:29 --> Router Class Initialized
+INFO - 2025-05-17 14:41:29 --> URI Class Initialized
+INFO - 2025-05-17 14:41:29 --> Output Class Initialized
+INFO - 2025-05-17 14:41:29 --> Router Class Initialized
+INFO - 2025-05-17 14:41:29 --> Output Class Initialized
+INFO - 2025-05-17 14:41:29 --> Security Class Initialized
+INFO - 2025-05-17 14:41:29 --> Security Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:29 --> Input Class Initialized
+INFO - 2025-05-17 14:41:29 --> Language Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:29 --> Input Class Initialized
+INFO - 2025-05-17 14:41:29 --> Language Class Initialized
+INFO - 2025-05-17 14:41:29 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:29 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:29 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:29 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:29 --> Database Driver Class Initialized
+INFO - 2025-05-17 14:41:29 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 14:41:29 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:41:29 --> Email Class Initialized
+INFO - 2025-05-17 14:41:29 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:41:29 --> Email Class Initialized
+INFO - 2025-05-17 14:41:29 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:29 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:41:29 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:41:29 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:29 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:41:29 --> Helper loaded: url_helper
+INFO - 2025-05-17 14:41:29 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:41:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 14:41:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:41:29 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:29 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:29 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:29 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:29 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:29 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:41:29 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/kamar/kamar_santri/table.php
+INFO - 2025-05-17 14:41:29 --> Final output sent to browser
+DEBUG - 2025-05-17 14:41:29 --> Total execution time: 0.1011
+INFO - 2025-05-17 14:41:29 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:29 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:29 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:29 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:29 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:29 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:41:29 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 14:41:29 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/kamar/kamar_santri/index.php
+INFO - 2025-05-17 14:41:29 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/kamar/kamar_santri/js.php
+INFO - 2025-05-17 14:41:29 --> Final output sent to browser
+DEBUG - 2025-05-17 14:41:29 --> Total execution time: 0.1527
+INFO - 2025-05-17 14:41:29 --> Config Class Initialized
+INFO - 2025-05-17 14:41:29 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:41:29 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:41:29 --> URI Class Initialized
+INFO - 2025-05-17 14:41:29 --> Router Class Initialized
+INFO - 2025-05-17 14:41:29 --> Output Class Initialized
+INFO - 2025-05-17 14:41:29 --> Security Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:41:29 --> Input Class Initialized
+INFO - 2025-05-17 14:41:29 --> Language Class Initialized
+INFO - 2025-05-17 14:41:29 --> Loader Class Initialized
+INFO - 2025-05-17 14:41:29 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:41:29 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:41:29 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:41:29 --> Email Class Initialized
+INFO - 2025-05-17 14:41:29 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:41:29 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:41:29 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:41:29 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:41:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:41:29 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:41:29 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:41:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:41:29 --> Cart Class Initialized
+INFO - 2025-05-17 14:41:29 --> Controller Class Initialized
+INFO - 2025-05-17 14:41:29 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:41:29 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:41:29 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/kamar/kamar_santri/table.php
+INFO - 2025-05-17 14:41:29 --> Final output sent to browser
+DEBUG - 2025-05-17 14:41:29 --> Total execution time: 0.0760
+INFO - 2025-05-17 14:43:48 --> Config Class Initialized
+INFO - 2025-05-17 14:43:48 --> Hooks Class Initialized
+DEBUG - 2025-05-17 14:43:48 --> UTF-8 Support Enabled
+INFO - 2025-05-17 14:43:48 --> Utf8 Class Initialized
+INFO - 2025-05-17 14:43:48 --> URI Class Initialized
+INFO - 2025-05-17 14:43:48 --> Router Class Initialized
+INFO - 2025-05-17 14:43:48 --> Output Class Initialized
+INFO - 2025-05-17 14:43:48 --> Security Class Initialized
+DEBUG - 2025-05-17 14:43:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 14:43:48 --> Input Class Initialized
+INFO - 2025-05-17 14:43:48 --> Language Class Initialized
+INFO - 2025-05-17 14:43:48 --> Loader Class Initialized
+INFO - 2025-05-17 14:43:48 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 14:43:48 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 14:43:48 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 14:43:48 --> Email Class Initialized
+INFO - 2025-05-17 14:43:48 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 14:43:48 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 14:43:48 --> Helper loaded: language_helper
+INFO - 2025-05-17 14:43:48 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 14:43:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 14:43:48 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 14:43:48 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 14:43:48 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 14:43:48 --> Cart Class Initialized
+INFO - 2025-05-17 14:43:48 --> Controller Class Initialized
+INFO - 2025-05-17 14:43:48 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 14:43:48 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 14:43:48 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/kamar/kamar_santri/table.php
+INFO - 2025-05-17 14:43:48 --> Final output sent to browser
+DEBUG - 2025-05-17 14:43:48 --> Total execution time: 0.0830
+INFO - 2025-05-17 15:13:40 --> Config Class Initialized
+INFO - 2025-05-17 15:13:40 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:13:40 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:40 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:13:40 --> URI Class Initialized
+INFO - 2025-05-17 15:13:40 --> Router Class Initialized
+INFO - 2025-05-17 15:13:40 --> Output Class Initialized
+INFO - 2025-05-17 15:13:40 --> Security Class Initialized
+DEBUG - 2025-05-17 15:13:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:40 --> Input Class Initialized
+INFO - 2025-05-17 15:13:40 --> Language Class Initialized
+INFO - 2025-05-17 15:13:40 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:40 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:41 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:13:41 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:41 --> Email Class Initialized
+INFO - 2025-05-17 15:13:41 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:41 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:41 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:13:41 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:13:41 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:41 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:41 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:13:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:41 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:41 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:42 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:42 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:13:42 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 15:13:42 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 15:13:42 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 15:13:42 --> Final output sent to browser
+DEBUG - 2025-05-17 15:13:42 --> Total execution time: 2.0518
+INFO - 2025-05-17 15:13:42 --> Config Class Initialized
+INFO - 2025-05-17 15:13:42 --> Hooks Class Initialized
+INFO - 2025-05-17 15:13:42 --> Config Class Initialized
+INFO - 2025-05-17 15:13:42 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:42 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:42 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:13:42 --> URI Class Initialized
+INFO - 2025-05-17 15:13:42 --> URI Class Initialized
+INFO - 2025-05-17 15:13:42 --> Router Class Initialized
+INFO - 2025-05-17 15:13:42 --> Output Class Initialized
+INFO - 2025-05-17 15:13:42 --> Config Class Initialized
+INFO - 2025-05-17 15:13:42 --> Hooks Class Initialized
+INFO - 2025-05-17 15:13:42 --> Config Class Initialized
+INFO - 2025-05-17 15:13:42 --> Hooks Class Initialized
+INFO - 2025-05-17 15:13:42 --> Router Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:42 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:13:42 --> URI Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:42 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:13:42 --> Router Class Initialized
+INFO - 2025-05-17 15:13:42 --> URI Class Initialized
+INFO - 2025-05-17 15:13:42 --> Output Class Initialized
+INFO - 2025-05-17 15:13:42 --> Router Class Initialized
+INFO - 2025-05-17 15:13:42 --> Security Class Initialized
+INFO - 2025-05-17 15:13:42 --> Output Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:42 --> Security Class Initialized
+INFO - 2025-05-17 15:13:42 --> Input Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:42 --> Input Class Initialized
+INFO - 2025-05-17 15:13:42 --> Language Class Initialized
+INFO - 2025-05-17 15:13:42 --> Language Class Initialized
+INFO - 2025-05-17 15:13:42 --> Security Class Initialized
+INFO - 2025-05-17 15:13:42 --> Loader Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:42 --> Input Class Initialized
+INFO - 2025-05-17 15:13:42 --> Language Class Initialized
+INFO - 2025-05-17 15:13:42 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:42 --> Output Class Initialized
+INFO - 2025-05-17 15:13:42 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:42 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:42 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:42 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:42 --> Security Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:42 --> Input Class Initialized
+INFO - 2025-05-17 15:13:42 --> Language Class Initialized
+INFO - 2025-05-17 15:13:42 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:42 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:42 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:13:42 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:13:42 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:42 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:13:42 --> Email Class Initialized
+INFO - 2025-05-17 15:13:42 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:42 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:42 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 15:13:42 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 15:13:42 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:42 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:13:42 --> Email Class Initialized
+INFO - 2025-05-17 15:13:42 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:42 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:42 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 15:13:42 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:42 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:13:42 --> Email Class Initialized
+INFO - 2025-05-17 15:13:42 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:42 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:42 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 15:13:42 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:42 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:13:42 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:42 --> Email Class Initialized
+INFO - 2025-05-17 15:13:42 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:13:42 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:42 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:42 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:42 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 15:13:42 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:42 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:13:42 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 15:13:42 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:42 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:42 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:42 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:42 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 15:13:42 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 15:13:42 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 15:13:42 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:42 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:13:42 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:42 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:42 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:42 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:42 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:13:42 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 15:13:42 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 15:13:42 --> Final output sent to browser
+DEBUG - 2025-05-17 15:13:42 --> Total execution time: 0.2675
+INFO - 2025-05-17 15:13:42 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:42 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:13:42 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:42 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:42 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:42 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:42 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:13:42 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 15:13:42 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 15:13:42 --> Final output sent to browser
+DEBUG - 2025-05-17 15:13:42 --> Total execution time: 0.3568
+INFO - 2025-05-17 15:13:42 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:42 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:13:42 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:42 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:42 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:42 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:42 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:13:42 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 15:13:42 --> Config Class Initialized
+INFO - 2025-05-17 15:13:42 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:42 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:13:42 --> URI Class Initialized
+INFO - 2025-05-17 15:13:42 --> Router Class Initialized
+INFO - 2025-05-17 15:13:42 --> Output Class Initialized
+INFO - 2025-05-17 15:13:42 --> Security Class Initialized
+DEBUG - 2025-05-17 15:13:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:42 --> Input Class Initialized
+INFO - 2025-05-17 15:13:42 --> Language Class Initialized
+INFO - 2025-05-17 15:13:42 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:42 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:42 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+DEBUG - 2025-05-17 15:13:43 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 15:13:43 --> Final output sent to browser
+DEBUG - 2025-05-17 15:13:43 --> Total execution time: 0.6410
+INFO - 2025-05-17 15:13:43 --> Email Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:43 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:43 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:13:43 --> Config Class Initialized
+INFO - 2025-05-17 15:13:43 --> Config Class Initialized
+INFO - 2025-05-17 15:13:43 --> Hooks Class Initialized
+INFO - 2025-05-17 15:13:43 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:43 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:13:43 --> URI Class Initialized
+INFO - 2025-05-17 15:13:43 --> URI Class Initialized
+INFO - 2025-05-17 15:13:43 --> Router Class Initialized
+INFO - 2025-05-17 15:13:43 --> Router Class Initialized
+INFO - 2025-05-17 15:13:43 --> Output Class Initialized
+INFO - 2025-05-17 15:13:43 --> Output Class Initialized
+INFO - 2025-05-17 15:13:43 --> Security Class Initialized
+INFO - 2025-05-17 15:13:43 --> Security Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:43 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:13:43 --> Input Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:43 --> Input Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:43 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:43 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:43 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:13:43 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:43 --> Loader Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:43 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:43 --> Email Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:43 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:43 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 15:13:43 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:13:43 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:13:43 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:13:43 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:43 --> Email Class Initialized
+INFO - 2025-05-17 15:13:43 --> Config Class Initialized
+INFO - 2025-05-17 15:13:43 --> Hooks Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2025-05-17 15:13:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 15:13:43 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:43 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:43 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:43 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:13:43 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:43 --> URI Class Initialized
+INFO - 2025-05-17 15:13:43 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:43 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:13:43 --> Router Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:43 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 15:13:43 --> Output Class Initialized
+INFO - 2025-05-17 15:13:43 --> Security Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:43 --> Input Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language Class Initialized
+INFO - 2025-05-17 15:13:43 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:43 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:43 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:43 --> Email Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:43 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:43 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:13:43 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:13:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:43 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:43 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_datatable" initialized
+DEBUG - 2025-05-17 15:13:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 15:13:43 --> Final output sent to browser
+DEBUG - 2025-05-17 15:13:43 --> Total execution time: 0.1574
+INFO - 2025-05-17 15:13:43 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:43 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:13:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:43 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:43 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 15:13:43 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 15:13:43 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 15:13:43 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:43 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//head.php
+DEBUG - 2025-05-17 15:13:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:43 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:43 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/include/menu.php
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//navbar.php
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 15:13:43 --> Final output sent to browser
+DEBUG - 2025-05-17 15:13:43 --> Total execution time: 0.2175
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//content.php
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\template//footer.php
+INFO - 2025-05-17 15:13:43 --> Final output sent to browser
+DEBUG - 2025-05-17 15:13:43 --> Total execution time: 0.3264
+INFO - 2025-05-17 15:13:43 --> Config Class Initialized
+INFO - 2025-05-17 15:13:43 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:43 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:13:43 --> URI Class Initialized
+INFO - 2025-05-17 15:13:43 --> Router Class Initialized
+INFO - 2025-05-17 15:13:43 --> Output Class Initialized
+INFO - 2025-05-17 15:13:43 --> Security Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:43 --> Input Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language Class Initialized
+INFO - 2025-05-17 15:13:43 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:43 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:43 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:43 --> Email Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:43 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:43 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:13:43 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:13:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:43 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:43 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:13:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:43 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:43 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:13:43 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 15:13:43 --> Final output sent to browser
+DEBUG - 2025-05-17 15:13:43 --> Total execution time: 0.1097
+INFO - 2025-05-17 15:13:43 --> Config Class Initialized
+INFO - 2025-05-17 15:13:43 --> Config Class Initialized
+INFO - 2025-05-17 15:13:43 --> Hooks Class Initialized
+INFO - 2025-05-17 15:13:43 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> UTF-8 Support Enabled
+DEBUG - 2025-05-17 15:13:43 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:43 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:13:43 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:13:43 --> URI Class Initialized
+INFO - 2025-05-17 15:13:43 --> URI Class Initialized
+INFO - 2025-05-17 15:13:43 --> Router Class Initialized
+INFO - 2025-05-17 15:13:43 --> Router Class Initialized
+INFO - 2025-05-17 15:13:43 --> Output Class Initialized
+INFO - 2025-05-17 15:13:43 --> Output Class Initialized
+INFO - 2025-05-17 15:13:43 --> Security Class Initialized
+INFO - 2025-05-17 15:13:43 --> Security Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2025-05-17 15:13:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:43 --> Input Class Initialized
+INFO - 2025-05-17 15:13:43 --> Input Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language Class Initialized
+INFO - 2025-05-17 15:13:43 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:43 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:43 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:43 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:43 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:13:43 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 15:13:43 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:43 --> Email Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:43 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:43 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:13:43 --> Email Class Initialized
+INFO - 2025-05-17 15:13:43 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:13:43 --> Config Class Initialized
+INFO - 2025-05-17 15:13:43 --> Hooks Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:43 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:43 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 15:13:43 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:13:43 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:43 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:13:43 --> URI Class Initialized
+INFO - 2025-05-17 15:13:43 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:43 --> Router Class Initialized
+INFO - 2025-05-17 15:13:43 --> Output Class Initialized
+INFO - 2025-05-17 15:13:43 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:13:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:43 --> Security Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:13:43 --> Input Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language Class Initialized
+INFO - 2025-05-17 15:13:43 --> Loader Class Initialized
+INFO - 2025-05-17 15:13:43 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:13:43 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:13:43 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:13:43 --> Email Class Initialized
+INFO - 2025-05-17 15:13:43 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:13:43 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:13:43 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 15:13:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:43 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:43 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:43 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:43 --> Model "SMMP_datatable" initialized
+DEBUG - 2025-05-17 15:13:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 15:13:43 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 15:13:43 --> Final output sent to browser
+DEBUG - 2025-05-17 15:13:43 --> Total execution time: 0.1314
+INFO - 2025-05-17 15:13:43 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:43 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:13:44 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:44 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:44 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:44 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:44 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:13:44 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 15:13:44 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 15:13:44 --> Final output sent to browser
+DEBUG - 2025-05-17 15:13:44 --> Total execution time: 0.1809
+INFO - 2025-05-17 15:13:44 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:13:44 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:13:44 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:13:44 --> Cart Class Initialized
+INFO - 2025-05-17 15:13:44 --> Controller Class Initialized
+INFO - 2025-05-17 15:13:44 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:13:44 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 15:13:44 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 15:13:44 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 15:15:02 --> Config Class Initialized
+INFO - 2025-05-17 15:15:02 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:15:02 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:02 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:02 --> URI Class Initialized
+INFO - 2025-05-17 15:15:02 --> Router Class Initialized
+INFO - 2025-05-17 15:15:02 --> Output Class Initialized
+INFO - 2025-05-17 15:15:02 --> Security Class Initialized
+DEBUG - 2025-05-17 15:15:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:02 --> Input Class Initialized
+INFO - 2025-05-17 15:15:02 --> Language Class Initialized
+INFO - 2025-05-17 15:15:02 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:02 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:15:02 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:15:02 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:15:02 --> Email Class Initialized
+INFO - 2025-05-17 15:15:02 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:02 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:15:02 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:02 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:15:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:15:02 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:02 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:15:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:02 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:02 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:02 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:02 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:02 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 15:15:02 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/index.php
+INFO - 2025-05-17 15:15:02 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/modal_change_status_santri.php
+INFO - 2025-05-17 15:15:02 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/js.php
+INFO - 2025-05-17 15:15:02 --> Final output sent to browser
+DEBUG - 2025-05-17 15:15:02 --> Total execution time: 0.2041
+INFO - 2025-05-17 15:15:02 --> Config Class Initialized
+INFO - 2025-05-17 15:15:02 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:15:02 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:02 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:02 --> URI Class Initialized
+INFO - 2025-05-17 15:15:02 --> Router Class Initialized
+INFO - 2025-05-17 15:15:02 --> Output Class Initialized
+INFO - 2025-05-17 15:15:02 --> Security Class Initialized
+DEBUG - 2025-05-17 15:15:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:02 --> Input Class Initialized
+INFO - 2025-05-17 15:15:02 --> Language Class Initialized
+INFO - 2025-05-17 15:15:02 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:02 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:15:02 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:15:02 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:15:02 --> Email Class Initialized
+INFO - 2025-05-17 15:15:02 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:02 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:15:02 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:02 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:15:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:15:02 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:02 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:15:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:02 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:02 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:02 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:02 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:02 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/global/page_header.php
+INFO - 2025-05-17 15:15:02 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/index.php
+INFO - 2025-05-17 15:15:02 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/modal_change_status_santri.php
+INFO - 2025-05-17 15:15:02 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/santri/index_page/js.php
+INFO - 2025-05-17 15:15:02 --> Final output sent to browser
+DEBUG - 2025-05-17 15:15:02 --> Total execution time: 0.0907
+INFO - 2025-05-17 15:15:02 --> Config Class Initialized
+INFO - 2025-05-17 15:15:02 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:15:02 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:02 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:02 --> URI Class Initialized
+INFO - 2025-05-17 15:15:02 --> Router Class Initialized
+INFO - 2025-05-17 15:15:02 --> Output Class Initialized
+INFO - 2025-05-17 15:15:02 --> Security Class Initialized
+DEBUG - 2025-05-17 15:15:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:02 --> Input Class Initialized
+INFO - 2025-05-17 15:15:02 --> Language Class Initialized
+INFO - 2025-05-17 15:15:02 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:02 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:15:02 --> Config Class Initialized
+INFO - 2025-05-17 15:15:02 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:15:02 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:02 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:02 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:15:02 --> URI Class Initialized
+INFO - 2025-05-17 15:15:02 --> Router Class Initialized
+DEBUG - 2025-05-17 15:15:02 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:15:02 --> Output Class Initialized
+INFO - 2025-05-17 15:15:02 --> Security Class Initialized
+INFO - 2025-05-17 15:15:02 --> Email Class Initialized
+INFO - 2025-05-17 15:15:02 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2025-05-17 15:15:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:02 --> Input Class Initialized
+INFO - 2025-05-17 15:15:02 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:15:02 --> Language Class Initialized
+INFO - 2025-05-17 15:15:02 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:02 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:15:02 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:02 --> Helper loaded: uuid_helper
+DEBUG - 2025-05-17 15:15:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:15:02 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:02 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:15:02 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:15:02 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:15:02 --> Email Class Initialized
+INFO - 2025-05-17 15:15:02 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:02 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:15:02 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:02 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:15:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 15:15:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:02 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:02 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:02 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:02 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:02 --> Final output sent to browser
+DEBUG - 2025-05-17 15:15:02 --> Total execution time: 0.0900
+INFO - 2025-05-17 15:15:02 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:02 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:15:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:02 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:02 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:02 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:02 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:02 --> Final output sent to browser
+DEBUG - 2025-05-17 15:15:02 --> Total execution time: 0.1089
+INFO - 2025-05-17 15:15:14 --> Config Class Initialized
+INFO - 2025-05-17 15:15:14 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:14 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:14 --> URI Class Initialized
+INFO - 2025-05-17 15:15:14 --> Router Class Initialized
+INFO - 2025-05-17 15:15:14 --> Output Class Initialized
+INFO - 2025-05-17 15:15:14 --> Security Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:14 --> Input Class Initialized
+INFO - 2025-05-17 15:15:14 --> Language Class Initialized
+INFO - 2025-05-17 15:15:14 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:14 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:15:14 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:15:14 --> Email Class Initialized
+INFO - 2025-05-17 15:15:14 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:14 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:15:14 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:14 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:15:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:15:14 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:14 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:15:14 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:14 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:14 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:14 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:14 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:14 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 15:15:14 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 15:15:14 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 15:15:14 --> Final output sent to browser
+DEBUG - 2025-05-17 15:15:14 --> Total execution time: 0.0988
+INFO - 2025-05-17 15:15:14 --> Config Class Initialized
+INFO - 2025-05-17 15:15:14 --> Hooks Class Initialized
+INFO - 2025-05-17 15:15:14 --> Config Class Initialized
+INFO - 2025-05-17 15:15:14 --> Config Class Initialized
+INFO - 2025-05-17 15:15:14 --> Hooks Class Initialized
+INFO - 2025-05-17 15:15:14 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:14 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:14 --> URI Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> UTF-8 Support Enabled
+DEBUG - 2025-05-17 15:15:14 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:14 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:14 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:14 --> URI Class Initialized
+INFO - 2025-05-17 15:15:14 --> URI Class Initialized
+INFO - 2025-05-17 15:15:14 --> Router Class Initialized
+INFO - 2025-05-17 15:15:14 --> Config Class Initialized
+INFO - 2025-05-17 15:15:14 --> Router Class Initialized
+INFO - 2025-05-17 15:15:14 --> Hooks Class Initialized
+INFO - 2025-05-17 15:15:14 --> Router Class Initialized
+INFO - 2025-05-17 15:15:14 --> Output Class Initialized
+INFO - 2025-05-17 15:15:14 --> Output Class Initialized
+INFO - 2025-05-17 15:15:14 --> Output Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:14 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:14 --> Security Class Initialized
+INFO - 2025-05-17 15:15:14 --> URI Class Initialized
+INFO - 2025-05-17 15:15:14 --> Security Class Initialized
+INFO - 2025-05-17 15:15:14 --> Security Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:14 --> Input Class Initialized
+INFO - 2025-05-17 15:15:14 --> Language Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2025-05-17 15:15:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:14 --> Input Class Initialized
+INFO - 2025-05-17 15:15:14 --> Input Class Initialized
+INFO - 2025-05-17 15:15:14 --> Language Class Initialized
+INFO - 2025-05-17 15:15:14 --> Language Class Initialized
+INFO - 2025-05-17 15:15:14 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:14 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:15:14 --> Router Class Initialized
+INFO - 2025-05-17 15:15:14 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:14 --> Output Class Initialized
+INFO - 2025-05-17 15:15:14 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:14 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:15:14 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:15:14 --> Security Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:14 --> Input Class Initialized
+INFO - 2025-05-17 15:15:14 --> Language Class Initialized
+INFO - 2025-05-17 15:15:14 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:14 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:15:14 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:15:14 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:15:14 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:15:14 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:15:14 --> Email Class Initialized
+INFO - 2025-05-17 15:15:14 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:14 --> Email Class Initialized
+INFO - 2025-05-17 15:15:14 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:14 --> Helper loaded: cookie_helper
+DEBUG - 2025-05-17 15:15:14 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:15:14 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:15:14 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:14 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:14 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:15:14 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:15:14 --> Email Class Initialized
+INFO - 2025-05-17 15:15:14 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:15:14 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:14 --> Helper loaded: cookie_helper
+DEBUG - 2025-05-17 15:15:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:15:14 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:14 --> Helper loaded: language_helper
+DEBUG - 2025-05-17 15:15:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:15:14 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:15:14 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:15:14 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 15:15:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:15:14 --> Email Class Initialized
+INFO - 2025-05-17 15:15:14 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:14 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:15:14 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:14 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:15:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 15:15:14 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:14 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:14 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:14 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:14 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:14 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 15:15:14 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 15:15:14 --> Final output sent to browser
+DEBUG - 2025-05-17 15:15:14 --> Total execution time: 0.1135
+INFO - 2025-05-17 15:15:14 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:14 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:15:14 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:14 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:14 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:14 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:14 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:14 --> Model "Dashboard_Model" initialized
+INFO - 2025-05-17 15:15:14 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/index.php
+INFO - 2025-05-17 15:15:14 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js.php
+INFO - 2025-05-17 15:15:14 --> Final output sent to browser
+DEBUG - 2025-05-17 15:15:14 --> Total execution time: 0.1764
+INFO - 2025-05-17 15:15:14 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:14 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 15:15:14 --> Config Class Initialized
+INFO - 2025-05-17 15:15:14 --> Hooks Class Initialized
+DEBUG - 2025-05-17 15:15:15 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:15 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:15 --> URI Class Initialized
+INFO - 2025-05-17 15:15:15 --> Router Class Initialized
+INFO - 2025-05-17 15:15:15 --> Output Class Initialized
+INFO - 2025-05-17 15:15:15 --> Security Class Initialized
+DEBUG - 2025-05-17 15:15:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:15 --> Input Class Initialized
+INFO - 2025-05-17 15:15:15 --> Language Class Initialized
+INFO - 2025-05-17 15:15:15 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:15 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:15:15 --> Config Class Initialized
+INFO - 2025-05-17 15:15:15 --> Hooks Class Initialized
+INFO - 2025-05-17 15:15:15 --> Database Driver Class Initialized
+DEBUG - 2025-05-17 15:15:15 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 15:15:15 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:15 --> Utf8 Class Initialized
+INFO - 2025-05-17 15:15:15 --> Email Class Initialized
+INFO - 2025-05-17 15:15:15 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:15 --> URI Class Initialized
+INFO - 2025-05-17 15:15:15 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:15:15 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:15 --> Router Class Initialized
+INFO - 2025-05-17 15:15:15 --> Helper loaded: url_helper
+INFO - 2025-05-17 15:15:15 --> Config Class Initialized
+INFO - 2025-05-17 15:15:15 --> Hooks Class Initialized
+INFO - 2025-05-17 15:15:15 --> Output Class Initialized
+DEBUG - 2025-05-17 15:15:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:15:15 --> Security Class Initialized
+DEBUG - 2025-05-17 15:15:15 --> UTF-8 Support Enabled
+INFO - 2025-05-17 15:15:15 --> Utf8 Class Initialized
+DEBUG - 2025-05-17 15:15:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:15 --> Input Class Initialized
+INFO - 2025-05-17 15:15:15 --> URI Class Initialized
+INFO - 2025-05-17 15:15:15 --> Router Class Initialized
+DEBUG - 2025-05-17 15:15:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:15 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:15 --> Language Class Initialized
+INFO - 2025-05-17 15:15:15 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:15 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:15 --> Output Class Initialized
+INFO - 2025-05-17 15:15:15 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:15 --> Security Class Initialized
+INFO - 2025-05-17 15:15:15 --> Loader Class Initialized
+ERROR - 2025-05-17 15:15:15 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 15:15:15 --> Helper loaded: uuid_helper
+INFO - 2025-05-17 15:15:15 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 15:15:15 --> Session: Class initialized using 'files' driver.
+DEBUG - 2025-05-17 15:15:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-05-17 15:15:15 --> Input Class Initialized
+INFO - 2025-05-17 15:15:15 --> Language Class Initialized
+INFO - 2025-05-17 15:15:15 --> Loader Class Initialized
+INFO - 2025-05-17 15:15:15 --> Model "Ion_auth_model" initialized
+INFO - 2025-05-17 15:15:15 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:15:15 --> Helper loaded: uuid_helper
+DEBUG - 2025-05-17 15:15:15 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-05-17 15:15:15 --> Email Class Initialized
+INFO - 2025-05-17 15:15:15 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:15 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:15:15 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:15 --> Database Driver Class Initialized
+INFO - 2025-05-17 15:15:15 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:15:15 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+DEBUG - 2025-05-17 15:15:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-05-17 15:15:15 --> Email Class Initialized
+INFO - 2025-05-17 15:15:15 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-05-17 15:15:15 --> Helper loaded: cookie_helper
+INFO - 2025-05-17 15:15:15 --> Helper loaded: language_helper
+INFO - 2025-05-17 15:15:15 --> Helper loaded: url_helper
+DEBUG - 2025-05-17 15:15:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2025-05-17 15:15:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:15 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:15 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:15 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:15 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:15 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 15:15:15 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 15:15:15 --> Final output sent to browser
+DEBUG - 2025-05-17 15:15:15 --> Total execution time: 0.3023
+INFO - 2025-05-17 15:15:15 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:15 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:15:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:15 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:15 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:15 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:15 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:15 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/graph.php
+INFO - 2025-05-17 15:15:15 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_graph.php
+INFO - 2025-05-17 15:15:15 --> Final output sent to browser
+DEBUG - 2025-05-17 15:15:15 --> Total execution time: 0.1519
+INFO - 2025-05-17 15:15:15 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:15 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:15:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:15 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:15 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:15 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:15 --> Model "SMMP_datatable" initialized
+ERROR - 2025-05-17 15:15:15 --> Query error: Table 'ppsq.sales_order' doesn't exist - Invalid query: select * from sales_order where status=0
+INFO - 2025-05-17 15:15:15 --> Language file loaded: language/english/db_lang.php
+INFO - 2025-05-17 15:15:15 --> Session: Class initialized using 'files' driver.
+INFO - 2025-05-17 15:15:15 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-05-17 15:15:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-05-17 15:15:15 --> Cart Class Initialized
+INFO - 2025-05-17 15:15:15 --> Controller Class Initialized
+INFO - 2025-05-17 15:15:15 --> Model "SMMP_Model" initialized
+INFO - 2025-05-17 15:15:15 --> Model "SMMP_datatable" initialized
+INFO - 2025-05-17 15:15:15 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/trans.php
+INFO - 2025-05-17 15:15:15 --> File loaded: C:\xampp\htdocs\santrinet\application\views\role/admin/page/dashboard/index_page/js_trans.php
+INFO - 2025-05-17 15:15:15 --> Final output sent to browser
+DEBUG - 2025-05-17 15:15:15 --> Total execution time: 0.2115

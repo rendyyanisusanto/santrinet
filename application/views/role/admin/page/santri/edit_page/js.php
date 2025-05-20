@@ -23,4 +23,29 @@
 		        });
 		    return false;
 		});
+		function add_document(){
+			let uuid = generateUUID();
+			let panel = '<div class="form-group">';
+				panel +='					<div class="col-lg-3">';
+				panel +='						<input type="text" placeholder="" name="dokumen['+uuid+'][name]" class="form-control">';
+				panel +='					</div>';
+				panel +='					<div class="col-lg-6">';
+				panel +='						<input type="file" placeholder="" name="dokumen['+uuid+'][val]" class="form-control">';
+				panel +='					</div>';
+				panel +='				</div>';
+
+			$('.additional-document').append(panel);
+		}
+
+		function delete_document(id){
+			send_ajax('Santri/delete_document/'+id, {}).then(function(data){
+				 var response = JSON.parse(data);
+		            if (response.status == 200) {
+			            toastr.success(response.msg);
+						$('.cl'+id).remove();
+		            }else{
+			            toastr.error(response.msg);
+		            }
+			})
+		}
 	</script>

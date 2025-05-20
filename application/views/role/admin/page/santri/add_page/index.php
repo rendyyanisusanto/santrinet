@@ -41,6 +41,20 @@
 									</div>
 								</div>
 								<div class="form-group">
+									<label class="col-lg-3 control-label">Angkatan : </label>
+									<div class="col-lg-6">
+										<select name="angkatan_id" id="" class="form-control">
+											<?php
+												foreach ($data_get['angkatan'] as $key => $value) {
+													?>
+														<option value="<?= $value['id']?>"><?= $value['nama'] ?></option>
+													<?php
+												}
+											?>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
 									<label class="col-lg-3 control-label">Tempat Lahir : </label>
 									<div class="col-lg-6">
 										<input type="text" placeholder=""  name="tempat_lahir" class="form-control">

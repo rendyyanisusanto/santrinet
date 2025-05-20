@@ -28,6 +28,16 @@ class sekolah extends MY_Controller {
 		$data['account']	=	$this->get_user_account();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
+	
+	function peserta_sekolah(){
+		
+		$data['param'] 		= 	$this->arr;
+		$data['account']	=	$this->get_user_account();
+		$data['asrama']		=	$this->db->query('select id, nama from asrama')->result_array();
+		$data['sekolah']		=	$this->db->query('select id, nama from sekolah')->result_array();
+		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/peserta_sekolah/index',$data['param']['parents_link'].'/peserta_sekolah/js' ],$data);
+
+	}
 	function import_page(){
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
@@ -415,5 +425,78 @@ class sekolah extends MY_Controller {
 
         echo json_encode($output);
 	}
+	function add_peserta_sekolah(){
+		try {
+			
+			$data = [
+				'santri_id'	=>	$_POST['santri_id'],
+				'sekolah_id'	=>	$_POST['sekolah_id']
+			];
+			if ($this->save_data('peserta_sekolah', $data)) {
+				echo json_encode([
+					'status'	=>	200,
+					'msg'		=>	'Data peserta sekolah berhasil ditambahkan'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	'Data peserta sekolah gagal ditambahkan'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	$e
+			]);
+		}
+	}
+	function delete_peserta_sekolah(){
+		try {
+			$dt = $this->arr;
+			if ($this->db->delete("peserta_sekolah", ["id"=>$_POST['id']])) {
+				echo json_encode([
+					'status'	=>  200,
+					'msg'		=>	'Data berhasil terhapus'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>  500,
+					'msg'		=>	'Data gagal terhapus'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'status'	=>  500,
+				'msg'		=>	$e
+			]);
+		}
+	}
+	function get_table_peserta_sekolah(){
+		
+		$data['param'] 		= 	$this->arr;
+		$search = $_POST['search'];
+		$opt = $_POST['opt'];
+		$data['santri']	=	$this->db->query('SELECT 
+			s.id, s.nama, (select nama from asrama where asrama.id = s.asrama_id) as nama_asrama
+		FROM 
+			santri s
+		LEFT JOIN 
+			peserta_sekolah pm ON s.id = pm.santri_id
+		WHERE 
+			pm.santri_id IS NULL
+		AND 
+			s.nama LIKE "%' . $search . '%"
+		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
+		LIMIT 20;')->result_array();
 
+		$this->my_view([$data['param']['parents_link'].'/peserta_sekolah/table'], $data);
+	}
+
+	function get_peserta_sekolah(){
+		$id = $_POST['id'];
+		
+		$data['param'] 		= 	$this->arr;
+		$data['peserta_sekolah']	=	$this->db->query('select * from v_sekolah where sekolah_id='.$id)->result_array();
+		$this->my_view([$data['param']['parents_link'].'/peserta_sekolah/table_sekolah'], $data);
+	}
 }

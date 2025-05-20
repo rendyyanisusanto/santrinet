@@ -28,7 +28,8 @@
 		           delay: 250,
 		           data: function (params) {
 		              return {
-		                searchTerm: params.term // search term
+		                searchTerm: params.term,
+						kategori_tatib_id: $('.kategori_tatib').val() || 1
 		              };
 		           },
 		           processResults: function (response) {
@@ -39,6 +40,16 @@
 		           cache: true
 		         }
 	    });
+
+		$('.select-tatib').on('select2:select', function (e) {
+			const data = e.params.data;
+			
+			send_ajax('<?php echo $data_get['param']['table'] ?>/get_sanksi/'+data.id, {}).then(function(data){
+				var rsp = JSON.parse(data);
+
+				$('.takzir').val(rsp.sanksi);
+			});
+		});
 
 		 $('.select-pelapor').select2({
 	        ajax: { 

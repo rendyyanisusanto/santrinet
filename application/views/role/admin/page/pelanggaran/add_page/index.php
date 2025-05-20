@@ -38,14 +38,30 @@
 									</div>
 								</div>
 								
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<label class="col-lg-3 control-label">Pelanggaran: <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
 										<input type="text" name="pelanggaran" class="form-control">
 									</div>
+								</div> -->
+
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Tingkat Pelanggaran (TATIB) : <i class="text-danger">*</i></label>
+									<div class="col-lg-6">
+										<select name="kategori_tatib" class="form-control kategori_tatib">
+											<option value="">-- Pilih --</option>
+											<?php
+												foreach ($data_get['kategori_tatib'] as $key => $value) {
+													?>
+														<option value="<?= $value['id']?>"><?= $value['nama']?></option>
+													<?php
+												}
+											?>
+										</select>
+									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-lg-3 control-label">Jenis Pelanggaran (TATIB) : <i class="text-danger">*</i></label>
+									<label class="col-lg-3 control-label">Pelanggaran (TATIB) : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
 										<select name="tatib_id" class="select-tatib">
 											<option value="">-- Pilih --</option>
@@ -56,7 +72,7 @@
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Takzir: <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input type="text" name="takzir" class="form-control">
+										<input type="text" name="takzir" class="form-control takzir">
 									</div>
 								</div>
 							
@@ -142,53 +158,4 @@
 			</form>
 		</div>
 	</div>
-</div>
-
-<div class="modal fade modal-obat" role="dialog">
-  <div class="modal-dialog">
-  	<form id="app-submit-obat" class="form-horizontal" action="<?php echo $data_get['param']['table'] ?>/simpan_data_obat" method="POST">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Tambah Obat</h4>
-      </div>
-      <div class="modal-body">
-      	
-      		<label>Kode</label>
-      		<input type="text" class="form-control" name="kode">
-      		<label>Nama</label>
-      		<input type="text" class="form-control" name="nama">
-      	
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-success"  >Tambah</button>
-      </div>
-    </div>
-    </form>
-  </div>
-</div>
-
-<div class="modal fade modal-keluhan" role="dialog">
-  <div class="modal-dialog">
-  	<form id="app-submit-keluhan" class="form-horizontal" action="<?php echo $data_get['param']['table'] ?>/simpan_data_keluhan" method="POST">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Tambah Keluhan</h4>
-      </div>
-      <div class="modal-body">
-      		<label>Nama</label>
-      		<input type="text" class="form-control" name="nama">
-      	
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-success"  >Tambah</button>
-      </div>
-    </div>
-    </form>
-  </div>
 </div>

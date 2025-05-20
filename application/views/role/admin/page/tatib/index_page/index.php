@@ -27,7 +27,7 @@
                                 echo "</tr>";
                             }
                             // Menampilkan setiap tatib dalam kategori dengan indentasi
-                            echo "<tr><td>&nbsp;&nbsp;&nbsp;<a style='color: black;' href='Tatib/edit_page/{$tatib['tatib_id']}' class='app-item'>{$tatib['tatib_kode']}. {$tatib['tatib_nama']} - <b> Poin {$tatib['tatib_poin']} </b></a></td> <td width='1%'><button onclick='delete_item({$tatib['tatib_id']});' type='button' class='btn btn-danger btn-xs'><i class='icon-close2'></i></button></td></tr>";
+                            echo "<tr><td>&nbsp;&nbsp;&nbsp;<a style='color: black;' href='Tatib/edit_page/{$tatib['tatib_id']}' class='app-item'>{$tatib['tatib_kode']}. {$tatib['tatib_nama']} - <b> Sanksi :  {$tatib['tatib_sanksi']} </b></a></td> <td width='1%'><button onclick='delete_item({$tatib['tatib_id']});' type='button' class='btn btn-danger btn-xs'><i class='icon-close2'></i></button></td></tr>";
                         }
                         ?>
                     </tbody>

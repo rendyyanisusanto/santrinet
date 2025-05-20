@@ -47,6 +47,12 @@
 									</div>
 								</div>
 								<div class="form-group">
+									<label class="col-lg-3 control-label">Sanksi : <i class="text-danger">*</i></label>
+									<div class="col-lg-6">
+										<input type="text" placeholder="" required name="sanksi" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
 									<label class="col-lg-3 control-label">Status : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
 										<select name="status_aktif" required class="form-control">

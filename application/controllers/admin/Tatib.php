@@ -27,6 +27,7 @@ class tatib extends MY_Controller {
                 tatib.kode AS tatib_kode,
                 tatib.poin AS tatib_poin,
                 tatib.nama AS tatib_nama,
+                tatib.sanksi AS tatib_sanksi,
                 tatib.id AS tatib_id
             FROM
                 kategori_tatib
@@ -88,6 +89,7 @@ class tatib extends MY_Controller {
 				'kode' => $_POST['kode'],
 				'nama' => $_POST['nama'],
 				'poin'	=>	$_POST['poin'],
+				'sanksi'	=>	$_POST['sanksi'],
 				'kategori_tatib_id' => $_POST['kategori_tatib_id'],
 				'status_aktif' => $_POST['status_aktif']
 			];

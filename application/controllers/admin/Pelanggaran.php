@@ -50,6 +50,7 @@ class pelanggaran extends MY_Controller {
 		$data['param'] 		= 	$this->arr;
 		$data['account']	=	$this->get_user_account();
 		$data['uuid']		=	generate_uuid();
+		$data['kategori_tatib'] = 	$this->db->query('select id, nama from kategori_tatib')->result_array();
 		$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/add_page/index',$data['param']['parents_link'].'/add_page/js', 'role/global/modal_setting'],$data);
 	}
 	function import_page(){
@@ -64,6 +65,7 @@ class pelanggaran extends MY_Controller {
 			$data['data_edit']	=	$this->my_where($data['param']['table'], [
 				$data['param']['id']	=>	$id
 			])->row_array();
+			$data['kategori_tatib'] = 	$this->db->query('select id, nama from kategori_tatib')->result_array();
 
 			if (!empty($data['data_edit'])) {
 				$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/edit_page/index',$data['param']['parents_link'].'/edit_page/js', 'role/global/modal_setting'],$data);
@@ -236,7 +238,7 @@ class pelanggaran extends MY_Controller {
 				]);
 				$data = [
 					'santri_id'				=>	$_POST['santri_id'],
-					'pelanggaran'			=>	$_POST['pelanggaran'],
+					// 'pelanggaran'			=>	$_POST['pelanggaran'],
 					'tanggal'				=>	$_POST['tanggal'],
 					'kode'					=>	$_POST['kode'],
 					'uuid'					=>	$_POST['uuid'],
@@ -279,7 +281,7 @@ class pelanggaran extends MY_Controller {
 			
 			$data = [
 				'santri_id'				=>	$_POST['santri_id'],
-				'pelanggaran'			=>	$_POST['pelanggaran'],
+				// 'pelanggaran'			=>	$_POST['pelanggaran'],
 				'tanggal'				=>	$_POST['tanggal'],
 				'kode'					=>	$_POST['kode'],
 				'tatib_id'				=>	$_POST['tatib_id'],
@@ -486,7 +488,7 @@ class pelanggaran extends MY_Controller {
             $row[]		=	$santri['nama'];
             $row[]		=	$kategori_tatib['nama'];
             $row[]		=	$kategori_tatib['kategori_tatib'];
-            $row[]		=	$field['pelanggaran'];
+            // $row[]		=	$field['pelanggaran'];
             $row[]		=	$field['takzir'];
             $row[]		=	$field['status_takzir'];
             $row[]		=	str_replace('_',' ' ,$field['status_dokumen_pelanggaran']);
@@ -533,7 +535,7 @@ class pelanggaran extends MY_Controller {
 	}
 	function get_tatib_select(){
 		$searchTerm = $this->input->post('searchTerm');
-	     $fetched_records = $this->db->query("select id,kode, nama, (select nama from kategori_tatib where kategori_tatib.id=kategori_tatib_id) as kategori_tatib from tatib where kode like '%".$searchTerm."%' or nama like '%".$searchTerm."%' order by id DESC limit 10");
+	     $fetched_records = $this->db->query("select id,kode, nama, (select nama from kategori_tatib where kategori_tatib.id=kategori_tatib_id) as kategori_tatib from tatib where kategori_tatib_id=".$this->input->post("kategori_tatib_id")." and (kode like '%".$searchTerm."%' or nama like '%".$searchTerm."%') order by id DESC limit 30");
 	     $bahan = $fetched_records->result_array();
 
 	     $data = array();
@@ -543,6 +545,12 @@ class pelanggaran extends MY_Controller {
 
       	echo json_encode($data);	
 
+	}
+
+	function get_sanksi($id){
+		$tatib = $this->db->query("select sanksi from tatib where id=".$id)->row_array();
+
+		echo json_encode($tatib);
 	}
 
 	function get_pelapor_select(){
