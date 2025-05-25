@@ -47,6 +47,12 @@
 										<input type="date" placeholder=""  value="<?= $data_get['data_edit']['tanggal_lahir'] ?>" name="tanggal_lahir" class="form-control">
 									</div>
 								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Alamat : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder="" value="<?= $data_get['data_edit']['alamat']?>"  name="alamat" class="form-control">
+									</div>
+								</div>
 								
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Nama Ayah : <i class="text-danger">*</i></label>

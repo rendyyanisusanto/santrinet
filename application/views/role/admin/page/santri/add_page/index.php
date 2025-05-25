@@ -32,6 +32,12 @@
 									</div>
 								</div>
 								<div class="form-group">
+									<label class="col-lg-3 control-label">Alamat : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder=""  name="alamat" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
 									<label class="col-lg-3 control-label">Jenis Kelamin :  </label>
 									<div class="col-lg-6">
 										<select class="form-control" name="jenis_kelamin">

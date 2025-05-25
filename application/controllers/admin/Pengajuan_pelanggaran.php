@@ -7,7 +7,7 @@ use PhpOffice\PhpWord\TemplateProcessor;
 use Dompdf\Dompdf;
 
 
-class pelanggaran extends MY_Controller {
+class pengajuan_pelanggaran extends MY_Controller {
 	public $arr = [
 			'title'				=>	'Master Data Pelanggaran',
 			'table'				=>	'pelanggaran',
@@ -16,7 +16,7 @@ class pelanggaran extends MY_Controller {
 			'column_search'		=>	[ 'id','kode','santri_id'],
 			'order'				=>	['id'	=>	'DESC'],
 			'id'				=>	'id',
-			'parents_link'		=>	'role/admin/page/pelanggaran'
+			'parents_link'		=>	'role/admin/page/pengajuan_pelanggaran'
 	];
 
 	public function get_data()
@@ -687,7 +687,7 @@ class pelanggaran extends MY_Controller {
 						p.tanggal, 
 						p.status_pengajuan, 
 						p.pelanggaran 
-					FROM pengajuan_pelanggaran p
+					FROM pelanggaran p
 					-- join ke santri pelanggar
 					LEFT JOIN santri s ON s.id = p.santri_id
 					-- join ke pengurus (pelapor)
