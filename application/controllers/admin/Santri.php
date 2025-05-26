@@ -157,7 +157,7 @@ class santri extends MY_Controller {
 				$data['rekam_medis']	=	$this->db->query('select * from rekam_medis where santri_id='.$id)->result_array();
 				$data['buku_tahfidz']	=	$this->db->query('select * from buku_tahfidz where santri_id='.$id)->result_array();
 				$data['perizinan_santri'] = $this->db->query('select * from perizinan_santri where santri_id='.$id)->result_array();
-				print_r($data);
+				// print_r($data);
 				if (!empty($data['data_edit'])) {
 					$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/look_page/index',$data['param']['parents_link'].'/look_page/js'],$data);
 				}
