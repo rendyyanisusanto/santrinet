@@ -3,7 +3,7 @@
 <script src="<?php echo base_url('inc/limitless/global_assets/')?>js/plugins/forms/selects/select2.min.js"></script>
 <!-- /include -->
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-md-4">
 		<div class="panel">
 			<form id="app-submit" class="form-horizontal" action="<?php echo $data_get['param']['table'] ?>/simpan_data" method="POST">
 				<div class="panel-body">	
@@ -12,11 +12,11 @@
 							<legend class="text-semibold"><?php echo $data_get['param']['title'] ?> - <b>TAMBAH DATA</b></legend>
 							
 
-							<div class="col-md-6">
-								<div class="form-group">
+							<div class="col-md-12">
+								<div class="form-group" style="display: none;">
 									<label class="col-lg-3 control-label">Kode : <i class="text-danger">*</i></label>
 									<div class="col-lg-4">
-										<input type="text" placeholder="" required name="kode" class="form-control kode">
+										<input type="text" placeholder=""  name="kode" class="form-control kode">
 									</div> 
 									<div class="col-lg-3">
 						              	<button class="btn btn-xs btn-warning" data-toggle="tooltip" onclick="reload_table('<?php echo $data_get['param']['table']; ?>','kode','kode');" data-placement="top" title="Reload Kode" type="button"><i class="icon-pencil7"></i></button>
@@ -29,13 +29,13 @@
 										<input type="text" placeholder="" required name="nama" class="form-control">
 									</div>
 								</div>
-								<div class="form-group">
+								<div class="form-group"  style="display: none;">
 									<label class="col-lg-3 control-label">Color : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
 										<input type="color" placeholder="" required name="color" class="form-control">
 									</div>
 								</div>
-								<div class="form-group">
+								<div class="form-group" style="display: none;">
 									<label class="col-lg-3 control-label">Status : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
 										<select name="status_aktif" required class="form-control">

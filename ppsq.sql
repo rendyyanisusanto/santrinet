@@ -1220,7 +1220,7 @@ CREATE TABLE `perolehan_tahfidz`  (
   `juz_terakhir` int NOT NULL,
   `surat_id` int NULL DEFAULT NULL,
   `ayat_terakhir` int NULL DEFAULT NULL,
-  `tanggal_update` date NULL DEFAULT curdate,
+  `tanggal_update` date NULL ,
   `catatan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `santri_id`(`santri_id` ASC) USING BTREE,
