@@ -152,10 +152,12 @@ class santri extends MY_Controller {
 			if (!empty($id)) {
 				$data['param']	=	$this->arr;
 				$data['id']		=	$id;
-				$data['data_edit']	=	$this->my_where($data['param']['table'], [
-					$data['param']['id']	=>	$id
-				])->row_array();
-				
+				$data['data_edit']	=	$this->db->query('select * from santri where id='.$id)->row_array();
+				$data['pelanggaran']	=	$this->db->query('select * from pelanggaran where santri_id='.$id)->result_array();
+				$data['rekam_medis']	=	$this->db->query('select * from rekam_medis where santri_id='.$id)->result_array();
+				$data['buku_tahfidz']	=	$this->db->query('select * from buku_tahfidz where santri_id='.$id)->result_array();
+				$data['perizinan_santri'] = $this->db->query('select * from perizinan_santri where santri_id='.$id)->result_array();
+				print_r($data);
 				if (!empty($data['data_edit'])) {
 					$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/look_page/index',$data['param']['parents_link'].'/look_page/js'],$data);
 				}
@@ -745,7 +747,7 @@ class santri extends MY_Controller {
             $row        =   array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]      =   (!empty($field['foto'])) ? '<center><img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="width: 30px;height:40px;"></center>' : '<center><img src="'.base_url('inc/media/no_image.jpg').'" style="width: 40px;height:40px;"></center>';
-            $row[]		=	'<a href="santri/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
+            $row[]		=	'<a href="santri/look_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	'<a onclick="change_status_santri('.$field['id'].','."'".$field['status_santri']."'".')"><span class="label label-block label-rounded label-'.(($field['status_santri'] == "AKTIF") ? "success" : "info").'">'.$field['status_santri'].'</span></a>' ;
             $row[]		=	'<ul class="text-center icons-list">

@@ -12,8 +12,8 @@
 							<legend class="text-semibold"><?php echo $data_get['param']['title'] ?> - <b>TAMBAH DATA</b></legend>
 							
 
-							<div class="col-md-6" style="display: none;">
-								<div class="form-group">
+							<div class="col-md-6" >
+								<div class="form-group" style="display: none;">
 									<label class="col-lg-3 control-label">Kode : <i class="text-danger">*</i></label>
 									<div class="col-lg-4">
 										<input type="text" placeholder=""  name="kode" class="form-control kode">
