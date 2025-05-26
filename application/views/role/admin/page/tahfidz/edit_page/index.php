@@ -17,7 +17,7 @@
 									<input type="hidden" value="<?= $data_get['data_edit']['id'] ?>" name="id">
 									<label class="col-lg-3 control-label">Kode : <i class="text-danger">*</i></label>
 									<div class="col-lg-4">
-										<input type="text" placeholder="" value="<?= $data_get['data_edit']['kode'] ?>" required name="kode" class="form-control kode">
+										<input type="text" placeholder="" value="<?= $data_get['data_edit']['kode'] ?>"  name="kode" class="form-control kode">
 									</div> 
 									<div class="col-lg-3">
 						              	<button class="btn btn-xs btn-warning" data-toggle="tooltip" onclick="reload_table('<?php echo $data_get['param']['table']; ?>','kode','kode');" data-placement="top" title="Reload Kode" type="button"><i class="icon-pencil7"></i></button>
@@ -33,14 +33,14 @@
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Color : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input type="color" placeholder="" required  value="<?= $data_get['data_edit']['color'] ?>" name="color" class="form-control">
+										<input type="color" placeholder=""   value="<?= $data_get['data_edit']['color'] ?>" name="color" class="form-control">
 									</div>
 								</div>
 
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Status : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<select name="status_aktif" required class="form-control">
+										<select name="status_aktif"  class="form-control">
 											<option <?= ($data_get['data_edit']['status_aktif'] == 1) ? "selected":""; ?> value="1">AKTIF</option>
 											<option <?= ($data_get['data_edit']['status_aktif'] == 0) ? "selected":""; ?> value="0">TIDAK AKTIF</option>
 										</select>

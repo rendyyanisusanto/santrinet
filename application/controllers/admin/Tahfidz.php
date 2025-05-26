@@ -190,9 +190,9 @@ class tahfidz extends MY_Controller {
             $no++;
             $row        =   array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
-            $row[]		=	'<a href="tahfidz/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
+            // $row[]		=	'<a href="tahfidz/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:'.$field['color'].'">'.strtoupper($field['nama']).'</b>' : '-';
-            $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;
+            // $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;
             $row[]		=	'<ul class="text-center icons-list">
             					<li class="dropdown">
             						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
