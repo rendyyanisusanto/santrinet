@@ -323,6 +323,7 @@ class santri extends MY_Controller {
 				'nama'           => $_POST['nama'],
 				'nis'            => $_POST['nis'],
 				'nik'            => $_POST['nik'],
+				'nip'            => $_POST['nip'],
 				'alamat'            => $_POST['alamat'],
 				'jenis_kelamin'  => $_POST['jenis_kelamin'],
 				'tempat_lahir'   => $_POST['tempat_lahir'],
@@ -447,6 +448,7 @@ class santri extends MY_Controller {
 			$data = [
 				'nama'           => $_POST['nama'],
 				'nis'            => $_POST['nis'],
+				'nip'            => $_POST['nip'],
 				'alamat'            => $_POST['alamat'],
 				'jenis_kelamin'  => $_POST['jenis_kelamin'],
 				'tempat_lahir'   => $_POST['tempat_lahir'],
@@ -747,6 +749,7 @@ class santri extends MY_Controller {
             $row        =   array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]      =   (!empty($field['foto'])) ? '<center><img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="width: 30px;height:40px;"></center>' : '<center><img src="'.base_url('inc/media/no_image.jpg').'" style="width: 40px;height:40px;"></center>';
+            $row[]		=	'<a href="santri/look_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nip']) ? strtoupper($field['nip']) : '-') . '</b></a>';
             $row[]		=	'<a href="santri/look_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	'<a onclick="change_status_santri('.$field['id'].','."'".$field['status_santri']."'".')"><span class="label label-block label-rounded label-'.(($field['status_santri'] == "AKTIF") ? "success" : "info").'">'.$field['status_santri'].'</span></a>' ;

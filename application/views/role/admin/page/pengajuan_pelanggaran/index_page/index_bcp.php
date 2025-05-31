@@ -13,11 +13,11 @@
 					<button class="btn btn-bulk-delete btn-danger" onclick="bulk_delete()" style="display: none;"><i class="icon-close2"></i> Hapus Data</button>
 				</div>
 				<div class="heading-elements">
-					<div class="heading-btn">
+					<!-- <div class="heading-btn">
 						<button type="button" class="btn btn-danger btn-icon" onclick="print_pdf();"><i class="icon-file-pdf"></i></button>
 						<button type="button" class="btn btn-success btn-icon" onclick="print_excel();"><i class="icon-file-excel"></i></button>
 						<button type="button" class="btn btn-info btn-print btn-icon" onclick="print();"><i class="icon-printer"></i></button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="panel-body" >
@@ -26,12 +26,14 @@
 						<thead>
 							<tr>
 								<th width="2%"><input type="checkbox" class="bulk-check" name=""></th>
-								<th width="2%">Foto</th>
-								<th width="10%">NIS</th>
-								<th width="10%">NIP</th>
+								<th width="10%">Tanggal</th>
 								<th>Nama</th>
-								<th width="10%">Status</th>
-								<th width="2%" class="text-center">Actions</th>
+								<th>Pelapor</th>
+								<th>Tatib</th>
+								<th>kronologi</th>
+								<th>Foto</th>
+								<th>Status</th>
+								<th>#</th>
 							</tr>
 						</thead>
 					<tbody></tbody>
@@ -48,4 +50,19 @@
 	</div>
 </div>
 </div>
+</div>
+
+<div class="modal modal-sp">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<center><h3><b>Cetak SP</b></h3></center>
+				<div class="div-sp"></div>
+				
+			</div>
+			<div class="modal-footer">
+		        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-close2"></i> Close</button>
+		      </div>
+		</div>
+	</div>
 </div>

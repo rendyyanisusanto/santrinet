@@ -82,7 +82,28 @@ class alumni extends MY_Controller {
 			]);
 		}
     }
-	
+	function convert_to_santri(){
+		try{
+			if($_POST['id'] != ''){
+				$this->my_update('santri', ['status_santri' => "AKTIF"], ['id' => $_POST['id']]);
+				$this->db->delete('alumni', ['santri_id'=>$_POST['id']]);
+				echo json_encode([
+					'status'	=>	200,
+					'msg'		=>	'Status santri berhasil diubah'
+				]);
+			}else{
+				echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	'ID tidak ditemukan'
+				]);
+			}
+		}catch(Exception $e){
+			echo json_encode([
+				'status'	=>	500,
+				'msg'		=>	$e
+			]);
+		}
+	}
 	public function datatable()
 	{
        	$this->arr['table'] = 'v_alumni';
@@ -110,9 +131,8 @@ class alumni extends MY_Controller {
             						<ul class="dropdown-menu dropdown-menu-right">
             							<li><a href="santri/look_page/'.$field['id'].'" class="app-item"><i class="icon-eye"></i> Lihat</a></li>
             							<li><a href="santri/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah</a></li>
-            							<li><a  onclick="change_status_santri('.$field['id'].','."'".$field['status_santri']."'".')"><i class="icon-user"></i> Jadikan Alumni</a></li>
-            							<li><a  onclick="change_status('.$field['id'].','.$field['status_aktif'].');"><i class="icon-close2"></i> '.(($field['status_aktif'] == 1) ? "Nonaktifkan" : "Aktifkan" ).'</a></li>
-            						</ul>
+            							<li><a  onclick="covert_to_santri('.$field['id'].')"><i class="icon-user"></i> Jadikan Santri Aktif</a></li>
+            							</ul>
             					</li>
             				</ul>';
             $data[]     =   $row;

@@ -16,7 +16,7 @@
 								<div class="form-group">
 									<label class="col-lg-3 control-label">NIP : </label>
 									<div class="col-lg-6">
-										<input type="text" placeholder=""  name="nis" class="form-control">
+										<input type="text" placeholder=""  name="nip" class="form-control">
 									</div>
 								</div>
 								<div class="form-group">
@@ -32,9 +32,9 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-lg-3 control-label">Alamat : </label>
+									<label class="col-lg-3 control-label">NIS : </label>
 									<div class="col-lg-6">
-										<input type="text" placeholder=""  name="alamat" class="form-control">
+										<input type="text" placeholder=""  name="nis" class="form-control">
 									</div>
 								</div>
 								<div class="form-group">
@@ -70,6 +70,12 @@
 									<label class="col-lg-3 control-label">Tanggal Lahir : </label>
 									<div class="col-lg-6">
 										<input type="date" placeholder=""  name="tanggal_lahir" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Alamat : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder=""  name="alamat" class="form-control">
 									</div>
 								</div>
 								<div class="form-group">

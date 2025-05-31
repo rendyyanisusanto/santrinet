@@ -27,7 +27,7 @@
 							<tr>
 								<th width="2%"><input type="checkbox" class="bulk-check" name=""></th>
 								<th width="2%">Foto</th>
-								<th width="10%">NIS</th>
+								<th width="10%">NIP</th>
 								<th>Nama</th>
 								<th>Tahun Lulus</th>
 								<th>Angkatan</th>

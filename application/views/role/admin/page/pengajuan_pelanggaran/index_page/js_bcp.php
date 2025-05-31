@@ -79,15 +79,6 @@
             },
             ],
     } );
-    $('.submit-change').on('submit', function(e){
-        send_ajax($(this).attr('action'), $(this).serialize()).then(function(data){
-            var resp = JSON.parse(data);
-            toastr.success(resp.msg);
-            table.ajax.reload();
-            $('.modal-change-status').modal('toggle');
-        })
-        return false;
-    });
 
     function search()
     {
@@ -220,11 +211,23 @@
         }
         return false;
     }
+    
+    function ubah_takzir(id="", status="")
+    {
+       
+        send_ajax("<?php echo $data_get['param']['table'] ?>/status_takzir", {id:id, status:status}).then(function(data){
+            var data = JSON.parse(data);
+            toastr.success(data.msg);
+            table.ajax.reload();
+        })
+                    
+        return false;
+    }
 
-    function covert_to_santri(id="")
+    function change_status(id="", status="")
     {
         if (id != '') {
-            send_ajax("<?php echo $data_get['param']['table'] ?>/convert_to_santri", {id:id}).then(function(data_delete){
+            send_ajax("<?php echo $data_get['param']['table'] ?>/change_status", {id:id, status:status}).then(function(data_delete){
                 var resp_delete = JSON.parse(data_delete);
                 toastr.success(resp_delete.msg);
                 table.ajax.reload();
@@ -233,13 +236,13 @@
         }
         return false;
     }
-    function change_status_santri(id="", status="")
-    {
-        if (id != '') {
-            $('.change_id').val(id);
-            $('.status_santri').val(status);
-            $('.modal-change-status').modal('toggle');
+
+        function cetak_sp(id){
+            send_ajax('Pelanggaran/modal_sp', {id:id}).then(function(data){
+                $('.modal-sp').modal('toggle');
+                $('.div-sp').html(data);
+            })
         }
-        return false;
-    }
+
+        
 </script>

@@ -478,22 +478,16 @@ class pengajuan_pelanggaran extends MY_Controller {
         foreach ($list as $field) {
             $no++;
             $row        =   array();
-            $santri 	= $this->db->query('select nama from santri where id = '.$field['santri_id'])->row_array();
             $pelapor 	= $this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama from pengurus where pengurus.id = '.$field['pelapor_id'])->row_array();
-            $pengurus 	= $this->db->query('select  id, (select nama from santri where santri.id = santri_id) as nama from pengurus where pengurus.id = '.$field['pengurus_id'])->row_array();
             $kategori_tatib = $this->db->query('select nama, (select nama from kategori_tatib where kategori_tatib.id = kategori_tatib_id) as kategori_tatib from pelanggaran left join tatib on tatib.id=tatib_id where tatib.id='.$field['tatib_id'])->row_array();
             $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]		=	date('d/m/Y', strtotime($field['tanggal']));
-            $row[]		=	'<a href="pelanggaran/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
-            $row[]		=	$santri['nama'];
-            $row[]		=	$kategori_tatib['nama'];
-            $row[]		=	$kategori_tatib['kategori_tatib'];
-            // $row[]		=	$field['pelanggaran'];
-            $row[]		=	$field['takzir'];
-            $row[]		=	$field['status_takzir'];
-            $row[]		=	str_replace('_',' ' ,$field['status_dokumen_pelanggaran']);
+            $row[]		=	'';
             $row[]		=	$pelapor['nama'];
-            $row[]		=	$pengurus['nama'];
+            $row[]		=	$kategori_tatib['nama'];
+            $row[]		=	$field['kronologi'];
+            $row[]		=	$field['foto'];
+            $row[]		=	str_replace('_',' ' ,$field['status_pengajuan']);
             $row[]		=	'<ul class="text-center icons-list">
             					<li class="dropdown">
             						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -501,7 +495,6 @@ class pengajuan_pelanggaran extends MY_Controller {
             						</a>
             						<ul class="dropdown-menu dropdown-menu-right">
             							<li><a href="pelanggaran/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah</a></li>
-            							<li><a  onclick="ubah_takzir('.$field['id'].', \''.$field['status_takzir'].'\');"><i class="icon-color-sampler"></i> Ubah Status Takzir</a></li>
             							<li><a  onclick="cetak_sp('.$field['id'].');"><i class="icon-file-text3"></i> Cetak SP</a></li>
             							<li><a  onclick="delete_item('.$field['id'].');"><i class="icon-trash"></i> Hapus</a></li>
             						</ul>
