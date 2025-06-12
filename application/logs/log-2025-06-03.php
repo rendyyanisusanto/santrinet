@@ -64,3 +64,36 @@ INFO - 2025-06-03 10:48:14 --> Language file loaded: language/english/auth_lang.
 INFO - 2025-06-03 10:48:14 --> File loaded: C:\xampp\htdocs\santrinet\application\views\auth\login.php
 INFO - 2025-06-03 10:48:14 --> Final output sent to browser
 DEBUG - 2025-06-03 10:48:14 --> Total execution time: 0.2282
+INFO - 2025-06-03 10:58:36 --> Config Class Initialized
+INFO - 2025-06-03 10:58:36 --> Hooks Class Initialized
+DEBUG - 2025-06-03 10:58:36 --> UTF-8 Support Enabled
+INFO - 2025-06-03 10:58:36 --> Utf8 Class Initialized
+INFO - 2025-06-03 10:58:36 --> URI Class Initialized
+INFO - 2025-06-03 10:58:36 --> Router Class Initialized
+INFO - 2025-06-03 10:58:36 --> Output Class Initialized
+INFO - 2025-06-03 10:58:36 --> Security Class Initialized
+DEBUG - 2025-06-03 10:58:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-06-03 10:58:36 --> Input Class Initialized
+INFO - 2025-06-03 10:58:36 --> Language Class Initialized
+INFO - 2025-06-03 10:58:36 --> Loader Class Initialized
+INFO - 2025-06-03 10:58:36 --> Helper loaded: uuid_helper
+INFO - 2025-06-03 10:58:36 --> Database Driver Class Initialized
+DEBUG - 2025-06-03 10:58:36 --> Config file loaded: C:\xampp\htdocs\santrinet\application\config/ion_auth.php
+INFO - 2025-06-03 10:58:36 --> Email Class Initialized
+INFO - 2025-06-03 10:58:36 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2025-06-03 10:58:36 --> Helper loaded: cookie_helper
+INFO - 2025-06-03 10:58:36 --> Helper loaded: language_helper
+INFO - 2025-06-03 10:58:36 --> Helper loaded: url_helper
+DEBUG - 2025-06-03 10:58:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-06-03 10:58:36 --> Session: Class initialized using 'files' driver.
+INFO - 2025-06-03 10:58:36 --> Model "Ion_auth_model" initialized
+DEBUG - 2025-06-03 10:58:36 --> Session class already loaded. Second attempt ignored.
+INFO - 2025-06-03 10:58:36 --> Cart Class Initialized
+INFO - 2025-06-03 10:58:36 --> Controller Class Initialized
+DEBUG - 2025-06-03 10:58:36 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2025-06-03 10:58:36 --> Helper loaded: form_helper
+INFO - 2025-06-03 10:58:36 --> Form Validation Class Initialized
+INFO - 2025-06-03 10:58:36 --> Language file loaded: language/english/auth_lang.php
+INFO - 2025-06-03 10:58:36 --> File loaded: C:\xampp\htdocs\santrinet\application\views\auth\login.php
+INFO - 2025-06-03 10:58:36 --> Final output sent to browser
+DEBUG - 2025-06-03 10:58:36 --> Total execution time: 0.0854
