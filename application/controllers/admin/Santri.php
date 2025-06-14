@@ -53,6 +53,15 @@ class santri extends MY_Controller {
 			}			
 		}
 	}
+	function dokumen_page($id = ""){
+		if (!empty($id)) {
+			$data['param'] 		= 	$this->arr;
+			$data['id']			=	$id;
+			$data['santri']		=	$this->db->query('select id, nama from santri where id='.$id)->row_array();
+			$data['dokumen_santri']	=	$this->db->query('select id, fname, file from santri_dokumen where santri_id='.$id)->result_array();
+			$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/dokumen_page/index',$data['param']['parents_link'].'/dokumen_page/js', 'role/global/modal_setting'],$data);
+		}
+	}
 	function import_santri(){
 		$file_mimes = array('application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 		
@@ -545,6 +554,58 @@ class santri extends MY_Controller {
 		}
 	}
 
+	function update_dokumen(){
+		try {
+			if (!empty($_FILES['dokumen']['name'])) {
+					foreach ($_FILES['dokumen']['name'] as $key => $name) {
+						if (!empty($name['val'])) {
+							if(!empty($_POST['dokumen'][$key]['id'])){
+								$this->db->delete('santri_dokumen', ['id'=>$_POST['dokumen'][$key]['id']]);
+							}
+							$_FILES['file_dokumen']['name']     = $name['val'];
+							$_FILES['file_dokumen']['type']     = $_FILES['dokumen']['type'][$key]['val'];
+							$_FILES['file_dokumen']['tmp_name'] = $_FILES['dokumen']['tmp_name'][$key]['val'];
+							$_FILES['file_dokumen']['error']    = $_FILES['dokumen']['error'][$key]['val'];
+							$_FILES['file_dokumen']['size']     = $_FILES['dokumen']['size'][$key]['val'];
+	
+							$upload_path = './inc/media/santri/dokumen_santri/';
+							$file_name = time() . '_' . $_FILES['file_dokumen']['name'];
+	
+							$config_dokumen['upload_path']   = $upload_path;
+							$config_dokumen['allowed_types'] = '*'; // Semua tipe file
+							$config_dokumen['max_size']      = 5120; // 5MB
+							$config_dokumen['file_name']     = $file_name;
+	
+							// $this->upload->initialize($config_dokumen);
+							$this->load->library('upload', $config_dokumen);
+	
+							if ($this->upload->do_upload('file_dokumen')) {
+								$upload_data = $this->upload->data();
+	
+								// Simpan ke database
+								$data_dokumen = [
+									'santri_id' => $_POST['id'],
+									'fname' => $_POST['dokumen'][$key]['name'],
+									'file' => $upload_data['file_name']
+								];
+								$this->db->insert('santri_dokumen', $data_dokumen);
+							}
+						}
+					}
+					echo json_encode([
+						'status' => 200,
+						'msg'    => 'Data dokumen santri berhasil diperbarui'
+					]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'status'	=>	500,
+				'msg'		=>	$e->getMessage()
+			]);
+		}
+		
+	}
+
 	function delete_document($id){
 		if($this->db->delete('santri_dokumen', ['id'=>$id])){
 			echo json_encode([
@@ -759,8 +820,9 @@ class santri extends MY_Controller {
             							<i class="icon-menu9"></i>
             						</a>
             						<ul class="dropdown-menu dropdown-menu-right">
-            							<li><a href="santri/look_page/'.$field['id'].'" class="app-item"><i class="icon-eye"></i> Lihat</a></li>
-            							<li><a href="santri/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah</a></li>
+            							<li><a href="santri/look_page/'.$field['id'].'" class="app-item"><i class="icon-eye"></i> Detail Data</a></li>
+            							<li><a href="santri/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah Data</a></li>
+            							<li><a href="santri/dokumen_page/'.$field['id'].'" class="app-item"><i class="icon-file-text3"></i> Tambah Dokumen</a></li>
             							<li><a  onclick="change_status_santri('.$field['id'].','."'".$field['status_santri']."'".')"><i class="icon-user"></i> Jadikan Alumni</a></li>
             							<li><a  onclick="change_status('.$field['id'].','.$field['status_aktif'].');"><i class="icon-close2"></i> '.(($field['status_aktif'] == 1) ? "Nonaktifkan" : "Aktifkan" ).'</a></li>
             						</ul>
