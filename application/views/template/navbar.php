@@ -1,14 +1,14 @@
 
-<body class="navbar-top-md-md">
+<body class="navbar-top-md-md" >
 
 <div class="se-pre-con" style="display: none;"></div>
 	<!-- Fixed navbars wrapper -->
 	<div class="navbar-fixed-top">
 
 		<!-- Main navbar -->
-		<div class="navbar navbar-inverse">
+		<div class="navbar navbar-inverse" style="background-color: #1A4D2E;">
 			<div class="navbar-header">
-				<a class="navbar-brand app-item"  href="Dashboard/get_data"><img src="<?php echo base_url('inc/media/');?>logo.png" style="height: 50px !important; margin-top: -13px !important;" alt=""></a>
+				<a class="navbar-brand app-item"  href="Dashboard/get_data"><img src="<?php echo base_url('inc/media/');?>icon.png" style="height: 40px !important; margin-top: -10px !important;" alt=""></a>
 
 				<ul class="nav navbar-nav pull-right visible-xs-block">
 					<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
