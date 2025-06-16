@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Template:</label>
                         <div class="col-lg-9">
-                            <a href="<?= base_url('inc/excel_template/template_santri.csv');?>" target="_blank" id="download_template" class="btn btn-success btn-sm">
+                            <a href="<?= base_url('inc/excel_template/template_santri.xls');?>" target="_blank" id="download_template" class="btn btn-success btn-sm">
                                 <i class="icon-download"></i> Download Template
                             </a>
                         </div>
