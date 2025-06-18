@@ -1,6 +1,5 @@
 
 	<script type="text/javascript">
-		get_city();
 		$('.select').select2();
 		$( "#app-submit" ).on('submit', function( e ) {
 		    e.stopImmediatePropagation();

@@ -54,7 +54,7 @@
                         </tr>
                     </thead>
                     <tbody id="asatidList">
-                        <tr><td colspan="4" class="text-center">Pilih lembaga untuk melihat asatid</td></tr>
+                        <tr><td colspan="4" class="text-center">Data asatid masih kosong</td></tr>
                     </tbody>
                 </table>
             </div>

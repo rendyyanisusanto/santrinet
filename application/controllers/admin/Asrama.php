@@ -380,13 +380,14 @@ class asrama extends MY_Controller {
 	public function datatable()
 	{
        	$_POST['frm']   =   $this->arr;
-        $list           =   $this->mod_datatable->get_datatables();
+        
+		$this->db->where('status_aktif', ($_POST['status_aktif'] ?? 1));
+		$list           =   $this->mod_datatable->get_datatables();
         $data           =   array();
         $no             =   $_POST['start'];
         foreach ($list as $field) {
             $no++;
             $row        =   array();
-            $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]		=	'<a href="asrama/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:'.$field['color'].'">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;

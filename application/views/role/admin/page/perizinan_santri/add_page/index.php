@@ -55,6 +55,19 @@
 										</select>
 									</div>
 								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Status Dokumen : <i class="text-danger">*</i></label>
+									<div class="col-lg-6">
+										<select name="status_dokumen" class="form-control status_dokumen">
+											<option value="">-- Pilih --</option>
+											<option value="DIAJUKAN">DIAJUKAN ASRAMA/POSKESTREN</option>
+                                            <option value="DIKETAHUI_KETUA_KAMAR">DIKETAHUI KETUA KAMAR</option>
+                                            <option value="DIKETAHUI_KABID">DIKETAHUI KABID</option>
+                                            <option value="SELESAI">SELESAI</option>
+                                            <option value="DITOLAK">DITOLAK</option>
+										</select>
+									</div>
+								</div>
                                 
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Alasan : <i class="text-danger">*</i></label>

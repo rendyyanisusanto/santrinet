@@ -61,7 +61,7 @@
        "processing": true, 
             "serverSide": true, 
             "stateSave": true,
-            "order": [], 
+            "ordering": false, 
              
             "ajax": {
                 "url": "<?php echo $data_get['param']['table'] ?>/datatable",

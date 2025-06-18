@@ -481,6 +481,11 @@ class kafil extends MY_Controller {
 			kafil ps ON s.id = ps.santri_id
 		WHERE 
 			ps.santri_id IS NULL
+			
+			and
+			s.status_santri = "AKTIF"
+			and 
+			s.status_aktif = 1
 		AND 
 			s.nama LIKE "%' . $search . '%"
 		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
@@ -490,7 +495,7 @@ class kafil extends MY_Controller {
 	}
 	function get_table_kafil(){
 		$data['param'] 		= 	$this->arr;
-		$data['kafil']	=	$this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama from kafil')->result_array();
+		$data['kafil']	=	$this->db->query('select santri.id, nama from kafil inner join santri on santri_id = santri.id')->result_array();
 		$this->my_view([$data['param']['parents_link'].'/add_page_kafil/table_kafil'], $data);
 	}
 	function save_table_kafil(){

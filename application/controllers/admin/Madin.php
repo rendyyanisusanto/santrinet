@@ -157,6 +157,23 @@ class madin extends MY_Controller {
 			]);
 		}
 	}
+	function change_status(){
+		try {
+			$dt = $this->arr;
+			
+			if ($this->my_update($dt['table'], ['status_aktif'=> (($_POST['status'] == 0) ? 1:0)], [$dt['id']=>$_POST['id']])) {
+				echo json_encode([
+					'status'	=>  200,
+					'msg'		=>	'Status berhasil diganti'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'status'	=>  500,
+				'msg'		=>	$e
+			]);
+		}
+	}
 	function delete_peserta_madin(){
 		try {
 			$dt = $this->arr;
@@ -180,11 +197,7 @@ class madin extends MY_Controller {
 	}
 	public function datatable()
 	{
-		if (($_POST['kode'] !== '')) {
-			$this->db->like('kode', $_POST['kode']);
-		}else if($_POST['nama'] !== ''){
-			$this->db->like('nama', $_POST['nama']);
-		}
+		$this->db->where('status_aktif', ($_POST['status_aktif'] ?? 1));
        	$_POST['frm']   =   $this->arr;
         $list           =   $this->mod_datatable->get_datatables();
         $data           =   array();
@@ -192,7 +205,6 @@ class madin extends MY_Controller {
         foreach ($list as $field) {
             $no++;
             $row        =   array();
-            $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             // $row[]		=	'<a href="madin/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:'.$field['color'].'">'.strtoupper($field['nama']).'</b>' : '-';
             // $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;
@@ -202,10 +214,8 @@ class madin extends MY_Controller {
             							<i class="icon-menu9"></i>
             						</a>
             						<ul class="dropdown-menu dropdown-menu-right">
-            							<li><a href="madin/look_page/'.$field['id'].'" class="app-item"><i class="icon-eye"></i> Lihat</a></li>
             							<li><a href="madin/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah</a></li>
             							<li><a  onclick="change_status('.$field['id'].','.$field['status_aktif'].');"><i class="icon-close2"></i> '.(($field['status_aktif'] == 1) ? "Nonaktifkan" : "Aktifkan" ).'</a></li>
-            							<li><a  onclick="delete_item('.$field['id'].');"><i class="icon-trash"></i> Hapus</a></li>
             						</ul>
             					</li>
             				</ul>';
@@ -236,6 +246,10 @@ class madin extends MY_Controller {
 			peserta_madin pm ON s.id = pm.santri_id
 		WHERE 
 			pm.santri_id IS NULL
+			and 
+			s.status_aktif = 1
+			and 
+			s.status_santri = "AKTIF"
 		AND 
 			s.nama LIKE "%' . $search . '%"
 		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
@@ -248,7 +262,7 @@ class madin extends MY_Controller {
 		$id = $_POST['id'];
 		
 		$data['param'] 		= 	$this->arr;
-		$data['peserta_madin']	=	$this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama, (select nama from madin where madin.id = madin_id) as madin from peserta_madin where madin_id='.$id)->result_array();
+		$data['peserta_madin']	=	$this->db->query('select peserta_madin.id, nama, (select nama from madin where madin.id = madin_id) as madin from peserta_madin inner join santri on santri.id = santri_id where santri.status_aktif=1 and santri.status_santri="AKTIF" and madin_id='.$id)->result_array();
 		$this->my_view([$data['param']['parents_link'].'/peserta_madin/table_madin'], $data);
 	}
 

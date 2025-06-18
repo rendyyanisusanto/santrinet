@@ -20,6 +20,13 @@
 										<input type="text" placeholder="" value="<?= $data_get['data_edit']['nis'] ?>" required name="nis" class="form-control">
 									</div>
 								</div>
+								
+								<div class="form-group">
+									<label class="col-lg-3 control-label">NIP : </label>
+									<div class="col-lg-6">
+										<input type="text" placeholder=""  value="<?= $data_get['data_edit']['nip'] ?>" name="nip" class="form-control">
+									</div>
+								</div>
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Nama : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">

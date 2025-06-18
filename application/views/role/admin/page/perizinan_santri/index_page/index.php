@@ -25,7 +25,6 @@
 					<table class="table datatable-basic table-bordered table-xxs table-framed table-striped table-hover"  id="tabel-data">
 						<thead>
 							<tr>
-								<th width="2%"><input type="checkbox" class="bulk-check" name=""></th>
 								<th width="10%">Kode</th>
 								<th>Nama</th>
 								<th>Tanggal Ijin</th>
@@ -43,8 +42,10 @@
 		<div class="panel-footer"><a class="heading-elements-toggle"><i class="icon-more"></i></a>
 		<div class="heading-elements">
 			<div class="heading-btn pull-right">
-				<!-- <button type="button" class="btn btn-default btn-icon btn-custom-search" onclick="custom_search();"><i class="icon-search4"></i> Custom Search</button> -->
-				<a href="<?= $data_get['param']['table'] ?>/import_page" class="btn btn-default btn-icon app-item"><i class="icon-upload"></i> Import Data</a>
+				<input type="hidden" class="status_aktif" value="1">
+				<button type="button" class="btn btn-danger btn-icon btn-riwayat" onclick="riwayat_terhapus();"><i class="icon-trash"></i> Riwayat Terhapus</button>	
+			<!-- <button type="button" class="btn btn-default btn-icon btn-custom-search" onclick="custom_search();"><i class="icon-search4"></i> Custom Search</button> -->
+				<!-- <a href="<?= $data_get['param']['table'] ?>/import_page" class="btn btn-default btn-icon app-item"><i class="icon-upload"></i> Import Data</a> -->
 			</div>
 		</div>
 	</div>

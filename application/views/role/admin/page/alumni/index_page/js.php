@@ -61,14 +61,17 @@
        "processing": true, 
             "serverSide": true, 
             "stateSave": true,
-            "order": [], 
+            
+            "ordering": false, 
+            "stateSave": true,
+             "searching": false,
              
             "ajax": {
                 "url": "<?php echo $data_get['param']['table'] ?>/datatable",
                 "type": "POST",
                 "data" : function(data){
                     data.kode = $('.kode').val();
-                    data.nama = $('.nama').val();
+                    data.status_aktif = $('.status_aktif').val();
                 }
             },
  
@@ -232,6 +235,24 @@
         
         }
         return false;
+    }
+    function riwayat_terhapus()
+    {
+        $('.status_aktif').val(0);
+        table.ajax.reload();
+        $('.btn-riwayat').html('<i class="icon-spinner"></i> Data Aktif');
+        $('.btn-riwayat').attr('onclick', 'data_aktif()');
+        $('.btn-riwayat').removeClass('btn-danger');
+        $('.btn-riwayat').addClass('btn-success');    
+    }
+    function data_aktif()
+    {
+        $('.status_aktif').val(1);
+        table.ajax.reload();
+        $('.btn-riwayat').html('<i class="icon-trash"></i> Riwayat Terhapus');
+        $('.btn-riwayat').attr('onclick', 'riwayat_terhapus()');
+        $('.btn-riwayat').addClass('btn-danger');
+        $('.btn-riwayat').removeClass('btn-success');    
     }
     function change_status_santri(id="", status="")
     {

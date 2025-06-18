@@ -68,7 +68,7 @@ class perizinan_santri extends MY_Controller {
             'tanggal_kembali'  =>  $_POST['tanggal_kembali'],
             'jenis_izin'       =>  $_POST['jenis_izin'],
             'alasan'           =>  $_POST['alasan'],
-            'status_dokumen'   =>  ($_POST['jenis_izin'] == "SAKIT") ? 'DIAJUKAN_POSKESTREN' : 'DIAJUKAN_ASRAMA',
+            'status_dokumen'   => ($_POST['status_dokumen'] == '' || $_POST['status_dokumen'] == 'DIAJUKAN') ? (($_POST['jenis_izin'] == "SAKIT") ? 'DIAJUKAN_POSKESTREN' : 'DIAJUKAN_ASRAMA') : $_POST['status_dokumen'],
             'status_aktif'      =>  1
         ];
         $this->db->insert('perizinan_santri', $data);
@@ -88,7 +88,7 @@ class perizinan_santri extends MY_Controller {
             'tanggal_kembali'  =>  $_POST['tanggal_kembali'],
             'jenis_izin'       =>  $_POST['jenis_izin'],
             'alasan'           =>  $_POST['alasan'],
-            'status_dokumen'   =>  ($_POST['jenis_izin'] == "SAKIT") ? 'DIAJUKAN_POSKESTREN' : 'DIAJUKAN_ASRAMA',
+            'status_dokumen'   => ($_POST['status_dokumen'] == '' || $_POST['status_dokumen'] == 'DIAJUKAN') ? (($_POST['jenis_izin'] == "SAKIT") ? 'DIAJUKAN_POSKESTREN' : 'DIAJUKAN_ASRAMA') : $_POST['status_dokumen'],
             'status_aktif'      =>  1
         ];
 		$this->db->where('id', $_POST['id']);
@@ -128,7 +128,8 @@ class perizinan_santri extends MY_Controller {
 	public function datatable()
 	{
        	$_POST['frm']   =   $this->arr;
-		$this->db->where('status_aktif', 1);
+		$this->db->where('status_aktif', ($_POST['status_aktif'] ?? 1));
+
 		$list           =   $this->mod_datatable->get_datatables();
         $data           =   array();
         $no             =   $_POST['start'];
@@ -137,8 +138,7 @@ class perizinan_santri extends MY_Controller {
             $no++;
             $row        =   array();
             $santri 	= $this->db->query('select nama from santri where id = '.$field['santri_id'])->row_array();
-            $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
-            $row[]		=	'<a href="perizinan_santri/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
+           	$row[]		=	'<a href="perizinan_santri/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
             $row[]		=	$santri['nama'];
             $row[]		=	date('d/m/Y', strtotime($field['tanggal_izin']));
             $row[]		=	date('d/m/Y', strtotime($field['tanggal_kembali']));
@@ -153,7 +153,8 @@ class perizinan_santri extends MY_Controller {
             						<ul class="dropdown-menu dropdown-menu-right">
             							<li><a href="perizinan_santri/edit_page/'.$field['id'].'" class="app-item"><i class="icon-pencil"></i> Ubah</a></li>
             							<li><a href="perizinan_santri/print_page/'.$field['id'].'" target="__blank"><i class="icon-printer"></i> Cetak Surat izin</a></li>
-            							<li><a  onclick="delete_item('.$field['id'].');"><i class="icon-trash"></i> Hapus</a></li>
+            							<li><a onclick="change_status('.$field['id'].','.$field['status_aktif'].');"><i class="icon-close2"></i> '.(($field['status_aktif'] == 1) ? "Nonaktifkan" : "Aktifkan" ).'</a></li>
+            							
             						</ul>
             					</li>
             				</ul>';
@@ -168,6 +169,24 @@ class perizinan_santri extends MY_Controller {
         );
 
         echo json_encode($output);
+	}
+
+	function change_status(){
+		try {
+			$dt = $this->arr;
+			
+			if ($this->my_update($dt['table'], ['status_aktif'=> (($_POST['status'] == 0) ? 1:0)], [$dt['id']=>$_POST['id']])) {
+				echo json_encode([
+					'status'	=>  200,
+					'msg'		=>	'Status berhasil diganti'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'status'	=>  500,
+				'msg'		=>	$e
+			]);
+		}
 	}
 
     function label_status_dokumen($status = null) {

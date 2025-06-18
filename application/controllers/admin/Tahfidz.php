@@ -160,6 +160,23 @@ class tahfidz extends MY_Controller {
 			]);
 		}
 	}
+	function change_status(){
+		try {
+			$dt = $this->arr;
+			
+			if ($this->my_update($dt['table'], ['status_aktif'=> (($_POST['status'] == 0) ? 1:0)], [$dt['id']=>$_POST['id']])) {
+				echo json_encode([
+					'status'	=>  200,
+					'msg'		=>	'Status berhasil diganti'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'status'	=>  500,
+				'msg'		=>	$e
+			]);
+		}
+	}
 	function bulk_delete()
 	{
 		try {
@@ -182,6 +199,8 @@ class tahfidz extends MY_Controller {
 
 	public function datatable()
 	{
+		
+		$this->db->where('status_aktif', ($_POST['status_aktif'] ?? 1));
        	$_POST['frm']   =   $this->arr;
         $list           =   $this->mod_datatable->get_datatables();
         $data           =   array();
@@ -189,8 +208,7 @@ class tahfidz extends MY_Controller {
         foreach ($list as $field) {
             $no++;
             $row        =   array();
-            $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
-            // $row[]		=	'<a href="tahfidz/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
+             // $row[]		=	'<a href="tahfidz/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:'.$field['color'].'">'.strtoupper($field['nama']).'</b>' : '-';
             // $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;
             $row[]		=	'<ul class="text-center icons-list">

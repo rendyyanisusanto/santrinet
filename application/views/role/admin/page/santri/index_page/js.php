@@ -60,15 +60,20 @@
     var table=$('#tabel-data').DataTable( {
        "processing": true, 
             "serverSide": true, 
+            "ordering": false, 
             "stateSave": true,
+             "searching": false,
             "order": [], 
              
             "ajax": {
                 "url": "<?php echo $data_get['param']['table'] ?>/datatable",
                 "type": "POST",
                 "data" : function(data){
-                    data.kode = $('.kode').val();
-                    data.nama = $('.nama').val();
+                    
+                    data.nis = $('.nis-search').val();
+                    data.nip = $('.nip-search').val();
+                    data.nama = $('.nama-search').val();
+                    data.status_aktif = $('.status_aktif').val();
                 }
             },
  
@@ -77,8 +82,43 @@
                 "targets": [ 0], 
                 "orderable": false, 
             },
+            
+                
             ],
+
+            initComplete: function () {
+                // Tambahkan pencarian di footer setiap kolom
+                this.api()
+                    .columns()
+                    .every(function () {
+                        var column = this;
+                        $('input', column.footer()).on('keyup change', function () {
+                            if (column.search() !== this.value) {
+                                column.search(this.value).draw();
+                            }
+                        });
+                    });
+            },
+            
     } );
+    function riwayat_terhapus()
+    {
+        $('.status_aktif').val(0);
+        table.ajax.reload();
+        $('.btn-riwayat').html('<i class="icon-spinner"></i> Data Aktif');
+        $('.btn-riwayat').attr('onclick', 'data_aktif()');
+        $('.btn-riwayat').removeClass('btn-danger');
+        $('.btn-riwayat').addClass('btn-success');    
+    }
+    function data_aktif()
+    {
+        $('.status_aktif').val(1);
+        table.ajax.reload();
+        $('.btn-riwayat').html('<i class="icon-trash"></i> Riwayat Terhapus');
+        $('.btn-riwayat').attr('onclick', 'riwayat_terhapus()');
+        $('.btn-riwayat').addClass('btn-danger');
+        $('.btn-riwayat').removeClass('btn-success');    
+    }
     $('.submit-change').on('submit', function(e){
         send_ajax($(this).attr('action'), $(this).serialize()).then(function(data){
             var resp = JSON.parse(data);

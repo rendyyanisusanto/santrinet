@@ -107,6 +107,7 @@ class alumni extends MY_Controller {
 	public function datatable()
 	{
        	$this->arr['table'] = 'v_alumni';
+		
 		$_POST['frm']   =   $this->arr;
 
         $list           =   $this->mod_datatable->get_datatables();
@@ -116,13 +117,12 @@ class alumni extends MY_Controller {
             $no++;
             $row        =   array();
             
-            $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]      =   (!empty($field['foto'])) ? '<center><img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="width: 30px;height:40px;"></center>' : '<center><img src="'.base_url('inc/media/no_image.jpg').'" style="width: 40px;height:40px;"></center>';
             $row[]		=	'<a href="santri/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	!empty($field['tahun_lulus']) ? '<b style="color:black">'.strtoupper($field['tahun_lulus']).'</b>' : '-';
             $row[]		=	!empty($field['nama_angkatan']) ? '<b style="color:black">'.strtoupper($field['nama_angkatan']).'</b>' : '-';
-            $row[]		=	'<a onclick="change_status_santri('.$field['id'].','."'".$field['status_santri']."'".')"><span class="label label-block label-rounded label-'.(($field['status_santri'] == "AKTIF") ? "success" : "info").'">'.$field['status_santri'].'</span></a>' ;
+            $row[]		=	'<span class="label label-block label-rounded label-'.(($field['status_santri'] == "AKTIF") ? "success" : "info").'">'.$field['status_santri'].'</span>' ;
             $row[]		=	'<ul class="text-center icons-list">
             					<li class="dropdown">
             						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -161,12 +161,33 @@ class alumni extends MY_Controller {
 			alumni ks ON s.id = ks.santri_id
 		WHERE 
 			ks.santri_id IS NULL
+			and
+			s.status_santri = "AKTIF"
+			and 
+			s.status_aktif = 1
 		AND 
 			s.nama LIKE "%' . $search . '%"
 		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
 		LIMIT 20;')->result_array();
 
 		$this->my_view([$data['param']['parents_link'].'/add_page/table'], $data);
+	}
+	function change_status(){
+		try {
+			$dt = $this->arr;
+			
+			if ($this->my_update($dt['table'], ['status_aktif'=> (($_POST['status'] == 0) ? 1:0)], [$dt['id']=>$_POST['id']])) {
+				echo json_encode([
+					'status'	=>  200,
+					'msg'		=>	'Status berhasil diganti'
+				]);
+			}
+		} catch (Exception $e) {
+			echo json_encode([
+				'status'	=>  500,
+				'msg'		=>	$e
+			]);
+		}
 	}
 
 	function get_table_lulusan(){

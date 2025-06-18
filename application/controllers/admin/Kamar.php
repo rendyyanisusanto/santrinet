@@ -322,6 +322,7 @@ class kamar extends MY_Controller {
 
 	public function datatable()
 	{
+		$this->db->where('status_aktif', ($_POST['status_aktif'] ?? 1));
        	$_POST['frm']   =   $this->arr;
         $list           =   $this->mod_datatable->get_datatables();
         $data           =   array();
@@ -331,7 +332,6 @@ class kamar extends MY_Controller {
             $row        =   array();
             $asrama		=	$this->db->query('select nama, color from asrama  where id='.$field['asrama_id'])->row_array();
 			$jumlah		=	$this->db->query('select count(*) as jml from kamar_santri where kamar_id='.$field['id'])->row_array();
-            $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]		=	'<a href="kamar/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
             $row[]		=	!empty($asrama['nama']) ? '<b style="color:'.$asrama['color'].'">'.strtoupper($asrama['nama']).'</b>' : '-';
             $row[]		=	!empty($field['nama']) ? '<b style="color:'.$field['color'].'">'.strtoupper($field['nama']).'</b>' : '-';
@@ -375,6 +375,10 @@ class kamar extends MY_Controller {
 			kamar_santri ks ON s.id = ks.santri_id
 		WHERE 
 			ks.santri_id IS NULL
+			and 
+			s.status_aktif = 1
+			and 
+			s.status_santri = "AKTIF"
 		AND 
 			s.nama LIKE "%' . $search . '%"
 		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
@@ -387,7 +391,7 @@ class kamar extends MY_Controller {
 		$id = $_POST['id'];
 		
 		$data['param'] 		= 	$this->arr;
-		$data['kamar_santri']	=	$this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama, (select nama from kamar where kamar.id = kamar_id) as kamar from kamar_santri where kamar_id='.$id)->result_array();
+		$data['kamar_santri']	=	$this->db->query('select kamar_santri.id, nama, (select nama from kamar where kamar.id = kamar_id) as kamar from kamar_santri inner join santri on santri.id = santri_id where santri.status_aktif=1 and santri.status_santri="AKTIF" and kamar_id='.$id)->result_array();
 		$this->my_view([$data['param']['parents_link'].'/kamar_santri/table_kamar'], $data);
 	}
 }

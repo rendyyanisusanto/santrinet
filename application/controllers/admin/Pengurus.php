@@ -509,6 +509,10 @@ class pengurus extends MY_Controller {
 			pengurus ps ON s.id = ps.santri_id
 		WHERE 
 			ps.santri_id IS NULL
+			and
+			s.status_santri = "AKTIF"
+			and 
+			s.status_aktif = 1
 		AND 
 			s.nama LIKE "%' . $search . '%"
 		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
@@ -520,7 +524,7 @@ class pengurus extends MY_Controller {
 		$id = $_POST['id'];
 		
 		$data['param'] 		= 	$this->arr;
-		$data['pengurus']	=	$this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama, (select nama from lembaga_pengurus where lembaga_pengurus.id = lembaga_pengurus_id) as lembaga from pengurus where lembaga_pengurus_id='.$id)->result_array();
+		$data['pengurus']	=	$this->db->query('select pengurus.id, nama, (select nama from lembaga_pengurus where lembaga_pengurus.id = lembaga_pengurus_id) as lembaga from pengurus inner join santri on santri.id=santri_id where status_santri = "AKTIF" and santri.status_aktif = 1 and lembaga_pengurus_id='.$id)->result_array();
 		$this->my_view([$data['param']['parents_link'].'/add_page_pengurus/table_pengurus'], $data);
 	}
 }

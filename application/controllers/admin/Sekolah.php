@@ -389,6 +389,7 @@ class sekolah extends MY_Controller {
 
 	public function datatable()
 	{
+		$this->db->where('status_aktif', ($_POST['status_aktif'] ?? 1));
        	$_POST['frm']   =   $this->arr;
         $list           =   $this->mod_datatable->get_datatables();
         $data           =   array();
@@ -396,8 +397,8 @@ class sekolah extends MY_Controller {
         foreach ($list as $field) {
             $no++;
             $row        =   array();
-            $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
-            $row[]		=	'<a href="sekolah/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
+			
+             $row[]		=	'<a href="sekolah/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['kode']) ? strtoupper($field['kode']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:'.$field['color'].'">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;
             $row[]		=	'<ul class="text-center icons-list">
@@ -485,6 +486,10 @@ class sekolah extends MY_Controller {
 		WHERE 
 			pm.santri_id IS NULL
 		AND 
+			s.status_aktif = 1
+		AND 
+			s.status_santri = "AKTIF"
+		AND 
 			s.nama LIKE "%' . $search . '%"
 		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
 		LIMIT 20;')->result_array();
@@ -496,7 +501,7 @@ class sekolah extends MY_Controller {
 		$id = $_POST['id'];
 		
 		$data['param'] 		= 	$this->arr;
-		$data['peserta_sekolah']	=	$this->db->query('select * from v_sekolah where sekolah_id='.$id)->result_array();
+		$data['peserta_sekolah']	=	$this->db->query('select * from v_sekolah where status_aktif=1 and status_santri="AKTIF" and sekolah_id='.$id)->result_array();
 		$this->my_view([$data['param']['parents_link'].'/peserta_sekolah/table_sekolah'], $data);
 	}
 }

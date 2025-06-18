@@ -82,7 +82,7 @@ class santri extends MY_Controller {
 		    $spreadsheet = $reader->load($_FILES['file_upload']['tmp_name']);
 		    $send = [];
 			$sheetData = $spreadsheet->getActiveSheet()->toArray();
-			for($i = 2 ;$i < count($sheetData);$i++)
+			for($i = 1 ;$i < count($sheetData);$i++)
 			{
 				if (!empty($sheetData[$i]['1'])) {
 			        $nis 			= (!empty($sheetData[$i]['0'])) ? $sheetData[$i]['0'] : '';
@@ -743,7 +743,7 @@ class santri extends MY_Controller {
 			    $spreadsheet = $reader->load($_FILES['file_upload']['tmp_name']);
 			    $send = [];
 				$sheetData = $spreadsheet->getActiveSheet()->toArray();
-				for($i = 3 ;$i < count($sheetData);$i++)
+				for($i = 2 ;$i < count($sheetData);$i++)
 				{
 					if (!empty($sheetData[$i]['1'])) {
 				        $kode 			= $sheetData[$i]['1'];
@@ -800,7 +800,19 @@ class santri extends MY_Controller {
 	public function datatable()
 	{
        	$this->arr['table'] = 'v_santri_aktif';
+		
+		
+		if (!empty($_POST['nip'])) {
+			$this->db->like('nip ', $_POST['nip']);
+		}
+		if (!empty($_POST['nis'])) {
+			$this->db->like('nis ', $_POST['nis']);
+		}
+		if (!empty($_POST['nama'])) {
+			$this->db->like('nama ', $_POST['nama']);
+		}
 		$_POST['frm']   =   $this->arr;
+		$this->db->where('status_aktif', ($_POST['status_aktif'] ?? 1));
 		$this->db->where('status_santri', 'AKTIF');
         $list           =   $this->mod_datatable->get_datatables();
         $data           =   array();
@@ -808,10 +820,8 @@ class santri extends MY_Controller {
         foreach ($list as $field) {
             $no++;
             $row        =   array();
-            $row[]      =   '<input type="checkbox" onchange="bulk_checkbox('.$field['id'].')" name="get-check" value="'.$field['id'].'"></input>';
             $row[]      =   (!empty($field['foto'])) ? '<center><img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="width: 30px;height:40px;"></center>' : '<center><img src="'.base_url('inc/media/no_image.jpg').'" style="width: 40px;height:40px;"></center>';
             $row[]		=	'<a href="santri/look_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nip']) ? strtoupper($field['nip']) : '-') . '</b></a>';
-            $row[]		=	'<a href="santri/look_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	'<a onclick="change_status_santri('.$field['id'].','."'".$field['status_santri']."'".')"><span class="label label-block label-rounded label-'.(($field['status_santri'] == "AKTIF") ? "success" : "info").'">'.$field['status_santri'].'</span></a>' ;
             $row[]		=	'<ul class="text-center icons-list">

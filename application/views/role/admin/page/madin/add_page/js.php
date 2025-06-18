@@ -1,6 +1,5 @@
 
 	<script type="text/javascript">
-		get_city();
 		$('.select').select2();
 		$( "#app-submit" ).on('submit', function( e ) {
 		    e.stopImmediatePropagation();
@@ -24,12 +23,4 @@
 		        });
 		    return false;
 		});
-		function get_city()
-		{
-			var dt = $('.idprovince_fk').val();
-
-			send_ajax('master_data_suplier/get_city', {id:dt}).then(function(data){
-				$('.select-city').html(data);
-			});
-		}
 	</script>

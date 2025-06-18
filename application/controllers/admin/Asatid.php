@@ -482,6 +482,10 @@ class asatid extends MY_Controller {
 			asatid ps ON s.id = ps.santri_id
 		WHERE 
 			ps.santri_id IS NULL
+			and
+			s.status_santri = "AKTIF"
+			and 
+			s.status_aktif = 1
 		AND 
 			s.nama LIKE "%' . $search . '%"
 		'.((!empty($opt)) ? " AND s.asrama_id = ".$opt." " : "").'	
@@ -493,7 +497,7 @@ class asatid extends MY_Controller {
 		$id = $_POST['id'];
 		
 		$data['param'] 		= 	$this->arr;
-		$data['asatid']	=	$this->db->query('select id, (select nama from santri where santri.id = santri_id) as nama from asatid')->result_array();
+		$data['asatid']	=	$this->db->query('select asatid.id, nama from asatid inner join santri on santri_id = santri.id where status_santri = "AKTIF" and santri.status_aktif = 1')->result_array();
 		$this->my_view([$data['param']['parents_link'].'/add_page_asatid/table_asatid'], $data);
 	}
 	function save_table_asatid(){
