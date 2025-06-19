@@ -10,6 +10,7 @@
 			<div class="panel-heading">
 				<div class="panel-title">
 					<a href="<?php echo $data_get['param']['table'] ?>/add_page" style="color:white;" class="btn btn-primary app-item"><i class="icon-plus3"></i> Tambah <?php echo $data_get['param']['title'] ?></a>
+					<a href="<?php echo $data_get['param']['table'] ?>/kamar_santri" style="color:white;" class="btn btn-success app-item"><i class="icon-users"></i> Tambah Peserta Kamar Santri</a>
 					<button class="btn btn-bulk-delete btn-danger" onclick="bulk_delete()" style="display: none;"><i class="icon-close2"></i> Hapus Data</button>
 				</div>
 				<div class="heading-elements">
