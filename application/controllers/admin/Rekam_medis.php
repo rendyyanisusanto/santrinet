@@ -194,21 +194,19 @@ class rekam_medis extends MY_Controller {
 	function simpan_data()
 	{
 		try {
+			$this->load->helper('minio');
 			$uuid = $_POST['uuid'];
 			$cek = $this->my_where('rekam_medis', ['uuid'=>$uuid])->num_rows();
 			if (!empty($uuid) && $cek == 0) {
 				// code...
-				$foto = $this->save_media([
-					'path'	=>	"./inc/media/rekam_medis/",
-					'filename' => 'foto',
-				]);
+				$foto = "";
 				$data = [
 					'santri_id'				=>	$_POST['santri_id'],
 					'status_rekam_medis_id'	=>	$_POST['status_rekam_medis_id'],
 					'tanggal'				=>	$_POST['tanggal'],
 					'kode'					=>	$_POST['kode'],
 					'uuid'					=>	$_POST['uuid'],
-					'foto'					=>	((isset($foto)) ? $foto['file_name'] : ''),
+					'foto'					=>	$foto,
 					'lama_sakit'			=>	$_POST['lama_sakit'],
 					'status_aktif'			=>	$_POST['status_aktif'],
 					'perawat_id'			=>	$_POST['perawat_id'],
@@ -216,19 +214,21 @@ class rekam_medis extends MY_Controller {
 					'catatan'				=>	$_POST['catatan'],
 	
 				];
-				if ($this->save_data('rekam_medis', $data)) {
-	
-					$rm = $this->my_where('rekam_medis', ['uuid'=>$uuid])->row_array();
-	
+				if ($this->db->insert('rekam_medis', $data)) {
+					$rekam_medis_id = $this->db->insert_id();
+					if (!empty($_FILES['foto']['name'])) {
+						$foto_nama = upload_to_minio('foto', 'rekam_medis', $_POST['santri_id'], 'foto', true); // compress gambar
+						$this->db->update('rekam_medis', ['foto' => $foto_nama], ['id' => $rekam_medis_id]);
+					}
 					foreach ($_POST['obat_id'] as $key => $value) {
 						$this->save_data('obat_rm', [
-							'rekam_medis_id' =>	$rm['id'],
+							'rekam_medis_id' =>	$rekam_medis_id,
 							'obat_id'	=>	$value
 						]);
 					}
 					foreach ($_POST['keluhan_id'] as $key => $value) {
 						$this->save_data('keluhan_rm', [
-							'rekam_medis_id' =>	$rm['id'],
+							'rekam_medis_id' =>	$rekam_medis_id,
 							'keluhan_id'	=>	$value
 						]);
 					}
@@ -492,7 +492,7 @@ class rekam_medis extends MY_Controller {
             $row[]		=	$keluhan;
             $row[]		=	$obat;
             $row[]		=	'<b style="color : '.$status_rekam_medis['color'].'">'.$status_rekam_medis['nama'].'</b>' ;
-			$row[]		=	(!empty($field['foto'])) ? '<a target="__blank" href="'.base_url('inc/media/rekam_medis/'.$field['foto']).'">Download</a>' : "Tidak Ada";
+			$row[]		=	(!empty($field['foto'])) ? '<a target="__blank" href="'.$field['foto'].'">Download</a>' : "Tidak Ada";
             $row[]		=	'<span class="label label-block label-rounded label-'.$this->get_status('active', $field['status_aktif'])['color'].'">'.$this->get_status('active', $field['status_aktif'])['name'].'</span>' ;
             $row[]		=	'<ul class="text-center icons-list">
             					<li class="dropdown">

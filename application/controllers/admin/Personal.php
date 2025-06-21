@@ -33,7 +33,7 @@ class Personal extends MY_Controller {
         foreach ($list as $field) {
             $no++;
             $row        =   array();
-            $row[]      =   (!empty($field['foto'])) ? '<img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="max-width: 50px">' : '<img src="'.base_url('inc/media/no_image.jpg').'" style="max-width: 50px">';
+            $row[]      =   (!empty($field['foto'])) ? '<img src="'.$field['foto'].'" style="max-width: 50px">' : '<img src="'.base_url('inc/media/no_image.jpg').'" style="max-width: 50px">';
             $row[]		=	'<a href="santri/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
             $row[]		=	(!empty($field['nama'])) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	(!empty($field['asatid'])) ? '<b class="icon-check text-success"></b>' : '<b class="icon-close2 text-danger"></b>';

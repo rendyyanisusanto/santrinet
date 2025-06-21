@@ -48,7 +48,7 @@
 		<div class="heading-elements">
 			<div class="heading-btn pull-right">
 				<!-- <button type="button" class="btn btn-default btn-icon btn-custom-search" onclick="custom_search();"><i class="icon-search4"></i> Custom Search</button> -->
-				<a href="<?= $data_get['param']['table'] ?>/import_page" class="btn btn-default btn-icon app-item"><i class="icon-upload"></i> Import Data</a>
+				<!-- <a href="<?= $data_get['param']['table'] ?>/import_page" class="btn btn-default btn-icon app-item"><i class="icon-upload"></i> Import Data</a> -->
 			</div>
 		</div>
 	</div>

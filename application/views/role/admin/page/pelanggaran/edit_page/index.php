@@ -5,13 +5,13 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel">
-			<form id="app-submit" class="form-horizontal" action="<?php echo $data_get['param']['table'] ?>/simpan_data" method="POST">
+			<form id="app-submit" class="form-horizontal" action="<?php echo $data_get['param']['table'] ?>/update_data" method="POST">
 				<div class="panel-body">	
 					<div class="col-md-12">
 						<fieldset>
-							<legend class="text-semibold"><?php echo $data_get['param']['title'] ?> - <b>TAMBAH DATA</b></legend>
+							<legend class="text-semibold"><?php echo $data_get['param']['title'] ?> - <b>Ubah DATA</b></legend>
 							
-							<input type="hidden" name="uuid" value="<?= $data_get['uuid']?>">
+							<input type="hidden" name="id" value="<?= $data_get['data_edit']['id']?>">
 							<div class="col-md-6">
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Tanggal : <i class="text-danger">*</i></label>
@@ -53,7 +53,7 @@
 											<?php
 												foreach ($data_get['kategori_tatib'] as $key => $value) {
 													?>
-														<option value="<?= $value['id']?>"><?= $value['nama']?></option>
+														<option <?= ($value['id'] == $data_get['tatib']['kategori_tatib_id'] ) ? "selected" : "" ?> value="<?= $value['id']?>"><?= $value['nama']?></option>
 													<?php
 												}
 											?>
@@ -100,7 +100,7 @@
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Kronologi : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input class="form-control" value="<?php echo $data_get['data_edit']['kode'] ?>" type="text" name="kronologi">
+										<input class="form-control" value="<?php echo $data_get['data_edit']['kronologi'] ?>" type="text" name="kronologi">
 									</div>
 								</div>
 								<div class="form-group">
@@ -115,7 +115,9 @@
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Foto : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
-										<input class="form-control" type="file" name="foto">
+										<img src="<?= (!empty($data_get['data_edit']['foto'])) ? $data_get['data_edit']['foto'] : base_url('inc/media/no_image.jpg') ;?>" style="width: 70px;height:90px;margin-bottom: 5px;border-radius:10px;" alt="">
+										<input type="hidden" name="foto_lama" value="<?= $data_get['data_edit']['foto']?>">
+										<input type="file" placeholder="" name="foto" class="form-control">
 									</div>
 								</div>
 

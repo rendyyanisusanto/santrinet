@@ -77,7 +77,7 @@ class MY_Controller extends CI_Controller {
         $group = $this->my_groups();
         $menu = $this->my_where('menu', [])->result_array();
         foreach ($menu as $value) {
-            $submenu = $this->my_where('submenu', ['menu_id'=>$value['id']])->result_array();
+            $submenu = $this->my_where('submenu', ['menu_id'=>$value['id'] , 'status_aktif'=>1])->result_array();
             $cek_menu = $this->my_where('v_groups_detail_submenu', ['groups_id'=>$group['id'], 'menu_id'=>$value['id'], 'r' => 1])->num_rows();
             $submenu_val = [];
             foreach ($submenu as $value_sub) {

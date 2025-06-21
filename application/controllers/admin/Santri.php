@@ -295,45 +295,18 @@ class santri extends MY_Controller {
 		$this->my_view([$data['param']['parents_link'].'/add_page/city'], $data);
 	}
 
-	function simpan_data()
+	public function simpan_data()
 	{
 		try {
+			$this->load->helper('minio');
 			$foto_nama = null;
-			
-			if (!empty($_FILES['foto']['name'])) {
-				$config['upload_path']   = './inc/media/santri/';
-				$config['allowed_types'] = 'jpg|jpeg|png';
-				$config['max_size']      = 2048; // 2MB
-				$config['file_name']     = time() . '_' . $_FILES['foto']['name'];
-				
-				$this->load->library('upload', $config);
-				
-				if ($this->upload->do_upload('foto')) {
-					$upload_data = $this->upload->data();
-					$foto_nama = $upload_data['file_name'];
-					
-					// Kompres gambar menggunakan Intervention Image
-					$this->load->library('image_lib');
-					
-					$config_img['image_library']  = 'gd2';
-					$config_img['source_image']   = './uploads/santri/' . $foto_nama;
-					$config_img['new_image']      = './uploads/santri/' . $foto_nama;
-					$config_img['quality']        = '50%'; // Kompres lebih tinggi
-					$config_img['maintain_ratio'] = TRUE;
-					$config_img['width']          = 500;
-					$config_img['height']         = 500;
-					
-					$this->image_lib->initialize($config_img);
-					$this->image_lib->resize();
-				}
-			}
-			
+
 			$data = [
 				'nama'           => $_POST['nama'],
 				'nis'            => $_POST['nis'],
 				'nik'            => $_POST['nik'],
 				'nip'            => $_POST['nip'],
-				'alamat'            => $_POST['alamat'],
+				'alamat'         => $_POST['alamat'],
 				'jenis_kelamin'  => $_POST['jenis_kelamin'],
 				'tempat_lahir'   => $_POST['tempat_lahir'],
 				'tanggal_lahir'  => $_POST['tanggal_lahir'],
@@ -343,117 +316,86 @@ class santri extends MY_Controller {
 				'no_hp_ayah'     => $_POST['no_hp_ayah'],
 				'no_hp_ibu'      => $_POST['no_hp_ibu'],
 				'no_hp_wali'     => $_POST['no_hp_wali'],
-				'asrama_id'         => $_POST['asrama_id'],
-				'angkatan_id'         => $_POST['angkatan_id'],
-				'status_santri'         => "AKTIF",
-				'foto'           => $foto_nama
+				'asrama_id'      => $_POST['asrama_id'],
+				'angkatan_id'    => $_POST['angkatan_id'],
+				'status_santri'  => 'AKTIF'
 			];
-			
+
 			if ($this->db->insert('santri', $data)) {
-				$santri_id = $this->db->insert_id(); // Ambil ID santri yang baru disimpan
-				 // Cek checkbox yang dicentang
-				 if (!empty($_POST['role']) && is_array($_POST['role'])) {
+				$santri_id = $this->db->insert_id();
+
+				// 🚀 Upload foto ke MinIO
+				if (!empty($_FILES['foto']['name'])) {
+					$foto_nama = upload_to_minio('foto', 'santri', $santri_id, 'foto', true); // compress gambar
+					$this->db->update('santri', ['foto' => $foto_nama], ['id' => $santri_id]);
+				}
+
+				// 🚀 Tambah role jika ada
+				if (!empty($_POST['role']) && is_array($_POST['role'])) {
 					foreach ($_POST['role'] as $role) {
 						if ($role == "KAFIL") {
 							$this->db->insert('kafil', ['santri_id' => $santri_id]);
 						} elseif ($role == "ASATID") {
 							$this->db->insert('asatid', ['santri_id' => $santri_id]);
 						} elseif ($role == "PENGURUS") {
-							$data_pengurus = [
-								'santri_id'          => $santri_id,
+							$this->db->insert('pengurus', [
+								'santri_id' => $santri_id,
 								'lembaga_pengurus_id' => $_POST['lembaga_pengurus_id']
-							];
-							$this->db->insert('pengurus', $data_pengurus);
+							]);
 						}
 					}
 				}
 
-				 // **Proses Upload Dokumen Tambahan**
-				 if (!empty($_FILES['dokumen']['name'])) {
-					foreach ($_FILES['dokumen']['name'] as $key => $name) {
-						if (!empty($name['val'])) {
-							
-							$_FILES['file_dokumen']['name']     = $name['val'];
-							$_FILES['file_dokumen']['type']     = $_FILES['dokumen']['type'][$key]['val'];
-							$_FILES['file_dokumen']['tmp_name'] = $_FILES['dokumen']['tmp_name'][$key]['val'];
-							$_FILES['file_dokumen']['error']    = $_FILES['dokumen']['error'][$key]['val'];
-							$_FILES['file_dokumen']['size']     = $_FILES['dokumen']['size'][$key]['val'];
-	
-							$upload_path = './inc/media/santri/dokumen_santri/';
-							$file_name = time() . '_' . $_FILES['file_dokumen']['name'];
-	
-							$config_dokumen['upload_path']   = $upload_path;
-							$config_dokumen['allowed_types'] = '*'; // Semua tipe file
-							$config_dokumen['max_size']      = 5120; // 5MB
-							$config_dokumen['file_name']     = $file_name;
-	
-							// $this->upload->initialize($config_dokumen);
-							$this->load->library('upload', $config_dokumen);
-	
-							if ($this->upload->do_upload('file_dokumen')) {
-								$upload_data = $this->upload->data();
-	
-								// Simpan ke database
-								$data_dokumen = [
-									'santri_id' => $santri_id,
-									'fname' => $_POST['dokumen'][$key]['name'],
-									'file' => $upload_data['file_name']
-								];
-								$this->db->insert('santri_dokumen', $data_dokumen);
-							}
+				// 🚀 Upload dokumen tambahan
+				if (!empty($_FILES['dokumen']['name'])) {
+					foreach ($_FILES['dokumen']['name'] as $key => $name_arr) {
+						$name = $name_arr['val'] ?? null;
+						if (!$name) continue;
+
+						$_FILES['file_dokumen'] = [
+							'name'     => $name,
+							'type'     => $_FILES['dokumen']['type'][$key]['val'],
+							'tmp_name' => $_FILES['dokumen']['tmp_name'][$key]['val'],
+							'error'    => $_FILES['dokumen']['error'][$key]['val'],
+							'size'     => $_FILES['dokumen']['size'][$key]['val'],
+						];
+
+						$dokumen_url = upload_to_minio('file_dokumen', 'santri', $santri_id, 'dokumen', false);
+
+						if ($dokumen_url) {
+							$this->db->insert('santri_dokumen', [
+								'santri_id' => $santri_id,
+								'fname'     => $_POST['dokumen'][$key]['name'],
+								'file'      => $dokumen_url
+							]);
 						}
 					}
 				}
-				echo json_encode([
-					'status' => 200,
-					'msg'    => 'Data santri berhasil diubah'
-				]);
+
+				echo json_encode(['status' => 200, 'msg' => 'Data santri berhasil disimpan']);
 			} else {
-				echo json_encode([
-					'status' => 500,
-					'msg'    => 'Data santri gagal diubah'
-				]);
+				echo json_encode(['status' => 500, 'msg' => 'Data santri gagal disimpan']);
 			}
 		} catch (Exception $e) {
-			echo json_encode([
-				'status' => 500,
-				'msg'    => $e->getMessage()
-			]);
+			echo json_encode(['status' => 500, 'msg' => $e->getMessage()]);
 		}
 	}
+
 	function update_data()
 	{
 		try {
 			$foto_nama = $this->input->post('foto_lama'); // Gunakan foto lama jika tidak ada yang baru
 			
+			$this->load->helper('minio');
+
+			// === 1. FOTO ===
 			if (!empty($_FILES['foto']['name'])) {
-				$config['upload_path']   = './inc/media/santri/';
-				$config['allowed_types'] = 'jpg|jpeg|png';
-				$config['max_size']      = 1024; // 1MB
-				$config['file_name']     = time() . '_' . $_FILES['foto']['name'];
-				
-				$this->load->library('upload', $config);
-				
-				if ($this->upload->do_upload('foto')) {
-					$upload_data = $this->upload->data();
-					$foto_nama = $upload_data['file_name'];
-					
-					// Kompres gambar menggunakan Intervention Image
-					$this->load->library('image_lib');
-					
-					$config_img['image_library']  = 'gd2';
-					$config_img['source_image']   = './inc/media/santri/' . $foto_nama;
-					$config_img['new_image']      = './inc/media/santri/' . $foto_nama;
-					$config_img['quality']        = '50%'; // Kompres lebih tinggi
-					$config_img['maintain_ratio'] = TRUE;
-					$config_img['width']          = 500;
-					$config_img['height']         = 500;
-					
-					$this->image_lib->initialize($config_img);
-					$this->image_lib->resize();
+				$foto_url = upload_to_minio('foto', 'santri', $_POST['id'], 'foto', true); // compress true
+				if ($foto_url) {
+					$foto_nama = $foto_url;
 				}
 			}
-			
+
 			$data = [
 				'nama'           => $_POST['nama'],
 				'nis'            => $_POST['nis'],
@@ -497,45 +439,37 @@ class santri extends MY_Controller {
 					}
 				}
 
-				
-				 // **Proses Upload Dokumen Tambahan**
 				 if (!empty($_FILES['dokumen']['name'])) {
-					foreach ($_FILES['dokumen']['name'] as $key => $name) {
-						if (!empty($name['val'])) {
-							if(!empty($_POST['dokumen'][$key]['id'])){
-								$this->db->delete('santri_dokumen', ['id'=>$_POST['dokumen'][$key]['id']]);
-							}
-							$_FILES['file_dokumen']['name']     = $name['val'];
-							$_FILES['file_dokumen']['type']     = $_FILES['dokumen']['type'][$key]['val'];
-							$_FILES['file_dokumen']['tmp_name'] = $_FILES['dokumen']['tmp_name'][$key]['val'];
-							$_FILES['file_dokumen']['error']    = $_FILES['dokumen']['error'][$key]['val'];
-							$_FILES['file_dokumen']['size']     = $_FILES['dokumen']['size'][$key]['val'];
-	
-							$upload_path = './inc/media/santri/dokumen_santri/';
-							$file_name = time() . '_' . $_FILES['file_dokumen']['name'];
-	
-							$config_dokumen['upload_path']   = $upload_path;
-							$config_dokumen['allowed_types'] = '*'; // Semua tipe file
-							$config_dokumen['max_size']      = 5120; // 5MB
-							$config_dokumen['file_name']     = $file_name;
-	
-							// $this->upload->initialize($config_dokumen);
-							$this->load->library('upload', $config_dokumen);
-	
-							if ($this->upload->do_upload('file_dokumen')) {
-								$upload_data = $this->upload->data();
-	
-								// Simpan ke database
-								$data_dokumen = [
-									'santri_id' => $_POST['id'],
-									'fname' => $_POST['dokumen'][$key]['name'],
-									'file' => $upload_data['file_name']
-								];
-								$this->db->insert('santri_dokumen', $data_dokumen);
-							}
+					foreach ($_FILES['dokumen']['name'] as $i => $name_arr) {
+						$name = $name_arr['val'] ?? null;
+						if (!$name) continue;
+
+						// hapus jika ada ID dokumen lama
+						if (!empty($_POST['dokumen'][$i]['id'])) {
+							$this->db->delete('santri_dokumen', ['id' => $_POST['dokumen'][$i]['id']]);
+						}
+
+						// mapping ulang agar helper upload bisa dipakai
+						$_FILES['dok_satuan'] = [
+							'name'     => $name,
+							'type'     => $_FILES['dokumen']['type'][$i]['val'],
+							'tmp_name' => $_FILES['dokumen']['tmp_name'][$i]['val'],
+							'error'    => $_FILES['dokumen']['error'][$i]['val'],
+							'size'     => $_FILES['dokumen']['size'][$i]['val'],
+						];
+
+						$dok_url = upload_to_minio('dok_satuan', 'santri', $_POST['id'], 'dokumen', false);
+
+						if ($dok_url) {
+							$this->db->insert('santri_dokumen', [
+								'santri_id' => $_POST['id'],
+								'fname'     => $_POST['dokumen'][$i]['name'],
+								'file'      => $dok_url
+							]);
 						}
 					}
 				}
+				 
 				echo json_encode([
 					'status' => 200,
 					'msg'    => 'Data santri berhasil diperbarui'
@@ -554,57 +488,56 @@ class santri extends MY_Controller {
 		}
 	}
 
-	function update_dokumen(){
+	public function update_dokumen()
+	{
 		try {
+			$this->load->helper('minio'); // pastikan helper sudah dimuat
+
 			if (!empty($_FILES['dokumen']['name'])) {
-					foreach ($_FILES['dokumen']['name'] as $key => $name) {
-						if (!empty($name['val'])) {
-							if(!empty($_POST['dokumen'][$key]['id'])){
-								$this->db->delete('santri_dokumen', ['id'=>$_POST['dokumen'][$key]['id']]);
-							}
-							$_FILES['file_dokumen']['name']     = $name['val'];
-							$_FILES['file_dokumen']['type']     = $_FILES['dokumen']['type'][$key]['val'];
-							$_FILES['file_dokumen']['tmp_name'] = $_FILES['dokumen']['tmp_name'][$key]['val'];
-							$_FILES['file_dokumen']['error']    = $_FILES['dokumen']['error'][$key]['val'];
-							$_FILES['file_dokumen']['size']     = $_FILES['dokumen']['size'][$key]['val'];
-	
-							$upload_path = './inc/media/santri/dokumen_santri/';
-							$file_name = time() . '_' . $_FILES['file_dokumen']['name'];
-	
-							$config_dokumen['upload_path']   = $upload_path;
-							$config_dokumen['allowed_types'] = '*'; // Semua tipe file
-							$config_dokumen['max_size']      = 5120; // 5MB
-							$config_dokumen['file_name']     = $file_name;
-	
-							// $this->upload->initialize($config_dokumen);
-							$this->load->library('upload', $config_dokumen);
-	
-							if ($this->upload->do_upload('file_dokumen')) {
-								$upload_data = $this->upload->data();
-	
-								// Simpan ke database
-								$data_dokumen = [
-									'santri_id' => $_POST['id'],
-									'fname' => $_POST['dokumen'][$key]['name'],
-									'file' => $upload_data['file_name']
-								];
-								$this->db->insert('santri_dokumen', $data_dokumen);
-							}
-						}
+				foreach ($_FILES['dokumen']['name'] as $key => $name_arr) {
+					$name = $name_arr['val'] ?? null;
+					if (!$name) continue;
+
+					// Hapus dokumen lama jika ada ID
+					if (!empty($_POST['dokumen'][$key]['id'])) {
+						$this->db->delete('santri_dokumen', ['id' => $_POST['dokumen'][$key]['id']]);
 					}
-					echo json_encode([
-						'status' => 200,
-						'msg'    => 'Data dokumen santri berhasil diperbarui'
-					]);
+
+					// Siapkan file agar dikenali CI
+					$_FILES['file_dokumen'] = [
+						'name'     => $name,
+						'type'     => $_FILES['dokumen']['type'][$key]['val'],
+						'tmp_name' => $_FILES['dokumen']['tmp_name'][$key]['val'],
+						'error'    => $_FILES['dokumen']['error'][$key]['val'],
+						'size'     => $_FILES['dokumen']['size'][$key]['val'],
+					];
+
+					// Upload ke MinIO (tanpa kompresi)
+					$dokumen_url = upload_to_minio('file_dokumen', 'santri', $_POST['id'], 'dokumen', false);
+
+					if ($dokumen_url) {
+						$data_dokumen = [
+							'santri_id' => $_POST['id'],
+							'fname'     => $_POST['dokumen'][$key]['name'],
+							'file'      => $dokumen_url
+						];
+						$this->db->insert('santri_dokumen', $data_dokumen);
+					}
+				}
+
+				echo json_encode([
+					'status' => 200,
+					'msg'    => 'Data dokumen santri berhasil diperbarui'
+				]);
 			}
 		} catch (Exception $e) {
 			echo json_encode([
-				'status'	=>	500,
-				'msg'		=>	$e->getMessage()
+				'status' => 500,
+				'msg'    => $e->getMessage()
 			]);
 		}
-		
 	}
+
 
 	function delete_document($id){
 		if($this->db->delete('santri_dokumen', ['id'=>$id])){
@@ -820,7 +753,7 @@ class santri extends MY_Controller {
         foreach ($list as $field) {
             $no++;
             $row        =   array();
-            $row[]      =   (!empty($field['foto'])) ? '<center><img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="width: 30px;height:40px;"></center>' : '<center><img src="'.base_url('inc/media/no_image.jpg').'" style="width: 40px;height:40px;"></center>';
+            $row[]      =   (!empty($field['foto'])) ? '<center><img src="'.$field['foto'].'" style="width: 30px;height:40px;"></center>' : '<center><img src="'.base_url('inc/media/no_image.jpg').'" style="width: 40px;height:40px;"></center>';
             $row[]		=	'<a href="santri/look_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nip']) ? strtoupper($field['nip']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	'<a onclick="change_status_santri('.$field['id'].','."'".$field['status_santri']."'".')"><span class="label label-block label-rounded label-'.(($field['status_santri'] == "AKTIF") ? "success" : "info").'">'.$field['status_santri'].'</span></a>' ;

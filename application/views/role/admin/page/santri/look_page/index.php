@@ -9,7 +9,7 @@
                     <!-- Foto Profil -->
                     <div class="col-sm-3 text-center">
                         <?php if (!empty($data_get['data_edit']['foto'])): ?>
-                            <img src="<?= base_url('inc/media/santri/' . $data_get['data_edit']['foto']) ?>" style="max-width: 200px"  class="img-thumbnail img-responsive" alt="Foto Santri">
+                            <img src="<?= $data_get['data_edit']['foto'] ?>" style="max-width: 200px"  class="img-thumbnail img-responsive" alt="Foto Santri">
                         <?php else: ?>
                             <img src="<?= base_url('inc/media/no_image.jpg') ?>" class="img-thumbnail img-responsive"  style="max-width: 200px" alt="Foto Santri">
                         <?php endif; ?>

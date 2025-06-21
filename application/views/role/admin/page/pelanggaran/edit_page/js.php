@@ -1,5 +1,22 @@
 
 	<script type="text/javascript">
+		initialData = {
+			id: '<?= $data_get['santri']['id'] ?>', // ID dari PHP
+			text: '<?= $data_get['santri']['nama'] ?>' // Nama dari PHP
+		};
+		initialDataTatib = {
+			id: '<?= $data_get['tatib']['id'] ?>', // ID dari PHP
+			text: '<?= $data_get['tatib']['nama'] ?>' // Nama dari PHP
+		};
+		initialDataPengurus = {
+			id: '<?= $data_get['pengurus']['id'] ?>', // ID dari PHP
+			text: '<?= $data_get['pengurus']['nama'] ?>' // Nama dari PHP
+		};
+		initialDataPelapor = {
+			id: '<?= $data_get['pelapor']['id'] ?>', // ID dari PHP
+			text: '<?= $data_get['pelapor']['nama'] ?>' // Nama dari PHP
+		};
+		
 		$(".select-santri").select2({
 		         ajax: { 
 		           url: '<?php echo $data_get['param']['table'] ?>/get_santri_select',
@@ -20,6 +37,11 @@
 		         }
 		    });
 		 
+		var selectSantri = $(".select-santri");
+		var option = new Option(initialData.text, initialData.id, true, true);
+		selectSantri.append(option).trigger('change');
+
+
 		 $('.select-tatib').select2({
 	        ajax: { 
 		           url: '<?php echo $data_get['param']['table'] ?>/get_tatib_select',
@@ -40,6 +62,11 @@
 		           cache: true
 		         }
 	    });
+
+		
+		var selectTatib = $(".select-tatib");
+		var option = new Option(initialDataTatib.text, initialDataTatib.id, true, true);
+		selectTatib.append(option).trigger('change');
 
 		$('.select-tatib').on('select2:select', function (e) {
 			const data = e.params.data;
@@ -70,6 +97,12 @@
 		           cache: true
 		         }
 	    });
+
+		
+		var selectPelapor = $(".select-pelapor");
+		var option = new Option(initialDataPelapor.text, initialDataPelapor.id, true, true);
+		selectPelapor.append(option).trigger('change');
+
 		 $('.select-pengurus').select2({
 	        ajax: { 
 		           url: '<?php echo $data_get['param']['table'] ?>/get_pengurus_select',
@@ -89,6 +122,10 @@
 		           cache: true
 		         }
 	    });
+
+		var selectPengurus = $(".select-pengurus");
+		var option = new Option(initialDataPengurus.text, initialDataPengurus.id, true, true);
+		selectPengurus.append(option).trigger('change');
 
 		$( "#app-submit" ).on('submit', function( e ) {
 		    e.stopImmediatePropagation();

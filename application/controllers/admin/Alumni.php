@@ -117,7 +117,7 @@ class alumni extends MY_Controller {
             $no++;
             $row        =   array();
             
-            $row[]      =   (!empty($field['foto'])) ? '<center><img src="'.base_url('inc/media/santri/'.$field['foto']).'" style="width: 30px;height:40px;"></center>' : '<center><img src="'.base_url('inc/media/no_image.jpg').'" style="width: 40px;height:40px;"></center>';
+            $row[]      =   (!empty($field['foto'])) ? '<center><img src="'.$field['foto'].'" style="width: 30px;height:40px;"></center>' : '<center><img src="'.base_url('inc/media/no_image.jpg').'" style="width: 40px;height:40px;"></center>';
             $row[]		=	'<a href="santri/edit_page/'.$field['id'].'" class="app-item"><b>'. (!empty($field['nis']) ? strtoupper($field['nis']) : '-') . '</b></a>';
             $row[]		=	!empty($field['nama']) ? '<b style="color:black">'.strtoupper($field['nama']).'</b>' : '-';
             $row[]		=	!empty($field['tahun_lulus']) ? '<b style="color:black">'.strtoupper($field['tahun_lulus']).'</b>' : '-';

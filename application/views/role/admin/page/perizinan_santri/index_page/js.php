@@ -61,7 +61,7 @@
        "processing": true, 
             "serverSide": true, 
             "stateSave": true,
-            "orderng": false,
+            "ordering": false,
             "searching": false, 
              
             "ajax": {

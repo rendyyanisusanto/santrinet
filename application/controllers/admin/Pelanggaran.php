@@ -66,7 +66,11 @@ class pelanggaran extends MY_Controller {
 				$data['param']['id']	=>	$id
 			])->row_array();
 			$data['kategori_tatib'] = 	$this->db->query('select id, nama from kategori_tatib')->result_array();
-
+			$data['santri']		=	$this->db->query('select id, nama from santri where id = '.$data['data_edit']['santri_id'])->row_array();
+			$data['tatib']		=	$this->db->query('select id, kode, nama, kategori_tatib_id, sanksi from tatib where id = '.$data['data_edit']['tatib_id'])->row_array();
+			$data['pengurus']		=	$this->db->query('select id, (select nama from santri where santri.id=pengurus.santri_id) as nama from pengurus where id = '.$data['data_edit']['pengurus_id'])->row_array();
+			$data['pelapor']		=	$this->db->query('select id, (select nama from santri where santri.id=pengurus.santri_id) as nama from pengurus where id = '.$data['data_edit']['pelapor_id'])->row_array();
+	
 			if (!empty($data['data_edit'])) {
 				$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/edit_page/index',$data['param']['parents_link'].'/edit_page/js', 'role/global/modal_setting'],$data);
 			}			
@@ -228,21 +232,19 @@ class pelanggaran extends MY_Controller {
 	function simpan_data()
 	{
 		try {
+			$this->load->helper('minio');
 			$uuid = $_POST['uuid'];
 			$cek = $this->my_where('pelanggaran', ['uuid'=>$uuid])->num_rows();
 			if (!empty($uuid) && $cek == 0) {
 				// code...
-				$foto = $this->save_media([
-					'path'	=>	"./inc/media/pelanggaran/",
-					'filename' => 'foto',
-				]);
+				$foto = "";
 				$data = [
 					'santri_id'				=>	$_POST['santri_id'],
 					// 'pelanggaran'			=>	$_POST['pelanggaran'],
 					'tanggal'				=>	$_POST['tanggal'],
 					'kode'					=>	$_POST['kode'],
 					'uuid'					=>	$_POST['uuid'],
-					'foto'					=>	(($_FILES['foto']) ? $foto['file_name'] : $_POST['foto_before']),
+					'foto'					=>	$foto,
 					'tatib_id'				=>	$_POST['tatib_id'],
 					'status_aktif'			=>	$_POST['status_aktif'],
 					'takzir'				=>	$_POST['takzir'],
@@ -254,7 +256,12 @@ class pelanggaran extends MY_Controller {
 					'status_pengajuan'		=>	'BUKAN PENGAJUAN'
 
 				];
-				if ($this->save_data('pelanggaran', $data)) {
+				if ($this->db->insert('pelanggaran', $data)) {
+					$pelanggaran_id = $this->db->insert_id();
+					if (!empty($_FILES['foto']['name'])) {
+						$foto_nama = upload_to_minio('foto', 'pelanggaran', $_POST['santri_id'], 'foto', true); // compress gambar
+						$this->db->update('pelanggaran', ['foto' => $foto_nama], ['id' => $pelanggaran_id]);
+					}
 					echo json_encode([
 						'status'	=>	200,
 						'msg'		=>	'Data pelanggaran berhasil disimpan',
@@ -267,6 +274,56 @@ class pelanggaran extends MY_Controller {
 					]);
 				}
 			}
+		} catch (Exception $e) {
+			echo json_encode([
+					'status'	=>	500,
+					'msg'		=>	$e
+			]);
+		}
+	}
+
+	function update_data()
+	{
+		try {
+				$this->load->helper('minio');
+				$foto_nama = $this->input->post('foto_lama');
+				if (!empty($_FILES['foto']['name'])) {
+					$foto_url = upload_to_minio('foto', 'pelanggaran', $_POST['id'], 'foto', true); // compress true
+					if ($foto_url) {
+						$foto_nama = $foto_url;
+					}
+				}
+				$data = [
+					'santri_id'				=>	$_POST['santri_id'],
+					'tanggal'				=>	$_POST['tanggal'],
+					'kode'					=>	$_POST['kode'],
+					'uuid'					=>	$_POST['uuid'],
+					'foto'					=>	$foto_nama,
+					'tatib_id'				=>	$_POST['tatib_id'],
+					'status_aktif'			=>	$_POST['status_aktif'],
+					'takzir'				=>	$_POST['takzir'],
+					'status_takzir'				=>	$_POST['status_takzir'],
+					'pengurus_id'				=>	$_POST['pengurus_id'],
+					'pelapor_id'				=>	$_POST['pelapor_id'],
+					'status_dokumen_pelanggaran'=>	$_POST['status_dokumen_pelanggaran'],
+					'kronologi'					=>	$_POST['kronologi'],
+					'status_pengajuan'		=>	'BUKAN PENGAJUAN'
+
+				];
+				if ($this->my_update('pelanggaran', $data, ['id' => $_POST['id']])) {
+					
+					echo json_encode([
+						'status'	=>	200,
+						'msg'		=>	'Data pelanggaran berhasil diubah',
+						'foto'		=>	$foto_nama
+					]);
+				}else{
+					echo json_encode([
+						'status'	=>	500,
+						'msg'		=>	'Data pelanggaran gagal diubah'
+					]);
+				}
+			
 		} catch (Exception $e) {
 			echo json_encode([
 					'status'	=>	500,

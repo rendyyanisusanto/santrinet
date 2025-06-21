@@ -23,7 +23,7 @@
 													<input type="hidden" value="<?= $value['id']?>" name="dokumen[<?= $key ?>][id]">
 												</div>
 												<div class="col-lg-2">
-													<a href="<?= base_url('inc/media/santri/dokumen_santri/'.$value['file']);?>" target="__blank">Lihat File</a>
+													<a href="<?= $value['file']; ?>" target="__blank">Lihat File</a>
 												</div>
 												<div class="col-lg-4">
 													<input type="file" placeholder="" name="dokumen[<?= $key ?>][val]" class="form-control">

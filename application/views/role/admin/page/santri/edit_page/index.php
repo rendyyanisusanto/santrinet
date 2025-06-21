@@ -136,7 +136,7 @@
 								<div class="form-group">
 									<label class="col-lg-3 control-label">Foto : </label>
 									<div class="col-lg-6">
-										<img src="<?= (!empty($data_get['data_edit']['foto'])) ? base_url('inc/media/santri/'.$data_get['data_edit']['foto']) : base_url('inc/media/no_image.jpg') ;?>" style="width: 70px;height:90px;margin-bottom: 5px;border-radius:10px;" alt="">
+										<img src="<?= (!empty($data_get['data_edit']['foto'])) ? $data_get['data_edit']['foto'] : base_url('inc/media/no_image.jpg') ;?>" style="width: 70px;height:90px;margin-bottom: 5px;border-radius:10px;" alt="">
 										<input type="hidden" name="foto_lama" value="<?= $data_get['data_edit']['foto']?>">
 										<input type="file" placeholder="" name="foto" class="form-control">
 									</div>
@@ -178,7 +178,7 @@
 													<input type="hidden" value="<?= $value['id']?>" name="dokumen[<?= $key ?>][id]">
 												</div>
 												<div class="col-lg-2">
-													<a href="<?= base_url('inc/media/santri/dokumen_santri/'.$value['file']);?>" target="__blank">Lihat File</a>
+													<a href="<?= $value['file'];?>" target="__blank">Lihat File</a>
 												</div>
 												<div class="col-lg-4">
 													
