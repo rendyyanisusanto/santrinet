@@ -25,6 +25,7 @@ class Personal extends MY_Controller {
 	public function datatable()
 	{
        	$this->arr['table'] = 'v_all_data';
+        $this->db->where('status_aktif', 1);
 		$_POST['frm']   =   $this->arr;
 
         $list           =   $this->mod_datatable->get_datatables();

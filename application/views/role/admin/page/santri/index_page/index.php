@@ -31,21 +31,22 @@
 								<th width="10%">Status</th>
 								<th width="2%" class="text-center">Actions</th>
 							</tr>
+							<tr>
+								
+								<td  style="background: gray;"></td>
+								<td>
+									<input placeholder="Cari berdasarkan NIP" type="text" name="nip" class="nip-search form-control" >
+								</td>
+								<td>
+									
+									<input placeholder="Cari berdasarkan Nama" type="text" name="nama" class="nama-search form-control" >
+								</td>
+								<td colspan="2" style="background: gray;"></td>
+							</tr>
 						</thead>
 					<tbody></tbody>
 					<tfoot>
-						<tr>
-							
-							<td  style="background: gray;"></td>
-							<td>
-								<input placeholder="Cari berdasarkan NIP" type="text" name="nip" class="nip-search form-control" >
-							</td>
-							<td>
-								
-								<input placeholder="Cari berdasarkan Nama" type="text" name="nama" class="nama-search form-control" >
-							</td>
-							<td colspan="2" style="background: gray;"></td>
-						</tr>
+						
 					</tfoot>
 				</table>
 			</div>
