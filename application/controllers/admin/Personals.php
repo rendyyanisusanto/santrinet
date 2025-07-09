@@ -411,11 +411,23 @@ class personals extends MY_Controller {
 			]);
 		}
 	}
+	
+	function __apply_filter(){
+		
+		$this->db->where('status_aktif', ($_POST['status_aktif'] ?? 1));
+		// $this->db->where('status_santri', 'AKTIF');
+	}
 
 	public function datatable()
 	{
+		
        	$_POST['frm']   =   $this->arr;
+		$this->__apply_filter();
         $list           =   $this->mod_datatable->get_datatables();
+		$this->__apply_filter();
+		$recordsTotal   =   $this->mod_datatable->count_all();
+		$this->__apply_filter();
+		$recordsFiltered =   $this->mod_datatable->count_filtered();
         $data           =   array();
         $no             =   $_POST['start'];
         foreach ($list as $field) {

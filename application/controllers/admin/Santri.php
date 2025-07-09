@@ -730,9 +730,8 @@ class santri extends MY_Controller {
 		}
 	}
 
-	public function datatable()
-	{
-       	$this->arr['table'] = 'v_santri_aktif';
+	function __apply_filter(){
+		$this->arr['table'] = 'v_santri_aktif';
 		
 		
 		if (!empty($_POST['nip'])) {
@@ -744,10 +743,19 @@ class santri extends MY_Controller {
 		if (!empty($_POST['nama'])) {
 			$this->db->like('nama ', $_POST['nama']);
 		}
-		$_POST['frm']   =   $this->arr;
 		$this->db->where('status_aktif', ($_POST['status_aktif'] ?? 1));
 		$this->db->where('status_santri', 'AKTIF');
+	}
+
+	public function datatable()
+	{
+		$_POST['frm']   =   $this->arr;
+		$this->__apply_filter();
         $list           =   $this->mod_datatable->get_datatables();
+		$this->__apply_filter();
+		$recordsTotal   =   $this->mod_datatable->count_all();
+		$this->__apply_filter();
+		$recordsFiltered =   $this->mod_datatable->count_filtered();
         $data           =   array();
         $no             =   $_POST['start'];
         foreach ($list as $field) {
@@ -776,8 +784,8 @@ class santri extends MY_Controller {
         }
         $output = array(
             "draw" => $_POST['draw'],
-            "recordsTotal" => $this->mod_datatable->count_all(),
-            "recordsFiltered" => $this->mod_datatable->count_filtered(),
+            "recordsTotal" => $recordsTotal,
+            "recordsFiltered" => $recordsFiltered,
             "data" => $data,
         );
 
