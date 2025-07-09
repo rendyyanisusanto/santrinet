@@ -735,7 +735,6 @@ class santri extends MY_Controller {
 	}
 
 	function __apply_filter(){
-		$this->arr['table'] = 'v_santri_aktif';
 		
 		
 		if (!empty($_POST['nip'])) {
@@ -753,6 +752,7 @@ class santri extends MY_Controller {
 
 	public function datatable()
 	{
+		$this->arr['table'] = 'v_santri_aktif';
 		$_POST['frm']   =   $this->arr;
 		$this->__apply_filter();
         $list           =   $this->mod_datatable->get_datatables();
