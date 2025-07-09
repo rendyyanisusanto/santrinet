@@ -756,12 +756,11 @@ class santri extends MY_Controller {
 		$_POST['frm']   =   $this->arr;
 		$this->__apply_filter();
         $list           =   $this->mod_datatable->get_datatables();
-		$this->__apply_filter();
-		$recordsTotal   =   $this->mod_datatable->count_all();
-		$this->__apply_filter();
-		$recordsFiltered =   $this->mod_datatable->count_filtered();
         $data           =   array();
         $no             =   $_POST['start'];
+
+		
+		
         foreach ($list as $field) {
             $no++;
             $row        =   array();
@@ -786,6 +785,11 @@ class santri extends MY_Controller {
 
             $data[]     =   $row;
         }
+
+		$this->__apply_filter();
+		$recordsTotal   =   $this->mod_datatable->count_all();
+		$this->__apply_filter();
+		$recordsFiltered =   $this->mod_datatable->count_filtered();
         $output = array(
             "draw" => $_POST['draw'],
             "recordsTotal" => $recordsTotal,
