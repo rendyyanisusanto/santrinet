@@ -45,9 +45,13 @@ class santri extends MY_Controller {
 			$data['data_edit']	=	$this->my_where($data['param']['table'], [
 				$data['param']['id']	=>	$id
 			])->row_array();
-
+			
+			$data['asatid']	=	$this->db->query('select * from asatid where santri_id='.$id)->num_rows();
+			$data['kafil']	=	$this->db->query('select * from kafil where santri_id='.$id)->num_rows();
+			$data['pengurus']	=	$this->db->query('select id, santri_id, lembaga_pengurus_id from pengurus where santri_id='.$id.' order by id DESC limit 1')->row_array();
+			$data['lembaga_pengurus']	=	$this->db->query('select id, nama from lembaga_pengurus')->result_array();
 			$data['dokumen_santri']	=	$this->db->query('select id, fname, file from santri_dokumen where santri_id='.$id)->result_array();
-
+				// print_r($data['pengurus']);
 			if (!empty($data['data_edit'])) {
 				$this->my_view(['role/global/page_header',$data['param']['parents_link'].'/edit_page/index',$data['param']['parents_link'].'/edit_page/js', 'role/global/modal_setting'],$data);
 			}			

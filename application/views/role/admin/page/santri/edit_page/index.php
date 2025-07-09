@@ -145,19 +145,19 @@
 									<label class="col-lg-3 control-label">Role : <i class="text-danger">*</i></label>
 									<div class="col-lg-6">
 										<input type="checkbox" name="role[]" checked value="SANTRI"> SANTRI <br>
-										<input type="checkbox" name="role[]" value="KAFIL"> KAFIL<br>
-										<input type="checkbox" name="role[]" value="ASATID"> ASATID<br>
-										<input type="checkbox" name="role[]" id="role_pengurus" value="PENGURUS"> PENGURUS
+										<input type="checkbox" name="role[]" <?= ($data_get['kafil'] > 0) ? "checked" : ""?> value="KAFIL"> KAFIL<br>
+										<input type="checkbox" name="role[]" <?= ($data_get['asatid'] > 0) ? "checked" : ""?> value="ASATID"> ASATID<br>
+										<input type="checkbox" name="role[]" <?= (!empty($data_get['pengurus'])) ? "checked" : ""?>  id="role_pengurus" value="PENGURUS"> PENGURUS
 									</div>
 								</div>
-								<div class="form-group" id="lembaga_pengurus" style="display: none;">
+								<div class="form-group" id="lembaga_pengurus" style="display: <?= (!empty($data_get['pengurus'])) ? '' : 'none' ?>;">
 									<label class="col-lg-3 control-label">Lembaga :</label>
 									<div class="col-lg-6">
 										<select name="lembaga_pengurus_id" class="form-control">
 											<?php
 												foreach ($data_get['lembaga_pengurus'] as $key => $value) {
 													?>
-													<option value="<?= $value['id']?>"><?= $value['nama']?></option>
+													<option <?= ($data_get['pengurus']['lembaga_pengurus_id'] == $value['id']) ? "selected" : "" ?> value="<?= $value['id']?>"><?= $value['nama']?></option>
 													<?php
 												}
 											?>

@@ -23,6 +23,15 @@
 		        });
 		    return false;
 		});
+		$(document).ready(function () {
+			$('#role_pengurus').change(function () {
+				if ($(this).is(':checked')) {
+					$('#lembaga_pengurus').show();
+				} else {
+					$('#lembaga_pengurus').hide();
+				}
+			});
+		});
 		function add_document(){
 			let uuid = generateUUID();
 			let panel = '<div class="form-group">';
