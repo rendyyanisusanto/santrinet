@@ -120,14 +120,6 @@
         setInterval(updateJam, 1000);
         updateJam();
 
-        function status_pulang(){
-            send_ajax('<?= base_url("Presence_system/get_status_pulang")?>', {}).then(function(data){
-                $('.status_pulang').html(data)
-            })
-        }
-
-        setInterval(status_pulang, 60000);
-        status_pulang();
         // Fokus kembali ke input RFID
         const rfidInput = document.getElementById("rfid-input");
         rfidInput.addEventListener("blur", () => {

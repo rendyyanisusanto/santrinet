@@ -14,7 +14,11 @@
                     <td colspan="3" class="text-center text-muted">Belum ada aktivitas hari ini.</td>
                 </tr>
             <?php else: ?>
-                <?php foreach ($presence as $act): ?>
+                <?php foreach ($presence as $act): 
+                    if ($act['status_konfirmasi_keluar'] == "BELUM DIKONFIRMASI") {
+                        continue; // Skip if both keluar and kembali are null
+                    } 
+                    ?>
                     <tr>
                         <td><?php echo $act['nama_pengurus'] ?></td>
                         <td class="text-center">

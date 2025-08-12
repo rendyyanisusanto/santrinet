@@ -1,7 +1,7 @@
 /*
  Navicat Premium Dump SQL
 
- Source Server         : LOCAL
+ Source Server         : localhost
  Source Server Type    : MySQL
  Source Server Version : 100432 (10.4.32-MariaDB)
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 100432 (10.4.32-MariaDB)
  File Encoding         : 65001
 
- Date: 26/05/2025 06:50:28
+ Date: 03/08/2025 16:52:36
 */
 
 SET NAMES utf8mb4;
@@ -27,7 +27,7 @@ CREATE TABLE `akun`  (
   `nama` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
   `indukakun_id` int NULL DEFAULT NULL,
   `saldo_normal` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  `create_at` timestamp NULL DEFAULT current_timestamp,
+  `create_at` timestamp NULL DEFAULT current_timestamp(),
   `is_edit` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
@@ -78,19 +78,19 @@ CREATE TABLE `alumni`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `santri_id` int NULL DEFAULT NULL,
   `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE CURRENT_TIMESTAMP,
   `tahun_lulus` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `santri_id`(`santri_id` ASC) USING BTREE,
   CONSTRAINT `alumni_ibfk_1` FOREIGN KEY (`santri_id`) REFERENCES `santri` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of alumni
 -- ----------------------------
 INSERT INTO `alumni` VALUES (2, 1534, 1, '2025-05-20 16:35:06', '2025', NULL);
-INSERT INTO `alumni` VALUES (3, 1551, 1, '2025-05-20 16:36:02', '2025', NULL);
+INSERT INTO `alumni` VALUES (6, 1581, NULL, '2025-06-18 18:18:56', '2025', 'imperium');
 
 -- ----------------------------
 -- Table structure for angkatan
@@ -121,11 +121,16 @@ CREATE TABLE `asatid`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `santri_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of asatid
 -- ----------------------------
+INSERT INTO `asatid` VALUES (8, 1535);
+INSERT INTO `asatid` VALUES (9, 1536);
+INSERT INTO `asatid` VALUES (10, 1538);
+INSERT INTO `asatid` VALUES (11, 1540);
+INSERT INTO `asatid` VALUES (13, 1586);
 
 -- ----------------------------
 -- Table structure for asrama
@@ -137,7 +142,7 @@ CREATE TABLE `asrama`  (
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` tinyint(1) NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
@@ -164,13 +169,13 @@ CREATE TABLE `buku_tahfidz`  (
   `ayat_akhir` int NULL DEFAULT NULL,
   `nilai` int NULL DEFAULT NULL,
   `catatan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
-  `created_at` datetime NULL DEFAULT current_timestamp,
+  `created_at` datetime NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `santri_id`(`santri_id` ASC) USING BTREE,
   INDEX `surat_id`(`surat_id` ASC) USING BTREE,
   CONSTRAINT `buku_tahfidz_ibfk_1` FOREIGN KEY (`santri_id`) REFERENCES `santri` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `buku_tahfidz_ibfk_2` FOREIGN KEY (`surat_id`) REFERENCES `surat` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of buku_tahfidz
@@ -179,6 +184,8 @@ INSERT INTO `buku_tahfidz` VALUES (1, 1565, '2025-05-25', 'MUROJAAH', 1, 1, '1',
 INSERT INTO `buku_tahfidz` VALUES (2, 1556, '2025-05-25', 'TAMBAHAN', 4, 4, '4', 1, 10, 80, 'tes', '2025-05-25 21:02:29');
 INSERT INTO `buku_tahfidz` VALUES (3, 1558, '2025-05-25', 'TAMBAHAN', 1, 1, '1', 1, 7, 70, 'tete', '2025-05-25 21:03:05');
 INSERT INTO `buku_tahfidz` VALUES (4, 1559, '2025-05-25', 'TAMBAHAN', 2, 2, '2', 1, 5, 80, 'asd', '2025-05-25 21:03:34');
+INSERT INTO `buku_tahfidz` VALUES (5, 1557, '2025-05-26', 'MUROJAAH', 1, 1, '3', 1, 3, 80, 'tes', '2025-05-26 12:38:03');
+INSERT INTO `buku_tahfidz` VALUES (6, 1581, '2025-05-26', 'TAMBAHAN', 1, 1, '8', 1, 8, 80, 'tes', '2025-05-26 13:15:10');
 
 -- ----------------------------
 -- Table structure for detail_pengajuan_pelanggaran
@@ -189,18 +196,14 @@ CREATE TABLE `detail_pengajuan_pelanggaran`  (
   `pengajuan_pelanggaran_id` int NULL DEFAULT NULL,
   `santri_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of detail_pengajuan_pelanggaran
 -- ----------------------------
-INSERT INTO `detail_pengajuan_pelanggaran` VALUES (1, 1, 1539);
-INSERT INTO `detail_pengajuan_pelanggaran` VALUES (2, 1, 1540);
-INSERT INTO `detail_pengajuan_pelanggaran` VALUES (3, 1, 1541);
-INSERT INTO `detail_pengajuan_pelanggaran` VALUES (4, 2, 0);
-INSERT INTO `detail_pengajuan_pelanggaran` VALUES (5, 3, 0);
-INSERT INTO `detail_pengajuan_pelanggaran` VALUES (6, 4, 0);
-INSERT INTO `detail_pengajuan_pelanggaran` VALUES (7, 5, 0);
+INSERT INTO `detail_pengajuan_pelanggaran` VALUES (15, 15, 1535);
+INSERT INTO `detail_pengajuan_pelanggaran` VALUES (16, 15, 1538);
+INSERT INTO `detail_pengajuan_pelanggaran` VALUES (17, 15, 1546);
 
 -- ----------------------------
 -- Table structure for groups
@@ -553,6 +556,32 @@ INSERT INTO `groups_detail` VALUES (687, 17, 35, 0, 0, 0, 0);
 INSERT INTO `groups_detail` VALUES (688, 17, 37, 1, 1, 1, 1);
 
 -- ----------------------------
+-- Table structure for ijin_pengurus
+-- ----------------------------
+DROP TABLE IF EXISTS `ijin_pengurus`;
+CREATE TABLE `ijin_pengurus`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `santri_id` int NULL DEFAULT NULL,
+  `waktu_keluar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `waktu_kembali` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `status` enum('KEMBALI','KELUAR') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of ijin_pengurus
+-- ----------------------------
+INSERT INTO `ijin_pengurus` VALUES (1, 1535, '2025-07-28 10:59:13', '2025-07-28 11:00:23', 'KEMBALI', '2025-07-28 10:59:13');
+INSERT INTO `ijin_pengurus` VALUES (2, 1535, '2025-07-28 11:00:27', '2025-07-28 11:26:28', 'KEMBALI', '2025-07-28 11:00:27');
+INSERT INTO `ijin_pengurus` VALUES (3, 1535, '2025-07-28 11:36:12', NULL, 'KELUAR', '2025-07-28 11:36:12');
+INSERT INTO `ijin_pengurus` VALUES (4, 1534, '2025-07-28 11:37:26', NULL, 'KELUAR', '2025-07-28 11:37:26');
+INSERT INTO `ijin_pengurus` VALUES (5, 1536, '2025-07-28 11:37:28', NULL, 'KELUAR', '2025-07-28 11:37:28');
+INSERT INTO `ijin_pengurus` VALUES (6, 1538, '2025-07-28 11:37:29', '2025-07-28 11:39:31', 'KEMBALI', '2025-07-28 11:37:29');
+INSERT INTO `ijin_pengurus` VALUES (7, 1541, '2025-07-28 11:37:30', NULL, 'KELUAR', '2025-07-28 11:37:30');
+INSERT INTO `ijin_pengurus` VALUES (8, 1538, '2025-07-28 11:39:36', NULL, 'KELUAR', '2025-07-28 11:39:36');
+
+-- ----------------------------
 -- Table structure for jadwal_presensi
 -- ----------------------------
 DROP TABLE IF EXISTS `jadwal_presensi`;
@@ -576,12 +605,25 @@ CREATE TABLE `kafil`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `santri_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of kafil
 -- ----------------------------
 INSERT INTO `kafil` VALUES (12, 1555);
+INSERT INTO `kafil` VALUES (13, 1540);
+INSERT INTO `kafil` VALUES (14, 1535);
+INSERT INTO `kafil` VALUES (15, 1538);
+INSERT INTO `kafil` VALUES (16, 1541);
+INSERT INTO `kafil` VALUES (17, 1542);
+INSERT INTO `kafil` VALUES (18, 1544);
+INSERT INTO `kafil` VALUES (19, 1545);
+INSERT INTO `kafil` VALUES (20, 1536);
+INSERT INTO `kafil` VALUES (21, 1554);
+INSERT INTO `kafil` VALUES (22, 1565);
+INSERT INTO `kafil` VALUES (23, 1564);
+INSERT INTO `kafil` VALUES (24, 1567);
+INSERT INTO `kafil` VALUES (26, 1586);
 
 -- ----------------------------
 -- Table structure for kamar
@@ -596,7 +638,7 @@ CREATE TABLE `kamar`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `asrama_id`(`asrama_id` ASC) USING BTREE,
   CONSTRAINT `kamar_ibfk_1` FOREIGN KEY (`asrama_id`) REFERENCES `asrama` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of kamar
@@ -608,6 +650,8 @@ INSERT INTO `kamar` VALUES (4, 'B1', 'Kamar B1', 3, 1);
 INSERT INTO `kamar` VALUES (5, 'B2', 'Kamar B2', 3, 1);
 INSERT INTO `kamar` VALUES (6, 'C1', 'Kamar C1', 4, 1);
 INSERT INTO `kamar` VALUES (7, 'C2', 'Kamar C2', 4, 1);
+INSERT INTO `kamar` VALUES (8, 'K8', 'tes', 2, 1);
+INSERT INTO `kamar` VALUES (9, 'K9', 'asdasd', 2, 1);
 
 -- ----------------------------
 -- Table structure for kamar_santri
@@ -845,11 +889,13 @@ CREATE TABLE `keluhan_rm`  (
   `rekam_medis_id` int NULL DEFAULT NULL,
   `keluhan_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 47 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 49 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of keluhan_rm
 -- ----------------------------
+INSERT INTO `keluhan_rm` VALUES (47, 18, 170);
+INSERT INTO `keluhan_rm` VALUES (48, 18, 169);
 
 -- ----------------------------
 -- Table structure for lembaga_pengurus
@@ -886,7 +932,7 @@ CREATE TABLE `login_attempts`  (
   `login` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `time` int UNSIGNED NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 281 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 283 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of login_attempts
@@ -902,13 +948,16 @@ CREATE TABLE `madin`  (
   `nama` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 104 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 107 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of madin
 -- ----------------------------
+INSERT INTO `madin` VALUES (104, '', 'MADIN 1', '#000000', 1, '2025-05-26 13:02:06');
+INSERT INTO `madin` VALUES (105, '12', 'MADIN 3', '#000000', 1, '2025-06-18 18:21:30');
+INSERT INTO `madin` VALUES (106, '', 'Madin 2', '#000000', 1, '2025-06-18 18:47:39');
 
 -- ----------------------------
 -- Table structure for menu
@@ -1061,11 +1110,12 @@ CREATE TABLE `obat_rm`  (
   `rekam_medis_id` int NULL DEFAULT NULL,
   `obat_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 45 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 46 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of obat_rm
 -- ----------------------------
+INSERT INTO `obat_rm` VALUES (45, 18, 102);
 
 -- ----------------------------
 -- Table structure for pelanggaran
@@ -1089,12 +1139,13 @@ CREATE TABLE `pelanggaran`  (
   `status_takzir` enum('BELUM','SUDAH') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'BELUM',
   `status_pengajuan` enum('BUKAN PENGAJUAN','BELUM DIPROSES','DITERIMA','DITOLAK') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'BUKAN PENGAJUAN',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of pelanggaran
 -- ----------------------------
 INSERT INTO `pelanggaran` VALUES (10, 'P3799', 1558, NULL, 31, 'Nulis Kalimat Toyyibah 20 Halaman  (Minimal 5 Macam)', 62, 63, 'BELUM_MENGAMBIL', '2025-05-20', 1, 'tes', '1078b495b03b1ea99ed4d895132cd626.png', 'f2a124f5-f92a-45e9-9a65-46bc38e11e3a', 'BELUM', 'BUKAN PENGAJUAN');
+INSERT INTO `pelanggaran` VALUES (11, 'P6926', 1581, NULL, 11, 'Nulis Pegon 10 Halaman', 63, 63, 'MENGAMBIL_BELUM_MENGEMBALIKAN', '2025-05-26', 1, 'tes', NULL, 'cacb8bbd-22bd-47e0-b3f5-ee877ebad80c', 'BELUM', 'BUKAN PENGAJUAN');
 
 -- ----------------------------
 -- Table structure for pendidikan_santri
@@ -1136,14 +1187,14 @@ CREATE TABLE `pengajuan_pelanggaran`  (
   `foto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_pengajuan` enum('BELUM DIPROSES','DITERIMA','DITOLAK') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'BELUM DIPROSES',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of pengajuan_pelanggaran
 -- ----------------------------
-INSERT INTO `pengajuan_pelanggaran` VALUES (1, 'PEL-001', 2, 1538, '2025-05-17', 1, 'Santri meninggalkan kegiatan tanpa izin.', '', 'BELUM DIPROSES');
-INSERT INTO `pengajuan_pelanggaran` VALUES (4, 'PEL-7f1b2c02', 3, 1538, '2025-05-22', 1, 'm,smdf,.msd.', 'uploads/ChatGPT Image 28 Apr 2025, 17.14.14.png', 'BELUM DIPROSES');
-INSERT INTO `pengajuan_pelanggaran` VALUES (5, 'PEL-3d686ed4', 17, 1538, '2025-05-22', 1, 'santri kabur dan terlambat mengikuti kegiatan', 'uploads/eParenting-App.png', 'BELUM DIPROSES');
+INSERT INTO `pengajuan_pelanggaran` VALUES (13, 'PEL-b290248c', 6, 1538, '2025-06-17', 1, 'teaadsasda', '1750233022_929.png', 'BELUM DIPROSES');
+INSERT INTO `pengajuan_pelanggaran` VALUES (14, 'PEL-f8b95ae0', 3, 1538, '2025-06-11', 1, 'asd', '1750233253_666.png', 'BELUM DIPROSES');
+INSERT INTO `pengajuan_pelanggaran` VALUES (15, 'PEL-d32f8eca', 7, 1538, '2025-06-11', 1, 'tesasda', '1750233579_570.png', 'BELUM DIPROSES');
 
 -- ----------------------------
 -- Table structure for pengurus
@@ -1154,7 +1205,7 @@ CREATE TABLE `pengurus`  (
   `santri_id` int NULL DEFAULT NULL,
   `lembaga_pengurus_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 64 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 68 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of pengurus
@@ -1162,6 +1213,9 @@ CREATE TABLE `pengurus`  (
 INSERT INTO `pengurus` VALUES (61, 1534, 1);
 INSERT INTO `pengurus` VALUES (62, 1535, 1);
 INSERT INTO `pengurus` VALUES (63, 1536, 1);
+INSERT INTO `pengurus` VALUES (64, 1538, 1);
+INSERT INTO `pengurus` VALUES (65, 1541, 1);
+INSERT INTO `pengurus` VALUES (67, 1586, 1);
 
 -- ----------------------------
 -- Table structure for perawat
@@ -1199,7 +1253,7 @@ CREATE TABLE `perizinan_santri`  (
   `status_aktif` tinyint NULL DEFAULT NULL,
   `status_dokumen` enum('DIAJUKAN_ASRAMA','DIAJUKAN_POSKESTREN','DIKETAHUI_KETUA_KAMAR','DIKETAHUI_KABID','SELESAI','DITOLAK') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT 'DIAJUKAN_ASRAMA',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of perizinan_santri
@@ -1209,6 +1263,12 @@ INSERT INTO `perizinan_santri` VALUES (3, 1564, '2025-05-25', '2025-05-27', 'Kun
 INSERT INTO `perizinan_santri` VALUES (5, 1557, '2025-05-25', '2025-05-30', 'Acara Keluarga', 'PULANG', 'PS-100', 1, 'DIAJUKAN_ASRAMA');
 INSERT INTO `perizinan_santri` VALUES (6, 1558, '2025-05-18', '2025-05-25', 'Sakit tenggorokan', 'SAKIT', 'PS-2505-101', 1, 'DIAJUKAN_POSKESTREN');
 INSERT INTO `perizinan_santri` VALUES (7, 1558, '2025-05-19', '2025-05-25', 'urusan keluarga', 'URUSAN_LAIN', 'PS-2505-102', 1, 'DIAJUKAN_ASRAMA');
+INSERT INTO `perizinan_santri` VALUES (8, 1581, '2025-05-26', '2025-05-29', 'Sakit tenggorokan', 'SAKIT', 'PS-2605-103', 1, 'DIAJUKAN_POSKESTREN');
+INSERT INTO `perizinan_santri` VALUES (9, 1583, '2025-06-18', '2025-06-20', 'tes', 'ACARA_KELUARGA', 'PS-1806-104', 1, 'DIKETAHUI_KETUA_KAMAR');
+INSERT INTO `perizinan_santri` VALUES (10, 1583, '2025-06-20', '2025-06-26', 'karena ingin pulang', 'PULANG', 'I-cf5d8f61', 1, 'DIAJUKAN_ASRAMA');
+INSERT INTO `perizinan_santri` VALUES (11, 1539, '2025-06-17', '2025-06-21', 'Mau naik haji', 'URUSAN_LAIN', 'I-1a311f68', 1, 'DIAJUKAN_ASRAMA');
+INSERT INTO `perizinan_santri` VALUES (12, 1540, '2025-06-19', '2025-06-25', 'asdasd', 'SAKIT', '2506191541820', 1, 'DIAJUKAN_ASRAMA');
+INSERT INTO `perizinan_santri` VALUES (13, 1534, '2025-06-18', '2025-06-27', 'sakit panas 3 hari', 'SAKIT', '2506191543518', 1, 'DIAJUKAN_POSKESTREN');
 
 -- ----------------------------
 -- Table structure for perolehan_tahfidz
@@ -1220,19 +1280,20 @@ CREATE TABLE `perolehan_tahfidz`  (
   `juz_terakhir` int NOT NULL,
   `surat_id` int NULL DEFAULT NULL,
   `ayat_terakhir` int NULL DEFAULT NULL,
-  `tanggal_update` date NULL ,
+  `tanggal_update` date NULL DEFAULT NULL,
   `catatan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `santri_id`(`santri_id` ASC) USING BTREE,
   INDEX `surat_id`(`surat_id` ASC) USING BTREE,
   CONSTRAINT `perolehan_tahfidz_ibfk_1` FOREIGN KEY (`santri_id`) REFERENCES `santri` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `perolehan_tahfidz_ibfk_2` FOREIGN KEY (`surat_id`) REFERENCES `surat` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of perolehan_tahfidz
 -- ----------------------------
 INSERT INTO `perolehan_tahfidz` VALUES (1, 1559, 2, NULL, NULL, '2025-05-25', NULL);
+INSERT INTO `perolehan_tahfidz` VALUES (2, 1581, 1, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for personal_titles
@@ -1291,11 +1352,13 @@ CREATE TABLE `peserta_sekolah`  (
   `santri_id` int NULL DEFAULT NULL,
   `sekolah_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of peserta_sekolah
 -- ----------------------------
+INSERT INTO `peserta_sekolah` VALUES (2, 1535, 4);
+INSERT INTO `peserta_sekolah` VALUES (3, 1536, 4);
 
 -- ----------------------------
 -- Table structure for peserta_tahfidz
@@ -1306,11 +1369,16 @@ CREATE TABLE `peserta_tahfidz`  (
   `tahfidz_id` int NULL DEFAULT NULL,
   `santri_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of peserta_tahfidz
 -- ----------------------------
+INSERT INTO `peserta_tahfidz` VALUES (2, 1, 1581);
+INSERT INTO `peserta_tahfidz` VALUES (3, 103, 1534);
+INSERT INTO `peserta_tahfidz` VALUES (4, 103, 1536);
+INSERT INTO `peserta_tahfidz` VALUES (5, 103, 1537);
+INSERT INTO `peserta_tahfidz` VALUES (6, 103, 1540);
 
 -- ----------------------------
 -- Table structure for presensi_santri
@@ -1368,7 +1436,7 @@ CREATE TABLE `profil_website`  (
 -- ----------------------------
 -- Records of profil_website
 -- ----------------------------
-INSERT INTO `profil_website` VALUES ('www.santripasir.id', 'Jl. Sumber Pasir No.99A, Krajan, Sumberpasir, Kec. Pakis, Kabupaten Malang, Jawa Timur 65154', '085894632505', 'fav.png', 'fav.png', 'SIM PONDOK', '-', '<p>The Balance Small Business makes launching and managing your own business easy. It is home to experts who provide clear, practical advice on entrepreneurship and management. Whether you&rsquo;re just starting up or you want to take your company to the next level, our 20-year-strong library of more than 7,000 pieces of content will answer your questions and turn your business dreams into reality.</p>\n\n<p><a href=\"https://www.thebalancesmb.com/\">The Balance</a>&nbsp;is part of The Balance family of sites, including&nbsp;<a href=\"https://www.thebalance.com/\" rel=\"noopener\" target=\"_blank\">The Balance</a>&nbsp;and&nbsp;<a href=\"https://www.thebalancecareers.com/\" rel=\"noopener\" target=\"_blank\">The Balance Careers</a>, covering personal finance, career, and small business topics. With more than 24 million monthly visitors, The Balance is among the top-10 largest finance properties as measured by comScore, a leading Internet measurement company. Our more than 50 expert writers have extensive qualifications and expertise in their topics, including MBAs, PhDs, CFPs, other advanced degrees and professional certifications.</p>\n\n<p>The Balance family of sites have been honored by multiple awards in the last year, including&nbsp;<a href=\"https://www.tellyawards.com/winners/2017/short-form-social/general-education-discovery\" rel=\"noopener nofollow\" target=\"_blank\">The Telly Awards</a>,&nbsp;<a href=\"https://www.communicatorawards.com/\" rel=\"noopener nofollow\" target=\"_blank\">The Communicator Awards</a>, and&nbsp;<a href=\"https://www.editorandpublisher.com/news/editor-publisher-announces-the-2017-eppy-award-finalists/\" rel=\"noopener nofollow\" target=\"_blank\">Eppy Awards</a>.</p>\n', 'hallo@impactfurniture.id', 'Andreas Hartanto', 'undefined', 'undefined', 'undefined', 'undefined', 'ea4d58dd1254aff316312b7ecbb5c410.jpg', 'Halo Admin, Saya ingin bertanya/membeli/.....', 'd797c14a0070235734508b7d9f409395.jpg', '&copy; 2019. <a href=\"#\">Core Master</a> by<a href=\"https://myber.co.id\" target=\"_blank\">Myber</a>', 'Core Master', 'Pondok Pesantren Salaf Quran Asy-Syadzili 1', 'Surabaya', 'Indonesia', '112.66307147573268', '-7.840640250568774', NULL);
+INSERT INTO `profil_website` VALUES ('www.santripasir.id', 'Jl. Sumber Pasir No.99A, Krajan, Sumberpasir, Kec. Pakis, Kabupaten Malang, Jawa Timur 65154', '085894632505', 'icon.png', 'icon.png', 'SIM PONDOK', '-', '<p>The Balance Small Business makes launching and managing your own business easy. It is home to experts who provide clear, practical advice on entrepreneurship and management. Whether you&rsquo;re just starting up or you want to take your company to the next level, our 20-year-strong library of more than 7,000 pieces of content will answer your questions and turn your business dreams into reality.</p>\n\n<p><a href=\"https://www.thebalancesmb.com/\">The Balance</a>&nbsp;is part of The Balance family of sites, including&nbsp;<a href=\"https://www.thebalance.com/\" rel=\"noopener\" target=\"_blank\">The Balance</a>&nbsp;and&nbsp;<a href=\"https://www.thebalancecareers.com/\" rel=\"noopener\" target=\"_blank\">The Balance Careers</a>, covering personal finance, career, and small business topics. With more than 24 million monthly visitors, The Balance is among the top-10 largest finance properties as measured by comScore, a leading Internet measurement company. Our more than 50 expert writers have extensive qualifications and expertise in their topics, including MBAs, PhDs, CFPs, other advanced degrees and professional certifications.</p>\n\n<p>The Balance family of sites have been honored by multiple awards in the last year, including&nbsp;<a href=\"https://www.tellyawards.com/winners/2017/short-form-social/general-education-discovery\" rel=\"noopener nofollow\" target=\"_blank\">The Telly Awards</a>,&nbsp;<a href=\"https://www.communicatorawards.com/\" rel=\"noopener nofollow\" target=\"_blank\">The Communicator Awards</a>, and&nbsp;<a href=\"https://www.editorandpublisher.com/news/editor-publisher-announces-the-2017-eppy-award-finalists/\" rel=\"noopener nofollow\" target=\"_blank\">Eppy Awards</a>.</p>\n', 'hallo@impactfurniture.id', 'Andreas Hartanto', 'undefined', 'undefined', 'undefined', 'undefined', 'ea4d58dd1254aff316312b7ecbb5c410.jpg', 'Halo Admin, Saya ingin bertanya/membeli/.....', 'd797c14a0070235734508b7d9f409395.jpg', '&copy; 2019. <a href=\"#\">Core Master</a> by<a href=\"https://myber.co.id\" target=\"_blank\">Myber</a>', 'Core Master', 'Pondok Pesantren Salaf Quran Asy-Syadzili 1', 'Surabaya', 'Indonesia', '112.66307147573268', '-7.840640250568774', NULL);
 
 -- ----------------------------
 -- Table structure for rekam_medis
@@ -1388,11 +1456,12 @@ CREATE TABLE `rekam_medis`  (
   `catatan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `lama_sakit` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of rekam_medis
 -- ----------------------------
+INSERT INTO `rekam_medis` VALUES (18, 1581, 1, '2025-05-26', '', 'RM9356', '6d783a07-aaba-4505-abe4-84c61fa51cb7', 1, 4, 'sakit', 'tes', 5);
 
 -- ----------------------------
 -- Table structure for santri
@@ -1400,7 +1469,7 @@ CREATE TABLE `rekam_medis`  (
 DROP TABLE IF EXISTS `santri`;
 CREATE TABLE `santri`  (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nis` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `nip` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `jenis_kelamin` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `tempat_lahir` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -1418,44 +1487,67 @@ CREATE TABLE `santri`  (
   `asrama_id` int NULL DEFAULT NULL,
   `nik` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `angkatan_id` int NULL DEFAULT NULL,
+  `nis` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `rfid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1566 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 1587 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of santri
 -- ----------------------------
-INSERT INTO `santri` VALUES (1534, '0119060052', 'Abdul Mun\'im Zam Zamy', 'L', 'MOJOKERTO', '2006-06-02', 'DESA MOJOGENENG, KEC. JATIREJO, KAB. MOJOKERTO, JATIM', 'MOH. SUBKHAN', 'ALFIYATUN NISA\'', '6285706270450', '6285706270450', 1, 'ALUMNI', '', '', NULL, NULL, '3516010206060001', NULL);
-INSERT INTO `santri` VALUES (1535, '0119060147', 'Achmad Fathir Fadillah Anam', 'L', 'MALANG', '2007-03-13', 'JL. MUHARTO NO. 35, KEL. JODIPAN, KEC. BLIMBING, KOTA. MALANG, JATIM', 'CHOIRUL ANAM', 'NURUL AINI', '6289654491144', '6289654491144', 1, 'AKTIF', '', '', NULL, NULL, '3573011303070005', NULL);
-INSERT INTO `santri` VALUES (1536, '0119060197', 'Achmad Nabil', 'L', 'MALANG', '2006-05-01', 'JL. TERNATE NO. 26, KEL. KASIN, KEC. KLOJEN, KOTA MALANG, JATIM', 'M. YAZID BUSTHAMI', 'ISTIANAH', '6285101363903', '6285101363903', 1, 'AKTIF', '', '', NULL, NULL, '3573020105060001', NULL);
-INSERT INTO `santri` VALUES (1537, '0122070263', 'Ahmad Aditya Ramadhani', 'L', 'MALANG', '2007-09-24', 'DUSUN PETUNGWULUNG RT. 7 RW. 6 DESA TOYOMARTO KEC. SINGOSARI KAB. MALANG JAWA TIMUR', 'AGUS EFENDI', 'HERY SULISTYOWATI', '', '', 1, 'AKTIF', '6283853584607', '', NULL, NULL, '3507242409070006', NULL);
-INSERT INTO `santri` VALUES (1538, '0119060021', 'Ahmad Novel Ashshidiqi', 'L', 'MALANG', '2006-11-20', 'DUSUN TENAGA TURI, DESA KEPUHARJO, KEC. KARANGPLOSO, KAB. MALANG, JATIM', 'NGADI SLAMET', 'ROIKHATUL JANNAH', '6285924312845', '6285924312845', 1, 'AKTIF', '', '', NULL, NULL, '', NULL);
-INSERT INTO `santri` VALUES (1539, '0122070113', 'Brian Erlangga', 'L', 'TULUNGANGUNG', '2006-05-10', 'DUSUN NGRAWAN RT. 3 RW. 6 DESA TEMPURSARI KEC. TEMPURSARI KAB. LUMAJANG JAWA TIMUR', 'SUGENG HARIANTO', 'SITI NUR ALIFAH', '', '', 1, 'AKTIF', '6285258749102', '', NULL, NULL, '3504031005060001', NULL);
-INSERT INTO `santri` VALUES (1540, '0119060212', 'Fahrur Rozy Hidayatullah', 'L', 'MALANG', '2007-10-31', 'JL. WARINOI III NO. 9, KEL. BUNUL, KEC. BLIMBING, KOTA MALANG, JATIM', 'BUDI KUSTIYONO (ALM)', 'SITI ZUMAROH', '6287851295138', '6287851295138', 1, 'AKTIF', '', '', NULL, NULL, '3573013110070003', NULL);
-INSERT INTO `santri` VALUES (1541, '0122070344', 'Farri Muhammad Irsyadil Haq', 'L', 'GRESIK', '2007-08-10', 'DUSU SUKOWATI RT. 01 RW. 01 DESA SUKOWATI KEC. BUNGAH KAB. GRESIK JAWA TIMUR', 'MUKHOIRI', 'KHANIFAH', '', '6281553086762', 1, 'AKTIF', '', '', NULL, NULL, '3525121008070003', NULL);
-INSERT INTO `santri` VALUES (1542, '0122070326', 'Fathur Ridho Ramadan Rengifuryaan', 'L', 'TUAL', '2008-09-11', 'DUSUN UTAN TEL TIMUR, KEL. OHOITAHIT, KEC. PULAU DULLAH UTARA, KOTA TUAL, MALUKU', 'SABAN REGIFURYAAN', 'RAHMA RUMLES', '', '', 1, 'AKTIF', '', '', NULL, NULL, '8172011109080001', NULL);
-INSERT INTO `santri` VALUES (1543, '0122070243', 'Jovanick Meywana Fajariano', 'L', 'LUMAJANG', '2007-05-23', 'DUSUN KRAJAN II RT. 1 RW. 3 DESA PASRUJAMBE KEC. PASRUJAMBE KAB. LUMAJANG JAWA TIMUR', 'SINDU', 'YUNI WULANDARI', '', '', 1, 'AKTIF', '6282332588812', '', NULL, NULL, '3508112305070001', NULL);
-INSERT INTO `santri` VALUES (1544, '0122070292', 'Moch. Rafy Denis Syahbana', 'L', 'MALANG', '2006-09-19', 'JL. CILIWUNG IIA NO. 24 RT. 13 RW. 07 KEL. PURWANTORO KEC. BLIMBING KOTA MALANG JAWA TIMUR', 'ACHMAD HUDA', 'SITI MASRUROH', '', '', 1, 'AKTIF', '', '', NULL, NULL, '3573011909060001', NULL);
-INSERT INTO `santri` VALUES (1545, '0119060001', 'Mochammad Amar Salman Alfarizi Ramdhani', 'L', 'MALANG', '2006-10-21', 'JL. KOL. SUGIONO NO. 12A, KEL. MERGOSONO, KEC. KEDUNGKANDANG, KOTA MALANG, JATIM', 'KUSMINDAR', 'SAB\'ATUR ROSYIDA', '6285732964639', '6285732964639', 1, 'AKTIF', '', '', NULL, NULL, '', NULL);
-INSERT INTO `santri` VALUES (1546, '0119060143', 'Mochammad Dhafa Maulana', 'L', 'MALANG', '2007-07-10', 'JL. KENANGA NO. 254, DESA KEBONSARI, KEC. TUMPANG, KAB. MALANG, JATIM', 'AKHMAD FAHRU RIZAL', 'SITI SOLIKAH', '6285100733412', '6285100733412', 1, 'AKTIF', '', '', NULL, NULL, '3507161007070002', NULL);
-INSERT INTO `santri` VALUES (1547, '0119060096', 'Mochammad Taufiqurahman', 'L', 'MALANG', '2007-04-30', 'JL. DIPONEGORO NO. 287, DESA SUKOHARJO, KEC. KEPANJEN, KAB MALANG, JATIM', 'HATONO', 'TRIYATMI', '62881036013996', '62881036013996', 1, 'AKTIF', '', '', NULL, NULL, '3573043004070005', NULL);
-INSERT INTO `santri` VALUES (1548, '0119060015', 'Mohammad Angga Ardiansyah', 'L', 'PASURUAN', '2006-09-16', 'DUSUN TAMAN, DESA KAYU KEBEK, KEC. TUTUR, KAB. PASURUAN, JATIM', 'HANDOKO', 'NURUL AINI', '6285697670037', '6285697670037', 1, 'AKTIF', '', '', NULL, NULL, '3514021609060001', NULL);
-INSERT INTO `santri` VALUES (1549, '0119060053', 'Muhammad Abyadl Wafi', 'L', 'SURABAYA', '2007-01-08', 'JL. KEPUTIH UTARA NO. 19B, KEL. KEPUTIH, KEC. SUKOLILO, KOTA SURABAYA, JATIM', 'AHMAD MUDZAKKIR', 'DESI SAPARINI', '62628123087509', '62628123087509', 1, 'AKTIF', '', '', NULL, NULL, '3578090801070001', NULL);
-INSERT INTO `santri` VALUES (1550, '0119060275', 'Muhammad Ahsanul Insani', 'L', 'BANYUWANGI', '2006-12-18', 'JL. KAPUAS NO. 74, DESA PENGANJURAN, KEC. BANYUWANGI, KAB. BANYUWANGI, JATIM', 'ABDUL HAMIM', 'ANITA EVIANA VAN EST', '6281336569975', '6281336569975', 1, 'AKTIF', '', '', NULL, NULL, '', NULL);
-INSERT INTO `santri` VALUES (1551, '0119060044', 'Muhammad Burhanuddin Yufi', 'L', 'MALANG', '2007-01-07', 'JL. LESANPURO GG. 1 NO. 9, RT. 08, RW. 03, KEL. LESANPURO KEC. KEDUNGKANDANG, KOTA MALANG, JATIM', 'LASIANTO', 'SITI KHUSNAIDAH', '6281335637591', '6281335637591', 1, 'ALUMNI', '6285749640163', '', NULL, NULL, '3573030601070007', NULL);
-INSERT INTO `santri` VALUES (1552, '0119060074', 'Muhammad Fakhri Jauhari', 'L', 'GRESIK', '2006-12-06', 'JL. BUNGAH NO. 20, DESA BUNGAH, KEC. BUNGAH, KAB. GRESIK, JATIM', 'AHMAD HADI', 'MUTHOHHAROH', '62813300701686', '62813300701686', 1, 'AKTIF', '', '', NULL, NULL, '', NULL);
-INSERT INTO `santri` VALUES (1553, '0122070185', 'Muhammad Farkhan Hafid', 'L', 'MOJOKERTO', '2007-06-21', 'JL. MASTO RT. 6 RW. 4 DESA PUNGGING KEC. PUNGGING KAB. MOJOKERTO JAWA TIMUR', 'BUDIONO', 'MURYATIN', '', '', 1, 'AKTIF', '6283832128204', '', NULL, NULL, '3516062106070003', NULL);
-INSERT INTO `santri` VALUES (1554, '0119060042', 'Muhammad Faruq Abdul Ghoni', 'L', 'MALANG', '2006-10-16', 'JL. PLAOSAN BARAT NO. 58B, KEL. PURWODADI, KEC. BLIMBING, KOTA MALANG, JATIM', 'MOH. SUPRIYADI', 'UMUL HAYATI', '6285103012725', '6285103012725', 1, 'AKTIF', '', '', NULL, NULL, '3573011610060006', NULL);
-INSERT INTO `santri` VALUES (1555, '0123100264', 'Muhammad Fatikh Al-Widad', 'L', 'Sidoarjo', '2006-11-02', 'Raden Fatah/Sidomulyo, Jambangan, Candi, Sidoarjo, Jawa Timur', 'H.Ach.Muntafa Maimun', 'Hj.Siti Lailatus Sholihah', '', '6281233974870', 1, 'AKTIF', '', '', '', 2, '3515070211060001', 7);
-INSERT INTO `santri` VALUES (1556, '0120060281', 'Muhammad Hasyim Mashuri', 'L', 'BERAU', '2007-04-20', 'JL. KENARI, DESA LEBANAN MAKMUR, KEC. TELUK BAYUR, KAB. BERAU, KALTIM', 'AGUS SUGIHARTO', 'WIWIK WIDAYAWATI', '6281348564416', '6281348564416', 1, 'AKTIF', '', '', NULL, NULL, '6403092004070001', NULL);
-INSERT INTO `santri` VALUES (1557, '0119060045', 'Muhammad Ihsanul Hasanain', 'L', 'BENGKULU', '2007-07-15', 'JL. LETJEN SUPRAPTO, KEL. ANGGUT DALAM, KEC. RATU SAMBAN, KOTA BENGKULU, BENGKULU', 'M. RIJALUDDIN', 'SUFIA HERLINA', '6282281110007', '6282281110007', 1, 'AKTIF', '', '', NULL, NULL, '', NULL);
-INSERT INTO `santri` VALUES (1558, '0122070251', 'Muhammad Ilham Sulthoni', 'L', 'SIDOARJO', '2006-08-07', 'JL. MARSIDIN RT. 6 RW. 1 DESA SAWOHAN KEC. BUDURAN KAB. SIDOARJO JAWA TIMUR', 'AHMAD JUNAIDI', 'LAILLATUZ ZAHRO', '', '', 1, 'AKTIF', '6282131976939', '', NULL, NULL, '3515090708060003', NULL);
-INSERT INTO `santri` VALUES (1559, '0119060003', 'Muhammad Makayla Akbar', 'L', 'PASURUAN', '2007-06-27', 'JL, DERMO NO. 22, DESA DERMO, KEC. BANGIL, KAB. PASURUAN, JATIM', 'NUR KHOLIS', 'HARTATIK', '6282232127206', '6282232127206', 1, 'AKTIF', '', '', NULL, NULL, '3514142706070001', NULL);
-INSERT INTO `santri` VALUES (1560, '0119060174', 'Muhammad Nur Syauqi Habibi', 'L', 'MALANG', '2007-07-15', 'DESA DONOWARIH, KEC. KARANGPLOSO, KAB. MALANG, JATIM', 'SYAIFUL ARIF', 'SITTI ROMLAH', '6285100129195', '6285100129195', 1, 'AKTIF', '', '', NULL, NULL, '3507231507070001', NULL);
-INSERT INTO `santri` VALUES (1561, '0119060085', 'Muhammad Saifuddin Zakaria', 'L', 'MALANG', '2008-05-03', 'JL. GANG INDAH RT. 06 RW. 01, DESA GANJARAN, KEC. GONDANGLEGI, KAB. MALANG, JATIM', 'AMSORI', 'RUCHI', '6281554151500', '6281554151500', 1, 'AKTIF', '', '', NULL, NULL, '3507100305080001', NULL);
-INSERT INTO `santri` VALUES (1562, '0122070262', 'Nu\'man Abdul Haq', 'L', 'PROBOLINGGO', '2006-05-31', 'JL. IKAN KAKAP RT. 6 RW. 3 KEL. MAYANGAN DESA MAYANGAN KOTA PROBOLINGGO JAWA TIMUR', 'CHOIRUL ANAM', 'EVI ZAQIYA', '', '', 1, 'AKTIF', '6282229352778', '', NULL, NULL, '', NULL);
-INSERT INTO `santri` VALUES (1563, '0119060156', 'Nurman Hidayatullah', 'L', 'BANGKALAN', '2007-05-01', 'JL. MUHARTO GG. 5B, KEL. KOTALAMA, KEC. KEDUNGKANDANG, KOTA MALANG, JATM', 'MOH NUR ROHMAN', 'SITI QURI\'AH', '6281944819448', '6281944819448', 1, 'AKTIF', '', '', NULL, NULL, '3573030105070007', NULL);
-INSERT INTO `santri` VALUES (1564, '0119060254', 'Syahrul Minan', 'L', 'MALANG', '2006-07-06', 'DUSUN BALEWARTI, DESA REJOSARI, KEC. BANTUR, KAB. MALANG, JATIM', 'M. HODRI', 'MUAWENAH', '62822132445299', '62822132445299', 1, 'AKTIF', 'irfaur', '9130912803', '1747724154_java.png', 3, '3507030607060003', 2);
-INSERT INTO `santri` VALUES (1565, '0122070162', 'Zainal Musthofa', 'L', 'MALANG', '2007-07-31', 'JL. SIDODADI 5 RT. 22 RW. 5 DESA WANDANPURO KEC. BULULAWANG KAB. MALANG JAWA TIMUR', 'MULYONO', 'NURUL KHOIRIYAH', '', '', 1, 'AKTIF', '6285100632623', '', '', 2, '', 6);
+INSERT INTO `santri` VALUES (1534, '0119060052', 'Abdul Mun\'im Zam Zamy', 'L', 'MOJOKERTO', '2006-06-02', 'DESA MOJOGENENG, KEC. JATIREJO, KAB. MOJOKERTO, JATIM', 'MOH. SUBKHAN', 'ALFIYATUN NISA\'', '6285706270450', '6285706270450', 1, 'ALUMNI', '', '', NULL, NULL, '3516010206060001', NULL, NULL, '1');
+INSERT INTO `santri` VALUES (1535, '0119060147', 'Achmad Fathir Fadillah Anam', 'L', 'MALANG', '2007-03-13', 'JL. MUHARTO NO. 35, KEL. JODIPAN, KEC. BLIMBING, KOTA. MALANG, JATIM', 'CHOIRUL ANAM', 'NURUL AINI', '6289654491144', '6289654491144', 1, 'AKTIF', '', '', NULL, NULL, '3573011303070005', NULL, NULL, '123');
+INSERT INTO `santri` VALUES (1536, '0119060197', 'Achmad Nabil', 'L', 'MALANG', '2006-05-01', 'JL. TERNATE NO. 26, KEL. KASIN, KEC. KLOJEN, KOTA MALANG, JATIM', 'M. YAZID BUSTHAMI', 'ISTIANAH', '6285101363903', '6285101363903', 1, 'AKTIF', '', '', NULL, NULL, '3573020105060001', NULL, NULL, '2');
+INSERT INTO `santri` VALUES (1537, '0122070263', 'Ahmad Aditya Ramadhani', 'L', 'MALANG', '2007-09-24', 'DUSUN PETUNGWULUNG RT. 7 RW. 6 DESA TOYOMARTO KEC. SINGOSARI KAB. MALANG JAWA TIMUR', 'AGUS EFENDI', 'HERY SULISTYOWATI', '', '', 0, 'AKTIF', '6283853584607', '', NULL, NULL, '3507242409070006', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1538, '0119060021', 'Ahmad Novel Ashshidiqi', 'L', 'MALANG', '2006-11-20', 'DUSUN TENAGA TURI, DESA KEPUHARJO, KEC. KARANGPLOSO, KAB. MALANG, JATIM', 'NGADI SLAMET', 'ROIKHATUL JANNAH', '6285924312845', '6285924312845', 1, 'AKTIF', '', '', NULL, NULL, '', NULL, NULL, '3');
+INSERT INTO `santri` VALUES (1539, '0122070113', 'Brian Erlangga', 'L', 'TULUNGANGUNG', '2006-05-10', 'DUSUN NGRAWAN RT. 3 RW. 6 DESA TEMPURSARI KEC. TEMPURSARI KAB. LUMAJANG JAWA TIMUR', 'SUGENG HARIANTO', 'SITI NUR ALIFAH', '', '', 1, 'AKTIF', '6285258749102', '', NULL, NULL, '3504031005060001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1540, '0119060212', 'Fahrur Rozy Hidayatullah', 'L', 'MALANG', '2007-10-31', 'JL. WARINOI III NO. 9, KEL. BUNUL, KEC. BLIMBING, KOTA MALANG, JATIM', 'BUDI KUSTIYONO (ALM)', 'SITI ZUMAROH', '6287851295138', '6287851295138', 1, 'AKTIF', '', '', NULL, NULL, '3573013110070003', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1541, '0122070344', 'Farri Muhammad Irsyadil Haq', 'L', 'GRESIK', '2007-08-10', 'DUSU SUKOWATI RT. 01 RW. 01 DESA SUKOWATI KEC. BUNGAH KAB. GRESIK JAWA TIMUR', 'MUKHOIRI', 'KHANIFAH', '', '6281553086762', 1, 'AKTIF', '', '', NULL, NULL, '3525121008070003', NULL, NULL, '4');
+INSERT INTO `santri` VALUES (1542, '0122070326', 'Fathur Ridho Ramadan Rengifuryaan', 'L', 'TUAL', '2008-09-11', 'DUSUN UTAN TEL TIMUR, KEL. OHOITAHIT, KEC. PULAU DULLAH UTARA, KOTA TUAL, MALUKU', 'SABAN REGIFURYAAN', 'RAHMA RUMLES', '', '', 1, 'AKTIF', '', '', NULL, NULL, '8172011109080001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1543, '0122070243', 'Jovanick Meywana Fajariano', 'L', 'LUMAJANG', '2007-05-23', 'DUSUN KRAJAN II RT. 1 RW. 3 DESA PASRUJAMBE KEC. PASRUJAMBE KAB. LUMAJANG JAWA TIMUR', 'SINDU', 'YUNI WULANDARI', '', '', 1, 'AKTIF', '6282332588812', '', NULL, NULL, '3508112305070001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1544, '0122070292', 'Moch. Rafy Denis Syahbana', 'L', 'MALANG', '2006-09-19', 'JL. CILIWUNG IIA NO. 24 RT. 13 RW. 07 KEL. PURWANTORO KEC. BLIMBING KOTA MALANG JAWA TIMUR', 'ACHMAD HUDA', 'SITI MASRUROH', '', '', 1, 'AKTIF', '', '', NULL, NULL, '3573011909060001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1545, '0119060001', 'Mochammad Amar Salman Alfarizi Ramdhani', 'L', 'MALANG', '2006-10-21', 'JL. KOL. SUGIONO NO. 12A, KEL. MERGOSONO, KEC. KEDUNGKANDANG, KOTA MALANG, JATIM', 'KUSMINDAR', 'SAB\'ATUR ROSYIDA', '6285732964639', '6285732964639', 1, 'AKTIF', '', '', NULL, NULL, '', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1546, '0119060143', 'Mochammad Dhafa Maulana', 'L', 'MALANG', '2007-07-10', 'JL. KENANGA NO. 254, DESA KEBONSARI, KEC. TUMPANG, KAB. MALANG, JATIM', 'AKHMAD FAHRU RIZAL', 'SITI SOLIKAH', '6285100733412', '6285100733412', 1, 'AKTIF', '', '', NULL, NULL, '3507161007070002', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1547, '0119060096', 'Mochammad Taufiqurahman', 'L', 'MALANG', '2007-04-30', 'JL. DIPONEGORO NO. 287, DESA SUKOHARJO, KEC. KEPANJEN, KAB MALANG, JATIM', 'HATONO', 'TRIYATMI', '62881036013996', '62881036013996', 1, 'AKTIF', '', '', NULL, NULL, '3573043004070005', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1548, '0119060015', 'Mohammad Angga Ardiansyah', 'L', 'PASURUAN', '2006-09-16', 'DUSUN TAMAN, DESA KAYU KEBEK, KEC. TUTUR, KAB. PASURUAN, JATIM', 'HANDOKO', 'NURUL AINI', '6285697670037', '6285697670037', 1, 'AKTIF', '', '', NULL, NULL, '3514021609060001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1549, '0119060053', 'Muhammad Abyadl Wafi', 'L', 'SURABAYA', '2007-01-08', 'JL. KEPUTIH UTARA NO. 19B, KEL. KEPUTIH, KEC. SUKOLILO, KOTA SURABAYA, JATIM', 'AHMAD MUDZAKKIR', 'DESI SAPARINI', '62628123087509', '62628123087509', 1, 'AKTIF', '', '', NULL, NULL, '3578090801070001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1550, '0119060275', 'Muhammad Ahsanul Insani', 'L', 'BANYUWANGI', '2006-12-18', 'JL. KAPUAS NO. 74, DESA PENGANJURAN, KEC. BANYUWANGI, KAB. BANYUWANGI, JATIM', 'ABDUL HAMIM', 'ANITA EVIANA VAN EST', '6281336569975', '6281336569975', 1, 'AKTIF', '', '', NULL, NULL, '', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1551, '0119060044', 'Muhammad Burhanuddin Yufi', 'L', 'MALANG', '2007-01-07', 'JL. LESANPURO GG. 1 NO. 9, RT. 08, RW. 03, KEL. LESANPURO KEC. KEDUNGKANDANG, KOTA MALANG, JATIM', 'LASIANTO', 'SITI KHUSNAIDAH', '6281335637591', '6281335637591', 1, 'AKTIF', '6285749640163', '', NULL, NULL, '3573030601070007', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1552, '0119060074', 'Muhammad Fakhri Jauhari', 'L', 'GRESIK', '2006-12-06', 'JL. BUNGAH NO. 20, DESA BUNGAH, KEC. BUNGAH, KAB. GRESIK, JATIM', 'AHMAD HADI', 'MUTHOHHAROH', '62813300701686', '62813300701686', 1, 'AKTIF', '', '', NULL, NULL, '', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1553, '0122070185', 'Muhammad Farkhan Hafid', 'L', 'MOJOKERTO', '2007-06-21', 'JL. MASTO RT. 6 RW. 4 DESA PUNGGING KEC. PUNGGING KAB. MOJOKERTO JAWA TIMUR', 'BUDIONO', 'MURYATIN', '', '', 1, 'AKTIF', '6283832128204', '', NULL, NULL, '3516062106070003', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1554, '0119060042', 'Muhammad Faruq Abdul Ghoni', 'L', 'MALANG', '2006-10-16', 'JL. PLAOSAN BARAT NO. 58B, KEL. PURWODADI, KEC. BLIMBING, KOTA MALANG, JATIM', 'MOH. SUPRIYADI', 'UMUL HAYATI', '6285103012725', '6285103012725', 1, 'AKTIF', '', '', NULL, NULL, '3573011610060006', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1555, '0123100264', 'Muhammad Fatikh Al-Widad', 'L', 'Sidoarjo', '2006-11-02', 'Raden Fatah/Sidomulyo, Jambangan, Candi, Sidoarjo, Jawa Timur', 'H.Ach.Muntafa Maimun', 'Hj.Siti Lailatus Sholihah', '', '6281233974870', 1, 'AKTIF', '', '', '', 2, '3515070211060001', 7, NULL, NULL);
+INSERT INTO `santri` VALUES (1556, '0120060281', 'Muhammad Hasyim Mashuri', 'L', 'BERAU', '2007-04-20', 'JL. KENARI, DESA LEBANAN MAKMUR, KEC. TELUK BAYUR, KAB. BERAU, KALTIM', 'AGUS SUGIHARTO', 'WIWIK WIDAYAWATI', '6281348564416', '6281348564416', 1, 'AKTIF', '', '', NULL, NULL, '6403092004070001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1557, '0119060045', 'Muhammad Ihsanul Hasanain', 'L', 'BENGKULU', '2007-07-15', 'JL. LETJEN SUPRAPTO, KEL. ANGGUT DALAM, KEC. RATU SAMBAN, KOTA BENGKULU, BENGKULU', 'M. RIJALUDDIN', 'SUFIA HERLINA', '6282281110007', '6282281110007', 1, 'AKTIF', '', '', NULL, NULL, '', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1558, '0122070251', 'Muhammad Ilham Sulthoni', 'L', 'SIDOARJO', '2006-08-07', 'JL. MARSIDIN RT. 6 RW. 1 DESA SAWOHAN KEC. BUDURAN KAB. SIDOARJO JAWA TIMUR', 'AHMAD JUNAIDI', 'LAILLATUZ ZAHRO', '', '', 1, 'AKTIF', '6282131976939', '', NULL, NULL, '3515090708060003', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1559, '0119060003', 'Muhammad Makayla Akbar', 'L', 'PASURUAN', '2007-06-27', 'JL, DERMO NO. 22, DESA DERMO, KEC. BANGIL, KAB. PASURUAN, JATIM', 'NUR KHOLIS', 'HARTATIK', '6282232127206', '6282232127206', 1, 'AKTIF', '', '', NULL, NULL, '3514142706070001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1560, '0119060174', 'Muhammad Nur Syauqi Habibi', 'L', 'MALANG', '2007-07-15', 'DESA DONOWARIH, KEC. KARANGPLOSO, KAB. MALANG, JATIM', 'SYAIFUL ARIF', 'SITTI ROMLAH', '6285100129195', '6285100129195', 1, 'AKTIF', '', '', NULL, NULL, '3507231507070001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1561, '0119060085', 'Muhammad Saifuddin Zakaria', 'L', 'MALANG', '2008-05-03', 'JL. GANG INDAH RT. 06 RW. 01, DESA GANJARAN, KEC. GONDANGLEGI, KAB. MALANG, JATIM', 'AMSORI', 'RUCHI', '6281554151500', '6281554151500', 1, 'AKTIF', '', '', NULL, NULL, '3507100305080001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1562, '0122070262', 'Nu\'man Abdul Haq', 'L', 'PROBOLINGGO', '2006-05-31', 'JL. IKAN KAKAP RT. 6 RW. 3 KEL. MAYANGAN DESA MAYANGAN KOTA PROBOLINGGO JAWA TIMUR', 'CHOIRUL ANAM', 'EVI ZAQIYA', '', '', 1, 'AKTIF', '6282229352778', '', NULL, NULL, '', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1563, '0119060156', 'Nurman Hidayatullah', 'L', 'BANGKALAN', '2007-05-01', 'JL. MUHARTO GG. 5B, KEL. KOTALAMA, KEC. KEDUNGKANDANG, KOTA MALANG, JATM', 'MOH NUR ROHMAN', 'SITI QURI\'AH', '6281944819448', '6281944819448', 1, 'AKTIF', '', '', NULL, NULL, '3573030105070007', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1564, '0119060254', 'Syahrul Minan', 'L', 'MALANG', '2006-07-06', 'DUSUN BALEWARTI, DESA REJOSARI, KEC. BANTUR, KAB. MALANG, JATIM', 'M. HODRI', 'MUAWENAH', '62822132445299', '62822132445299', 1, 'AKTIF', 'irfaur', '9130912803', '1747724154_java.png', 3, '3507030607060003', 2, NULL, NULL);
+INSERT INTO `santri` VALUES (1565, '0122070162', 'Zainal Musthofa', 'L', 'MALANG', '2007-07-31', 'JL. SIDODADI 5 RT. 22 RW. 5 DESA WANDANPURO KEC. BULULAWANG KAB. MALANG JAWA TIMUR', 'MULYONO', 'NURUL KHOIRIYAH', '', '', 1, 'AKTIF', '6285100632623', '', '', 2, '', 6, NULL, NULL);
+INSERT INTO `santri` VALUES (1566, '0118060105', 'Ahmad Hubail Badru Tamam', 'L', 'MALANG', '2005-02-11', 'JL. MELATI, DESA SEKARPURO, KEC. PAKIS, KAB. MALANG, JATIM', 'EDI SISWANTO', 'UMI SAROH', '', '6285100472112', 1, 'AKTIF', '', '', NULL, NULL, '3507180211050003', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1567, '0118060106', 'Ahmad Imam Syafi\'i', 'L', 'MALANG', '2006-01-21', 'JL. KH. AMIR, DESA NGEMBAL, KEC. WAJAK, KAB. MALANG, JATIM', 'MUHAMMAD YUSUF', 'JUMI\'ATI', '6281336867279', '6281336867279', 1, 'AKTIF', '', '', NULL, NULL, '3507082101060001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1568, '0119060062', 'Ahmad Rama Syaifuddin', 'L', 'MALANG', '2005-06-22', 'DUSUN KRAJAN, DESA BUNUT WETAN, KEC. PAKIS, KAB. MALANG, JATIM', 'ANDY SYAIFUDIN', 'RINA SETYOWATI', '', '6285236189316', 1, 'AKTIF', '', '', NULL, NULL, '3507182206050007', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1569, '0122070258', 'Dimas Ardiansyah', 'L', 'BANYUASIN', '2005-08-10', 'DUSUN DELTA UPANG RT. 3 RW. 1 DESA DELTA UPANG KEC. MAKARTI JAYA KAB. BANYUASIN SUMSEL', 'TUMINO', 'SUPRIYANTI', '', '6281377770765', 1, 'AKTIF', '', '', NULL, NULL, '1607090810050003', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1570, '0118060262', 'Farhadika Hardiansyah', 'L', 'MALANG', '2006-04-07', 'DUSUN JURANG PEDAS, DESA KIDAL, KEC. TUMPANG, KAB. MALANG, JATIM', 'ARIP AGUS SETYO', 'KHUSNUL MUNAWAROH', '6285259634490', '6285259634490', 1, 'AKTIF', '', '', NULL, NULL, '3507164404760002', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1571, '0124090221', 'Farhan Maulana Ibrahim', 'L', 'LUMAJANG', '2009-03-17', 'DSN. KALIBENING. RT 05 RW 03, PRONOJIWO, PRONOJIWO, LUMAJANG, JAWA TIMUR, 67374', 'ABDUL ROHIM', 'KURNIAWATI', '082338857407', '', 1, 'AKTIF', '', '', NULL, NULL, '', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1572, '0123070229', 'Haydar Radya Dwi Putra', 'L', 'SIDOARJO', '1999-08-09', 'DUSUN SANAN, DESA WATUGEDE, KEC. SINGOSARI, KAB. MALANG, JAWA TIMUR', 'MOH. LUKMAN HUDA', 'NINIK SARASWATI', '', '6282334722287', 1, 'AKTIF', '', '', NULL, NULL, '3514120809990001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1573, '0118060051', 'Iltsar Nail Abdul', 'L', 'MALANG', '2006-05-22', 'DESA GUBUG KLAKAH, KEC. PONCOKUSUMO, KAB. MALANG, JATIM', 'ABDUL GHOFUR', 'DEWI MUFIDA', '6281252697037', '6281252697037', 1, 'AKTIF', '', '', NULL, NULL, '3507072205050004', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1574, '0124050118', 'M.Aghosana Asadila', 'L', 'Kediri', '2007-12-28', 'Kebanan, Desa Ploso , Mojo, Kab.Kediri, Jawa timur, 64162', 'Khafid Imroni', 'Siti Maryam', '626285853334378', '626285853334378', 1, 'AKTIF', '', '', NULL, NULL, '350602000000000', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1575, '0124040088', 'Mochamad Alim', 'L', 'MALANG', '2008-08-08', 'JL. AGROWAYANG, WIYUREJO, PUJON, MALANG, JAWA TIMUR, 65391', 'FAYAKUN YUSUF', 'ELFI KUSNAH', '6288989856128', '6288989856128', 1, 'AKTIF', '', '', NULL, NULL, '350726000000000', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1576, '0118060163', 'Mochammad Chasanuddin', 'L', 'MALANG', '2006-04-04', 'JL. SIMPANG SULFAT UTARA, KEL. PANDANWANGI, KEC. BLIMBING, KOTA MALANG, JATIM', 'MARWAH JUNAEDI', 'MAFTUKHATUL MUNIROH', '6287854513150', '6287854513150', 1, 'AKTIF', '', '', NULL, NULL, '3573010404060003', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1577, '0118060119', 'Muhammad Adn Bahrul Alamsyah', 'L', 'MALANG', '2005-05-26', 'JL. PROF MOCH. YAMIN VI NO. 28, KEL. SUKOHARJO, KEC. KLOJEN, KOTA MALANG, JATIM', 'MOCH. HARDIANSYAH', 'SITI MUJAYANA', '6289638256969', '6289638256969', 1, 'AKTIF', '', '', NULL, NULL, '3573022605050002', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1578, '0118060078', 'Muhammad Ilham Jaya Kusuma', 'L', 'SURABAYA', '2005-07-07', 'DUSUN GENITRI, DESA TIRTOMOYO, KEC. PAKIS, KAB. MALANG, JATIM', 'ABDAN SYAKUR', 'MUNAWWAROH', '6,2851E+12', '6,2851E+12', 1, 'AKTIF', '', '', NULL, NULL, '', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1579, '0119060236', 'Muhammad Rahmat Kholili', 'L', 'MALANG', '2006-02-04', 'DUSUN KRAJAN, DESA DENGKOL, KEC. SINGOSARI, KAB. MALANG, JATIM', 'AHMAD SYAIKHU', 'NURUL HIDAYATI', '62895367081949', '62895367081949', 1, 'AKTIF', '', '', NULL, NULL, '3507240204060001', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1580, '0121080309', 'Muhammad Rizky Syahputra', 'L', 'BIMA', '2006-10-21', 'KEL. RITE KEC. RABA KOTA BIMA NUSA TENGGARA BARAT', 'SUHERMAN', 'WAHYUNINGSIH', '6285233185687', '6285233185687', 1, 'AKTIF', '', '', NULL, NULL, '52060121100660000', NULL, NULL, NULL);
+INSERT INTO `santri` VALUES (1581, '0121070031', 'Widadul Mustofa Muhammad Abdillah', 'L', 'KEDIRI', '2005-08-11', 'DESA KARANGANYAR, KEC. WATES, KAB. KEDIRI, JATIM', 'MUHTAROM', 'SALAMATU ALIN TINA', '6285884441176', '6285884441176', 1, 'ALUMNI', '', '', '', 4, '3506062811050001', 7, NULL, NULL);
+INSERT INTO `santri` VALUES (1582, '234343343243', 'Deco', 'L', '', '0000-00-00', '', '', '', '', '', 1, 'AKTIF', '', '', '1750248285_Programmer_(700_x_512_piksel)_(1).png', 2, '', 7, '234343434', NULL);
+INSERT INTO `santri` VALUES (1583, '324234324234', 'paijo ', 'L', 'malang', '2025-06-18', 'precet', 'soaj', 'dasdas', '012975308320', '23213213234', 1, 'AKTIF', 'addas', '21323421342', '1750248226_Programmer_(700_x_512_piksel)_(5)_1.png', 4, '', 7, '134343434', NULL);
+INSERT INTO `santri` VALUES (1584, '1231', 'tes', 'L', '', '0000-00-00', '', '', '', '', '', 1, 'AKTIF', '', '', '0', 2, '44341231232', 7, '0122070162', NULL);
+INSERT INTO `santri` VALUES (1585, '', 'agung herkules', 'L', '', '2025-07-09', '', '', '', '', '', 1, 'AKTIF', '', '', NULL, 2, '', 7, '', NULL);
+INSERT INTO `santri` VALUES (1586, '', 'Aji Santoso', 'L', '', '0000-00-00', '', '', '', '', '', 1, 'AKTIF', '', '', '', 2, '', 7, '123123123123', '5');
 
 -- ----------------------------
 -- Table structure for santri_dokumen
@@ -1488,7 +1580,7 @@ CREATE TABLE `sekolah`  (
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
@@ -1592,50 +1684,51 @@ CREATE TABLE `submenu`  (
   `u` tinyint NULL DEFAULT NULL,
   `d` tinyint NULL DEFAULT NULL,
   `icon` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `status_aktif` int NULL DEFAULT 1,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 39 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of submenu
 -- ----------------------------
-INSERT INTO `submenu` VALUES (1, 1, 'Data Santri', 'santri/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (2, 1, 'Data Pengurus', 'pengurus/add_page_pengurus', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (3, 1, 'Data Asatid', 'asatid/add_page_asatid', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (4, 1, 'Data Kafil', 'kafil/add_page_kafil', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (5, 1, 'Data Alumni', 'alumni/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (6, 1, 'Kelas Madin', 'madin/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (7, 1, 'Kelas Tahfidz', 'tahfidz/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (8, 1, 'Master Sekolah', 'sekolah/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (9, 1, 'Master Asrama', 'asrama/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (10, 2, 'Master Kamar', 'kamar/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (11, 2, 'Perizinan', 'perizinan_santri/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (12, 2, 'Pelaporan', 'perizinan/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (13, 3, 'Pengajuan Pelanggaran', 'Pelanggaran/pengajuan', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (14, 3, 'Data Pelanggaran', 'Pelanggaran/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (15, 3, 'Surat Pernyataan (SP)', 'Surat_pernyataan/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (16, 3, 'Berita Acara Pemeriksaan (BAP)', NULL, 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (17, 3, 'Tata Tertib', 'Tatib/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (18, 3, 'Kategori Tata Tertib', 'Kategori_tatib/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (19, 3, 'Laporan Pelanggaran', NULL, 1, 1, 1, 1, 'icon-file-text2');
-INSERT INTO `submenu` VALUES (20, 3, 'Statistik Pelanggaran', NULL, 1, 1, 1, 1, 'icon-file-text2');
-INSERT INTO `submenu` VALUES (21, 3, 'Poin Santri', NULL, 1, 1, 1, 1, 'icon-file-text2');
-INSERT INTO `submenu` VALUES (22, 4, 'Absensi Tahfidz', 'Tahfidz/absensi', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (23, 4, 'Buku Tahfidz', 'Buku_tahfidz/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (24, 4, 'Laporan', 'Tahfidz/laporan', 1, 1, 1, 1, 'icon-file-text2');
-INSERT INTO `submenu` VALUES (25, 5, 'Absensi Tahfidz', 'Tahfidz/absensi', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (26, 5, 'Perkembangan Tahfidz', 'Tahfidz/perkembangan', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (27, 5, 'Laporan', 'Tahfidz/laporan', 1, 1, 1, 1, 'icon-file-text2');
-INSERT INTO `submenu` VALUES (28, 6, 'Rekam Medis', 'Rekam_medis/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (29, 6, 'Data Obat', 'Obat/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (30, 6, 'Data Keluhan', 'Keluhan/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (31, 6, 'Status Rekam Medis', '', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (32, 6, 'Surat Ijin Sakit', NULL, 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (33, 6, 'Surat Ijin Lain', NULL, 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (34, 6, 'Laporan Rekam Medis', NULL, 1, 1, 1, 1, 'icon-file-text2');
-INSERT INTO `submenu` VALUES (35, 6, 'Laporan Ijin', NULL, 1, 1, 1, 1, 'icon-file-text2');
-INSERT INTO `submenu` VALUES (36, 2, 'Setting Kamar Santri', 'kamar/kamar_santri', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (37, 10, 'Presensi Harian Santri', 'presensi_harian/get_data', 1, 1, 1, 1, 'icon-folder3');
-INSERT INTO `submenu` VALUES (38, 1, 'Semua Data Santri & Pengurus', 'personal/get_data', 1, 1, 1, 1, 'icon-folder3');
+INSERT INTO `submenu` VALUES (1, 1, 'Data Santri', 'santri/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (2, 1, 'Data Pengurus', 'pengurus/add_page_pengurus', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (3, 1, 'Data Asatid', 'asatid/add_page_asatid', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (4, 1, 'Data Kafil', 'kafil/add_page_kafil', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (5, 1, 'Data Alumni', 'alumni/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (6, 1, 'Kelas Madin', 'madin/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (7, 1, 'Kelas Tahfidz', 'tahfidz/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (8, 1, 'Master Sekolah', 'sekolah/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (9, 1, 'Master Asrama', 'asrama/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (10, 2, 'Master Kamar', 'kamar/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (11, 2, 'Perizinan', 'perizinan_santri/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (12, 2, 'Pelaporan', 'perizinan/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (13, 3, 'Pengajuan Pelanggaran', 'Pelanggaran/pengajuan', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (14, 3, 'Data Pelanggaran', 'Pelanggaran/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (15, 3, 'Surat Pernyataan (SP)', 'Surat_pernyataan/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (16, 3, 'Berita Acara Pemeriksaan (BAP)', NULL, 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (17, 3, 'Tata Tertib', 'Tatib/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (18, 3, 'Kategori Tata Tertib', 'Kategori_tatib/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (19, 3, 'Laporan Pelanggaran', NULL, 1, 1, 1, 1, 'icon-file-text2', 1);
+INSERT INTO `submenu` VALUES (20, 3, 'Statistik Pelanggaran', NULL, 1, 1, 1, 1, 'icon-file-text2', 1);
+INSERT INTO `submenu` VALUES (21, 3, 'Poin Santri', NULL, 1, 1, 1, 1, 'icon-file-text2', 1);
+INSERT INTO `submenu` VALUES (22, 4, 'Absensi Tahfidz', 'Tahfidz/absensi', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (23, 4, 'Buku Tahfidz', 'Buku_tahfidz/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (24, 4, 'Laporan', 'Tahfidz/laporan', 1, 1, 1, 1, 'icon-file-text2', 1);
+INSERT INTO `submenu` VALUES (25, 5, 'Absensi Tahfidz', 'Tahfidz/absensi', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (26, 5, 'Perkembangan Tahfidz', 'Tahfidz/perkembangan', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (27, 5, 'Laporan', 'Tahfidz/laporan', 1, 1, 1, 1, 'icon-file-text2', 1);
+INSERT INTO `submenu` VALUES (28, 6, 'Rekam Medis', 'Rekam_medis/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (29, 6, 'Data Obat', 'Obat/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (30, 6, 'Data Keluhan', 'Keluhan/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (31, 6, 'Status Rekam Medis', '', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (32, 6, 'Surat Ijin Sakit', NULL, 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (33, 6, 'Surat Ijin Lain', NULL, 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (34, 6, 'Laporan Rekam Medis', NULL, 1, 1, 1, 1, 'icon-file-text2', 1);
+INSERT INTO `submenu` VALUES (35, 6, 'Laporan Ijin', NULL, 1, 1, 1, 1, 'icon-file-text2', 1);
+INSERT INTO `submenu` VALUES (36, 2, 'Setting Kamar Santri', 'kamar/kamar_santri', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (37, 10, 'Presensi Harian Santri', 'presensi_harian/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
+INSERT INTO `submenu` VALUES (38, 1, 'Semua Data Santri & Pengurus', 'personal/get_data', 1, 1, 1, 1, 'icon-folder3', 1);
 
 -- ----------------------------
 -- Table structure for surat
@@ -1647,7 +1740,7 @@ CREATE TABLE `surat`  (
   `juz_awal` int NOT NULL,
   `jumlah_ayat` int NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of surat
@@ -1818,9 +1911,9 @@ CREATE TABLE `tahfidz`  (
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_aktif` int NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT current_timestamp,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 104 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of tahfidz
@@ -1926,6 +2019,7 @@ INSERT INTO `tahfidz` VALUES (99, 'T097', 'TAHFIDZ 33A', '#000000', 1, '2024-11-
 INSERT INTO `tahfidz` VALUES (100, 'T098', 'TAHFIDZ 33B', '#000000', 1, '2024-11-02 02:16:32');
 INSERT INTO `tahfidz` VALUES (101, 'T099', 'TAHFIDZ 33C', '#000000', 1, '2024-11-02 02:16:32');
 INSERT INTO `tahfidz` VALUES (102, 'T100', 'TAHFIDZ 34A', '#000000', 1, '2024-11-02 02:16:32');
+INSERT INTO `tahfidz` VALUES (103, '', 'new', '#000000', 0, '2025-06-18 18:45:06');
 
 -- ----------------------------
 -- Table structure for tatib
@@ -2056,12 +2150,12 @@ CREATE TABLE `users`  (
   UNIQUE INDEX `activation_selector`(`activation_selector` ASC) USING BTREE,
   UNIQUE INDEX `forgotten_password_selector`(`forgotten_password_selector` ASC) USING BTREE,
   UNIQUE INDEX `remember_selector`(`remember_selector` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 33 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 37 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, '127.0.0.1', 'administrator', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1748172766, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, NULL, NULL);
+INSERT INTO `users` VALUES (1, '127.0.0.1', 'administrator', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1752059363, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, NULL, NULL);
 INSERT INTO `users` VALUES (25, '::1', 'mir', '$2y$10$7CtyYQ1SxDYSjYyssEFWle4FJD.12O9biLP5vcH4wAi37v5lNTawW', 'irfaur@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1746599349, 1746599358, 1, 'M. Irfaur Rizky', NULL, NULL, NULL, NULL, NULL, 1372, 'karyawan');
 INSERT INTO `users` VALUES (26, '::1', 'rendy', '$2y$10$Bz3IJjHsT86GzE0hb5IBZeZVubG9Resb/W1YIWVGG7rOE1uzTlNEO', 'rendyyanisusanto@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1746607038, 1746607047, 1, 'rendy', NULL, NULL, NULL, NULL, NULL, 1359, 'karyawan');
 INSERT INTO `users` VALUES (27, '::1', 'pau', '$2y$10$Q2Qu7gbHIE1VxCY0OxOgJORnU.smVgiY0C0wp7TbNnCvJkv4oac4O', 'pau@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1746862620, NULL, 1, 'pau', NULL, NULL, NULL, NULL, NULL, 1359, 'karyawan');
@@ -2070,6 +2164,9 @@ INSERT INTO `users` VALUES (29, '::1', 'asrama', '$2y$10$KdfMqD5THqlp5hY9.sJmjus
 INSERT INTO `users` VALUES (30, '::1', 'ketuakamar', '$2y$10$oe.kt.bsjj13t09fEz0woOmYp7cNf1NwxFi7EfTAW6W8iOGxHM8q2', 'ketuakamar@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1746862749, NULL, 1, 'ketuakamar', NULL, NULL, NULL, NULL, NULL, 1359, 'karyawan');
 INSERT INTO `users` VALUES (31, '127.0.0.1', 'ortu', '$2y$10$dxrlMRQtUt9vRv6IiSXLkegTZQtnpumaSX2dZRHtAkwgIBUrB1/Si', 'ortu@gmail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1747447694, 1, 'Admin', 'istrator', 'ADMIN', '0', '123', NULL, 1373, 'santri');
 INSERT INTO `users` VALUES (32, '::1', 'amar', '$2y$10$9tmW9T6pC.lZWL7lS4obC.DxCVpcpgdGrNEgvUaSo16oDj2nvczAW', 'amar@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1747745240, NULL, 1, 'Amar', NULL, NULL, NULL, NULL, NULL, 1545, 'santri');
+INSERT INTO `users` VALUES (33, '192.168.6.45', 'abdul', '$2y$10$apYqCvxtimgGl0BKEbddwe7Bt7hGFibfl8aYjy1KLLdSIrbqswhf.', 'baikdika65@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1750048993, 1750049004, 1, 'abdul', NULL, NULL, NULL, NULL, NULL, 1534, 'karyawan');
+INSERT INTO `users` VALUES (35, '::1', 'paijo', '$2y$10$chAjSToV/CqVgRUtclfTT.VLZP7.Hw33tRwKXYf3kFNrNiYxirn2G', 'pau1@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1750300796, NULL, 1, 'paijo', NULL, NULL, NULL, NULL, NULL, 1583, 'karyawan');
+INSERT INTO `users` VALUES (36, '::1', 'deco', '$2y$10$OBN0V7jULdd8mt6jGDmWPewXMXYd9YK56lr2zQ9kCZckE0q5HNa9W', 'dikabaik65@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1750322525, NULL, 1, 'Deco', NULL, NULL, NULL, NULL, NULL, 1582, 'karyawan');
 
 -- ----------------------------
 -- Table structure for users_groups
@@ -2080,7 +2177,7 @@ CREATE TABLE `users_groups`  (
   `user_id` mediumint UNSIGNED NOT NULL,
   `group_id` mediumint UNSIGNED NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 30 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of users_groups
@@ -2111,6 +2208,9 @@ INSERT INTO `users_groups` VALUES (23, 28, 13);
 INSERT INTO `users_groups` VALUES (24, 29, 12);
 INSERT INTO `users_groups` VALUES (25, 30, 17);
 INSERT INTO `users_groups` VALUES (26, 31, 18);
+INSERT INTO `users_groups` VALUES (27, 33, 13);
+INSERT INTO `users_groups` VALUES (28, 35, 12);
+INSERT INTO `users_groups` VALUES (29, 36, 16);
 
 -- ----------------------------
 -- View structure for v_all_data
@@ -2195,7 +2295,7 @@ CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_pengurus` AS SELECT
 	pengurus.id AS id_pengurus, 
 	lembaga_pengurus.id, 
 	lembaga_pengurus.kode, 
-	lembaga_pengurus.nama as nama_lembaga, 
+	lembaga_pengurus.nama AS nama_lembaga, 
 	santri.id AS id_santri, 
 	santri.nis, 
 	santri.nama, 
@@ -2212,7 +2312,8 @@ CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_pengurus` AS SELECT
 	santri.nama_wali, 
 	santri.no_hp_wali, 
 	santri.foto, 
-	santri.asrama_id
+	santri.asrama_id, 
+	santri.rfid
 FROM
 	pengurus
 	INNER JOIN
@@ -2228,17 +2329,27 @@ FROM
 -- View structure for v_santri_aktif
 -- ----------------------------
 DROP VIEW IF EXISTS `v_santri_aktif`;
-CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_santri_aktif` AS SELECT 
-        s.*, 
-        (SELECT nama FROM asrama WHERE asrama.id = s.asrama_id) AS nama_asrama
-    FROM santri s
-    LEFT JOIN kafil k ON s.id = k.santri_id
-    LEFT JOIN asatid a ON s.id = a.santri_id
-    LEFT JOIN pengurus p ON s.id = p.santri_id
-    WHERE k.santri_id IS NULL 
-      AND a.santri_id IS NULL 
-      AND p.santri_id IS NULL 
-      AND s.status_aktif = 1 ;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_santri_aktif` AS SELECT
+	s.*, 
+	(SELECT nama FROM asrama WHERE asrama.id = s.asrama_id) AS nama_asrama
+FROM
+	santri AS s
+	LEFT JOIN
+	kafil AS k
+	ON 
+		s.id = k.santri_id
+	LEFT JOIN
+	asatid AS a
+	ON 
+		s.id = a.santri_id
+	LEFT JOIN
+	pengurus AS p
+	ON 
+		s.id = p.santri_id
+WHERE
+	k.santri_id IS NULL AND
+	a.santri_id IS NULL AND
+	p.santri_id IS NULL ;
 
 -- ----------------------------
 -- View structure for v_sekolah

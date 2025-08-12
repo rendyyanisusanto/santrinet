@@ -15,7 +15,9 @@ class Presensi extends CI_Controller {
             SELECT 
                 s.id AS santri_id,
                 s.nama AS nama_pengurus,
-                i.waktu_keluar AS ijin_keluar
+                i.waktu_keluar AS ijin_keluar,
+                i.status_konfirmasi_keluar AS status_konfirmasi_keluar,
+                i.status_konfirmasi_kembali AS status_konfirmasi_kembali
             FROM pengurus p
             INNER JOIN santri s ON s.id = p.santri_id
             INNER JOIN ijin_pengurus i ON i.santri_id = s.id
@@ -42,6 +44,8 @@ class Presensi extends CI_Controller {
 		$data['presence'] 	=	$this->db->query("SELECT 
             s.nama AS nama_pengurus,
             i.status,
+            i.status_konfirmasi_keluar, 
+            i.status_konfirmasi_kembali,
             IF(i.status = 'KELUAR', i.waktu_keluar, i.waktu_kembali) AS waktu
         FROM ijin_pengurus i
         JOIN santri s ON s.id = i.santri_id
@@ -94,7 +98,7 @@ class Presensi extends CI_Controller {
                 WHERE status = 'KELUAR' AND waktu_kembali IS NULL
             ")->row()->total;
 
-            if ($jumlah_keluar >= 5) {
+            if ($jumlah_keluar >= 10) {
                 echo json_encode(['status'=>'error','msg' => 'Maksimal 10 pengurus boleh keluar bersamaan']);
                 return;
             }

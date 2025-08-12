@@ -9,7 +9,11 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($presence as $key => $value): ?>
+                <?php foreach ($presence as $key => $value): 
+                    if ($value['status_konfirmasi_keluar'] == "BELUM DIKONFIRMASI") {
+                        continue; // Skip if both keluar and kembali are null
+                    }    
+                ?>
                     <tr>
                         <td class="fw-bold"><?php echo $value['nama_pengurus'] ?></td>
                         <td class="text-center fw-semibold">
