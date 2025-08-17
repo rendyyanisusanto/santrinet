@@ -53,6 +53,8 @@ class ijin_pengurus extends MY_Controller {
 
     function ubah_status(){
         $id = $this->input->post('id');
+        $ijin_pengurus = $this->db->get_where('ijin_pengurus', ['id' => $id])->row_array();
+        $santri = $this->db->get_where('santri', ['id' => $ijin_pengurus['santri_id']])->row_array();
         $konfirmasi_keluar = $this->input->post('konfirmasi_keluar');
         $konfirmasi_kembali = $this->input->post('konfirmasi_kembali');
         $keterangan = $this->input->post('keterangan');
@@ -61,12 +63,21 @@ class ijin_pengurus extends MY_Controller {
             'status_konfirmasi_kembali' => $konfirmasi_kembali,
             'keterangan' => $keterangan,
         ];
-        $this->db->where('id', $id);
-        $this->db->update('ijin_pengurus', $data);
-        if ($this->db->affected_rows() == 0) {
-            echo json_encode(['status' => 500, 'msg' => 'Gagal mengubah status']);
-            return;
-        }
+        // $this->db->where('id', $id);
+        // $this->db->update('ijin_pengurus', $data);
+        // if ($this->db->affected_rows() == 0) {
+        //     echo json_encode(['status' => 500, 'msg' => 'Gagal mengubah status']);
+        //     return;
+        // }
+        // kirim notifikasi ke WhatsApp
+        $msg = "Ijin Keluar Pengurus : \n\n"
+               . "\tNama  \t\t\t: " . str_pad($santri['nama'], 40) . "\n"
+               . "\tTanggal/jam \t\t\t: " . str_pad($ijin_pengurus['waktu_keluar'], 40) . "\n"
+               . "\tKeterangan \t\t: " . str_pad($keterangan, 40);
+
+		$this->bot_wa('085894632505', $msg, 'ijin_pengurus', $id, 'admin');
+			
+        
         echo json_encode(['status' => 200, 'msg' => 'Status berhasil diubah', 'data' => $this->input->post()]);
     }
 }
