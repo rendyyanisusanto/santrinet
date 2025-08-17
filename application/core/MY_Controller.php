@@ -404,10 +404,6 @@ class MY_Controller extends CI_Controller {
                 // Ambil status pesan (pending, delivered, dll.)
                 $message_status = $response_data['response']['status'];
 
-                // Tampilkan hasilnya atau lakukan tindakan lainnya
-                echo "Status utama: " . ($main_status ? 'true' : 'false') . "<br>";
-                echo "Status pesan: " . $message_status . "<br>";
-
                 $data = [
                     'no_hp'         =>  $this->formatNomorHP($no_hp),
                     'msg'           =>  urlencode($message),
