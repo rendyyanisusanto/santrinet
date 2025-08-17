@@ -68,13 +68,15 @@ class ijin_pengurus extends MY_Controller {
             return;
         }
 
+
         if ($konfirmasi_keluar == 'TERKONFIRMASI') {
+            $settings = $this->db->get_where('settings', ['name' => 'wa_number_ijin_pengurus'])->row_array();
             $msg = "Ijin Keluar Pengurus : \n\n"
                . "\tNama  \t\t\t: " . str_pad($santri['nama'], 40) . "\n"
                . "\tTanggal/jam \t\t\t: " . str_pad($ijin_pengurus['waktu_keluar'], 40) . "\n"
                . "\tKeterangan \t\t: " . str_pad($keterangan, 40);
 
-		    $this->bot_wa('085894632505', $msg, 'ijin_pengurus', $id, 'admin');
+		    $this->bot_wa($settings['val'], $msg, 'ijin_pengurus', $id, 'admin');
         }
         // kirim notifikasi ke WhatsApp
         
