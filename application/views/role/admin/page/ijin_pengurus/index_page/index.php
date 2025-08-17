@@ -24,23 +24,25 @@
         </div>
     </div>
 </div>
-    <!-- Panel Filter -->
+<!-- Panel Data Ijin Pengurus -->
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
-        <div class="panel-heading">
-            <b class="panel-title">
-                Data Ijin Pengurus
-            </b>
-        </div>
-        <div class="panel-body" id="perijinanList">
-            <div class="alert alert-info">
-                Silakan pilih tanggal dan klik <b>Proses</b> untuk menampilkan data.
+            <div class="panel-heading clearfix">
+                <b class="panel-title pull-left">Data Ijin Pengurus</b>
+                <button class="btn btn-xs btn-info pull-right" data-toggle="modal" data-target="#modalWaSetting">
+                    <i class="glyphicon glyphicon-cog"></i> Setting Nomor WA
+                </button>
+            </div>
+            <div class="panel-body" id="perijinanList">
+                <div class="alert alert-info">
+                    Silakan pilih tanggal dan klik <b>Proses</b> untuk menampilkan data.
+                </div>
             </div>
         </div>
     </div>
-    </div>
 </div>
+
 
 <div class="modal modal-change-status">
 	<div class="modal-dialog">
@@ -67,8 +69,4 @@
 		</div>
 	</div>
 </div>
-
-
-    <!-- Panel Hasil -->
-    
 
