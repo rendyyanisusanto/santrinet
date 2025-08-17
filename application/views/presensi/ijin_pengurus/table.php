@@ -10,9 +10,9 @@
             </thead>
             <tbody>
                 <?php foreach ($presence as $key => $value): 
-                    if ($value['status_konfirmasi_keluar'] == "BELUM DIKONFIRMASI") {
-                        continue; // Skip if both keluar and kembali are null
-                    }    
+                    if ($value['status_konfirmasi_keluar'] == "TERKONFIRMASI") {
+                        // Skip if both keluar and kembali are null
+                     
                 ?>
                     <tr>
                         <td class="fw-bold"><?php echo $value['nama_pengurus'] ?></td>
@@ -23,6 +23,9 @@
                             <?php echo $value['ijin_kembali'] ? date('H:i:s', strtotime($value['ijin_kembali'])) : '-' ?>
                         </td>
                     </tr>
+                <?php
+                    }
+                ?>
                 <?php endforeach ?>
             </tbody>
         </table>
