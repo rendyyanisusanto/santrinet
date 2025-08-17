@@ -54,20 +54,13 @@
                 <input type="hidden" name="id" class="inp-id" value="">
 				<center><h3><b>Ubah Status</b></h3></center>
                 <label for="">Keterangan</label>
-                <input type="text" name="keterangan" class="form-control" placeholder="Masukkan keterangan jika diperlukan">
+                <input type="text" name="keterangan" class="form-control keterangan" placeholder="Masukkan keterangan jika diperlukan">
                 <br>
 				<label>Konfirmasi Keluar</label>
-                <select name="konfirmasi_keluar" id="" class="form-control">
+                <select name="konfirmasi_keluar" id="" class="form-control konfirmasi_keluar">
                     <option value="BELUM DIKONFIRMASI">BELUM DIKONFIRMASI</option>
                     <option value="TERKONFIRMASI">TERKONFIRMASI</option>
                 </select>
-				<br>
-				<label>Konfirmasi Kembali</label>
-                <select name="konfirmasi_kembali" id="" class="form-control">
-                    <option value="BELUM DIKONFIRMASI">BELUM DIKONFIRMASI</option>
-                    <option value="TERKONFIRMASI">TERKONFIRMASI</option>
-                </select>
-				
 			</div>
 			<div class="modal-footer">
 		        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-close2"></i> Close</button>

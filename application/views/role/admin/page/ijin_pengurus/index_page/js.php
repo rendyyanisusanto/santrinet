@@ -18,11 +18,11 @@ function proses_data() {
         });
 }
 
-function change_status(id, keluar, kembali) {
+function change_status(id, keluar, keterangan) {
     
     $('.inp-id').val(id);
     $('.submit-status select[name="konfirmasi_keluar"]').val((keluar == 0) ? "BELUM DIKONFIRMASI" : "TERKONFIRMASI");
-    $('.submit-status select[name="konfirmasi_kembali"]').val((kembali == 0) ? "BELUM DIKONFIRMASI" : "TERKONFIRMASI");
+    $('.submit-status .keterangan').val(keterangan);
     $('.modal-change-status').modal('toggle');
 }
 

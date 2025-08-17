@@ -51,7 +51,7 @@
                     <?php endif; ?>
                 </td>
                 <td>
-                    <button class="btn btn-success btn-sm" type="button" onclick="change_status(<?= $row['id'] ?>, <?= $konfirmasi_keluar ?>, <?= $konfirmasi_kembali ?>);"><i class="icon-pencil"></i></button>
+                    <button class="btn btn-success btn-sm" type="button" onclick="change_status(<?= $row['id'] ?>, <?= $konfirmasi_keluar ?>, '<?= $row['keterangan'] ?>');"><i class="icon-pencil"></i></button>
                 </td>
             </tr>
             <?php endforeach; ?>
