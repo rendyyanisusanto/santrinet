@@ -43,7 +43,7 @@ class ijin_pengurus extends MY_Controller {
         $this->db->from('ijin_pengurus');
         $this->db->join('santri', 'santri.id = ijin_pengurus.santri_id', 'left');
         $this->db->where('DATE(ijin_pengurus.waktu_keluar)', $tanggal);
-        $this->db->order_by('ijin_pengurus.waktu_keluar', 'ASC');
+        $this->db->order_by('ijin_pengurus.id', 'DESC');
 
         $data['list'] = $this->db->get()->result_array();
 
@@ -64,7 +64,7 @@ class ijin_pengurus extends MY_Controller {
         $this->db->where('id', $id);
         $this->db->update('ijin_pengurus', $data);
         if ($this->db->affected_rows() == 0) {
-            echo json_encode(['status' => 500, 'msg' => 'Gagal mengubah status']);
+            echo json_encode(['status' => 500, 'msg' => 'Tidak ada perubahan pada status']);
             return;
         }
 
@@ -82,6 +82,6 @@ class ijin_pengurus extends MY_Controller {
         
 			
         
-        echo json_encode(['status' => 200, 'msg' => 'Status berhasil diubah', 'data' => $this->input->post()]);
+        echo json_encode(['status' => 200, 'msg' => 'Status berhasil diubah']);
     }
 }
