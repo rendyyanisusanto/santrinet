@@ -9,15 +9,12 @@
             <div class="panel-body">
                 <div class="row">
                     <!-- Filter Tanggal -->
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <label for="tanggal">Tanggal</label>
                             <input type="date" id="tanggal" class="form-control tanggal" value="<?= date('Y-m-d') ?>">
                         </div>
-                    </div>
-
-                    <!-- Tombol Proses -->
-                    <div class="col-md-2" style="margin-top: 25px;">
+                        <hr>
                         <button class="btn btn-primary btn-block" type="button" onclick="proses_data()">
                             <i class="icon-spinner"></i> Proses
                         </button>

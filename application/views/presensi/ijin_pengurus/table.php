@@ -4,8 +4,8 @@
             <thead class="table-dark text-center">
                 <tr>
                     <th>Nama Pengurus</th>
-                    <th>Ijin Keluar</th>
-                    <th>Ijin Kembali</th>
+                    <th>Keluar</th>
+                    <th>Kembali</th>
                 </tr>
             </thead>
             <tbody>
