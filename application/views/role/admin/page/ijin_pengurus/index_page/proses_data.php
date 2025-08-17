@@ -11,7 +11,6 @@
                 <th style="width: 15%;">Waktu Kembali</th>
                 <th style="width: 5%;">Status</th>
                 <th style="width: 5%;">Konfirmasi Keluar</th>
-                <th style="width: 5%;">Konfirmasi Kembali</th>
                 <th style="width: 1%;">#</th>
             </tr>
         </thead>
@@ -38,13 +37,6 @@
                 </td>
                 <td>
                     <?php if ($row['status_konfirmasi_keluar'] == 'TERKONFIRMASI'): ?>
-                        <span class="label label-success">Terkonfirmasi</span>
-                    <?php else: ?>
-                        <span class="label label-warning">Belum Dikonfirmasi</span>
-                    <?php endif; ?>
-                </td>
-                <td>
-                    <?php if ($row['status_konfirmasi_kembali'] == 'TERKONFIRMASI'): ?>
                         <span class="label label-success">Terkonfirmasi</span>
                     <?php else: ?>
                         <span class="label label-warning">Belum Dikonfirmasi</span>
