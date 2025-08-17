@@ -41,4 +41,32 @@ $('.submit-status').on('submit', function(e){
         return false;
     });
 
+function setting_wa() {
+    send_ajax('Ijin_pengurus/setting_wa', {})
+        .then(function (data) {
+            let waData = JSON.parse(data);
+            $('#nomorWa').val(waData.wa_number.val);
+            $('#modalWaSetting').modal('toggle');
+        })
+}   
+
+function simpanNomorWa() {
+    let nomorWa = $('#nomorWa').val();
+    if (!nomorWa) {
+        alert('Nomor WhatsApp tidak boleh kosong!');
+        return;
+    }
+    send_ajax('Ijin_pengurus/simpan_nomor_wa', { nomor: nomorWa })
+        .then(function (data) {
+            let resp = JSON.parse(data); 
+            if (resp.status == 200) {
+                toastr.success(resp.msg);
+            } else {
+                toastr.error(resp.msg);
+            }
+            $('#modalWaSetting').modal('toggle');
+        })
+    
+}
+    
 </script>

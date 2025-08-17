@@ -84,4 +84,24 @@ class ijin_pengurus extends MY_Controller {
         
         echo json_encode(['status' => 200, 'msg' => 'Status berhasil diubah']);
     }
+
+    function setting_wa() {
+        $data['wa_number'] = $this->db->get_where('settings', ['name' => 'wa_number_ijin_pengurus'])->row_array();  
+        echo json_encode($data);
+    }
+
+    function simpan_nomor_wa() {
+        $nomor = $this->input->post('nomor');
+        if (!$nomor) {
+            echo json_encode(['status' => 500, 'msg' => 'Nomor WhatsApp tidak boleh kosong']);
+            return;
+        }
+        $this->my_update('settings', ['val' => $nomor], ['name' => 'wa_number_ijin_pengurus']);
+        if ($this->db->affected_rows() > 0) {
+            echo json_encode(['status' => 200, 'msg' => 'Nomor WhatsApp berhasil disimpan']);
+        }
+        else {
+            echo json_encode(['status' => 500, 'msg' => 'Gagal menyimpan nomor WhatsApp']);
+        }
+    }
 }
